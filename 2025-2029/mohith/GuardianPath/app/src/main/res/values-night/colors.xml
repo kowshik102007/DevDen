@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Theme Colors -->
+    <color name="primaryColor">#1F2937</color> <!-- Dark gray/blue for header -->
+    <color name="primaryColorVariant">#111827</color>
+    <color name="colorOnPrimary">#F9FAFB</color>
+    
+    <color name="backgroundColor">#121212</color>
+    <color name="surfaceColor">#1E1E1E</color>
+    
+    <!-- Text Colors -->
+    <color name="textColorPrimary">#F3F4F6</color>
+    <color name="textColorSecondary">#9CA3AF</color>
+    <color name="textColorTertiary">#6B7280</color>
+    
+    <!-- Icon Tints -->
+    <color name="iconTint">#9CA3AF</color>
+    <color name="iconTintPrimary">#818CF8</color>
+    
+    <!-- Specific elements -->
+    <color name="dividerColor">#374151</color>
+    <color name="subtitleColor">#93C5FD</color>
+    
+    <color name="bg_warning">#431407</color>
+    <color name="bg_success">#064E3B</color>
+</resources>

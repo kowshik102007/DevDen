@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Edit Student</title>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+
+<body class="{{ 'dark' if session.get('theme') == 'dark' else '' }}">
+    <h2>Edit Student</h2>
+    <form method="POST" id="editForm">
+        <input type="text" name="name" value="{{ student.name }}" required>
+        <input type="number" name="age" value="{{ student.age }}" required>
+        <input type="text" name="course" value="{{ student.course }}" required>
+        <button type="submit">Update Student</button>
+    </form>
+    <a href="/">Back</a>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+{% include 'navbar.html' %}
+
+</html>

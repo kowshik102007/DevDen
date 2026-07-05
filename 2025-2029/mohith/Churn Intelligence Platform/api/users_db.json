@@ -1,0 +1,26 @@
+{
+    "analyst@company.com": {
+        "name": "Sarah Connor",
+        "role": "data_scientist",
+        "password": "password123",
+        "token": "mock-jwt-token-analyst"
+    },
+    "executive@company.com": {
+        "name": "John Connor",
+        "role": "executive",
+        "password": "password123",
+        "token": "mock-jwt-token-executive"
+    },
+    "marketer@company.com": {
+        "name": "Kyle Reese",
+        "role": "retention_agent",
+        "password": "password123",
+        "token": "mock-jwt-token-marketer"
+    },
+    "akitani0007@gmail.com": {
+        "name": "akitani",
+        "role": "data_scientist",
+        "password": "Arimasu007#",
+        "token": "mock-jwt-token-akitani0007"
+    }
+}
