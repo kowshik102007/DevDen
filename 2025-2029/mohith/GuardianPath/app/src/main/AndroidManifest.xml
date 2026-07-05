@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Location permission -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GuardianPath">
+
+        <!-- ✅ Google Maps API KEY -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDXhAhBVbEDYdSKXnbjiho9DXH6MghaKis"/>
+
+        <!-- Map Activity -->
+        <activity
+            android:name=".MapActivity"
+            android:exported="false" />
+
+        <!-- Report Area Activity -->
+        <activity
+            android:name=".ReportAreaActivity"
+            android:exported="false"
+            android:theme="@style/Theme.GuardianPath" />
+
+        <!-- Emergency SOS Activity -->
+        <activity
+            android:name=".EmergencySosActivity"
+            android:exported="false"
+            android:theme="@style/Theme.GuardianPath" />
+
+        <!-- Settings Activity -->
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.GuardianPath" />
+
+        <!-- Login Activity -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.GuardianPath" />
+
+        <!-- Sign Up Activity -->
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false"
+            android:theme="@style/Theme.GuardianPath" />
+
+        <!-- Bookmarks Activity -->
+        <activity
+            android:name=".BookmarksActivity"
+            android:exported="false"
+            android:theme="@style/Theme.GuardianPath" />
+
+        <!-- Main Activity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.GuardianPath">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+        </activity>
+
+    </application>
+
+</manifest>

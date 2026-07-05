@@ -1,0 +1,127 @@
+Causal Churn Intelligence Platform
+
+Predict. Explain. Prescribe. — Beyond Standard Churn Prediction
+
+
+📌 Overview
+
+Most customer churn projects stop at "train a classifier, report AUC." This project goes further: it builds a system that tells a business who is going to churn, why in plain language, what intervention would actually change their mind, and how much revenue that intervention is worth — the same decision-support loop real retention and growth teams use in production.
+
+The core insight this project is built around: predicting churn and preventing churn are different problems. A model that ranks customers by churn risk is not the same as a model that tells you which of those customers will actually respond to a retention offer. Most public churn projects conflate the two. This one doesn't.
+
+
+🎯 Problem Statement
+
+Companies lose significant revenue to customer churn, and most churn-prevention efforts fail for a specific, avoidable reason: they target customers based on risk score alone, without asking whether an intervention will change that customer's behavior. 
+This wastes retention budget on two groups — customers who would have stayed anyway, and customers who will leave no matter what — while under-targeting the group where an offer would actually make a difference.
+
+This project builds a system that separates those groups automatically, and quantifies the ROI of doing so.
+
+
+🧠 Core Idea / Approach
+
+
+Predict churn risk and estimated time-to-churn per customer.
+Explain each prediction in business-readable terms (not just SHAP values, but a plain-language reason).
+Prescribe the intervention most likely to work for that specific customer, using uplift modeling instead of naive risk-based targeting.
+Quantify the expected financial return of following the model's recommendation vs. a blanket retention strategy.
+Serve all of this through a live dashboard, not just a notebook.
+
+
+
+🛠️ Target Architecture & Techniques
+
+LayerTechniquePurposeBase churn predictionLightGBM / XGBoost / CatBoostIndustry-standard, strong baseline, fast to iterateTime-to-event modelingCox Proportional Hazards / DeepSurvPredicts when a customer is likely to churn, not just ifIndividual explainabilitySHAP (per-customer, not global)Converts model output into a specific, readable reasonCausal targetingUplift modeling — T-learner / X-learner (CausalML or EconML)Identifies which customers will actually respond to an interventionDecision layerCost-sensitive thresholding + ROI simulationTranslates model output into a dollar-value business recommendationServingFlask or FastAPI backend + Streamlit or React dashboardMakes the system usable, not just demonstrable in a notebookStretch: adaptive policyContextual bandit (LinUCB / Thompson Sampling)Learns over time which offer works best for which segment
+
+
+📊 Datasets
+
+
+Baseline / prototyping: IBM Telco Customer Churn dataset — clean, well-documented, good for initial pipeline validation.
+Primary (for differentiation): KKBox Churn Prediction dataset (Kaggle / WSDM Cup) — large-scale, temporal, event-log based. Requires real feature engineering instead of using a pre-flattened table, which is a meaningfully stronger signal of ability.
+Optional / advanced: Synthetically generated SaaS-style longitudinal data (simulated monthly usage, support tickets, billing events, login frequency) to demonstrate the ability to work with raw, messy, time-stamped data rather than only a static CSV.
+
+
+
+⚖️ Key Engineering & ML Challenges
+
+
+Correlation vs. causation: Standard churn models surface correlates of churn, many of which aren't actionable levers. Uplift modeling forces genuine engagement with counterfactual reasoning — this is the hardest and most valuable part of the project.
+Label leakage: Features computed after the point of churn decision will leak into training if time windows aren't handled carefully. Getting this right (and documenting how) is a strong signal of engineering maturity.
+Class imbalance and asymmetric costs: Churn events are rare, and false negatives (missed at-risk customers) cost differently than false positives (wasted retention spend). This requires a custom cost-weighted evaluation rather than relying on accuracy or plain F1.
+Explainability at the individual level: Global feature importance is easy to produce; a trustworthy, correct, per-customer explanation — especially with correlated features — is not.
+Serving latency: Batch-scoring a customer base and serving cached results with fast dashboard load times is what separates a "production-aware" project from a notebook exercise.
+
+
+
+📈 Evaluation Metrics
+
+
+Classification: AUC-ROC, PR-AUC (prioritized over ROC given class imbalance), F1 at a business-calibrated threshold.
+Time-to-event: Concordance index (C-index) for the survival model.
+Causal / uplift: Qini coefficient and uplift AUC — including this metric is itself a differentiator, since most public churn projects never touch causal evaluation.
+Business impact: A simulated ROI comparison — e.g., "targeting the top-decile uplift segment with a $10 offer saves an estimated $X versus blanket targeting of all high-risk customers." This single number is the most important output of the entire project for a non-technical reviewer.
+
+
+
+🖥️ Dashboard Requirements
+
+
+Per-customer view: churn probability, estimated time-to-churn, plain-language explanation of top risk drivers.
+Recommended action per customer (send offer / call / no action), driven by uplift score, not raw risk score.
+Segment-level view: expected ROI of following model recommendations vs. blanket strategy.
+Model performance panel: AUC-ROC, PR-AUC, Qini curve, calibration plot.
+
+
+
+🚀 Stretch Goal: Adaptive Retention Policy
+
+Frame "which offer to send which customer" as a contextual bandit problem (LinUCB or Thompson Sampling) so the system learns, over time and from real outcomes, which interventions work best for which customer segments. This moves the project from a static model to an adaptive decision system — closer to what real growth/marketing teams building "next-best-action" systems actually deploy.
+
+
+🗂️ Suggested Project Structure
+
+churn-intelligence-platform/
+├── data/
+│   ├── raw/
+│   └── processed/
+├── notebooks/
+│   ├── 01_eda.ipynb
+│   ├── 02_feature_engineering.ipynb
+│   ├── 03_baseline_classifier.ipynb
+│   ├── 04_survival_model.ipynb
+│   ├── 05_uplift_modeling.ipynb
+│   └── 06_roi_simulation.ipynb
+├── src/
+│   ├── features/
+│   ├── models/
+│   ├── explainability/
+│   └── evaluation/
+├── dashboard/
+│   ├── app.py
+│   └── components/
+├── api/
+│   └── main.py
+├── reports/
+│   └── figures/
+├── requirements.txt
+└── README.md
+
+
+🗓️ Suggested Build Order
+
+
+Baseline classifier on Telco dataset — validate the end-to-end pipeline.
+Migrate to KKBox dataset — build real time-windowed feature engineering.
+Add SHAP-based per-customer explainability.
+Add survival analysis (time-to-churn).
+Build the uplift model and validate with Qini curve.
+Build the ROI simulation layer.
+Build the dashboard (Streamlit first, React/Flask if time allows).
+Stretch: contextual bandit adaptive policy.
+
+
+
+💡 Why This Project Stands Out
+
+The sentence this project is built to justify: "I built a system that tells you who to target, why, and what it's worth — not just who is likely to leave." That distinction — risk prediction vs. causal, cost-aware decision support — is what separates this from the hundreds of churn classifiers already on GitHub, and it is exactly the kind of reasoning retention, growth, and applied ML teams are hired to do.

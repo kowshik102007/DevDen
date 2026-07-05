@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Shield Outline -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="4"
+        android:strokeLineJoin="round"
+        android:pathData="M54,18 L84,28 L84,55 C84,78 66,96 54,102 C42,96 24,78 24,55 L24,28 Z" />
+        
+    <!-- Map Pin inside Shield -->
+    <path
+        android:fillColor="#FF9800"
+        android:pathData="M54,35 C46.8,35 41,40.8 41,48 C41,58.4 54,73 54,73 C54,73 67,58.4 67,48 C67,40.8 61.2,35 54,35 Z M54,53 C51.2,53 49,50.8 49,48 C49,45.2 51.2,43 54,43 C56.8,43 59,45.2 59,48 C59,50.8 56.8,53 54,53 Z" />
+</vector>
