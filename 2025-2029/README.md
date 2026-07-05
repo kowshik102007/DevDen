@@ -2,8 +2,8 @@
 
 ## Overview
 
-Provide a brief introduction about the 2025–2029 batch.  
-Describe the academic duration, overall direction, and technical focus of the cohort.
+The SIG-AI (Special Interest Group in Artificial Intelligence) Batch of 2025–2029 is a dedicated cohort focused on advancing the frontiers of artificial intelligence. Spanning a four-year academic duration, this portfolio serves as a central repository to document and showcase our innovative AI projects, technical developments, and research endeavors as we progress through the program.
+
 
 ## Core Focus Areas
 * **Machine Learning:** Building predictive models and data-driven algorithms.
