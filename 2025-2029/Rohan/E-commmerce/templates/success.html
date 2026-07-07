@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}Success - E-Commerce Store{% endblock %}
+
+{% block extra_css %}
+<style>
+    .success-container {
+        max-width: 500px;
+        margin: 50px auto;
+        background: white;
+        padding: 50px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        text-align: center;
+        border-top: 5px solid #28a745;
+    }
+    
+    .success-container h1 {
+        color: #28a745;
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    
+    .success-container p {
+        color: #555;
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+    
+    .success-container a {
+        display: inline-block;
+        padding: 12px 30px;
+        background: linear-gradient(135deg, #eaac66, #764ba2);
+        color: white;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+    
+    .success-container a:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="success-container">
+    <h1>✓ {{ message or 'Success!' }}</h1>
+    <p>Your action has been completed successfully.</p>
+    <a href="/">Back to Home</a>
+</div>
+{% endblock %}
+
+
+<h1>Regestration Successful </h1>
+
+<p>Welcome to the E-commerce website.</p>
+
+<a href="/login">Login</a>
+
+</div>
+
+</body>
+</html>
