@@ -1,8 +1,4 @@
-#  Hi, I'm Mohith Dande 👋
-
-<div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Outfit&size=24&duration=3000&pause=1000&color=22D3EE&center=true&vCenter=true&width=600&lines=Cyber+Security+Student+;AI+%26+Machine+Learning+Enthusiast+;Full-Stack+Developer+" alt="Mohith's Typing SVG" />
-</div>
+#  Hi, I'm Mohith Dande 
 
 <p align="center">
   <a href="https://mohith1-stack.github.io">
@@ -18,7 +14,7 @@
 
 ---
 
-## ⚡ About Me
+##  About Me
 
 I am a passionate **B.Tech Computer Science student specializing in Cyber Security** at Amrita Vishwa Vidyapeetham, India. My passion lies at the intersection of robust security systems, predictive Machine Learning algorithms, and secure full-stack web applications. I love automation, developing intelligent pipelines, and exploring explainable AI technologies.
 
@@ -84,18 +80,18 @@ I am a passionate **B.Tech Computer Science student specializing in Cyber Securi
 
 | Project | Domain / Type | Primary Stack | Live Repo Link |
 | :--- | :--- | :--- | :--- |
-| **🤖 AI Student Placement Predictor** | Machine Learning (Predictive) | Python, Flask, Scikit-Learn | [View Repo](https://github.com/Mohith1-stack/AI-Student-Placement-Predictor) |
-| **🎥 Netflix Recommendation System** | Machine Learning (NLP) | Python, Flask, TMDB API | [View Repo](https://github.com/Mohith1-stack/Netflix-Recommendation-System) |
-| **🛡️ Guardian Path** | Mobile / Cyber Security | Kotlin, Android SDK, Maps | [View Repo](https://github.com/Mohith1-stack/Code-Chaos) |
-| **💼 SkillBridge AI** | Full Stack / SaaS | React, Node.js, MongoDB, OpenAI | [View Repo](https://github.com/Mohith1-stack/AI-Powered-Freelance-Marketplace) |
-| **🎵 Spotify Clone** | Web App / Streaming | React, Node.js, MongoDB | [View Repo](https://github.com/Mohith1-stack/Spotify-Clone) |
-| **🏦 Loan Approval Predictor** | Machine Learning | Python, Streamlit, Scikit-Learn | [View Repo](https://github.com/Mohith1-stack/AI-Loan-Approval-Prediction) |
-| **🏙️ CivicSense-AI** | Smart Governance | Flask, SQLite, NLP Classifier | [View Repo](https://github.com/Mohith1-stack/CivicSense-AI) |
-| **📚 TechBuddies** | Web App / Management | Flask, SQLAlchemy, SQLite | [View Repo](https://github.com/Mohith1-stack/TechBuddies) |
+| ** AI Student Placement Predictor** | Machine Learning (Predictive) | Python, Flask, Scikit-Learn | [View Repo](https://github.com/Mohith1-stack/AI-Student-Placement-Predictor) |
+| ** Netflix Recommendation System** | Machine Learning (NLP) | Python, Flask, TMDB API | [View Repo](https://github.com/Mohith1-stack/Netflix-Recommendation-System) |
+| ** Guardian Path** | Mobile / Cyber Security | Kotlin, Android SDK, Maps | [View Repo](https://github.com/Mohith1-stack/Code-Chaos) |
+| ** SkillBridge AI** | Full Stack / SaaS | React, Node.js, MongoDB, OpenAI | [View Repo](https://github.com/Mohith1-stack/AI-Powered-Freelance-Marketplace) |
+| ** Spotify Clone** | Web App / Streaming | React, Node.js, MongoDB | [View Repo](https://github.com/Mohith1-stack/Spotify-Clone) |
+| ** Loan Approval Predictor** | Machine Learning | Python, Streamlit, Scikit-Learn | [View Repo](https://github.com/Mohith1-stack/AI-Loan-Approval-Prediction) |
+| ** CivicSense-AI** | Smart Governance | Flask, SQLite, NLP Classifier | [View Repo](https://github.com/Mohith1-stack/CivicSense-AI) |
+| ** TechBuddies** | Web App / Management | Flask, SQLAlchemy, SQLite | [View Repo](https://github.com/Mohith1-stack/TechBuddies) |
 
 ---
 
-## 📊 Github Stats
+##  Github Stats
 
 <div align="center">
   <table border="0">
