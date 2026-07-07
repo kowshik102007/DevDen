@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Dashboard — Lost & Found</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <!-- Favicon Fix -->
+  <link rel="icon" href="data:," />
+</head>
+
+<body class="bg-[#060d1a] text-slate-100 min-h-screen overflow-x-hidden">
+
+<!-- Background Orbs -->
+<div class="bg-orb bg-orb-1"></div>
+<div class="bg-orb bg-orb-2"></div>
+<div class="bg-orb bg-orb-3"></div>
+
+<!-- Spinner -->
+<div id="globalSpinner" style="display:none">
+  <div class="spinner-ring"></div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar fixed top-0 left-0 right-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+
+    <!-- Logo -->
+    <a href="index.html" class="flex items-center gap-2.5">
+      <div class="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center font-display font-bold text-white text-sm shadow-lg shadow-blue-600/30">
+        L&F
+      </div>
+
+      <span class="font-display font-bold text-white text-sm tracking-wider hidden sm:block">
+          LOST<span class="text-blue-400">&</span>FOUND
+        </span>
+    </a>
+
+    <!-- Desktop Nav -->
+    <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+
+      <a href="index.html"
+         class="text-slate-400 hover:text-slate-200 transition-colors">
+        Home
+      </a>
+
+      <a href="lost.html"
+         class="text-slate-400 hover:text-slate-200 transition-colors">
+        Lost Items
+      </a>
+
+      <a href="found.html"
+         class="text-slate-400 hover:text-slate-200 transition-colors">
+        Found Items
+      </a>
+
+      <a href="post.html"
+         class="text-slate-400 hover:text-slate-200 transition-colors">
+        Post Item
+      </a>
+
+      <a href="dashboard.html"
+         class="text-blue-400">
+        Dashboard
+      </a>
+      <a href="contact.html"
+          class="text-slate-400 hover:text-slate-200 transition-colors">
+          Contact
+      </a>
+
+    </div>
+
+    <!-- Right -->
+    <div class="flex items-center gap-3">
+
+      <a href="post.html"
+         class="btn-primary hidden sm:flex px-4 py-2 rounded-xl text-sm font-semibold text-white items-center gap-2">
+        <span>+</span>
+        <span>Post</span>
+      </a>
+
+      <button id="logoutBtn"
+              class="text-slate-400 hover:text-red-400 text-sm transition-colors">
+        Logout
+      </button>
+
+      <!-- Mobile -->
+      <button id="mobileMenuBtn"
+              class="md:hidden text-slate-400 hover:text-white p-2">
+
+        <svg class="w-5 h-5"
+             fill="none"
+             stroke="currentColor"
+             viewBox="0 0 24 24">
+
+          <path stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu"
+       class="hidden md:hidden border-t border-white/5 bg-[#060d1a]/95 backdrop-blur-xl">
+
+    <div class="px-4 py-4 space-y-2 text-sm font-medium">
+
+      <a href="index.html"
+         class="block py-2 text-slate-400">
+        Home
+      </a>
+
+      <a href="lost.html"
+         class="block py-2 text-slate-400">
+        Lost Items
+      </a>
+
+      <a href="found.html"
+         class="block py-2 text-slate-400">
+        Found Items
+      </a>
+
+      <a href="post.html"
+         class="block py-2 text-slate-400">
+        Post Item
+      </a>
+
+      <a href="dashboard.html"
+         class="block py-2 text-blue-400">
+        Dashboard
+      </a>
+      <a href="contact.html"
+      class="block py-2 text-slate-400">
+      Contact
+      </a>
+
+    </div>
+  </div>
+</nav>
+
+<!-- Header -->
+<section class="pt-24 pb-8 px-4 relative z-10 border-b border-white/5">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+      <div class="flex items-center gap-4">
+        <div id="userAvatar"
+             class="w-16 h-16 rounded-2xl bg-blue-600 flex items-center justify-center font-display font-black text-white text-xl shadow-2xl shadow-blue-600/30">U</div>
+        <div>
+          <h1 class="font-display text-2xl sm:text-3xl font-bold text-white" id="userName">User</h1>
+          <p class="text-slate-500 text-sm mt-1" id="userEmail">Loading account…</p>
+        </div>
+      </div>
+      <a href="post.html"
+         class="btn-primary px-5 py-3 rounded-xl text-white font-semibold text-sm inline-flex items-center gap-2 self-start sm:self-auto">
+        <svg class="w-4 h-4"
+             fill="none"
+             stroke="currentColor"
+             viewBox="0 0 24 24">
+          <path stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 4v16m8-8H4"/></svg>
+        Post New Item
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="py-8 px-4 relative z-10">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-5">
+    <div class="glass-card rounded-2xl p-5">
+      <div class="text-slate-500 text-xs mb-1">Total Posts</div>
+      <div id="statTotal"
+           class="font-display text-3xl font-bold text-white">0</div>
+    </div>
+    <div class="glass-card rounded-2xl p-5">
+      <div class="text-slate-500 text-xs mb-1">Open Items</div>
+      <div id="statOpen"
+           class="font-display text-3xl font-bold text-blue-400">0</div>
+    </div>
+    <div class="glass-card rounded-2xl p-5">
+      <div class="text-slate-500 text-xs mb-1">Reunited</div>
+      <div id="statReunited"
+           class="font-display text-3xl font-bold text-emerald-400">0</div>
+    </div>
+  </div>
+</section>
+
+<!-- Tabs -->
+<section class="px-4 relative z-10">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex items-center gap-3 border-b border-white/5 mb-6">
+      <button data-tab="lost"
+              class="tab-btn tab-active px-4 py-3 text-sm font-semibold flex items-center gap-2">
+        Lost Items <span id="lostCount"
+              class="text-xs text-slate-500">0</span>
+      </button>
+      <button data-tab="found"
+              class="tab-btn px-4 py-3 text-sm font-semibold flex items-center gap-2">
+        Found Items <span id="foundCount"
+              class="text-xs text-slate-500">0</span>
+      </button>
+    </div>
+
+    <div id="dashGrid"
+         class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 pb-12">
+      <!-- Dashboard items rendered here -->
+    </div>
+  </div>
+</section>
+
+<!-- SCRIPTS -->
+<script type="module">
+
+  import { initDashboard } from "./js/dashboard.js";
+  import { logout } from "./js/auth.js";
+
+  document.getElementById("mobileMenuBtn")?.addEventListener("click", () => {
+    document.getElementById("mobileMenu").classList.toggle("hidden");
+  });
+  document.getElementById("logoutBtn")?.addEventListener("click", logout);
+
+  initDashboard();
+
+
+</script>
+
+</body>
+</html>

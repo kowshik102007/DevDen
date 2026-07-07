@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PHAROS — Adaptive Optics Wavefront Reconstruction</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0a0e17;--bg2:#111827;--bg3:#1a2236;--bg4:#232d44;
+  --text:#e2e8f0;--text2:#94a3b8;--text3:#64748b;
+  --accent:#06b6d4;--accent2:#22d3ee;--accent3:#0e7490;
+  --green:#10b981;--purple:#a78bfa;--orange:#f59e0b;--pink:#f472b6;
+  --radius:12px;--max-w:1140px;
+}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,14,23,.85);backdrop-filter:blur(16px);border-bottom:1px solid rgba(6,182,212,.1);transition:box-shadow .3s}
+nav.scrolled{box-shadow:0 4px 30px rgba(0,0,0,.4)}
+.nav-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 24px;height:64px}
+.nav-logo{font-size:1.25rem;font-weight:700;letter-spacing:2px;color:var(--accent)}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{color:var(--text2);text-decoration:none;font-size:.875rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--accent2)}
+.hamburger{display:none;background:none;border:none;color:var(--text);font-size:1.5rem;cursor:pointer}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 24px 80px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(ellipse at 60% 40%,rgba(6,182,212,.08) 0%,transparent 50%),radial-gradient(ellipse at 30% 70%,rgba(167,139,250,.06) 0%,transparent 50%);animation:heroGlow 12s ease-in-out infinite alternate}
+@keyframes heroGlow{0%{transform:translate(0,0)}100%{transform:translate(-3%,2%)}}
+.hero-content{position:relative;z-index:1;max-width:800px}
+.hero-badge{display:inline-block;padding:6px 16px;border:1px solid var(--accent3);border-radius:999px;font-size:.75rem;font-weight:600;letter-spacing:1.5px;color:var(--accent2);margin-bottom:24px;text-transform:uppercase}
+.hero h1{font-size:clamp(3rem,8vw,5.5rem);font-weight:800;letter-spacing:6px;line-height:1.1;margin-bottom:12px}
+.hero h1 span{background:linear-gradient(135deg,var(--accent),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{font-size:clamp(1rem,2.5vw,1.35rem);color:var(--text2);max-width:640px;margin:0 auto 16px;font-weight:400}
+.hero-full{font-size:.95rem;color:var(--text3);margin-bottom:40px;font-style:italic}
+.hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;border-radius:8px;font-size:.95rem;font-weight:600;text-decoration:none;transition:all .25s}
+.btn-primary{background:var(--accent);color:#0a0e17}
+.btn-primary:hover{background:var(--accent2);transform:translateY(-2px);box-shadow:0 8px 30px rgba(6,182,212,.3)}
+.btn-outline{border:1.5px solid var(--bg4);color:var(--text2);background:transparent}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent)}
+
+/* SECTIONS */
+section{padding:100px 24px}
+.section-inner{max-width:var(--max-w);margin:0 auto}
+.section-label{font-size:.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.section-title{font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;margin-bottom:16px}
+.section-desc{color:var(--text2);max-width:600px;margin-bottom:48px;font-size:1.05rem}
+
+/* PIPELINE */
+.pipeline-section{background:var(--bg2)}
+.pipeline-wrapper{position:relative;overflow-x:auto;padding:20px 0}
+.pipeline{display:flex;align-items:center;gap:0;min-width:max-content;margin:0 auto;justify-content:center}
+.pipe-stage{display:flex;flex-direction:column;align-items:center;position:relative}
+.pipe-box{width:130px;padding:18px 12px;background:var(--bg3);border:1px solid var(--bg4);border-radius:var(--radius);text-align:center;transition:all .3s;cursor:default;position:relative;z-index:1}
+.pipe-box:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:0 8px 24px rgba(6,182,212,.15)}
+.pipe-icon{font-size:1.5rem;margin-bottom:8px;display:block}
+.pipe-name{font-size:.8rem;font-weight:600;color:var(--text)}
+.pipe-ml{font-size:.65rem;color:var(--green);margin-top:6px;font-weight:600;opacity:0;transition:opacity .3s}
+.pipe-box:hover .pipe-ml{opacity:1}
+.pipe-arrow{color:var(--accent3);font-size:1.2rem;margin:0 6px;flex-shrink:0;animation:arrowPulse 2s ease-in-out infinite}
+@keyframes arrowPulse{0%,100%{opacity:.4}50%{opacity:1}}
+
+/* FEATURES */
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.feature-card{background:var(--bg2);border:1px solid var(--bg4);border-radius:var(--radius);padding:32px;transition:all .3s}
+.feature-card:hover{border-color:var(--accent3);transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,.3)}
+.feature-icon{width:48px;height:48px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:20px}
+.fi-cyan{background:rgba(6,182,212,.12);color:var(--accent2)}
+.fi-purple{background:rgba(167,139,250,.12);color:var(--purple)}
+.fi-green{background:rgba(16,185,129,.12);color:var(--green)}
+.fi-orange{background:rgba(245,158,11,.12);color:var(--orange)}
+.fi-pink{background:rgba(244,114,182,.12);color:var(--pink)}
+.feature-card h3{font-size:1.15rem;margin-bottom:10px;font-weight:600}
+.feature-card p{color:var(--text2);font-size:.9rem;line-height:1.7}
+
+/* HOW IT WORKS */
+.how-section{background:var(--bg2)}
+.stages{display:flex;flex-direction:column;gap:40px}
+.stage{display:grid;grid-template-columns:80px 1fr;gap:24px;align-items:start}
+.stage-num{width:56px;height:56px;border-radius:50%;background:var(--bg3);border:2px solid var(--accent3);display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:700;color:var(--accent);flex-shrink:0}
+.stage-content h3{font-size:1.1rem;font-weight:600;margin-bottom:8px}
+.stage-content p{color:var(--text2);font-size:.9rem;line-height:1.7}
+.stage-formula{display:inline-block;background:var(--bg);padding:6px 14px;border-radius:6px;font-family:'Courier New',Courier,monospace;font-size:.85rem;color:var(--accent2);margin-top:10px;border:1px solid var(--bg4)}
+
+/* PERFORMANCE */
+.perf-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.perf-table{width:100%;border-collapse:collapse;background:var(--bg2);border-radius:var(--radius);overflow:hidden}
+.perf-table th{background:var(--bg3);padding:14px 20px;text-align:left;font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--text2)}
+.perf-table td{padding:14px 20px;border-top:1px solid var(--bg4);font-size:.9rem}
+.perf-table tr:hover td{background:rgba(6,182,212,.03)}
+.perf-highlight{color:var(--accent2);font-weight:700}
+.optimizations{list-style:none;display:flex;flex-direction:column;gap:16px}
+.optimizations li{padding:16px 20px;background:var(--bg2);border-radius:var(--radius);border-left:3px solid var(--accent3);font-size:.9rem;color:var(--text2);line-height:1.6}
+.optimizations li strong{color:var(--text);display:block;margin-bottom:4px}
+.perf-badge{display:inline-block;padding:3px 10px;border-radius:4px;font-size:.7rem;font-weight:700;margin-left:8px}
+.badge-fast{background:rgba(16,185,129,.15);color:var(--green)}
+.badge-ml{background:rgba(167,139,250,.15);color:var(--purple)}
+
+/* ARCHITECTURE */
+.arch-section{background:var(--bg2)}
+.arch-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.file-tree{background:var(--bg);border:1px solid var(--bg4);border-radius:var(--radius);padding:28px;font-family:'Courier New',Courier,monospace;font-size:.82rem;line-height:1.9;color:var(--text2);overflow-x:auto;white-space:pre}
+.file-tree .dir{color:var(--accent2);font-weight:600}
+.file-tree .comment{color:var(--text3)}
+.tech-stack{display:flex;flex-wrap:wrap;gap:12px;align-content:start}
+.tech-badge{padding:10px 18px;background:var(--bg);border:1px solid var(--bg4);border-radius:8px;font-size:.85rem;font-weight:500;color:var(--text2);transition:all .2s}
+.tech-badge:hover{border-color:var(--accent3);color:var(--text)}
+
+/* GETTING STARTED */
+.steps{display:flex;flex-direction:column;gap:24px;max-width:720px}
+.step{background:var(--bg2);border:1px solid var(--bg4);border-radius:var(--radius);overflow:hidden}
+.step-header{display:flex;align-items:center;gap:12px;padding:16px 20px;cursor:pointer;user-select:none}
+.step-header:hover{background:rgba(6,182,212,.03)}
+.step-number{width:28px;height:28px;border-radius:50%;background:var(--accent3);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;flex-shrink:0}
+.step-title{font-weight:600;font-size:.95rem}
+.step-toggle{margin-left:auto;color:var(--text3);transition:transform .3s;font-size:.8rem}
+.step.open .step-toggle{transform:rotate(180deg)}
+.step-body{display:none;padding:0 20px 20px 60px}
+.step.open .step-body{display:block}
+.code-block{background:var(--bg);border:1px solid var(--bg4);border-radius:8px;padding:16px;font-family:'Courier New',Courier,monospace;font-size:.82rem;line-height:1.7;color:var(--accent2);overflow-x:auto;margin-top:8px;position:relative}
+.code-block .prompt{color:var(--text3);user-select:none}
+.copy-btn{position:absolute;top:8px;right:8px;background:var(--bg3);border:1px solid var(--bg4);color:var(--text3);padding:4px 10px;border-radius:4px;font-size:.7rem;cursor:pointer;transition:all .2s}
+.copy-btn:hover{border-color:var(--accent);color:var(--accent)}
+
+/* CONFIG */
+.config-section{background:var(--bg2)}
+.config-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.config-card{background:var(--bg);border:1px solid var(--bg4);border-radius:var(--radius);padding:24px}
+.config-card h4{font-size:.8rem;text-transform:uppercase;letter-spacing:1px;color:var(--accent);margin-bottom:16px;font-weight:600}
+.config-row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--bg4);font-size:.85rem}
+.config-row:last-child{border-bottom:none}
+.config-key{color:var(--text2)}
+.config-val{color:var(--text);font-weight:500;font-family:'Courier New',Courier,monospace;font-size:.82rem}
+
+/* FOOTER */
+footer{border-top:1px solid var(--bg4);padding:40px 24px;text-align:center}
+footer p{color:var(--text3);font-size:.85rem}
+footer a{color:var(--accent);text-decoration:none}
+footer a:hover{text-decoration:underline}
+
+/* SCROLL ANIMATIONS */
+.fade-up{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:var(--bg);flex-direction:column;padding:20px 24px;gap:16px;border-bottom:1px solid var(--bg4)}
+  .nav-links.open{display:flex}
+  .hamburger{display:block}
+  .perf-grid,.arch-grid{grid-template-columns:1fr}
+  .stage{grid-template-columns:48px 1fr;gap:16px}
+  .stage-num{width:42px;height:42px;font-size:.9rem}
+  .pipeline{flex-wrap:wrap;justify-content:center;gap:8px}
+  .pipe-arrow{display:none}
+  .features-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <div class="nav-logo">PHAROS</div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#pipeline">Pipeline</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#how">How It Works</a></li>
+      <li><a href="#performance">Performance</a></li>
+      <li><a href="#architecture">Architecture</a></li>
+      <li><a href="#start">Get Started</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">Adaptive Optics Pipeline</div>
+    <h1><span>PHAROS</span></h1>
+    <p class="hero-sub">Phase and Hartmann Adaptive Reconstruction with Optimised Sensing</p>
+    <p class="hero-full">End-to-end wavefront reconstruction and atmospheric turbulence characterisation using Shack-Hartmann Wavefront Sensor data, with classical and ML-accelerated paths.</p>
+    <div class="hero-btns">
+      <a href="#start" class="btn btn-primary">Get Started</a>
+      <a href="#pipeline" class="btn btn-outline">Explore Pipeline</a>
+    </div>
+  </div>
+</section>
+
+<!-- PIPELINE VISUALIZATION -->
+<section class="pipeline-section" id="pipeline">
+  <div class="section-inner">
+    <div class="section-label">Processing Chain</div>
+    <h2 class="section-title">The PHAROS Pipeline</h2>
+    <p class="section-desc">From raw sensor frame to deformable mirror commands in under 10 ms.</p>
+    <div class="pipeline-wrapper fade-up">
+      <div class="pipeline">
+        <div class="pipe-stage">
+          <div class="pipe-box">
+            <span class="pipe-icon">&#128247;</span>
+            <span class="pipe-name">Raw Frame</span>
+            <span class="pipe-ml">&nbsp;</span>
+          </div>
+        </div>
+        <span class="pipe-arrow">&#10132;</span>
+        <div class="pipe-stage">
+          <div class="pipe-box">
+            <span class="pipe-icon">&#9881;</span>
+            <span class="pipe-name">Preprocess</span>
+            <span class="pipe-ml">Dark + Flat</span>
+          </div>
+        </div>
+        <span class="pipe-arrow">&#10132;</span>
+        <div class="pipe-stage">
+          <div class="pipe-box">
+            <span class="pipe-icon">&#9678;</span>
+            <span class="pipe-name">Centroid</span>
+            <span class="pipe-ml">CNN Drop-in</span>
+          </div>
+        </div>
+        <span class="pipe-arrow">&#10132;</span>
+        <div class="pipe-stage">
+          <div class="pipe-box">
+            <span class="pipe-icon">&#8599;</span>
+            <span class="pipe-name">Slopes</span>
+            <span class="pipe-ml">&nbsp;</span>
+          </div>
+        </div>
+        <span class="pipe-arrow">&#10132;</span>
+        <div class="pipe-stage">
+          <div class="pipe-box">
+            <span class="pipe-icon">&#127754;</span>
+            <span class="pipe-name">Reconstruct</span>
+            <span class="pipe-ml">MLP Drop-in</span>
+          </div>
+        </div>
+        <span class="pipe-arrow">&#10132;</span>
+        <div class="pipe-stage">
+          <div class="pipe-box">
+            <span class="pipe-icon">&#127752;</span>
+            <span class="pipe-name">Turbulence</span>
+            <span class="pipe-ml">ANN Drop-in</span>
+          </div>
+        </div>
+        <span class="pipe-arrow">&#10132;</span>
+        <div class="pipe-stage">
+          <div class="pipe-box">
+            <span class="pipe-icon">&#128640;</span>
+            <span class="pipe-name">DM Commands</span>
+            <span class="pipe-ml">RL Control</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features">
+  <div class="section-inner">
+    <div class="section-label">Capabilities</div>
+    <h2 class="section-title">What PHAROS Does</h2>
+    <p class="section-desc">A complete adaptive optics processing chain with dual classical and ML paths.</p>
+    <div class="features-grid">
+      <div class="feature-card fade-up">
+        <div class="feature-icon fi-cyan">&#9883;</div>
+        <h3>Classical Pipeline</h3>
+        <p>Full SVD-based wavefront reconstruction via Zernike modal decomposition. Dark subtraction, flat-field correction, threshold centroiding, and Noll-based turbulence estimation out of the box.</p>
+      </div>
+      <div class="feature-card fade-up">
+        <div class="feature-icon fi-purple">&#9889;</div>
+        <h3>ML-Accelerated Path</h3>
+        <p>Three trained neural networks as drop-in replacements: CentroidCNN for sub-pixel spot localisation, WavefrontMLP for slope-to-Zernike reconstruction, and TurbulenceANN for r&#8320; and &#964;&#8320; estimation.</p>
+      </div>
+      <div class="feature-card fade-up">
+        <div class="feature-icon fi-green">&#9200;</div>
+        <h3>Real-Time Control Loop</h3>
+        <p>Producer-consumer architecture with separate capture and processing threads. Queue-based frame management with latency monitoring and graceful frame-drop handling.</p>
+      </div>
+      <div class="feature-card fade-up">
+        <div class="feature-icon fi-orange">&#128202;</div>
+        <h3>Benchmarking Suite</h3>
+        <p>End-to-end latency profiling, RMS wavefront error, Strehl ratio computation, and phase structure function validation. Classical vs ML comparison tables.</p>
+      </div>
+      <div class="feature-card fade-up">
+        <div class="feature-icon fi-pink">&#128230;</div>
+        <h3>Model Export</h3>
+        <p>Export trained models to TorchScript and ONNX for deployment. GPU-free CPU inference path for embedded and edge scenarios.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section" id="how">
+  <div class="section-inner">
+    <div class="section-label">Deep Dive</div>
+    <h2 class="section-title">How It Works</h2>
+    <p class="section-desc">Each pipeline stage maps directly to the physics of atmospheric wavefront sensing.</p>
+    <div class="stages">
+      <div class="stage fade-up">
+        <div class="stage-num">1</div>
+        <div class="stage-content">
+          <h3>Frame Preprocessing</h3>
+          <p>Raw SH-WFS frames are loaded and normalised to float32. A dark frame is subtracted to remove sensor bias, then a flat-field correction accounts for pixel-to-pixel sensitivity variation. An optimised <code>preprocess_fast</code> path uses precomputed correctors for real-time operation.</p>
+        </div>
+      </div>
+      <div class="stage fade-up">
+        <div class="stage-num">2</div>
+        <div class="stage-content">
+          <h3>Centroid Extraction</h3>
+          <p>Each microlens in the 10&times;10 array focuses its portion of the wavefront onto the detector. The spot displacement within each sub-aperture encodes the local wavefront slope. Three methods available: Centre-of-Mass, Threshold CoM (sigma-clipped), and 2D Gaussian fitting. A vectorised batch path processes all sub-apertures simultaneously.</p>
+        </div>
+      </div>
+      <div class="stage fade-up">
+        <div class="stage-num">3</div>
+        <div class="stage-content">
+          <h3>Slope Assembly</h3>
+          <p>Centroid deviations from reference positions are converted to wavefront slopes in radians by dividing by the lenslet focal length. Slopes are assembled into a single vector for reconstruction.</p>
+          <span class="stage-formula">s<sub>x</sub> = &Delta;x / f &nbsp;&nbsp; [radians]</span>
+        </div>
+      </div>
+      <div class="stage fade-up">
+        <div class="stage-num">4</div>
+        <div class="stage-content">
+          <h3>Wavefront Reconstruction</h3>
+          <p>The slope vector is multiplied by a pseudo-inverse reconstructor matrix R = D&#8314; (computed via truncated SVD of the Zernike interaction matrix) to recover the Zernike modal coefficients. The phase map is then synthesised as a linear combination of Zernike polynomials.</p>
+          <span class="stage-formula">c = R &middot; s &nbsp;&nbsp;&nbsp; W(x,y) = &Sigma; c<sub>j</sub> &middot; Z<sub>j</sub>(x,y)</span>
+        </div>
+      </div>
+      <div class="stage fade-up">
+        <div class="stage-num">5</div>
+        <div class="stage-content">
+          <h3>Turbulence Characterisation</h3>
+          <p>From the time-series of Zernike coefficients, the Fried parameter r&#8320; is estimated using the Noll (1976) variance formula. Coherence time &#964;&#8320; is extracted by fitting the temporal power spectral density of the slope measurements to the expected f<sup>-8/3</sup> Kolmogorov spectrum.</p>
+          <span class="stage-formula">Var(Z<sub>j</sub>) = 0.2944 &middot; &Delta;<sub>j</sub> &middot; (D/r&#8320;)<sup>5/3</sup> &middot; &lambda;&sup2;</span>
+        </div>
+      </div>
+      <div class="stage fade-up">
+        <div class="stage-num">6</div>
+        <div class="stage-content">
+          <h3>DM Actuator Commands</h3>
+          <p>The reconstructed phase map is conjugated and the coupling matrix equation I &middot; a = &minus;W is solved via least-squares to compute the 97-actuator stroke vector. Commands are clipped to the physical stroke range (&pm;5 &mu;m) and dispatched to the deformable mirror.</p>
+          <span class="stage-formula">a = I&#8314; &middot; (&minus;W<sub>flat</sub>)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PERFORMANCE -->
+<section id="performance">
+  <div class="section-inner">
+    <div class="section-label">Benchmarks</div>
+    <h2 class="section-title">Performance</h2>
+    <p class="section-desc">Measured on CPU-only (Python 3.14, NumPy 2.5, PyTorch 2.14). Classical pipeline optimised from 58 ms to 6.6 ms.</p>
+    <div class="perf-grid fade-up">
+      <div>
+        <table class="perf-table">
+          <thead>
+            <tr><th>Pipeline</th><th>Median</th><th>p95</th><th>r&#8320; Estimate</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Classical (SVD) <span class="perf-badge badge-fast">FAST</span></td>
+              <td class="perf-highlight">6.6 ms</td>
+              <td>10.8 ms</td>
+              <td>1.30 cm</td>
+            </tr>
+            <tr>
+              <td>ML (WavefrontMLP) <span class="perf-badge badge-ml">ML</span></td>
+              <td>19.6 ms</td>
+              <td>24.8 ms</td>
+              <td>&mdash;</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <ul class="optimizations">
+        <li>
+          <strong>preprocess_fast</strong>
+          Precomputed flat corrector eliminates per-frame division and normalisation overhead.
+        </li>
+        <li>
+          <strong>compute_centroids_vectorised</strong>
+          Batched NumPy operations replace per-subaperture Python loops. ~2x speedup.
+        </li>
+        <li>
+          <strong>basis_at_pts reconstruction</strong>
+          Phase evaluated at sample points only, skipping the full 900&times;900 phase map generation.
+        </li>
+        <li>
+          <strong>58 ms &#10132; 6.6 ms</strong>
+          8.8x total speedup over the naive baseline through targeted optimisations.
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SYSTEM CONFIG -->
+<section class="config-section" id="config">
+  <div class="section-inner">
+    <div class="section-label">System Parameters</div>
+    <h2 class="section-title">Configuration</h2>
+    <p class="section-desc">All optical, detector, and DM parameters are defined in <code>config/system.yaml</code>.</p>
+    <div class="config-grid fade-up">
+      <div class="config-card">
+        <h4>Microlens Array</h4>
+        <div class="config-row"><span class="config-key">Lenslets</span><span class="config-val">10 &times; 10</span></div>
+        <div class="config-row"><span class="config-key">Pitch</span><span class="config-val">0.3 mm</span></div>
+        <div class="config-row"><span class="config-key">Focal Length</span><span class="config-val">18.6 mm</span></div>
+      </div>
+      <div class="config-card">
+        <h4>Camera</h4>
+        <div class="config-row"><span class="config-key">Pixel Size</span><span class="config-val">5.5 &mu;m</span></div>
+        <div class="config-row"><span class="config-key">Resolution</span><span class="config-val">1024 &times; 1024</span></div>
+        <div class="config-row"><span class="config-key">Frame Rate</span><span class="config-val">200 Hz</span></div>
+        <div class="config-row"><span class="config-key">Bit Depth</span><span class="config-val">16-bit</span></div>
+      </div>
+      <div class="config-card">
+        <h4>Pupil</h4>
+        <div class="config-row"><span class="config-key">Diameter</span><span class="config-val">900 px</span></div>
+        <div class="config-row"><span class="config-key">Centre</span><span class="config-val">(512, 512)</span></div>
+      </div>
+      <div class="config-card">
+        <h4>Deformable Mirror</h4>
+        <div class="config-row"><span class="config-key">Actuators</span><span class="config-val">97</span></div>
+        <div class="config-row"><span class="config-key">Stroke Range</span><span class="config-val">&pm;5.0 &mu;m</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ARCHITECTURE -->
+<section class="arch-section" id="architecture">
+  <div class="section-inner">
+    <div class="section-label">Structure</div>
+    <h2 class="section-title">Architecture</h2>
+    <p class="section-desc">Modular design with clear separation between classical algorithms, ML models, and system integration.</p>
+    <div class="arch-grid fade-up">
+      <div class="file-tree"><span class="dir">pharos/</span>                      <span class="comment">Core pipeline</span>
+  preprocess.py              <span class="comment">Dark + flat correction</span>
+  centroid.py                <span class="comment">CoM / threshold / Gaussian</span>
+  slopes.py                  <span class="comment">Centroid offsets to slopes</span>
+  zernike.py                 <span class="comment">Zernike polynomial basis</span>
+  reconstruct.py             <span class="comment">SVD reconstructor</span>
+  turbulence.py              <span class="comment">r&#8320; and &#964;&#8320; estimation</span>
+  actuator.py                <span class="comment">DM command solver</span>
+  pipeline_classical.py      <span class="comment">End-to-end classical</span>
+  realtime.py                <span class="comment">Real-time control loop</span>
+
+<span class="dir">ml/</span>                           <span class="comment">ML models</span>
+  centroid_cnn/              <span class="comment">Patch to sub-pixel centroid</span>
+  reconstructor/             <span class="comment">Slopes to Zernike coeffs</span>
+  turbulence_ann/            <span class="comment">Variances to r&#8320;, &#964;&#8320;</span>
+  rl_control/                <span class="comment">PPO DM control agent</span>
+
+<span class="dir">export/</span>                       <span class="comment">TorchScript + ONNX</span>
+<span class="dir">benchmarks/</span>                   <span class="comment">Latency and accuracy</span>
+<span class="dir">tests/</span>                        <span class="comment">pytest suite (12 passing)</span>
+<span class="dir">config/</span>system.yaml           <span class="comment">System parameters</span>
+simulate_loop.py             <span class="comment">1000-frame closed loop</span></div>
+      <div class="tech-stack">
+        <span class="tech-badge">Python 3.11+</span>
+        <span class="tech-badge">NumPy</span>
+        <span class="tech-badge">SciPy</span>
+        <span class="tech-badge">OpenCV</span>
+        <span class="tech-badge">Matplotlib</span>
+        <span class="tech-badge">Astropy</span>
+        <span class="tech-badge">PyTorch</span>
+        <span class="tech-badge">TorchScript</span>
+        <span class="tech-badge">ONNX</span>
+        <span class="tech-badge">ONNX Runtime</span>
+        <span class="tech-badge">Stable-Baselines3</span>
+        <span class="tech-badge">Gymnasium</span>
+        <span class="tech-badge">aotools</span>
+        <span class="tech-badge">ruamel.yaml</span>
+        <span class="tech-badge">tqdm</span>
+        <span class="tech-badge">pytest</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GETTING STARTED -->
+<section id="start">
+  <div class="section-inner">
+    <div class="section-label">Quick Start</div>
+    <h2 class="section-title">Getting Started</h2>
+    <p class="section-desc">Six steps from clone to closed-loop simulation.</p>
+    <div class="steps">
+      <div class="step open">
+        <div class="step-header" onclick="toggleStep(this)">
+          <span class="step-number">1</span>
+          <span class="step-title">Install Dependencies</span>
+          <span class="step-toggle">&#9660;</span>
+        </div>
+        <div class="step-body">
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<span class="prompt">$</span> pip install -r requirements.txt
+<span class="prompt">$</span> pip install -e .
+          </div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-header" onclick="toggleStep(this)">
+          <span class="step-number">2</span>
+          <span class="step-title">Generate Synthetic Data</span>
+          <span class="step-toggle">&#9660;</span>
+        </div>
+        <div class="step-body">
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<span class="prompt">$</span> python data/sim/generate_sim_data.py
+<span class="prompt">$</span> python data/sim/generate_kolmogorov_data.py
+          </div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-header" onclick="toggleStep(this)">
+          <span class="step-number">3</span>
+          <span class="step-title">Run the Classical Pipeline</span>
+          <span class="step-toggle">&#9660;</span>
+        </div>
+        <div class="step-body">
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<span class="prompt">$</span> python pharos/pipeline_classical.py
+          </div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-header" onclick="toggleStep(this)">
+          <span class="step-number">4</span>
+          <span class="step-title">Train ML Models</span>
+          <span class="step-toggle">&#9660;</span>
+        </div>
+        <div class="step-body">
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<span class="prompt">$</span> python ml/reconstructor/dataset.py --generate --n-samples 10000
+<span class="prompt">$</span> python ml/turbulence_ann/dataset.py --generate --n-samples 50000
+<span class="prompt">$</span> python ml/train_all.py
+          </div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-header" onclick="toggleStep(this)">
+          <span class="step-number">5</span>
+          <span class="step-title">Closed-Loop Simulation</span>
+          <span class="step-toggle">&#9660;</span>
+        </div>
+        <div class="step-body">
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<span class="prompt">$</span> python simulate_loop.py --n-frames 1000 --mode classical
+<span class="prompt">$</span> python simulate_loop.py --n-frames 1000 --mode ml
+          </div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-header" onclick="toggleStep(this)">
+          <span class="step-number">6</span>
+          <span class="step-title">Run Benchmarks</span>
+          <span class="step-toggle">&#9660;</span>
+        </div>
+        <div class="step-body">
+          <div class="code-block">
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+<span class="prompt">$</span> python benchmarks/benchmark.py --n-frames 200
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p><strong style="color:var(--accent);letter-spacing:2px">PHAROS</strong></p>
+  <p style="margin-top:8px">Phase and Hartmann Adaptive Reconstruction with Optimised Sensing</p>
+  <p style="margin-top:12px">MIT License</p>
+</footer>
+
+<script>
+// Navbar scroll effect
+const nav = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// Mobile menu
+document.getElementById('hamburger').addEventListener('click', () => {
+  document.getElementById('navLinks').classList.toggle('open');
+});
+
+// Close mobile menu on link click
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.addEventListener('click', () => {
+    document.getElementById('navLinks').classList.remove('open');
+  });
+});
+
+// Accordion steps
+function toggleStep(header) {
+  const step = header.parentElement;
+  step.classList.toggle('open');
+}
+
+// Copy code
+function copyCode(btn) {
+  const block = btn.parentElement;
+  const text = block.textContent.replace('Copy', '').replace(/\$ /g, '').trim();
+  navigator.clipboard.writeText(text).then(() => {
+    btn.textContent = 'Copied!';
+    setTimeout(() => btn.textContent = 'Copy', 1500);
+  });
+}
+
+// Scroll-triggered fade-up
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/patient_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Patient: "
+            android:textSize="18sp"
+            android:textColor="#0B6E6E"
+            android:textStyle="bold"
+            android:paddingBottom="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Visit Details"
+            android:textSize="16sp"
+            android:textColor="#333333"
+            android:textStyle="bold"
+            android:paddingBottom="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/input_gestational_age"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Gest. Age (weeks)"
+                android:inputType="number"
+                android:background="#FFFFFF"
+                android:padding="12dp"
+                android:layout_marginEnd="8dp" />
+
+            <EditText
+                android:id="@+id/input_weight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Weight (kg)"
+                android:inputType="numberDecimal"
+                android:background="#FFFFFF"
+                android:padding="12dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/input_systolic_bp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Systolic BP"
+                android:inputType="number"
+                android:background="#FFFFFF"
+                android:padding="12dp"
+                android:layout_marginEnd="8dp" />
+
+            <EditText
+                android:id="@+id/input_diastolic_bp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Diastolic BP"
+                android:inputType="number"
+                android:background="#FFFFFF"
+                android:padding="12dp" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/input_hemoglobin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Hemoglobin (g/dL)"
+            android:inputType="numberDecimal"
+            android:background="#FFFFFF"
+            android:padding="12dp"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/input_fetal_heart_rate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fetal Heart Rate (bpm)"
+            android:inputType="number"
+            android:background="#FFFFFF"
+            android:padding="12dp"
+            android:layout_marginTop="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/input_urine_protein"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Urine Protein (0-4)"
+                android:inputType="number"
+                android:background="#FFFFFF"
+                android:padding="12dp"
+                android:layout_marginEnd="8dp" />
+
+            <EditText
+                android:id="@+id/input_muac"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="MUAC (cm)"
+                android:inputType="numberDecimal"
+                android:background="#FFFFFF"
+                android:padding="12dp" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/input_notes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Notes (optional)"
+            android:background="#FFFFFF"
+            android:padding="12dp"
+            android:layout_marginTop="8dp"
+            android:minLines="2" />
+
+        <Button
+            android:id="@+id/btn_submit_visit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit Visit &amp; Get Risk Assessment"
+            android:backgroundTint="#E8543A"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/btn_view_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View Visit History"
+            android:backgroundTint="#0B6E6E"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  overflow: hidden;
+  height: 100%;
+  background-color: #09090b; /* zinc-950 — prevents white flash/bleed in dark mode */
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #3f3f46 transparent;
+}
+
+html.light * {
+  scrollbar-color: #cbd5e1 transparent;
+}
+
+/* Light mode overrides */
+html.light body { background-color: #f8fafc; color: #0f172a; }
+html.light .bg-zinc-950 { background-color: #f8fafc !important; }
+html.light .bg-zinc-900 { background-color: #f1f5f9 !important; }
+html.light .bg-zinc-800 { background-color: #e2e8f0 !important; }
+html.light .bg-zinc-700 { background-color: #cbd5e1 !important; }
+html.light .text-white { color: #0f172a !important; }
+html.light .text-zinc-100 { color: #1e293b !important; }
+html.light .text-zinc-200 { color: #334155 !important; }
+html.light .text-zinc-300 { color: #475569 !important; }
+html.light .text-zinc-400 { color: #374151 !important; }
+html.light .text-zinc-500 { color: #4b5563 !important; }
+html.light .text-zinc-600 { color: #6b7280 !important; }
+html.light .border-zinc-800 { border-color: #e2e8f0 !important; }
+html.light .border-zinc-700 { border-color: #cbd5e1 !important; }
+html.light .hover\:bg-zinc-800:hover { background-color: #e2e8f0 !important; }
+html.light .hover\:bg-zinc-900:hover { background-color: #f1f5f9 !important; }
+html.light .focus-within\:border-zinc-500:focus-within { border-color: #94a3b8 !important; }
+html.light .placeholder-zinc-500::placeholder { color: #94a3b8 !important; }
+html.light .placeholder-zinc-600::placeholder { color: #94a3b8 !important; }
+
+/* ── Light mode: prose-invert overrides ─────────────────────────────────────
+   prose-invert uses CSS custom properties AND Tailwind modifier classes that
+   set direct element colors. Both need to be overridden here.               */
+
+/* Reset the CSS custom properties used by @tailwindcss/typography */
+html.light .prose-invert {
+  --tw-prose-body: #1e293b;
+  --tw-prose-headings: #0f172a;
+  --tw-prose-lead: #475569;
+  --tw-prose-links: #2563eb;
+  --tw-prose-bold: #0f172a;
+  --tw-prose-counters: #475569;
+  --tw-prose-bullets: #64748b;
+  --tw-prose-hr: #e2e8f0;
+  --tw-prose-quotes: #334155;
+  --tw-prose-quote-borders: #cbd5e1;
+  --tw-prose-captions: #475569;
+  --tw-prose-code: #0f172a;
+  --tw-prose-pre-code: #e2e8f0;
+  --tw-prose-pre-bg: #1e293b;
+  --tw-prose-th-borders: #cbd5e1;
+  --tw-prose-td-borders: #e2e8f0;
+}
+
+/* Override direct element colors set by prose modifier classes */
+html.light .prose-invert p,
+html.light .prose-invert li,
+html.light .prose-invert td,
+html.light .prose-invert th,
+html.light .prose-invert blockquote { color: #1e293b !important; }
+
+html.light .prose-invert h1,
+html.light .prose-invert h2,
+html.light .prose-invert h3,
+html.light .prose-invert h4,
+html.light .prose-invert h5,
+html.light .prose-invert h6 { color: #0f172a !important; }
+
+html.light .prose-invert strong,
+html.light .prose-invert b { color: #0f172a !important; }
+
+html.light .prose-invert em,
+html.light .prose-invert i { color: #334155 !important; }
+
+html.light .prose-invert a { color: #2563eb !important; }
+
+/* Inline code: light blue chip on slate background */
+html.light .prose-invert :not(pre) > code {
+  color: #0369a1 !important;
+  background-color: #dbeafe !important;
+}
+
+/* Keep code blocks (syntax highlighter) dark — they're always readable */
+html.light .prose-invert pre { background-color: #1e293b !important; }
+
+/* KaTeX math — keep dark so it's readable on white */
+html.light .prose-invert .katex { color: #0f172a !important; }
+
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #3f3f46;
+  border-radius: 3px;
+}

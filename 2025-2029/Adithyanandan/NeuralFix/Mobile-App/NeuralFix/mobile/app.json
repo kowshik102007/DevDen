@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "NeuralFix",
+    "slug": "neuralfix",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#080B12"
+    },
+    "ios": {
+      "bundleIdentifier": "com.neuralfix.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "NeuralFix needs camera access to photograph devices for diagnosis.",
+        "NSPhotoLibraryUsageDescription": "NeuralFix needs photo access to upload device images."
+      }
+    },
+    "android": {
+      "package": "com.neuralfix.app",
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow NeuralFix to access your photos.",
+          "cameraPermission": "Allow NeuralFix to use the camera."
+        }
+      ],
+      "expo-asset"
+    ]
+  }
+}

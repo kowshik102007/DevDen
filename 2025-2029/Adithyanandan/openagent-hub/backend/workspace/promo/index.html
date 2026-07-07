@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OpenAgent Hub – Self‑hosted AI Operating System</title>
+  <meta name="description" content="Docker‑first self‑hosted AI workspace that unifies multiple LLM providers, agents, tools, memory and more." />
+  <!-- Open Graph / SEO -->
+  <meta property="og:title" content="OpenAgent Hub – Self‑hosted AI Operating System" />
+  <meta property="og:description" content="Docker‑first self‑hosted AI workspace that unifies multiple LLM providers, agents, tools, memory and more." />
+  <meta property="og:image" content="https://raw.githubusercontent.com/AdithyanandanArun/openagent-hub/main/frontend/public/og-image.png" />
+  <meta property="og:url" content="https://openagent-hub.vercel.app" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <!-- Tailwind via CDN (Play CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind config – design tokens
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#3b82f6', // blue-500
+            accent: '#10b981', // emerald-500
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    /* Simple focus outline for accessibility */
+    .focus-visible { outline: 2px solid #3b82f6; outline-offset: 2px; }
+  </style>
+</head>
+<body class="font-sans antialiased text-gray-900 bg-gray-50 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-200">
+  <!-- Header -->
+  <header class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex items-center justify-between">
+    <a href="#" class="text-2xl font-bold text-primary focus-visible">OpenAgent Hub</a>
+    <nav class="hidden md:flex space-x-6">
+      <a href="#features" class="hover:text-primary focus-visible">Features</a>
+      <a href="#quickstart" class="hover:text-primary focus-visible">Quick Start</a>
+      <a href="https://github.com/AdithyanandanArun/openagent-hub" target="_blank" rel="noopener" class="hover:text-primary focus-visible">GitHub</a>
+    </nav>
+    <button id="themeToggle" aria-label="Toggle dark mode" class="p-2 rounded focus-visible">
+      <svg id="themeIcon" class="w-6 h-6 text-gray-800 dark:text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m8.66-9.66l-.71.71M4.05 19.95l-.71-.71M21 12h-1M4 12H3m15.66 5.66l-.71-.71M6.34 6.34l-.71-.71"></path></svg>
+    </button>
+  </header>
+
+  <!-- Hero -->
+  <section class="bg-white dark:bg-gray-800 py-20">
+    <div class="max-w-4xl mx-auto text-center px-4">
+      <h1 class="text-4xl sm:text-5xl font-extrabold mb-6">
+        Self‑hosted AI Operating System
+      </h1>
+      <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">
+        Unify multiple LLM providers, agents, tools, memory and RAG in a single Docker‑first platform.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="https://github.com/AdithyanandanArun/openagent-hub" target="_blank" rel="noopener" class="inline-block bg-primary text-white font-medium py-3 px-6 rounded hover:bg-primary/90 focus-visible">
+          ★ Star on GitHub
+        </a>
+        <button id="copyCmd" class="inline-block bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 font-mono py-3 px-6 rounded hover:bg-gray-300 dark:hover:bg-gray-600 focus-visible">
+          npm i -g openagent-hub
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Key Features</h2>
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <!-- Feature Card -->
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-semibold mb-3 text-primary">Multi‑Provider Support</h3>
+          <p class="text-gray-600 dark:text-gray-300">Connect Groq, OpenRouter, Ollama, Google AI Studio, and any OpenAI‑compatible endpoint. Automatic routing, health checks and failover.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-semibold mb-3 text-primary">Agent Framework</h3>
+          <p class="text-gray-600 dark:text-gray-300">Give a goal, watch the ReAct loop, tool calls and live step‑by‑step timeline. Supports multi‑agent parallel execution.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-semibold mb-3 text-primary">MCP Integration</h3>
+          <p class="text-gray-600 dark:text-gray-300">Plug‑in stdio MCP servers to expose filesystem, database, browser, GitHub, Slack and more as first‑class tools.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-semibold mb-3 text-primary">Persistent Memory</h3>
+          <p class="text-gray-600 dark:text-gray-300">User, project and conversation memory that agents can read/write across runs.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-semibold mb-3 text-primary">Unified Model Catalog</h3>
+          <p class="text-gray-600 dark:text-gray-300">All models normalized with capability metadata (context, vision, reasoning, speed).</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition-shadow">
+          <h3 class="text-xl font-semibold mb-3 text-primary">Docker‑First Deployment</h3>
+          <p class="text-gray-600 dark:text-gray-300">One‑command `docker compose up -d --build` gets you a full stack (PostgreSQL, FastAPI, React) on any host.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Start -->
+  <section id="quickstart" class="bg-gray-100 dark:bg-gray-800 py-20">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-6">Get Started in 2 Minutes</h2>
+      <pre class="bg-gray-200 dark:bg-gray-700 p-4 rounded text-left overflow-x-auto text-sm font-mono">
+git clone https://github.com/AdithyanandanArun/openagent-hub.git
+cd openagent-hub
+docker compose up -d --build
+      </pre>
+      <p class="mt-4 text-gray-600 dark:text-gray-300">Open <a href="http://localhost:3000" class="text-primary underline" target="_blank" rel="noopener">http://localhost:3000</a> in your browser, register, and add your first provider.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-200 py-8">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+      <p class="text-sm">© 2026 OpenAgent Hub. All rights reserved.</p>
+      <div class="flex space-x-4 mt-4 md:mt-0">
+        <a href="https://github.com/AdithyanandanArun/openagent-hub" target="_blank" rel="noopener" class="hover:text-primary focus-visible" aria-label="GitHub">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.71-2.78.61-3.37-1.34-3.37-1.34-.45-1.14-1.11-1.44-1.11-1.44-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.94.84.09-.66.35-1.09.64-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.26-.45-1.28.1-2.66 0 0 .84-.27 2.75 1.02A9.58 9.58 0 0112 7.8c.85.004 1.71.115 2.51.337 1.9-1.29 2.74-1.02 2.74-1.02.55 1.38.2 2.4.1 2.66.64.7 1.02 1.59 1.02 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.86 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z" clip-rule="evenodd"/></svg>
+        </a>
+        <a href="https://twitter.com" target="_blank" rel="noopener" class="hover:text-primary focus-visible" aria-label="Twitter">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0012.07 8v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Theme toggle logic (persisted in localStorage)
+    const toggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+    const stored = localStorage.getItem('theme');
+    if (stored === 'dark') html.classList.add('dark');
+    toggle.addEventListener('click', () => {
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    });
+    // Copy command button feedback
+    const copyBtn = document.getElementById('copyCmd');
+    copyBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText('npm i -g openagent-hub');
+        const original = copyBtn.textContent;
+        copyBtn.textContent = 'Copied!';
+        setTimeout(() => copyBtn.textContent = original, 1500);
+      } catch (e) { console.error(e); }
+    });
+  </script>
+</body>
+</html>

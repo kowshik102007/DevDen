@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+bower_components/
+
+# Lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+venv/
+
+# Build outputs
+dist/
+build/
+.next/
+.nuxt/
+.turbo/
+.vite/
+.parcel-cache/
+.angular/
+
+# Expo / React Native
+.expo/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Coverage
+coverage/
+
+# Misc
+*.tsbuildinfo
+*.log
