@@ -1,0 +1,7 @@
+venv/
+__pycache__/
+*.pkl
+*.db
+.env
+.DS_Store
+ml/data/*.csv
