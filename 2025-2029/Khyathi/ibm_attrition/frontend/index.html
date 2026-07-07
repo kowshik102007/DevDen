@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Attrition Predictor</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Attrition Predictor</h1>
+        <form id="predictForm">
+
+            <div class="form-grid">
+    <div class="field">
+        <label>OverTime</label>
+        <select name="OverTime">
+            <option>No</option>
+            <option>Yes</option>
+        </select>
+    </div>
+    <div class="field">
+        <label>Job Level (1-5)</label>
+        <input type="number" name="JobLevel" min="1" max="5" value="2" required>
+    </div>
+    <div class="field">
+        <label>Job Role</label>
+        <select name="JobRole">
+            <option>Sales Executive</option>
+            <option>Research Scientist</option>
+            <option>Laboratory Technician</option>
+            <option>Manufacturing Director</option>
+            <option>Healthcare Representative</option>
+            <option>Manager</option>
+            <option>Sales Representative</option>
+            <option>Research Director</option>
+            <option>Human Resources</option>
+        </select>
+    </div>
+    <div class="field">
+        <label>Stock Option Level (0-3)</label>
+        <input type="number" name="StockOptionLevel" min="0" max="3" value="1" required>
+    </div>
+    <div class="field">
+        <label>Department</label>
+        <select name="Department">
+            <option>Sales</option>
+            <option>Research & Development</option>
+            <option>Human Resources</option>
+        </select>
+    </div>
+    <div class="field">
+        <label>Total Working Years</label>
+        <input type="number" name="TotalWorkingYears" value="8" required>
+    </div>
+    <div class="field">
+        <label>Years With Current Manager</label>
+        <input type="number" name="YearsWithCurrManager" value="3" required>
+    </div>
+    <div class="field">
+        <label>Monthly Income</label>
+        <input type="number" name="MonthlyIncome" value="5000" required>
+    </div>
+    <div class="field">
+        <label>Years In Current Role</label>
+        <input type="number" name="YearsInCurrentRole" value="3" required>
+    </div>
+    <div class="field">
+        <label>Work Life Balance (1-4)</label>
+        <input type="number" name="WorkLifeBalance" min="1" max="4" value="3" required>
+    </div>
+    <div class="field">
+        <label>Num Companies Worked</label>
+        <input type="number" name="NumCompaniesWorked" value="2" required>
+    </div>
+    <div class="field">
+        <label>Education Field</label>
+        <select name="EducationField">
+            <option>Life Sciences</option>
+            <option>Medical</option>
+            <option>Marketing</option>
+            <option>Technical Degree</option>
+            <option>Human Resources</option>
+            <option>Other</option>
+        </select>
+    </div>
+</div>
+<button type="submit">Predict</button>
+        </form>
+
+        <div id="result" class="result"></div>
+    </div>
+
+     <script src="script.js"></script>
+</body>
+</html>

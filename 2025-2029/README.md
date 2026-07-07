@@ -2,10 +2,11 @@
 
 ## Overview
 
+
 Provide a brief introduction about the 2025–2029 batch.  
 Describe the academic duration, overall direction, and technical focus of the cohort.
 
----
+
 
 ## Vision and Objectives
 
@@ -15,7 +16,6 @@ Outline the primary goals of this batch. Examples:
 - Objective 2
 - Objective 3
 
----
 
 ## Core Focus Areas
 
@@ -26,7 +26,7 @@ List the major technical domains explored by this batch.
 - Area 3
 - Area 4
 
----
+
 
 ## Members
 
@@ -37,7 +37,7 @@ List all members in alphabetical order.
 - Member Name 3
 - Member Name 4
 
----
+
 
 ## Notable Achievements
 
@@ -74,6 +74,29 @@ Curated list of selected projects from this batch.
 - Tech Stack:
 - Deployment Link:
 - Repository Path:
+
+The SIG-AI (Special Interest Group in Artificial Intelligence) Batch of 2025–2029 is a dedicated cohort focused on advancing the frontiers of artificial intelligence. Spanning a four-year academic duration, this portfolio serves as a central repository to document and showcase our innovative AI projects, technical developments, and research endeavors as we progress through the program.
+
+
+## Core Focus Areas
+* **Machine Learning:** Building predictive models and data-driven algorithms.
+* **Deep Learning:** Designing and training complex neural networks for advanced pattern recognition.
+* **Large Language Models (LLMs) & Agentic AI:** Exploring state-of-the-art natural language processing and developing autonomous, goal-oriented AI agents. 
+
+---
+
+## Members (Semester 3)
+* Adithyan
+* Amritalekshmy
+* Bhavya
+* Jeevan
+* Khyati
+* Mohith
+* Neeraj
+* Rohan
+* Sreenandan
+* Surya Niteesh
+
 
 ---
 

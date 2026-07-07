@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- Search Bar -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/searchCard"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="28dp"
+            app:cardElevation="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="16dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_search"
+                    app:tint="@color/textColorSecondary"/>
+
+                <EditText
+                    android:id="@+id/etSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="Search destination..."
+                    android:textColor="@color/textColorPrimary"
+                    android:textColorHint="@color/textColorTertiary"
+                    android:textSize="16sp"
+                    android:inputType="textPostalAddress"
+                    android:imeOptions="actionSearch"
+                    android:maxLines="1"
+                    android:layout_marginStart="12dp"/>
+                    
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- My Location FAB -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabMyLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:src="@drawable/ic_my_location"
+            app:backgroundTint="@color/surfaceColor"
+            app:tint="@color/primaryColor"
+            app:elevation="6dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" 
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Bottom Sheet -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/bottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bottom_sheet_bg"
+        android:elevation="16dp"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="300dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp">
+
+            <!-- Drag Handle -->
+            <View
+                android:layout_width="32dp"
+                android:layout_height="4dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/dividerColor"
+                android:layout_marginBottom="16dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp">
+
+                <TextView
+                    android:id="@+id/tvCityTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="City Name"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_alignParentStart="true" />
+
+                <ImageView
+                    android:id="@+id/btnCloseCityInfo"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_menu_close_clear_cancel"
+                    app:tint="@color/textColorSecondary"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="4dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvCitySubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Location Details"
+                android:textColor="@color/textColorSecondary"
+                android:textSize="14sp"
+                android:paddingHorizontal="16dp"
+                android:layout_marginTop="4dp"/>
+
+            <!-- Action Buttons -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:layout_marginTop="16dp"
+                android:paddingHorizontal="16dp"
+                android:clipToPadding="false">
+                
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnDirections"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Directions"
+                        app:icon="@drawable/ic_directions"
+                        app:iconTint="@color/colorOnPrimary"
+                        app:backgroundTint="@color/primaryColor"
+                        app:cornerRadius="20dp"
+                        android:textColor="@color/colorOnPrimary"
+                        android:layout_marginEnd="8dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnAgentInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Agent's Route"
+                        app:icon="@drawable/ic_info"
+                        app:iconTint="@color/green_success"
+                        android:textColor="@color/green_success"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        app:strokeColor="@color/green_success"
+                        app:cornerRadius="20dp"
+                        android:layout_marginEnd="8dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnStart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Start"
+                        app:icon="@drawable/ic_start"
+                        app:iconTint="@color/colorOnPrimary"
+                        app:backgroundTint="@color/green_success"
+                        app:cornerRadius="20dp"
+                        android:textColor="@color/colorOnPrimary"
+                        android:layout_marginEnd="8dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSave"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Save"
+                        app:icon="@drawable/ic_save"
+                        app:iconTint="@color/textColorPrimary"
+                        android:textColor="@color/textColorPrimary"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        app:strokeColor="@color/textColorPrimary"
+                        app:cornerRadius="20dp"
+                        android:layout_marginEnd="8dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnShare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Share"
+                        app:icon="@drawable/ic_share"
+                        app:iconTint="@color/textColorPrimary"
+                        android:textColor="@color/textColorPrimary"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        app:strokeColor="@color/textColorPrimary"
+                        app:cornerRadius="20dp" />
+                </LinearLayout>
+            </HorizontalScrollView>
+            <!-- Route Stats Section -->
+            <LinearLayout
+                android:id="@+id/layoutRouteStats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvRouteStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Status: Calculating..."
+                    android:textColor="@color/orange_warning"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:id="@+id/tvRouteDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Distance: -"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="4dp"/>
+
+                <TextView
+                    android:id="@+id/tvRouteEta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ETA - Driving: - | Cycling: - | Walking: -"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="14sp"/>
+                
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/dividerColor"
+                    android:layout_marginTop="12dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvCityDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fetching information..."
+                android:textColor="@color/textColorPrimary"
+                android:textSize="14sp"
+                android:lineSpacingExtra="4dp"
+                android:padding="16dp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

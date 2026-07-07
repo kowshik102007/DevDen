@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.GuardianPath" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryVariant">@color/primaryColorVariant</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+        <item name="android:statusBarColor">@color/primaryColor</item>
+    </style>
+</resources>

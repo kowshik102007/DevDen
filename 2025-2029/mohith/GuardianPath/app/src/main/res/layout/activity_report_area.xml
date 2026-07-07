@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/backgroundColor"
+    tools:context=".ReportAreaActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        android:background="@color/primaryColor">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Report Unsafe Area"
+            app:titleTextColor="@color/colorOnPrimary"
+            app:navigationIcon="@drawable/ic_back"
+            app:navigationIconTint="@color/colorOnPrimary"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Location Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Point Out Location"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Search Bar -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="2dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/dividerColor">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="16dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_search"
+                        app:tint="@color/textColorSecondary"/>
+
+                    <EditText
+                        android:id="@+id/etReportSearch"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="Search area..."
+                        android:textColor="@color/textColorPrimary"
+                        android:textColorHint="@color/textColorTertiary"
+                        android:textSize="14sp"
+                        android:inputType="textPostalAddress"
+                        android:imeOptions="actionSearch"
+                        android:maxLines="1"
+                        android:layout_marginStart="8dp"/>
+                        
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Map Placeholder Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:strokeWidth="0dp"
+                android:layout_marginBottom="24dp">
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/mapView"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Hazard Category -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hazard Type"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:layout_marginBottom="24dp">
+                
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Poor Lighting"/>
+
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Suspicious Activity"/>
+
+                    <com.google.android.material.chip.Chip
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Road Hazard"/>
+
+                </com.google.android.material.chip.ChipGroup>
+            </HorizontalScrollView>
+
+            <!-- Description -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Additional Details"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Describe the issue..."
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp"
+                android:layout_marginBottom="32dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:gravity="top|start"
+                    android:inputType="textMultiLine"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Submit Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSubmitReport"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:text="Submit Report"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:cornerRadius="16dp"
+                app:backgroundTint="@color/orange_warning"
+                app:elevation="4dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSubmitSms"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginTop="12dp"
+                android:text="Report via SMS"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:cornerRadius="16dp"
+                app:backgroundTint="@color/orange_warning"
+                android:textColor="@color/colorOnPrimary"
+                app:icon="@android:drawable/ic_dialog_email"
+                app:iconTint="@color/colorOnPrimary"
+                app:elevation="4dp"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
