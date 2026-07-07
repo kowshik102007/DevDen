@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Found Items — Lost & Found</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body class="bg-[#060d1a] text-slate-100 min-h-screen">
+
+  <div class="bg-orb bg-orb-1"></div>
+  <div class="bg-orb bg-orb-2"></div>
+  <div id="globalSpinner" style="display:none;"><div class="spinner-ring"></div></div>
+
+  <!-- Navbar -->
+  <nav class="navbar fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center font-display font-bold text-white text-sm">L&F</div>
+        <span class="font-display font-bold text-white text-sm tracking-wider hidden sm:block">LOST<span class="text-blue-400">&</span>FOUND</span>
+      </a>
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="index.html"     class="text-slate-400 hover:text-slate-200 transition-colors">Home</a>
+        <a href="lost.html"      class="text-slate-400 hover:text-slate-200 transition-colors">Lost Items</a>
+        <a href="found.html"     class="text-blue-400">Found Items</a>
+        <a href="post.html"      class="text-slate-400 hover:text-slate-200 transition-colors">Post Item</a>
+        <a href="dashboard.html" class="text-slate-400 hover:text-slate-200 transition-colors">Dashboard</a>
+        <a href="contact.html"   class="text-slate-400 hover:text-slate-200 transition-colors">Contact</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <div id="guestNav">
+          <a href="login.html" class="btn-outline px-4 py-2 rounded-xl text-sm font-semibold">Login</a>
+        </div>
+        <div id="userNav" class="hidden flex items-center gap-3">
+          <a href="post.html?type=found" class="btn-primary px-4 py-2 rounded-xl text-sm font-semibold text-white">+ Post</a>
+          <a href="dashboard.html" class="text-slate-400 hover:text-slate-200 text-sm transition-colors">Dashboard</a>
+        </div>
+        <button id="mobileMenuBtn" class="md:hidden text-slate-400 p-2">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden border-t border-white/5 bg-[#060d1a]/95 backdrop-blur-xl">
+      <div class="px-4 py-4 space-y-2 text-sm font-medium">
+        <a href="index.html"     class="block py-2 text-slate-400">Home</a>
+        <a href="lost.html"      class="block py-2 text-slate-400">Lost Items</a>
+        <a href="found.html"     class="block py-2 text-blue-400">Found Items</a>
+        <a href="post.html"      class="block py-2 text-slate-400">Post Item</a>
+        <a href="dashboard.html" class="block py-2 text-slate-400">Dashboard</a>
+        <a href="contact.html"   class="block py-2 text-slate-400">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="pt-24 pb-8 px-4 border-b border-white/5 relative z-10">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+        <div>
+          <div class="flex items-center gap-2 text-xs text-slate-500 mb-2">
+            <a href="index.html" class="hover:text-slate-300">Home</a>
+            <span>›</span>
+            <span class="text-blue-400">Found Items</span>
+          </div>
+          <h1 class="font-display text-2xl sm:text-3xl font-bold text-white">Found Items</h1>
+          <p class="text-slate-500 text-sm mt-1">Items that have been found and are waiting for their owners</p>
+        </div>
+        <a href="post.html?type=found"
+          class="btn-primary px-5 py-3 rounded-xl text-white font-semibold text-sm inline-flex items-center gap-2 self-start sm:self-auto">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+          Report Found Item
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Filters Bar -->
+  <div class="sticky top-16 z-40 bg-[#060d1a]/90 backdrop-blur-xl border-b border-white/5 px-4 py-4">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row gap-3">
+      <div class="relative flex-1">
+        <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+        </svg>
+        <input id="searchInput" type="text" placeholder="Search by title, description, or location…"
+          class="input-field w-full pl-11 pr-4 py-2.5 rounded-xl text-sm"/>
+      </div>
+      <select id="categoryFilter" class="input-field px-4 py-2.5 rounded-xl text-sm min-w-[140px] cursor-pointer">
+        <option value="all">All Categories</option>
+        <option value="electronics">💻 Electronics</option>
+        <option value="clothing">👕 Clothing</option>
+        <option value="jewelry">💍 Jewelry</option>
+        <option value="documents">📄 Documents</option>
+        <option value="bags">👜 Bags</option>
+        <option value="keys">🔑 Keys</option>
+        <option value="wallet">👛 Wallet</option>
+        <option value="pet">🐾 Pet</option>
+        <option value="other">📦 Other</option>
+      </select>
+      <select id="statusFilter" class="input-field px-4 py-2.5 rounded-xl text-sm min-w-[130px] cursor-pointer">
+        <option value="all">All Statuses</option>
+        <option value="open">Open</option>
+        <option value="claimed">Claimed</option>
+        <option value="reunited">Reunited</option>
+      </select>
+      <select id="sortSelect" class="input-field px-4 py-2.5 rounded-xl text-sm min-w-[130px] cursor-pointer">
+        <option value="newest">Newest First</option>
+        <option value="oldest">Oldest First</option>
+      </select>
+    </div>
+    <div class="max-w-7xl mx-auto mt-3">
+      <span class="text-xs text-slate-500">Showing <span id="resultCount" class="text-slate-300 font-semibold">…</span></span>
+    </div>
+  </div>
+
+  <!-- Items Grid -->
+  <main class="max-w-7xl mx-auto px-4 py-10 relative z-10">
+    <div id="itemsGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+      <!-- Dynamic -->
+    </div>
+  </main>
+
+  <footer class="border-t border-white/5 py-6 px-4 text-center text-slate-600 text-xs relative z-10">
+    © 2025 Lost &amp; Found Platform
+  </footer>
+
+  <script type="module">
+    import { watchAuth }  from "./js/auth.js";
+    import { initSearch } from "./js/search.js";
+
+    document.getElementById("mobileMenuBtn")?.addEventListener("click", () => {
+      document.getElementById("mobileMenu").classList.toggle("hidden");
+    });
+
+    watchAuth(
+      () => {
+        document.getElementById("guestNav").classList.add("hidden");
+        document.getElementById("userNav").classList.remove("hidden");
+        document.getElementById("userNav").classList.add("flex");
+      },
+      () => { document.getElementById("guestNav").classList.remove("hidden"); }
+    );
+
+    initSearch("found");
+  </script>
+</body>
+</html>

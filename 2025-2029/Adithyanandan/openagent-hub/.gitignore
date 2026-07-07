@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.env
+.venv/
+venv/
+*.egg-info/
+.serena/
+node_modules/
+dist/
+.env.local
+
+*.log
+*.sqlite3
+.DS_Store
+Reference/
+api.txt
+.playwright-mcp/

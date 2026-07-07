@@ -1,0 +1,62 @@
+{
+  "version": "1.0.0",
+  "feature_order": [
+    "age",
+    "gravida",
+    "parity",
+    "previous_complications",
+    "inter_pregnancy_interval_months",
+    "systolic_bp",
+    "diastolic_bp",
+    "hemoglobin_gdl",
+    "gestational_age_weeks",
+    "weight_gain_kg",
+    "fetal_heart_rate",
+    "urine_protein_dipstick",
+    "muac_cm"
+  ],
+  "n_features": 13,
+  "label_map": {
+    "0": "LOW",
+    "1": "MODERATE",
+    "2": "HIGH"
+  },
+  "label_map_inverse": {
+    "LOW": 0,
+    "MODERATE": 1,
+    "HIGH": 2
+  },
+  "scaler_mean": [
+    23.98925,
+    2.00575,
+    1.00575,
+    0.20225,
+    17.3515,
+    118.81175,
+    77.44725,
+    10.647749994516372,
+    23.407,
+    8.187150005664677,
+    139.94675,
+    0.49225,
+    24.710949998378755
+  ],
+  "scaler_std": [
+    4.564771016984309,
+    0.8793275484709784,
+    0.8793275484709784,
+    0.40167765372246683,
+    15.489284933462677,
+    15.6695185611269,
+    9.960231796374003,
+    1.495794076135362,
+    9.062634881754843,
+    3.5096132175789054,
+    11.160484507291788,
+    0.8694480648664761,
+    2.3411204738467735
+  ],
+  "trained_on": "synthetic_phc_v2",
+  "high_risk_recall_target": 0.9,
+  "test_accuracy": 0.893
+}

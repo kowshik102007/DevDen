@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lost & Found — Community Platform</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body class="bg-[#060d1a] text-slate-100 relative">
+
+  <!-- Background Orbs -->
+  <div class="bg-orb bg-orb-1"></div>
+  <div class="bg-orb bg-orb-2"></div>
+  <div class="bg-orb bg-orb-3"></div>
+
+  <!-- Global Spinner -->
+  <div id="globalSpinner" style="display:none;">
+    <div class="spinner-ring"></div>
+  </div>
+
+  <!-- ── Navbar ─────────────────────────────────────────── -->
+  <nav class="navbar fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center font-display font-bold text-white text-sm shadow-lg shadow-blue-600/30">L&F</div>
+        <span class="font-display font-bold text-white text-sm tracking-wider hidden sm:block">LOST<span class="text-blue-400">&</span>FOUND</span>
+      </a>
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="index.html"     data-nav="index.html"     class="text-blue-400 transition-colors">Home</a>
+        <a href="lost.html"      data-nav="lost.html"      class="text-slate-400 hover:text-slate-200 transition-colors">Lost Items</a>
+        <a href="found.html"     data-nav="found.html"     class="text-slate-400 hover:text-slate-200 transition-colors">Found Items</a>
+        <a href="post.html"      data-nav="post.html"      class="text-slate-400 hover:text-slate-200 transition-colors">Post Item</a>
+        <a href="dashboard.html" data-nav="dashboard.html" class="text-slate-400 hover:text-slate-200 transition-colors">Dashboard</a>
+        <a href="contact.html"   data-nav="contact.html"   class="text-slate-400 hover:text-slate-200 transition-colors">Contact</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <div id="guestNav" class="flex items-center gap-2">
+          <a href="login.html" class="btn-outline px-4 py-2 rounded-xl text-sm font-semibold">Login</a>
+          <a href="login.html?signup=1" class="btn-primary px-4 py-2 rounded-xl text-sm font-semibold text-white hidden sm:block">Sign Up</a>
+        </div>
+        <div id="userNav" class="hidden flex items-center gap-3">
+          <a href="dashboard.html" class="btn-outline px-4 py-2 rounded-xl text-sm font-semibold">Dashboard</a>
+          <button id="logoutBtn" class="text-slate-400 hover:text-red-400 text-sm transition-colors">Logout</button>
+        </div>
+        <!-- Mobile menu -->
+        <button id="mobileMenuBtn" class="md:hidden text-slate-400 hover:text-white p-2">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-white/5 bg-[#060d1a]/95 backdrop-blur-xl">
+      <div class="px-4 py-4 space-y-2 text-sm font-medium">
+        <a href="index.html"     class="block py-2 text-blue-400">Home</a>
+        <a href="lost.html"      class="block py-2 text-slate-400">Lost Items</a>
+        <a href="found.html"     class="block py-2 text-slate-400">Found Items</a>
+        <a href="post.html"      class="block py-2 text-slate-400">Post Item</a>
+        <a href="dashboard.html" class="block py-2 text-slate-400">Dashboard</a>
+        <a href="contact.html"   class="block py-2 text-slate-400">Contact</a>
+        <a href="login.html"     class="block py-2 text-slate-400">Login / Sign Up</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Hero ───────────────────────────────────────────── -->
+  <section class="hero-bg grid-bg relative pt-32 pb-24 px-4 overflow-hidden">
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-300 text-xs font-semibold mb-8 animate-fade-in-up">
+        <span class="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"></span>
+        Community-Driven Platform
+      </div>
+
+      <h1 class="font-display font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight mb-6 animate-fade-in-up delay-100">
+        <span class="text-white">Lost</span>
+        <span class="gradient-text"> & </span>
+        <span class="text-white">Found</span>
+        <br/>
+        <span class="text-glow gradient-text text-3xl sm:text-4xl md:text-5xl">Web Application</span>
+      </h1>
+
+      <p class="text-slate-400 text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up delay-200">
+        A community-driven platform that reunites people with their lost belongings.
+        Post, search, and connect — anonymously and securely.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up delay-300">
+        <a href="post.html?type=found"
+           class="btn-primary px-8 py-4 rounded-2xl text-white font-semibold text-base flex items-center justify-center gap-2">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+          Report Found Item
+        </a>
+        <a href="lost.html"
+           class="btn-outline px-8 py-4 rounded-2xl font-semibold text-base flex items-center justify-center gap-2">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          Search Lost Items
+        </a>
+      </div>
+
+      <!-- Stats row -->
+      <div class="mt-16 grid grid-cols-3 gap-6 max-w-sm mx-auto animate-fade-in-up delay-400">
+        <div class="text-center">
+          <div id="statLost"  class="font-display text-2xl font-bold text-blue-400">—</div>
+          <div class="text-slate-500 text-xs mt-1">Lost Items</div>
+        </div>
+        <div class="text-center border-x border-white/5">
+          <div id="statFound" class="font-display text-2xl font-bold text-blue-400">—</div>
+          <div class="text-slate-500 text-xs mt-1">Found Items</div>
+        </div>
+        <div class="text-center">
+          <div id="statRatio" class="font-display text-2xl font-bold text-emerald-400">—</div>
+          <div class="text-slate-500 text-xs mt-1">Reunited</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Problem / Solution ─────────────────────────────── -->
+  <section class="py-24 px-4 relative z-10">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div class="animate-fade-in-up">
+        <div class="inline-block text-xs font-semibold text-red-400 bg-red-400/10 border border-red-400/20 rounded-full px-3 py-1 mb-4">The Problem</div>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-white mb-4">Lost items rarely<br/>find their way home</h2>
+        <p class="text-slate-400 leading-relaxed mb-6">
+          Every day, thousands of people lose personal items — wallets, phones, keys, pets — with no effective
+          centralized way to report or find them. Traditional methods are fragmented, inefficient, and frustrating.
+        </p>
+        <div class="space-y-3">
+          <div class="flex items-start gap-3">
+            <div class="w-5 h-5 rounded-full bg-red-500/20 flex items-center justify-center mt-0.5 flex-shrink-0">
+              <span class="text-red-400 text-xs">✕</span>
+            </div>
+            <p class="text-slate-400 text-sm">No central platform to post or search lost items</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-5 h-5 rounded-full bg-red-500/20 flex items-center justify-center mt-0.5 flex-shrink-0">
+              <span class="text-red-400 text-xs">✕</span>
+            </div>
+            <p class="text-slate-400 text-sm">Privacy concerns about sharing contact information publicly</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-5 h-5 rounded-full bg-red-500/20 flex items-center justify-center mt-0.5 flex-shrink-0">
+              <span class="text-red-400 text-xs">✕</span>
+            </div>
+            <p class="text-slate-400 text-sm">Outdated listings that clog searches and waste time</p>
+          </div>
+        </div>
+      </div>
+      <div class="animate-fade-in-up delay-200">
+        <div class="inline-block text-xs font-semibold text-emerald-400 bg-emerald-400/10 border border-emerald-400/20 rounded-full px-3 py-1 mb-4">Our Solution</div>
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-white mb-4">A smart, secure &<br/>community platform</h2>
+        <p class="text-slate-400 leading-relaxed mb-6">
+          Lost & Found brings the community together with real-time posts, intelligent search,
+          anonymous contact, and automatic status management — making reunions happen faster.
+        </p>
+        <div class="space-y-3">
+          <div class="flex items-start gap-3">
+            <div class="w-5 h-5 rounded-full bg-emerald-500/20 flex items-center justify-center mt-0.5 flex-shrink-0">
+              <span class="text-emerald-400 text-xs">✓</span>
+            </div>
+            <p class="text-slate-400 text-sm">Centralized real-time database powered by Firebase</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-5 h-5 rounded-full bg-emerald-500/20 flex items-center justify-center mt-0.5 flex-shrink-0">
+              <span class="text-emerald-400 text-xs">✓</span>
+            </div>
+            <p class="text-slate-400 text-sm">Anonymous contact system protects your privacy</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-5 h-5 rounded-full bg-emerald-500/20 flex items-center justify-center mt-0.5 flex-shrink-0">
+              <span class="text-emerald-400 text-xs">✓</span>
+            </div>
+            <p class="text-slate-400 text-sm">Automatic status tracking and expiry management</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Features Grid ──────────────────────────────────── -->
+  <section class="py-24 px-4 relative z-10">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <div class="inline-block text-xs font-semibold text-blue-400 bg-blue-400/10 border border-blue-400/20 rounded-full px-3 py-1 mb-4">Features</div>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white">Everything you need</h2>
+        <p class="text-slate-500 mt-3 max-w-xl mx-auto">Built with the community in mind, every feature is designed to maximize reunions.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <!-- Feature 1 -->
+        <div class="feature-card p-6 animate-fade-in-up delay-100">
+          <div class="w-12 h-12 rounded-2xl bg-blue-500/15 border border-blue-500/20 flex items-center justify-center text-2xl mb-4">📋</div>
+          <h3 class="text-white font-semibold text-base mb-2">Found Item Posts</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">Report items you've found with photos, location, and details so the rightful owner can reclaim them.</p>
+        </div>
+        <!-- Feature 2 -->
+        <div class="feature-card p-6 animate-fade-in-up delay-200">
+          <div class="w-12 h-12 rounded-2xl bg-purple-500/15 border border-purple-500/20 flex items-center justify-center text-2xl mb-4">🎫</div>
+          <h3 class="text-white font-semibold text-base mb-2">Lost Item Tickets</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">Post detailed descriptions of what you've lost. Our community will help identify and return your belongings.</p>
+        </div>
+        <!-- Feature 3 -->
+        <div class="feature-card p-6 animate-fade-in-up delay-300">
+          <div class="w-12 h-12 rounded-2xl bg-cyan-500/15 border border-cyan-500/20 flex items-center justify-center text-2xl mb-4">🔍</div>
+          <h3 class="text-white font-semibold text-base mb-2">Search & Filter</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">Powerful search with category, location, status filters and real-time results to find items instantly.</p>
+        </div>
+        <!-- Feature 4 -->
+        <div class="feature-card p-6 animate-fade-in-up delay-100">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-500/15 border border-emerald-500/20 flex items-center justify-center text-2xl mb-4">✋</div>
+          <h3 class="text-white font-semibold text-base mb-2">Claim Requests</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">Found your item? Submit a claim and get connected with the finder securely and efficiently.</p>
+        </div>
+        <!-- Feature 5 -->
+        <div class="feature-card p-6 animate-fade-in-up delay-200">
+          <div class="w-12 h-12 rounded-2xl bg-orange-500/15 border border-orange-500/20 flex items-center justify-center text-2xl mb-4">🕵️</div>
+          <h3 class="text-white font-semibold text-base mb-2">Anonymous Contact</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">Connect without exposing personal details. Our privacy-first approach keeps your information safe.</p>
+        </div>
+        <!-- Feature 6 -->
+        <div class="feature-card p-6 animate-fade-in-up delay-300">
+          <div class="w-12 h-12 rounded-2xl bg-red-500/15 border border-red-500/20 flex items-center justify-center text-2xl mb-4">⏱️</div>
+          <h3 class="text-white font-semibold text-base mb-2">Auto Expiry</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">Posts automatically track status updates from Open → Claimed → Reunited, keeping listings accurate.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Recent Posts Preview ────────────────────────────── -->
+  <section class="py-24 px-4 relative z-10">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center justify-between mb-10">
+        <div>
+          <h2 class="font-display text-2xl sm:text-3xl font-bold text-white">Recent Lost Items</h2>
+          <p class="text-slate-500 text-sm mt-1">Help reunite these items with their owners</p>
+        </div>
+        <a href="lost.html" class="btn-outline px-5 py-2.5 rounded-xl text-sm font-semibold hidden sm:block">View All →</a>
+      </div>
+      <div id="recentGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <!-- Loaded dynamically -->
+      </div>
+      <div class="text-center mt-8 sm:hidden">
+        <a href="lost.html" class="btn-outline px-6 py-3 rounded-xl text-sm font-semibold inline-block">View All Lost Items →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA Banner ─────────────────────────────────────── -->
+  <section class="py-20 px-4 relative z-10">
+    <div class="max-w-4xl mx-auto glass-card rounded-2xl p-10 sm:p-14 text-center glow-border">
+      <div class="text-4xl mb-4">🤝</div>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-white mb-3">Ready to help your community?</h2>
+      <p class="text-slate-400 max-w-xl mx-auto mb-8">Join thousands of users who are helping each other recover lost belongings every day.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="login.html?signup=1" class="btn-primary px-8 py-4 rounded-2xl text-white font-semibold">Get Started Free</a>
+        <a href="found.html" class="btn-outline px-8 py-4 rounded-2xl font-semibold">Browse Found Items</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ─────────────────────────────────────────── -->
+  <footer class="border-t border-white/5 py-10 px-4 relative z-10">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-2">
+          <div class="w-7 h-7 rounded-lg bg-blue-600 flex items-center justify-center font-display font-bold text-white text-xs">L&F</div>
+          <span class="font-display text-sm text-white font-bold">LOST<span class="text-blue-400">&</span>FOUND</span>
+        </div>
+        <div class="flex gap-6 text-xs text-slate-500">
+          <a href="lost.html"  class="hover:text-slate-300 transition-colors">Lost Items</a>
+          <a href="found.html" class="hover:text-slate-300 transition-colors">Found Items</a>
+          <a href="post.html"  class="hover:text-slate-300 transition-colors">Post Item</a>
+          <a href="login.html" class="hover:text-slate-300 transition-colors">Login</a>
+          <a href="contact.html" class="hover:text-slate-300 transition-colors">Contact Us</a>
+        </div>
+        <p class="text-slate-600 text-xs">© 2025 Lost &amp; Found Platform. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { auth }                          from "./js/firebase.js";
+    import { logout, watchAuth }             from "./js/auth.js";
+    import { fetchRecentPosts }              from "./js/posts.js";
+    import { itemCard, renderSkeletons }     from "./js/search.js";
+    import { showSpinner, hideSpinner }      from "./js/ui.js";
+
+    // Mobile menu toggle
+    document.getElementById("mobileMenuBtn")?.addEventListener("click", () => {
+      document.getElementById("mobileMenu").classList.toggle("hidden");
+    });
+
+    // Logout
+    document.getElementById("logoutBtn")?.addEventListener("click", logout);
+
+    // Auth state
+    watchAuth(
+      (user) => {
+        document.getElementById("guestNav").classList.add("hidden");
+        document.getElementById("userNav").classList.remove("hidden");
+        document.getElementById("userNav").classList.add("flex");
+      },
+      () => {
+        document.getElementById("guestNav").classList.remove("hidden");
+        document.getElementById("userNav").classList.add("hidden");
+      }
+    );
+
+    // Load recent lost items
+    async function loadRecent() {
+      const grid = document.getElementById("recentGrid");
+      grid.innerHTML = Array.from({length:3}).map(() => `
+        <div class="glass-card rounded-2xl overflow-hidden animate-pulse">
+          <div class="h-44 bg-white/5"></div>
+          <div class="p-5 space-y-3">
+            <div class="h-4 bg-white/5 rounded-full w-3/4"></div>
+            <div class="h-3 bg-white/5 rounded-full"></div>
+            <div class="flex gap-2 pt-2"><div class="flex-1 h-9 bg-white/5 rounded-xl"></div><div class="flex-1 h-9 bg-white/5 rounded-xl"></div></div>
+          </div>
+        </div>`).join("");
+
+      try {
+        const [lost, found, reunited] = await Promise.all([
+          fetchRecentPosts("lost",  20),
+          fetchRecentPosts("found", 20),
+          fetchRecentPosts("lost",  100)
+        ]);
+
+        document.getElementById("statLost").textContent  = lost.length  + "+";
+        document.getElementById("statFound").textContent = found.length + "+";
+        const r = [...lost, ...found].filter(i => i.status === "reunited").length;
+        document.getElementById("statRatio").textContent = r;
+
+        const recent = lost.slice(0, 3);
+        if (recent.length === 0) {
+          grid.innerHTML = `<div class="col-span-full text-center text-slate-600 py-16">No items posted yet. Be the first!</div>`;
+        } else {
+          const { itemCard } = await import("./js/search.js");
+          grid.innerHTML = recent.map(item => itemCard(item, "lost")).join("");
+        }
+      } catch(e) {
+        grid.innerHTML = `<div class="col-span-full text-center text-slate-600 py-16">Connect Firebase to see live data.</div>`;
+      }
+    }
+
+    loadRecent();
+  </script>
+</body>
+</html>

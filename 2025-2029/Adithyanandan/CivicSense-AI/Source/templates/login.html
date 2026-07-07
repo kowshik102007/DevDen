@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CivicSense AI — Sign In</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --orange: #e8651a;
+  --orange-dark: #c9531a;
+  --bg: #fdf6ed;
+  --white: #fffaf3;
+  --border: #ead9c4;
+  --text: #2b2118;
+  --muted: #9e8c7a;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.login-card {
+  width: 100%;
+  max-width: 360px;
+  padding: 40px 36px;
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: 20px;
+  box-shadow: 0 6px 32px rgba(43,33,24,.08);
+  text-align: center;
+  animation: fadeUp .4s ease both;
+}
+
+.login-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 28px;
+}
+
+.login-icon {
+  width: 38px; height: 38px;
+  background: var(--orange);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem;
+}
+
+.login-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+.login-name span { color: var(--orange); }
+
+.form-section { display: none; }
+.form-section.active { display: block; }
+
+.form-section h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.5rem;
+  color: var(--text);
+  margin-bottom: 6px;
+  letter-spacing: -.02em;
+}
+
+.form-section p {
+  font-size: .82rem;
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+.field { margin-bottom: 12px; text-align: left; }
+
+.field input {
+  width: 100%;
+  background: var(--bg);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .87rem;
+  color: var(--text);
+  outline: none;
+  transition: border-color .2s, background .2s;
+}
+
+.field input:focus { border-color: var(--orange); background: var(--white); }
+.field input::placeholder { color: #c8b9a8; }
+
+.two-col { display: flex; gap: 10px; }
+.two-col .field { flex: 1; }
+
+.submit-btn {
+  width: 100%;
+  background: var(--orange);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 13px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .9rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: all .2s;
+}
+
+.submit-btn:hover {
+  background: var(--orange-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(232,101,26,.28);
+}
+
+.submit-btn:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.login-footer {
+  margin-top: 18px;
+  font-size: .76rem;
+  color: var(--muted);
+}
+
+.login-footer a {
+  color: var(--orange);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.error-msg {
+  background: #fff0f0;
+  border: 1.5px solid #f5c0c0;
+  color: #c0392b;
+  border-radius: 8px;
+  padding: 9px 12px;
+  font-size: .78rem;
+  font-weight: 500;
+  text-align: left;
+  margin-bottom: 12px;
+  display: none;
+}
+
+.error-msg.show { display: block; }
+
+.success-msg {
+  background: #f0faf5;
+  border: 1.5px solid #a8dfc0;
+  color: #1a7a45;
+  border-radius: 8px;
+  padding: 9px 12px;
+  font-size: .78rem;
+  font-weight: 500;
+  text-align: left;
+  margin-bottom: 12px;
+  display: none;
+}
+
+.success-msg.show { display: block; }
+
+@media (max-width: 600px) {
+  .login-card { max-width: 90vw; padding: 32px 24px; }
+}
+</style>
+</head>
+<body>
+
+<div class="login-card">
+  <div class="login-logo">
+    <div class="login-icon">🏛️</div>
+    <div class="login-name">Civic<span>Sense</span> AI</div>
+  </div>
+
+  <!-- SIGN IN -->
+  <div class="form-section active" id="signinSection">
+    <h2>Welcome back</h2>
+    <p>Sign in to continue</p>
+    <div class="error-msg" id="signinError"></div>
+    <div class="field">
+      <input type="text" id="signinUsername" placeholder="Username" autocomplete="username"/>
+    </div>
+    <div class="field">
+      <input type="password" id="signinPassword" placeholder="Password" autocomplete="current-password"/>
+    </div>
+    <button class="submit-btn" id="signinBtn" onclick="handleSignin()">Sign In</button>
+    <div class="login-footer">No account? <a onclick="show('signup')">Sign up free</a></div>
+  </div>
+
+  <!-- SIGN UP -->
+  <div class="form-section" id="signupSection">
+    <h2>Create account</h2>
+    <p>Join CivicSense AI — it's free</p>
+    <div class="error-msg" id="signupError"></div>
+    <div class="success-msg" id="signupSuccess"></div>
+    <div class="field">
+      <input type="text" id="signupUsername" placeholder="Username" autocomplete="username"/>
+    </div>
+    <div class="field">
+      <input type="email" id="signupEmail" placeholder="Email address" autocomplete="email"/>
+    </div>
+    <div class="field">
+      <input type="password" id="signupPassword" placeholder="Create a password (min 6 chars)" autocomplete="new-password"/>
+    </div>
+    <button class="submit-btn" id="signupBtn" onclick="handleSignup()">Create Account</button>
+    <div class="login-footer">Already have an account? <a onclick="show('signin')">Sign in</a></div>
+  </div>
+</div>
+
+<script>
+  function show(section) {
+    document.getElementById('signinSection').classList.toggle('active', section === 'signin');
+    document.getElementById('signupSection').classList.toggle('active', section === 'signup');
+    clearErrors();
+  }
+
+  function clearErrors() {
+    ['signinError','signupError','signupSuccess'].forEach(id => {
+      document.getElementById(id).classList.remove('show');
+    });
+  }
+
+  function setError(id, msg) {
+    const el = document.getElementById(id);
+    el.textContent = msg;
+    el.classList.add('show');
+  }
+
+  // Enter key support
+  document.addEventListener('keydown', e => {
+    if (e.key !== 'Enter') return;
+    if (document.getElementById('signinSection').classList.contains('active')) handleSignin();
+    else handleSignup();
+  });
+
+  async function handleSignin() {
+    clearErrors();
+    const username = document.getElementById('signinUsername').value.trim();
+    const password = document.getElementById('signinPassword').value;
+    const btn = document.getElementById('signinBtn');
+
+    if (!username || !password) return setError('signinError', 'Please fill in all fields');
+
+    btn.disabled = true;
+    btn.textContent = 'Signing in…';
+
+    try {
+      const res = await fetch('/api/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password })
+      });
+      const data = await res.json();
+      if (!res.ok) return setError('signinError', data.error);
+      window.location.href = '/';
+    } catch {
+      setError('signinError', 'Connection error. Try again.');
+    } finally {
+      btn.disabled = false;
+      btn.textContent = 'Sign In';
+    }
+  }
+
+  async function handleSignup() {
+    clearErrors();
+    const username = document.getElementById('signupUsername').value.trim();
+    const email    = document.getElementById('signupEmail').value.trim();
+    const password = document.getElementById('signupPassword').value;
+    const btn = document.getElementById('signupBtn');
+
+    if (!username || !email || !password) return setError('signupError', 'Please fill in all fields');
+    if (password.length < 6) return setError('signupError', 'Password must be at least 6 characters');
+
+    btn.disabled = true;
+    btn.textContent = 'Creating account…';
+
+    try {
+      const res = await fetch('/api/signup', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, email, password })
+      });
+      const data = await res.json();
+      if (!res.ok) return setError('signupError', data.error);
+
+      const s = document.getElementById('signupSuccess');
+      s.textContent = 'Account created! Signing you in…';
+      s.classList.add('show');
+
+      // auto login
+      await fetch('/api/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password })
+      });
+      window.location.href = '/';
+    } catch {
+      setError('signupError', 'Connection error. Try again.');
+    } finally {
+      btn.disabled = false;
+      btn.textContent = 'Create Account';
+    }
+  }
+</script>
+</body>
+</html>

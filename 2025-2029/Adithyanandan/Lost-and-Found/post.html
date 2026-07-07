@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Post Item — Lost & Found</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body class="bg-[#060d1a] text-slate-100 min-h-screen">
+
+  <div class="bg-orb bg-orb-1"></div>
+  <div class="bg-orb bg-orb-2"></div>
+  <div id="globalSpinner" style="display:none;"><div class="spinner-ring"></div></div>
+
+  <!-- Navbar -->
+  <nav class="navbar fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center font-display font-bold text-white text-sm">L&F</div>
+        <span class="font-display font-bold text-white text-sm tracking-wider hidden sm:block">LOST<span class="text-blue-400">&</span>FOUND</span>
+      </a>
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="index.html"     class="text-slate-400 hover:text-slate-200 transition-colors">Home</a>
+        <a href="lost.html"      class="text-slate-400 hover:text-slate-200 transition-colors">Lost Items</a>
+        <a href="found.html"     class="text-slate-400 hover:text-slate-200 transition-colors">Found Items</a>
+        <a href="post.html"      class="text-blue-400">Post Item</a>
+        <a href="dashboard.html" class="text-slate-400 hover:text-slate-200 transition-colors">Dashboard</a>
+        <a href="contact.html"   class="text-slate-400 hover:text-slate-200 transition-colors">Contact</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <button id="logoutBtn" class="text-slate-400 hover:text-red-400 text-sm transition-colors">Logout</button>
+        <button id="mobileMenuBtn" class="md:hidden text-slate-400 p-2">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden border-t border-white/5 bg-[#060d1a]/95 backdrop-blur-xl">
+      <div class="px-4 py-4 space-y-2 text-sm font-medium">
+        <a href="index.html"     class="block py-2 text-slate-400">Home</a>
+        <a href="lost.html"      class="block py-2 text-slate-400">Lost Items</a>
+        <a href="found.html"     class="block py-2 text-slate-400">Found Items</a>
+        <a href="post.html"      class="block py-2 text-blue-400">Post Item</a>
+        <a href="dashboard.html" class="block py-2 text-slate-400">Dashboard</a>
+        <a href="contact.html"   class="block py-2 text-slate-400">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="pt-24 pb-8 px-4 border-b border-white/5 relative z-10">
+    <div class="max-w-2xl mx-auto">
+      <div class="flex items-center gap-2 text-xs text-slate-500 mb-2">
+        <a href="index.html" class="hover:text-slate-300">Home</a>
+        <span>›</span>
+        <span id="breadcrumb" class="text-blue-400">Post Item</span>
+      </div>
+      <h1 id="pageTitle" class="font-display text-2xl sm:text-3xl font-bold text-white">Post an Item</h1>
+      <p id="pageSubtitle" class="text-slate-500 text-sm mt-1">Fill in the details to help others find or return the item</p>
+    </div>
+  </div>
+
+  <!-- Form -->
+  <main class="max-w-2xl mx-auto px-4 py-10 relative z-10">
+    <div class="glass-card rounded-2xl p-6 sm:p-8 animate-fade-in-up">
+
+      <!-- Type Toggle -->
+      <div class="mb-8">
+        <label class="block text-xs font-semibold text-slate-400 mb-3">I am posting a…</label>
+        <div class="flex rounded-xl overflow-hidden border border-white/10">
+          <button type="button" id="typeLost"
+            class="flex-1 py-3 text-sm font-semibold transition-all flex items-center justify-center gap-2 bg-red-600/80 text-white">
+            🔍 Lost Item
+          </button>
+          <button type="button" id="typeFound"
+            class="flex-1 py-3 text-sm font-semibold transition-all flex items-center justify-center gap-2 text-slate-400 hover:text-slate-200">
+            📦 Found Item
+          </button>
+        </div>
+      </div>
+
+      <!-- Form Fields -->
+      <div class="space-y-5">
+        <!-- Title -->
+        <div>
+          <label class="block text-xs font-semibold text-slate-400 mb-2">Item Title <span class="text-red-400">*</span></label>
+          <input id="fieldTitle" type="text" placeholder="e.g. Blue iPhone 14 Pro, Black Wallet, Car Keys…" required
+            class="input-field w-full px-4 py-3 rounded-xl text-sm"/>
+        </div>
+
+        <!-- Category -->
+        <div>
+          <label class="block text-xs font-semibold text-slate-400 mb-2">Category <span class="text-red-400">*</span></label>
+          <select id="fieldCategory" class="input-field w-full px-4 py-3 rounded-xl text-sm cursor-pointer" required>
+            <option value="">Select a category…</option>
+            <option value="electronics">💻 Electronics</option>
+            <option value="clothing">👕 Clothing</option>
+            <option value="jewelry">💍 Jewelry</option>
+            <option value="documents">📄 Documents</option>
+            <option value="bags">👜 Bags</option>
+            <option value="keys">🔑 Keys</option>
+            <option value="wallet">👛 Wallet</option>
+            <option value="pet">🐾 Pet</option>
+            <option value="other">📦 Other</option>
+          </select>
+        </div>
+
+        <!-- Description -->
+        <div>
+          <label class="block text-xs font-semibold text-slate-400 mb-2">Description <span class="text-red-400">*</span></label>
+          <textarea id="fieldDescription" rows="4" placeholder="Describe the item in detail — color, brand, distinguishing features…" required
+            class="input-field w-full px-4 py-3 rounded-xl text-sm resize-none"></textarea>
+        </div>
+
+        <!-- Location -->
+        <div>
+          <label class="block text-xs font-semibold text-slate-400 mb-2">Location</label>
+          <input id="fieldLocation" type="text" placeholder="Where was it lost/found? (e.g. Central Park, Main Street…)"
+            class="input-field w-full px-4 py-3 rounded-xl text-sm"/>
+        </div>
+
+        <!-- Date -->
+        <div>
+          <label class="block text-xs font-semibold text-slate-400 mb-2">Date Lost / Found</label>
+          <input id="fieldDate" type="date"
+            class="input-field w-full px-4 py-3 rounded-xl text-sm"/>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <label class="block text-xs font-semibold text-slate-400 mb-2">Contact Info (optional)</label>
+          <input id="fieldContact" type="text" placeholder="Phone number or email for direct contact"
+            class="input-field w-full px-4 py-3 rounded-xl text-sm"/>
+        </div>
+
+        <!-- Image Upload -->
+        <div>
+          <label class="block text-xs font-semibold text-slate-400 mb-2">Photo</label>
+          <div id="uploadZone" class="upload-zone p-8 text-center cursor-pointer" onclick="document.getElementById('fileInput').click()">
+            <div id="uploadPrompt">
+              <div class="text-3xl mb-3">📷</div>
+              <p class="text-slate-400 text-sm font-medium">Click to upload a photo</p>
+              <p class="text-slate-600 text-xs mt-1">PNG, JPG up to 5MB</p>
+            </div>
+            <div id="uploadPreview" class="hidden">
+              <img id="previewImg" src="" alt="Preview" class="max-h-48 mx-auto rounded-xl object-contain mb-3"/>
+              <p class="text-slate-400 text-xs" id="previewName"></p>
+              <button type="button" id="removeImg" class="text-red-400 text-xs mt-2 hover:text-red-300">Remove</button>
+            </div>
+          </div>
+          <input id="fileInput" type="file" accept="image/*" class="hidden"/>
+
+          <!-- Upload Progress -->
+          <div id="uploadProgress" class="hidden mt-3">
+            <div class="flex justify-between text-xs text-slate-500 mb-1">
+              <span>Uploading…</span>
+              <span id="progressPct">0%</span>
+            </div>
+            <div class="progress-bar">
+              <div id="progressFill" class="progress-fill" style="width:0%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Submit -->
+      <div class="flex gap-3 mt-8">
+        <a href="dashboard.html" class="flex-1 py-3.5 rounded-xl border border-white/10 text-slate-400 text-sm font-semibold text-center hover:bg-white/5 transition-all">
+          Cancel
+        </a>
+        <button id="submitBtn" type="button"
+          class="flex-2 flex-1 py-3.5 rounded-xl btn-primary text-white text-sm font-semibold">
+          Post Item
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="border-t border-white/5 py-6 px-4 text-center text-slate-600 text-xs relative z-10">
+    © 2025 Lost &amp; Found Platform
+  </footer>
+
+  <script type="module">
+    import { requireAuth, logout } from "./js/auth.js";
+    import { createPost, fetchPost, updatePost } from "./js/posts.js";
+    import { showToast } from "./js/ui.js";
+
+    document.getElementById("mobileMenuBtn")?.addEventListener("click", () => {
+      document.getElementById("mobileMenu").classList.toggle("hidden");
+    });
+    document.getElementById("logoutBtn")?.addEventListener("click", logout);
+
+    const params  = new URLSearchParams(window.location.search);
+    let postType  = params.get("type") || "lost";
+    const editId  = params.get("id");
+    const isEdit  = params.get("edit") === "1" && editId;
+    let selectedFile = null;
+    let currentUser;
+
+    // Require auth
+    currentUser = await requireAuth();
+
+    // Set page titles
+    if (isEdit) {
+      document.getElementById("pageTitle").textContent     = "Edit Item";
+      document.getElementById("pageSubtitle").textContent  = "Update your post details";
+      document.getElementById("breadcrumb").textContent    = "Edit Post";
+      document.getElementById("submitBtn").textContent     = "Save Changes";
+    }
+
+    // Type toggle logic
+    function setType(t) {
+      postType = t;
+      const lostBtn  = document.getElementById("typeLost");
+      const foundBtn = document.getElementById("typeFound");
+      lostBtn.className  = `flex-1 py-3 text-sm font-semibold transition-all flex items-center justify-center gap-2 ${t === "lost"  ? "bg-red-600/80 text-white" : "text-slate-400 hover:text-slate-200"}`;
+      foundBtn.className = `flex-1 py-3 text-sm font-semibold transition-all flex items-center justify-center gap-2 ${t === "found" ? "bg-emerald-600/80 text-white" : "text-slate-400 hover:text-slate-200"}`;
+    }
+
+    setType(postType);
+    document.getElementById("typeLost").addEventListener("click",  () => setType("lost"));
+    document.getElementById("typeFound").addEventListener("click", () => setType("found"));
+
+    // Image handling
+    const fileInput   = document.getElementById("fileInput");
+    const uploadZone  = document.getElementById("uploadZone");
+    const uploadPrompt = document.getElementById("uploadPrompt");
+    const uploadPreview = document.getElementById("uploadPreview");
+
+    fileInput.addEventListener("change", (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      if (file.size > 5 * 1024 * 1024) { showToast("Image must be under 5MB.", "error"); return; }
+      selectedFile = file;
+      const url = URL.createObjectURL(file);
+      document.getElementById("previewImg").src = url;
+      document.getElementById("previewName").textContent = file.name;
+      uploadPrompt.classList.add("hidden");
+      uploadPreview.classList.remove("hidden");
+    });
+
+    document.getElementById("removeImg").addEventListener("click", (e) => {
+      e.stopPropagation();
+      selectedFile = null;
+      fileInput.value = "";
+      uploadPreview.classList.add("hidden");
+      uploadPrompt.classList.remove("hidden");
+    });
+
+    uploadZone.addEventListener("dragover",  (e) => { e.preventDefault(); uploadZone.classList.add("drag-over"); });
+    uploadZone.addEventListener("dragleave", ()  => uploadZone.classList.remove("drag-over"));
+    uploadZone.addEventListener("drop",      (e) => {
+      e.preventDefault(); uploadZone.classList.remove("drag-over");
+      const file = e.dataTransfer.files[0];
+      if (file) { fileInput.files = e.dataTransfer.files; fileInput.dispatchEvent(new Event("change")); }
+    });
+
+    // Load edit data
+    if (isEdit) {
+      try {
+        const item = await fetchPost(postType, editId);
+        if (item) {
+          document.getElementById("fieldTitle").value       = item.title       || "";
+          document.getElementById("fieldCategory").value   = item.category    || "";
+          document.getElementById("fieldDescription").value= item.description || "";
+          document.getElementById("fieldLocation").value   = item.location    || "";
+          document.getElementById("fieldContact").value    = item.contact     || "";
+          if (item.date) document.getElementById("fieldDate").value = item.date;
+          if (item.imageUrl) {
+            document.getElementById("previewImg").src = item.imageUrl;
+            document.getElementById("previewName").textContent = "Existing image";
+            uploadPrompt.classList.add("hidden");
+            uploadPreview.classList.remove("hidden");
+          }
+        }
+      } catch(e) { showToast("Could not load post for editing.", "error"); }
+    }
+
+    // Submit
+    document.getElementById("submitBtn").addEventListener("click", async () => {
+      const title       = document.getElementById("fieldTitle").value.trim();
+      const category    = document.getElementById("fieldCategory").value;
+      const description = document.getElementById("fieldDescription").value.trim();
+      const location    = document.getElementById("fieldLocation").value.trim();
+      const date        = document.getElementById("fieldDate").value;
+      const contact     = document.getElementById("fieldContact").value.trim();
+
+      if (!title || !category || !description) {
+        showToast("Please fill in all required fields.", "error");
+        return;
+      }
+
+      const onProgress = (pct) => {
+        document.getElementById("uploadProgress").classList.remove("hidden");
+        document.getElementById("progressPct").textContent  = pct + "%";
+        document.getElementById("progressFill").style.width = pct + "%";
+      };
+
+      const data = { title, category, description, location, date, contact };
+
+      if (isEdit) {
+        const ok = await updatePost(postType, editId, data);
+        if (ok) setTimeout(() => window.location.href = "dashboard.html", 800);
+      } else {
+        const id = await createPost(postType, data, selectedFile, currentUser.uid, onProgress);
+        if (id) setTimeout(() => window.location.href = postType === "lost" ? "lost.html" : "found.html", 800);
+      }
+    });
+  </script>
+</body>
+</html>

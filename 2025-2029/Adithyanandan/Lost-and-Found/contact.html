@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Lost & Found</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="bg-[#060d1a] text-slate-100 min-h-screen">
+
+  <!-- Background Effects -->
+  <div class="bg-orb bg-orb-1"></div>
+  <div class="bg-orb bg-orb-2"></div>
+
+  <!-- Global Spinner -->
+  <div id="globalSpinner" style="display:none;">
+    <div class="spinner-ring"></div>
+  </div>
+
+  <!--  NAVBAR  -->
+  <nav class="navbar fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-2.5">
+        <div class="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center font-display font-bold text-white text-sm">
+          L&F
+        </div>
+
+        <span class="font-display font-bold text-white text-sm tracking-wider hidden sm:block">
+          LOST<span class="text-blue-400">&</span>FOUND
+        </span>
+      </a>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="index.html" class="text-slate-400 hover:text-slate-200 transition-colors">
+          Home
+        </a>
+
+        <a href="lost.html" class="text-slate-400 hover:text-slate-200 transition-colors">
+          Lost Items
+        </a>
+
+        <a href="found.html" class="text-slate-400 hover:text-slate-200 transition-colors">
+          Found Items
+        </a>
+
+        <a href="post.html" class="text-slate-400 hover:text-slate-200 transition-colors">
+          Post Item
+        </a>
+
+        <a href="dashboard.html" class="text-slate-400 hover:text-slate-200 transition-colors">
+          Dashboard
+        </a>
+
+        <!-- ACTIVE PAGE -->
+        <a href="contact.html" class="text-blue-400">
+          Contact
+        </a>
+      </div>
+
+      <!-- Right Buttons -->
+      <div class="flex items-center gap-3">
+
+        <button id="logoutBtn"
+          class="text-slate-400 hover:text-red-400 text-sm transition-colors">
+          Logout
+        </button>
+
+        <button id="mobileMenuBtn"
+          class="md:hidden text-slate-400 p-2">
+
+          <svg class="w-5 h-5"
+               fill="none"
+               stroke="currentColor"
+               viewBox="0 0 24 24">
+
+            <path stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu"
+         class="hidden md:hidden border-t border-white/5 bg-[#060d1a]/95 backdrop-blur-xl">
+
+      <div class="px-4 py-4 space-y-2 text-sm font-medium">
+
+        <a href="index.html"
+           class="block py-2 text-slate-400">
+           Home
+        </a>
+
+        <a href="lost.html"
+           class="block py-2 text-slate-400">
+           Lost Items
+        </a>
+
+        <a href="found.html"
+           class="block py-2 text-slate-400">
+           Found Items
+        </a>
+
+        <a href="post.html"
+           class="block py-2 text-slate-400">
+           Post Item
+        </a>
+
+        <a href="dashboard.html"
+           class="block py-2 text-slate-400">
+           Dashboard
+        </a>
+
+        <a href="contact.html"
+           class="block py-2 text-blue-400">
+           Contact
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!--  HEADER  -->
+  <section class="pt-24 pb-10 px-4 border-b border-white/5 relative z-10">
+    <div class="max-w-6xl mx-auto text-center">
+
+      <div class="flex justify-center items-center gap-2 text-xs text-slate-500 mb-4">
+        <a href="index.html" class="hover:text-slate-300">
+          Home
+        </a>
+
+        <span>›</span>
+
+        <span class="text-blue-400">
+          Contact
+        </span>
+      </div>
+
+      <h1 class="font-display text-4xl sm:text-5xl font-bold text-white">
+        Contact <span class="text-blue-400">Us</span>
+      </h1>
+
+      <p class="text-slate-500 mt-4 max-w-2xl mx-auto">
+        Have a question, feedback, or want to collaborate?
+        Reach out to the Lost & Found team.
+      </p>
+    </div>
+  </section>
+
+  <!--  MAIN  -->
+  <main class="max-w-7xl mx-auto px-4 py-12 relative z-10">
+
+    <div class="grid lg:grid-cols-2 gap-8">
+
+      <!-- LEFT SIDE -->
+      <div class="space-y-6">
+
+        <!-- Contact Details -->
+        <div class="glass-card rounded-2xl p-6">
+
+          <h2 class="text-xl font-bold text-white mb-5">
+            Contact Information
+          </h2>
+
+          <div class="space-y-5">
+
+            <div>
+              <p class="text-xs text-slate-500 mb-1">
+                📞 Phone
+              </p>
+
+              <p class="text-slate-200">
+                8129425180
+              </p>
+            </div>
+
+            <div>
+              <p class="text-xs text-slate-500 mb-1">
+                📧 Email
+              </p>
+
+              <p class="text-slate-200">
+                rahulrohitnair@gmail.com
+              </p>
+            </div>
+
+            <div>
+              <p class="text-xs text-slate-500 mb-1">
+                📍 Location
+              </p>
+
+              <p class="text-slate-200">
+                Amrita Vishwa Vidyapeetham Amritapuri Kerala
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="glass-card rounded-2xl p-6">
+
+          <h2 class="text-xl font-bold text-white mb-5">
+            Connect With Us
+          </h2>
+
+          <div class="flex flex-col gap-4">
+
+            <a href="https://github.com/AdithyanandanArun/Lost-and-Found"
+               target="_blank"
+               class="flex items-center justify-between rounded-xl border border-white/10 p-4 hover:border-blue-500/30 transition-all">
+
+              <span>GitHub</span>
+              <span class="text-blue-400">↗</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/rahul-r-nair-09675835b"
+               target="_blank"
+               class="flex items-center justify-between rounded-xl border border-white/10 p-4 hover:border-blue-500/30 transition-all">
+
+              <span>LinkedIn</span>
+              <span class="text-blue-400">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Google Maps -->
+        <div class="glass-card rounded-2xl overflow-hidden">
+
+          <div class="p-6 pb-4">
+            <h2 class="text-xl font-bold text-white">
+              Visit Us
+            </h2>
+          </div>
+
+          <!-- Replace iframe src -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.6684482863407!2d76.48923911183262!3d9.093936990932317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0602e7b4a2049d%3A0x3af3246b5138db0f!2sAmrita%20Vishwa%20Vidyapeetham%2C%20Amritapuri!5e0!3m2!1sen!2sin!4v1778873012006!5m2!1sen!2sin"
+            width="100%"
+            height="350"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+<!-- RIGHT SIDE -->
+<div class="space-y-6 self-start">
+
+  <!-- Meet the Team -->
+  <div class="glass-card rounded-2xl p-6">
+
+    <h2 class="text-xl font-bold text-white mb-5">
+      Meet the Team
+    </h2>
+
+    <div class="grid sm:grid-cols-2 gap-4">
+
+      <!-- Rahul -->
+      <div class="rounded-xl border border-white/10 p-4 hover:border-blue-500/30 transition-all flex items-center justify-between">
+        <div>
+          <p class="text-white font-semibold">
+            Rahul R Nair
+          </p>
+          <p class="text-slate-500 text-sm mt-1">
+            Project Contributor
+          </p>
+        </div>
+
+        <img
+          src="assets/rahul.jpeg"
+          alt="Rahul R Nair"
+          class="w-16 h-16 rounded-full object-cover border border-blue-500/30 shrink-0"
+        />
+      </div>
+
+      <!-- Adithyanandan -->
+      <div class="rounded-xl border border-white/10 p-4 hover:border-blue-500/30 transition-all flex items-center justify-between">
+        <div>
+          <p class="text-white font-semibold">
+            Adithyanandan Arun
+          </p>
+          <p class="text-slate-500 text-sm mt-1">
+            Project Contributor
+          </p>
+        </div>
+
+        <img
+          src="assets/Adithyanandan.png"
+          alt="Adithyanandan Arun"
+          class="w-16 h-16 rounded-full object-cover border border-blue-500/30 shrink-0"
+        />
+      </div>
+
+      <!-- Ganesh -->
+      <div class="rounded-xl border border-white/10 p-4 hover:border-blue-500/30 transition-all flex items-center justify-between">
+        <div>
+          <p class="text-white font-semibold">
+            Ganesh S
+          </p>
+          <p class="text-slate-500 text-sm mt-1">
+            Project Contributor
+          </p>
+        </div>
+
+        <img
+          src="assets/Ganesh.png"
+          alt="Ganesh S"
+          class="w-16 h-16 rounded-full object-cover border border-blue-500/30 shrink-0"
+        />
+      </div>
+
+      <!-- Yazeen -->
+      <div class="rounded-xl border border-white/10 p-4 hover:border-blue-500/30 transition-all flex items-center justify-between">
+        <div>
+          <p class="text-white font-semibold">
+            Muhammad Yazeen
+          </p>
+          <p class="text-slate-500 text-sm mt-1">
+            Project Contributor
+          </p>
+        </div>
+
+        <img
+          src="assets/Yazeen.jpeg"
+          alt="Muhammad Yazeen"
+          class="w-16 h-16 rounded-full object-cover border border-blue-500/30 shrink-0"
+        />
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Contact Form -->
+  <div class="glass-card rounded-2xl p-6 sm:p-8">
+
+    <h2 class="text-2xl font-bold text-white mb-2">
+      Send us a Message
+    </h2>
+
+    <p class="text-slate-500 text-sm mb-8">
+      We’ll get back to you as soon as possible.
+    </p>
+
+    <div class="space-y-5">
+
+      <div>
+        <label class="block text-xs font-semibold text-slate-400 mb-2">
+          Name
+        </label>
+
+        <input
+          id="contactName"
+          type="text"
+          placeholder="Your full name"
+          class="input-field w-full px-4 py-3 rounded-xl text-sm"
+        />
+      </div>
+
+      <div>
+        <label class="block text-xs font-semibold text-slate-400 mb-2">
+          Email
+        </label>
+
+        <input
+          id="contactEmail"
+          type="email"
+          placeholder="your@email.com"
+          class="input-field w-full px-4 py-3 rounded-xl text-sm"
+        />
+      </div>
+
+      <div>
+        <label class="block text-xs font-semibold text-slate-400 mb-2">
+          Subject
+        </label>
+
+        <input
+          id="contactSubject"
+          type="text"
+          placeholder="What is this about?"
+          class="input-field w-full px-4 py-3 rounded-xl text-sm"
+        />
+      </div>
+
+      <div>
+        <label class="block text-xs font-semibold text-slate-400 mb-2">
+          Message
+        </label>
+
+        <textarea
+          id="contactMessage"
+          rows="6"
+          placeholder="Write your message here..."
+          class="input-field w-full px-4 py-3 rounded-xl text-sm resize-none">
+        </textarea>
+      </div>
+
+      <button
+        id="sendMessageBtn"
+        class="w-full py-3.5 rounded-xl btn-primary text-white text-sm font-semibold">
+        Send Message
+      </button>
+
+    </div>
+  </div>
+
+</div>
+</div>
+  </main>
+<!-- FOOTER -->
+<footer class="border-t border-white/5 mt-16 py-6 relative z-10">
+
+  <div class="max-w-7xl mx-auto px-4 text-center">
+    <p class="text-slate-500 text-sm">
+      © 2025 Lost & Found Platform
+    </p>
+  </div>
+
+</footer>
+
+  <!--  JS  -->
+  <script type="module" src="./js/contact.js"></script>
+
+</body>
+</html>

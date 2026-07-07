@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.uv-cache/
+.uv-tools/
+.npm-cache/
+.venv/
+uploads/
