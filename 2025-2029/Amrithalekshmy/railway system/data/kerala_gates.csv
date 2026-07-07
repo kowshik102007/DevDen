@@ -1,0 +1,1223 @@
+gate_id,display_name,lat,lon,road_name,nearest_place,district
+node/269201602,LC near Vellayil (P. T. Usha Road),11.2597645,75.7760998,P. T. Usha Road,Vellayil,Kozhikode
+node/288413246,LC near Thavakkara (thane to kannur city),11.8648783,75.3808271,thane to kannur city,Thavakkara,Kannur
+node/291551682,LC near Vengara,12.0299792,75.2465881,,Vengara,Kannur
+node/292318817,LC near Elathur,11.3446613,75.7411649,,Elathur,Kozhikode
+node/292321535,LC near Varam (NH 66),11.8643107,75.4079725,NH 66,Varam,Kannur
+node/292321578,LC near Thavakkara (thane to kannur city),11.864858,75.3789463,thane to kannur city,Thavakkara,Kannur
+node/299088690,LC near Kumbalam,9.9027031,76.3129224,,Kumbalam,Ernakulam
+node/304281383,LC near Kanhangad (Puthiyotta-Kallooravi Road),12.3173749,75.0859526,Puthiyotta-Kallooravi Road,Kanhangad,Kasaragod
+node/304986474,LC near Perumpazhuthoor,8.4191458,77.0672086,,Perumpazhuthoor,Thiruvananthapuram
+node/304986491,LC near Balaramapuram,8.4400163,77.0393905,,Balaramapuram,Thiruvananthapuram
+node/304986501,LC near Balaramapuram,8.4446561,77.0198401,,Balaramapuram,Thiruvananthapuram
+node/304986502,LC near Balaramapuram,8.4449214,77.0193531,,Balaramapuram,Thiruvananthapuram
+node/305995842,LC near Kothanalloor (Kothanalloor Chamakkala Road),9.7152765,76.5251795,Kothanalloor Chamakkala Road,Kothanalloor,Kottayam
+node/306007102,LC near Thrippunithura,9.9735845,76.336358,,Thrippunithura,Ernakulam
+node/306007155,LC near Thrippunithura,9.9734909,76.3427408,,Thrippunithura,Ernakulam
+node/306007160,LC near Thrippunithura,9.9735579,76.3400289,,Thrippunithura,Ernakulam
+node/306010326,LC near Kothakulangara,10.1972308,76.3743748,,Kothakulangara,Ernakulam
+node/306010331,LC near Kothakulangara (Angamayl Road),10.1854052,76.3771831,Angamayl Road,Kothakulangara,Ernakulam
+node/306010355,LC near Aluva (Aluva Kalady Road),10.120786,76.3635551,Aluva Kalady Road,Aluva,Ernakulam
+node/306010376,LC near Aluva,10.0811031,76.3398699,,Aluva,Ernakulam
+node/306148826,LC near Thuruthy,9.484648,76.5296215,,Thuruthy,Kottayam
+node/306148862,LC near Nalukody (thengana naalukodi),9.4197592,76.5591074,thengana naalukodi,Nalukody,Kottayam
+node/306253855,LC near Ettumanoor (Anamala - Kanakkari Road),9.6870888,76.5444853,Anamala - Kanakkari Road,Ettumanoor,Kottayam
+node/306604213,LC near Changanassery,9.4688629,76.5377951,,Changanassery,Kottayam
+node/331172538,LC near Varkala (Varkala - Edava - Kappil Bridge Approach Road),8.7641225,76.6967103,Varkala - Edava - Kappil Bridge Approach Road,Varkala,Thiruvananthapuram
+node/334544617,LC near Andamukkam (Public Library YMCA Road),8.8840366,76.591496,Public Library YMCA Road,Andamukkam,Kollam
+node/334641063,LC near Melvettoor (Varkala-Paripally Road),8.742898,76.7216368,Varkala-Paripally Road,Melvettoor,Thiruvananthapuram
+node/334641214,LC near Varkala (Varkala - Edava - Kappil Bridge Approach Road),8.7528517,76.7096058,Varkala - Edava - Kappil Bridge Approach Road,Varkala,Thiruvananthapuram
+node/334641271,LC near Varkala (Varkala - Edava - Kappil Bridge Approach Road),8.7616134,76.6997018,Varkala - Edava - Kappil Bridge Approach Road,Varkala,Thiruvananthapuram
+node/334651976,LC near Nedungolam,8.8129774,76.6751109,,Nedungolam,Kollam
+node/334652219,LC near Mayyanad (Kottiyam mayyanad road),8.8329922,76.6510318,Kottiyam mayyanad road,Mayyanad,Kollam
+node/334652416,LC near Mayyanad (Kottiyam Mayyanad Road),8.8542031,76.6377067,Kottiyam Mayyanad Road,Mayyanad,Kollam
+node/334652535,LC near Eravipuram (Thattamala-thirumukku road),8.8630748,76.6299467,Thattamala-thirumukku road,Eravipuram,Kollam
+node/334662852,LC near Cheriyanad (Cheriyanad - Ala - Madathumpady Road),9.2766405,76.585352,Cheriyanad - Ala - Madathumpady Road,Cheriyanad,Alappuzha
+node/334666170,LC near Thazhava (kanjirappally- sasthampoika road),9.0971069,76.5353299,kanjirappally- sasthampoika road,Thazhava,Kollam
+node/334666175,LC near Karunagapally (Puthiyakavu - Chakuvally Road),9.0770117,76.5412587,Puthiyakavu - Chakuvally Road,Karunagapally,Kollam
+node/344450409,LC near Ollur (Mannuthy-Palakkal Road),10.4718288,76.2387398,Mannuthy-Palakkal Road,Ollur,Thrissur
+node/352732225,LC near Thalassery (Paraal road),11.7308399,75.5117693,Paraal road,Thalassery,Kannur
+node/355168639,LC near Kalpathy,10.7694358,76.6545504,,Kalpathy,Palakkad
+node/356643918,LC near Shava kotta palam,9.5108317,76.3200876,,Shava kotta palam,Alappuzha
+node/364306481,LC near Edamon,9.0064296,76.9874183,,Edamon,Kollam
+node/381074850,LC near Nadakkave (Panickar Road),11.2675345,75.7727598,Panickar Road,Nadakkave,Kozhikode
+node/405227279,LC near Vaniyambalam,11.1901218,76.2595544,,Vaniyambalam,Malappuram
+node/417496866,LC near Thalassery (Thalassery Kolassery Road),11.7600035,75.4889451,Thalassery Kolassery Road,Thalassery,Kannur
+node/417542260,LC near Thalassery (Thalasseri - Irikkur Road),11.7672295,75.478846,Thalasseri - Irikkur Road,Thalassery,Kannur
+node/471962351,LC near Pudussery West,10.8015592,76.7301108,,Pudussery West,Palakkad
+node/571344047,LC near Mananchira (Court Road),11.2514148,75.779501,Court Road,Mananchira,Kozhikode
+node/571782370,LC near Kodumunda (Pattambi-Kodumunda Road),10.8097538,76.149308,Pattambi-Kodumunda Road,Kodumunda,Palakkad
+node/580724448,LC near Payyanur (Payyanur-Thrikkaripur-Kalikadavu),12.0972006,75.1933092,Payyanur-Thrikkaripur-Kalikadavu,Payyanur,Kannur
+node/580735258,LC near Vengara,12.0304563,75.2464272,,Vengara,Kannur
+node/585111227,LC near Cherukunnu (Kannapuram-Dharmasala),11.9801841,75.3176236,Kannapuram-Dharmasala,Cherukunnu,Kannur
+node/594906898,LC near Kurikad,9.9271961,76.3741606,,Kurikad,Ernakulam
+node/604925081,LC near Chandiroor,9.832708,76.3048407,,Chandiroor,Alappuzha
+node/604925341,LC near Cherthala,9.6827602,76.3329621,,Cherthala,Alappuzha
+node/605274266,LC near Thrikaripur (vellapp road),12.1415939,75.175781,vellapp road,Thrikaripur,Kasaragod
+node/633278521,LC near Manjeshwar,12.7060569,74.9023568,,Manjeshwar,Kasaragod
+node/634476206,LC near Palakkunnu (kottikulum arattukadav road),12.4240349,75.0239553,kottikulum arattukadav road,Palakkunnu,Kasaragod
+node/671562836,LC near Kuthiathode,9.7803735,76.310005,,Kuthiathode,Alappuzha
+node/685602020,LC near Wadakkancherry (Kodungallur - Shornur Road),10.6554138,76.24718,Kodungallur - Shornur Road,Wadakkancherry,Thrissur
+node/706930324,LC near Vadavannur,10.6592508,76.6833315,,Vadavannur,Palakkad
+node/707728402,LC near Peringala (Bhagavathipadi - Menampally Road),9.2119501,76.5276896,Bhagavathipadi - Menampally Road,Peringala,Alappuzha
+node/707728451,LC near Peringala (Bhagavathipadi - Menampally Road),9.2051715,76.5241374,Bhagavathipadi - Menampally Road,Peringala,Alappuzha
+node/707728484,LC near Thakazhy (Ambalapuzha-Thiruvalla Highway),9.3742861,76.4074981,Ambalapuzha-Thiruvalla Highway,Thakazhy,Alappuzha
+node/707728491,LC near Alappuzha,9.4694945,76.3258659,,Alappuzha,Alappuzha
+node/707728497,LC near Peringala (Kayamkulam - Thiruvalla Road),9.1928018,76.5157824,Kayamkulam - Thiruvalla Road,Peringala,Alappuzha
+node/713196725,LC near Vallapuzha,10.84026,76.2522113,,Vallapuzha,Palakkad
+node/806551341,LC near Pilathara (Kunnaru--Kunhimangalam Road),12.0680662,75.2324586,Kunnaru--Kunhimangalam Road,Pilathara,Kannur
+node/1053678254,LC near Kochuveli (Kochuveli Road),8.5125051,76.8933832,Kochuveli Road,Kochuveli,Thiruvananthapuram
+node/1053678707,LC near Kochuveli (Kochuveli Road),8.5124516,76.8933232,Kochuveli Road,Kochuveli,Thiruvananthapuram
+node/1075413348,LC near Amballur (Urakam-Pudukad Road),10.4197277,76.2620225,Urakam-Pudukad Road,Amballur,Thrissur
+node/1126467972,LC near Pathiyoor,9.2038864,76.4961113,,Pathiyoor,Alappuzha
+node/1126468160,LC near Shava kotta palam,9.4939173,76.3202273,,Shava kotta palam,Alappuzha
+node/1126468275,LC near Alappuzha (Beach Thiruvambadi Road),9.4812692,76.3229775,Beach Thiruvambadi Road,Alappuzha,Alappuzha
+node/1126468579,LC near Shava kotta palam,9.5001945,76.3186693,,Shava kotta palam,Alappuzha
+node/1126468655,LC near Shava kotta palam,9.4946934,76.3198494,,Shava kotta palam,Alappuzha
+node/1126468757,LC near Omanappuzha,9.5478039,76.3194945,,Omanappuzha,Alappuzha
+node/1126485158,LC near Cherthala,9.6843649,76.331984,,Cherthala,Alappuzha
+node/1126485258,LC near Cherthala,9.6872298,76.330228,,Cherthala,Alappuzha
+node/1126485283,LC near Cherthala,9.6979137,76.3177851,,Cherthala,Alappuzha
+node/1126516031,LC near Pattanakkad,9.743125,76.3118914,,Pattanakkad,Alappuzha
+node/1126516238,LC near Kuthiathode,9.7691317,76.3115101,,Kuthiathode,Alappuzha
+node/1126516552,LC near Ezhupunna,9.8216525,76.3014319,,Ezhupunna,Alappuzha
+node/1126516653,LC node/1126516653,9.7037673,76.3121626,,,Alappuzha
+node/1166511399,LC near Cantonment (College Junction Level Cross),8.8811104,76.5971004,College Junction Level Cross,Cantonment,Kollam
+node/1166511404,LC near Kadappakkada,8.8903544,76.6102886,,Kadappakkada,Kollam
+node/1166965652,LC near Chittattukara,10.577382,76.0635199,,Chittattukara,Thrissur
+node/1166965796,LC near Chittattukara,10.5771818,76.0667022,,Chittattukara,Thrissur
+node/1284047615,LC near Ettumanoor (Anamala - Kanakkari Road),9.6871079,76.5445499,Anamala - Kanakkari Road,Ettumanoor,Kottayam
+node/1358277686,LC near Punkunnam (thiruvambady rd),10.5335149,76.2088413,thiruvambady rd,Punkunnam,Thrissur
+node/1358277747,LC near Guruvayur,10.5995135,76.0444835,,Guruvayur,Thrissur
+node/1365686429,LC near Mattancherry,9.9555467,76.2698161,,Mattancherry,Ernakulam
+node/1497532640,LC near Amballur (Arakkunnam - Amballoor Road),9.8746894,76.4005072,Arakkunnam - Amballoor Road,Amballur,Ernakulam
+node/1510533891,LC near Kayamkulam (Kayamkulam - Thiruvalla Road),9.1967796,76.5112565,Kayamkulam - Thiruvalla Road,Kayamkulam,Alappuzha
+node/1511767584,LC near Alappuzha,9.4502174,76.3330319,,Alappuzha,Alappuzha
+node/1511950056,LC near Shava kotta palam,9.5208729,76.3216674,,Shava kotta palam,Alappuzha
+node/1604386981,LC near Mulakunnathukavu (Attore-Tirur Road),10.5826549,76.2051555,Attore-Tirur Road,Mulakunnathukavu,Thrissur
+node/1615612486,LC near Perunguzhi (Azhoor level cross),8.643377,76.7974375,Azhoor level cross,Perunguzhi,Thiruvananthapuram
+node/1615612504,LC near Perunguzhi (Manjadimoodu Level cross),8.6495635,76.790877,Manjadimoodu Level cross,Perunguzhi,Thiruvananthapuram
+node/1615612731,LC near Kadakkavoor (Vakkom Main Road),8.6884157,76.7608836,Vakkom Main Road,Kadakkavoor,Thiruvananthapuram
+node/1683508246,LC near Karunagapally,9.0620169,76.5457154,,Karunagapally,Kollam
+node/1683508339,LC near Karunagapally (Puthiyakavu - Chakuvally Road),9.0812693,76.5399893,Puthiyakavu - Chakuvally Road,Karunagapally,Kollam
+node/1764149826,LC near Elampalloor,8.9560846,76.6704507,,Elampalloor,Kollam
+node/1770457338,LC near Kadalundi (Chaliyam - Kadalundi - Kottakadavu Road),11.1372541,75.826682,Chaliyam - Kadalundi - Kottakadavu Road,Kadalundi,Kozhikode
+node/1805290547,LC near Kaniyapuram (Kaniyapuram-Perumathura Road),8.5884155,76.8534622,Kaniyapuram-Perumathura Road,Kaniyapuram,Thiruvananthapuram
+node/1805290698,LC near Murukkumpuzha,8.6113758,76.8327329,,Murukkumpuzha,Thiruvananthapuram
+node/1854679172,LC near Muttuchira (Muttuchira - Ayakudi Road),9.7561112,76.492333,Muttuchira - Ayakudi Road,Muttuchira,Kottayam
+node/1861429031,LC near Cheppad,9.2399992,76.4746868,,Cheppad,Alappuzha
+node/1887842861,LC near Enkakkad (Wadakkanchery Vazhani Rd),10.6657109,76.2563118,Wadakkanchery Vazhani Rd,Enkakkad,Thrissur
+node/1909587955,LC near Nangiarkulangara,9.2471809,76.4725977,,Nangiarkulangara,Alappuzha
+node/1962359017,LC near Mankara (Mankara Chakkanthara Road),10.7797628,76.5094635,Mankara Chakkanthara Road,Mankara,Palakkad
+node/1986388344,LC near Punnapra,9.433752,76.3388005,,Punnapra,Alappuzha
+node/2002602476,LC near Kurikad,9.9271428,76.3741264,,Kurikad,Ernakulam
+node/2017705899,LC near Vaduthala (Chittoor Road),10.0132919,76.2771026,Chittoor Road,Vaduthala,Ernakulam
+node/2024529483,LC near Shenoys (Kizhavana Road),9.955729,76.2939203,Kizhavana Road,Shenoys,Ernakulam
+node/2039597103,LC near Kalpathy,10.8047777,76.6476425,,Kalpathy,Palakkad
+node/2118017473,LC near Vandithavalam,10.6304837,76.739532,,Vandithavalam,Palakkad
+node/2118605809,LC near Mullurkara (Mulloorkkara - Varavoor Road),10.7059687,76.2707356,Mulloorkkara - Varavoor Road,Mullurkara,Thrissur
+node/2118609483,LC near Lakkidi (Pazhayannur-Lakkidi Road),10.7533531,76.4368745,Pazhayannur-Lakkidi Road,Lakkidi,Palakkad
+node/2121173171,LC near Cherukara,10.9317515,76.2267747,,Cherukara,Malappuram
+node/2121173860,LC near Pattikkad,11.0198682,76.2306444,,Pattikkad,Malappuram
+node/2121714766,LC near Mappattukara,10.8831827,76.2355815,,Mappattukara,Palakkad
+node/2136532842,LC near Kaithappuram,10.9808944,75.8800308,,Kaithappuram,Malappuram
+node/2136532958,LC near Murikkal,11.0302689,75.8683851,,Murikkal,Malappuram
+node/2169557651,LC near Chettippadi (Chamravattam - Tirur - Kozhikkode Road),11.072285,75.855356,Chamravattam - Tirur - Kozhikkode Road,Chettippadi,Malappuram
+node/2440782920,LC near Shenoys (Ambikapuram Crossing),9.9616643,76.2927079,Ambikapuram Crossing,Shenoys,Ernakulam
+node/2444557374,LC near Polayathodu (Polayathoduu - Chayakkadamukku - Kachikkadavu Road),8.8769338,76.6086535,Polayathoduu - Chayakkadamukku - Kachikkadavu Road,Polayathodu,Kollam
+node/2451502202,LC near Karayamparambu,10.2298171,76.3724922,,Karayamparambu,Ernakulam
+node/2451546480,LC near Aluva (Aluva Kalady Road),10.1207496,76.3634284,Aluva Kalady Road,Aluva,Ernakulam
+node/2451549122,LC near Aluva,10.0932614,76.3463368,,Aluva,Ernakulam
+node/2453236878,LC near Chirangara (Old NH Koratty),10.2528757,76.3661346,Old NH Koratty,Chirangara,Thrissur
+node/2456547427,LC near Nellayi (Vallakkunnu-Nellayi Road),10.3938362,76.2756457,Vallakkunnu-Nellayi Road,Nellayi,Thrissur
+node/2465783853,LC near Kottappuram (AR Menon Road),10.5264995,76.2080852,AR Menon Road,Kottappuram,Thrissur
+node/2486248703,LC near Mayyanad (Kottiyam mayyanad road),8.8399577,76.6465932,Kottiyam mayyanad road,Mayyanad,Kollam
+node/2495246656,LC near Kunnikode (Kunnikodu - Pattazhy),9.0334101,76.8471796,Kunnikodu - Pattazhy,Kunnikode,Kollam
+node/2495917589,LC near Kunnikode (Kunnikodu - Pattazhy),9.0334411,76.8471618,Kunnikodu - Pattazhy,Kunnikode,Kollam
+node/2518959777,LC near Karuvanpadi (Pallipuram - Pattambi Road),10.8313933,76.1272127,Pallipuram - Pattambi Road,Karuvanpadi,Palakkad
+node/2521085992,LC near Cherukunnu (Cherukunnuthara - Keezhara - Vellikkeelkadavu Road),11.9908131,75.308594,Cherukunnuthara - Keezhara - Vellikkeelkadavu Road,Cherukunnu,Kannur
+node/2521086007,LC near Cherukunnu (Kovvappuram - Irinavu Bypass Road),11.9971819,75.2954675,Kovvappuram - Irinavu Bypass Road,Cherukunnu,Kannur
+node/2569526690,LC near Polayathodu (Madannada - Eravipuram),8.8728488,76.6155442,Madannada - Eravipuram,Polayathodu,Kollam
+node/2569546776,LC near Panayam,8.9740058,76.6074601,,Panayam,Kollam
+node/2570349361,LC near Thazhava (Changankulangara - Vallikunnam Road),9.1033536,76.5335014,Changankulangara - Vallikunnam Road,Thazhava,Kollam
+node/2570442451,LC near West Kallada,9.0147137,76.6061696,,West Kallada,Kollam
+node/2571150865,LC near Udyawara,12.7274915,74.8835561,,Udyawara,Kasaragod
+node/2571152312,LC near Uppala,12.6714606,74.9061256,,Uppala,Kasaragod
+node/2571153873,LC near Uppala (Uppala - Moosodi Road),12.6839288,74.9029537,Uppala - Moosodi Road,Uppala,Kasaragod
+node/2573337035,LC near Bandiyod,12.6348636,74.9246787,,Bandiyod,Kasaragod
+node/2577129459,LC near Muzhappilangad,11.7996435,75.4482808,,Muzhappilangad,Kannur
+node/2584800087,LC near Melechovva (Thayil - Thazhe Chova Road),11.8663509,75.4026599,Thayil - Thazhe Chova Road,Melechovva,Kannur
+node/2585077098,LC near Dharmadom,11.7748433,75.4664249,,Dharmadom,Kannur
+node/2599401523,LC near Nedumbassery (Parambayam - Avanamcode Road),10.1411776,76.3769099,Parambayam - Avanamcode Road,Nedumbassery,Ernakulam
+node/2603200456,LC near Cantonment (College Junction Level Cross),8.8797107,76.6032281,College Junction Level Cross,Cantonment,Kollam
+node/2610846383,LC near Aluva,10.0986491,76.347767,,Aluva,Ernakulam
+node/2620773900,LC near Polayathodu (Polayathoduu - Chayakkadamukku - Kachikkadavu Road),8.8768691,76.6086598,Polayathoduu - Chayakkadamukku - Kachikkadavu Road,Polayathodu,Kollam
+node/2622365839,LC near Polayathodu (Parakkottu Kavu Temple Road),8.8789821,76.6049413,Parakkottu Kavu Temple Road,Polayathodu,Kollam
+node/2641836427,LC near Murukkumpuzha (Karichara Kadavu Road),8.6020664,76.8426057,Karichara Kadavu Road,Murukkumpuzha,Thiruvananthapuram
+node/2654257263,LC near Chemanchery,11.4098383,75.7169128,,Chemanchery,Kozhikode
+node/2654257265,LC near Chemanchery,11.4098773,75.7169945,,Chemanchery,Kozhikode
+node/2694753341,LC near Kadalundi (Mannur Rail Chaliyam Road),11.1504258,75.8283315,Mannur Rail Chaliyam Road,Kadalundi,Kozhikode
+node/2705338804,LC node/2705338804,9.7174506,76.3104504,,,Alappuzha
+node/2803174325,LC near Thalassery (Thalassery-Kuttiyadi Road),11.7415831,75.5054695,Thalassery-Kuttiyadi Road,Thalassery,Kannur
+node/2900337197,LC near Chirayinkeezhu (Chirayinkeezhu - Attingal Road),8.660525,76.7848271,Chirayinkeezhu - Attingal Road,Chirayinkeezhu,Thiruvananthapuram
+node/2917454062,LC near Mavelikkara,9.2427775,76.5483723,,Mavelikkara,Alappuzha
+node/2920445312,LC near Thakazhy,9.3630631,76.4120689,,Thakazhy,Alappuzha
+node/2921756318,LC near Kothanalloor (Kothanalloor Chamakkala Road),9.7200842,76.5229517,Kothanalloor Chamakkala Road,Kothanalloor,Kottayam
+node/2926176797,LC near Vadanamkurussi,10.7867589,76.2526051,,Vadanamkurussi,Palakkad
+node/2934999994,LC near Aloor (Kodakara - Kodungallur Road),10.3315996,76.291171,Kodakara - Kodungallur Road,Aloor,Thrissur
+node/2984138939,LC near Kanhangad (Puthiyotta-Kallooravi Road),12.3173743,75.0859016,Puthiyotta-Kallooravi Road,Kanhangad,Kasaragod
+node/2999857481,LC near Chettukundu,12.3696364,75.0564567,,Chettukundu,Kasaragod
+node/3042677624,LC near Thrikaripur,12.1188863,75.1846749,,Thrikaripur,Kasaragod
+node/3109653113,LC near Kanhangad (Puthiyotta-Kallooravi Road),12.3173891,75.0859913,Puthiyotta-Kallooravi Road,Kanhangad,Kasaragod
+node/3109653114,LC near Kanhangad (Puthiyotta-Kallooravi Road),12.3173983,75.0860446,Puthiyotta-Kallooravi Road,Kanhangad,Kasaragod
+node/3213757004,LC near Kochuveli (Kochuveli Road),8.5074755,76.8990475,Kochuveli Road,Kochuveli,Thiruvananthapuram
+node/3213757005,LC near Kochuveli (Kochuveli Road),8.5074943,76.8991013,Kochuveli Road,Kochuveli,Thiruvananthapuram
+node/3213757038,LC near Kochuveli (Kochuveli Road),8.5125922,76.8934709,Kochuveli Road,Kochuveli,Thiruvananthapuram
+node/3249471730,LC near Amballur (Urakam-Pudukad Road),10.4196409,76.2619299,Urakam-Pudukad Road,Amballur,Thrissur
+node/3265639853,LC near Iringal,11.5588406,75.608865,,Iringal,Kozhikode
+node/3387672808,LC near Kadappakkada,8.8902773,76.6103458,,Kadappakkada,Kollam
+node/3387672841,LC near Kallumthazham (Kallumthazham Motheenmukku road),8.9011631,76.6229482,Kallumthazham Motheenmukku road,Kallumthazham,Kollam
+node/3617771916,LC near Chala (Melarannoor-Killipalam Road),8.4856826,76.9612492,Melarannoor-Killipalam Road,Chala,Thiruvananthapuram
+node/3661697672,LC near Kadappakkada,8.8903148,76.6103158,,Kadappakkada,Kollam
+node/3661697673,LC near Kallumthazham (Kallumthazham Motheenmukku road),8.9012044,76.6228969,Kallumthazham Motheenmukku road,Kallumthazham,Kollam
+node/3661697674,LC near Kallumthazham (Kallumthazham Motheenmukku road),8.9012652,76.622831,Kallumthazham Motheenmukku road,Kallumthazham,Kollam
+node/3668093012,LC near Kandamkulangara,11.311561,75.7542673,,Kandamkulangara,Kozhikode
+node/3668297583,LC near West Hill (Bhatt Road),11.2897637,75.7634591,Bhatt Road,West Hill,Kozhikode
+node/3668297607,LC near West Hill (Bhatt Road),11.291818,75.7625749,Bhatt Road,West Hill,Kozhikode
+node/3704141230,LC near Nandikkara (Mapranam Nandikara Road),10.403036,76.2751511,Mapranam Nandikara Road,Nandikkara,Thrissur
+node/3709666882,LC near Nandikkara (Mapranam Nandikara Road),10.409633,76.2717744,Mapranam Nandikara Road,Nandikkara,Thrissur
+node/3745066984,LC near Kuttikadan Colony (Anandapuram ‐ kodakara road),10.3805977,76.2754198,Anandapuram ‐ kodakara road,Kuttikadan Colony,Thrissur
+node/3745068458,LC near Kuttikadan Colony (Anandapuram ‐ kodakara road),10.3806124,76.2755593,Anandapuram ‐ kodakara road,Kuttikadan Colony,Thrissur
+node/3748767996,LC near Poothole (Kanimangalam - Nedupuzha Road),10.4995343,76.2055756,Kanimangalam - Nedupuzha Road,Poothole,Thrissur
+node/3748768001,LC near Poothole (Kanimangalam - Nedupuzha Road),10.4995266,76.2054953,Kanimangalam - Nedupuzha Road,Poothole,Thrissur
+node/3797752732,LC near Pathaya Pura (Vattampoyil Railway gate),11.2400323,75.7860409,Vattampoyil Railway gate,Pathaya Pura,Kozhikode
+node/3806142945,LC near Azhiyur (Moonam Gate Road),11.6867588,75.5492306,Moonam Gate Road,Azhiyur,Kozhikode
+node/3807766343,LC near Azhiyur (Koroth Road to Mahe Railway station road),11.6929476,75.5479665,Koroth Road to Mahe Railway station road,Azhiyur,Kozhikode
+node/3818668393,LC near Thalassery (Thalassery-Kuttiyadi Road),11.744607,75.4999945,Thalassery-Kuttiyadi Road,Thalassery,Kannur
+node/3824115492,LC near Pilathara (Kunnaru--Kunhimangalam Road),12.0641997,75.2369858,Kunnaru--Kunhimangalam Road,Pilathara,Kannur
+node/3831409974,LC near Udyawara,12.7438386,74.8749699,,Udyawara,Kasaragod
+node/3832323264,LC near Iringal,11.5588041,75.6087924,,Iringal,Kozhikode
+node/3839412203,LC near Walayar,10.8497972,76.8383971,,Walayar,Palakkad
+node/3841371966,LC near Pudussery West,10.8016138,76.7301034,,Pudussery West,Palakkad
+node/3842268999,LC near Mulakunnathukavu (Ayodhya Nagar Road),10.5792693,76.2062039,Ayodhya Nagar Road,Mulakunnathukavu,Thrissur
+node/3843128966,LC near Ollur (Thaikkattussery Road),10.4543923,76.2428254,Thaikkattussery Road,Ollur,Thrissur
+node/3844086874,LC node/3844086874 (muriyad- kodakara road),10.3693951,76.2700624,muriyad- kodakara road,,Thrissur
+node/3844086876,LC node/3844086876 (muriyad- kodakara road),10.3694477,76.2699862,muriyad- kodakara road,,Thrissur
+node/3844119595,LC near Nellayi (Vallakkunnu-Nellayi Road),10.3938371,76.2755936,Vallakkunnu-Nellayi Road,Nellayi,Thrissur
+node/3844288603,LC near Aloor (Kodakara - Kodungallur Road),10.3349434,76.2880413,Kodakara - Kodungallur Road,Aloor,Thrissur
+node/3844288605,LC near Aloor (Kodakara - Kodungallur Road),10.3315546,76.2911327,Kodakara - Kodungallur Road,Aloor,Thrissur
+node/3844289084,LC near Nedumbassery (Parambayam - Avanamcode Road),10.1411915,76.3767936,Parambayam - Avanamcode Road,Nedumbassery,Ernakulam
+node/3844322009,LC near Aluva,10.0986781,76.3477434,,Aluva,Ernakulam
+node/3844322049,LC near Aluva,10.0811222,76.339815,,Aluva,Ernakulam
+node/3844322267,LC near Vaduthala (Chittoor Road),10.0133328,76.2770579,Chittoor Road,Vaduthala,Ernakulam
+node/3846355220,LC near Chemanchery (Kappad-Thiruvangoor Road),11.3844644,75.7314018,Kappad-Thiruvangoor Road,Chemanchery,Kozhikode
+node/3848712038,LC near Nilambur,11.2772491,76.2556718,,Nilambur,Malappuram
+node/3856005416,LC near Wadakkancherry (Kodungallur - Shornur Road),10.6555135,76.2471791,Kodungallur - Shornur Road,Wadakkancherry,Thrissur
+node/3856210316,LC near Kuranchery,10.6235366,76.2182085,,Kuranchery,Thrissur
+node/3856210317,LC near Kuranchery,10.6236599,76.2182424,,Kuranchery,Thrissur
+node/3856210321,LC near Kuranchery,10.639469,76.2318101,,Kuranchery,Thrissur
+node/3856210322,LC near Kuranchery,10.6395092,76.2319472,,Kuranchery,Thrissur
+node/3904001355,LC near Walayar,10.8498181,76.8383551,,Walayar,Palakkad
+node/3904001558,LC near Walayar,10.8498765,76.8382445,,Walayar,Palakkad
+node/3904001561,LC near Walayar,10.8499661,76.8380341,,Walayar,Palakkad
+node/3925608627,LC near Thalassery,11.7106949,75.5441632,,Thalassery,Kannur
+node/3926805444,LC near Ollur (Mannuthy-Palakkal Road),10.4717993,76.2387088,Mannuthy-Palakkal Road,Ollur,Thrissur
+node/3930096908,LC near Cheriyanad (Cheriyanad - Ala - Madathumpady Road),9.2698798,76.5847251,Cheriyanad - Ala - Madathumpady Road,Cheriyanad,Alappuzha
+node/3930105828,LC near Haripad (Vazhappally - Railway Cross Road),9.2837548,76.4615985,Vazhappally - Railway Cross Road,Haripad,Alappuzha
+node/3930214196,LC near Punnapra,9.4196776,76.3427516,,Punnapra,Alappuzha
+node/3930214213,LC near Punnapra,9.4141528,76.3442185,,Punnapra,Alappuzha
+node/3930214800,LC near Ambalappuzha,9.4089217,76.3456221,,Ambalappuzha,Alappuzha
+node/3930223107,LC near Alappuzha,9.4613185,76.3288937,,Alappuzha,Alappuzha
+node/3930223900,LC near Alappuzha,9.4639845,76.3278143,,Alappuzha,Alappuzha
+node/3930223910,LC near Punnapra,9.4410682,76.3362382,,Punnapra,Alappuzha
+node/3930420947,LC near Mynagappally (Karunagappally - Sasthamcottah Road),9.0429002,76.5795753,Karunagappally - Sasthamcottah Road,Mynagappally,Kollam
+node/3930428758,LC near Mynagappally (Karunagappally - Sasthamcottah Road),9.0443568,76.5779033,Karunagappally - Sasthamcottah Road,Mynagappally,Kollam
+node/3930673382,LC near Melvettoor (Varkala-Paripally Road),8.7481613,76.716417,Varkala-Paripally Road,Melvettoor,Thiruvananthapuram
+node/3930932426,LC near Chirayinkeezhu (chirayinkeezhu-Thiruvananthapuram Road),8.6549375,76.7878172,chirayinkeezhu-Thiruvananthapuram Road,Chirayinkeezhu,Thiruvananthapuram
+node/3930988245,LC near Thumba,8.5433448,76.8744882,,Thumba,Thiruvananthapuram
+node/3931011760,LC near Kaniyapuram (St Andrews Road),8.580295,76.8600394,St Andrews Road,Kaniyapuram,Thiruvananthapuram
+node/3931047763,LC near Kadakkavoor (Randam Gate Road),8.6847644,76.7615269,Randam Gate Road,Kadakkavoor,Thiruvananthapuram
+node/3973092193,LC near Puthukkad (Chittisery -Thalore Road),10.4346326,76.2452542,Chittisery -Thalore Road,Puthukkad,Thrissur
+node/4047075502,LC near Kumaranalloor,9.6127595,76.5307485,,Kumaranalloor,Kottayam
+node/4262036390,LC near Punkunnam (thiruvambady rd),10.5335048,76.2087921,thiruvambady rd,Punkunnam,Thrissur
+node/4295684668,LC near Amballur (Urakam-Pudukad Road),10.4197007,76.2619966,Urakam-Pudukad Road,Amballur,Thrissur
+node/4295690320,LC near Puthukkad (Chittisery -Thalore Road),10.4346512,76.2451642,Chittisery -Thalore Road,Puthukkad,Thrissur
+node/4333432336,LC near Mattancherry,9.9575101,76.2710585,,Mattancherry,Ernakulam
+node/4351654965,LC near Mulanthuruthy,9.9070106,76.3877746,,Mulanthuruthy,Ernakulam
+node/4385136074,LC near Omanappuzha,9.5535278,76.3191534,,Omanappuzha,Alappuzha
+node/4385989950,LC near Thrippunithura,9.9268836,76.3101229,,Thrippunithura,Ernakulam
+node/4389095585,LC near Thavakkara (thane to kannur city),11.8648201,75.3808185,thane to kannur city,Thavakkara,Kannur
+node/4432152759,LC near Haripad (Vathukulangara Railway Underpass),9.2937618,76.4586222,Vathukulangara Railway Underpass,Haripad,Alappuzha
+node/4455850874,LC near Thiruvalla (Muthoor-Chumathra-Believers Church Hospital-Kizhakken Muthoor-Traco Cable Factory Road),9.4061997,76.5721255,Muthoor-Chumathra-Believers Church Hospital-Kizhakken Muthoor-Traco Cable Factory Road,Thiruvalla,Pathanamthitta
+node/4474499464,LC near Haripad,9.3025469,76.4468753,,Haripad,Alappuzha
+node/4491704901,LC near Kuriyachira (Kanimangalam - Nedupuzha Road),10.492639,76.209353,Kanimangalam - Nedupuzha Road,Kuriyachira,Thrissur
+node/4503702426,LC node/4503702426,11.8888776,75.3609461,,,Kannur
+node/4584881210,LC near Elampalloor,8.9587805,76.6746806,,Elampalloor,Kollam
+node/4641417251,LC near Elathur (Navachethana Library Road),11.3306285,75.7462102,Navachethana Library Road,Elathur,Kozhikode
+node/4666566258,LC near Kuthiathode,9.7895228,76.3093194,,Kuthiathode,Alappuzha
+node/4711102023,LC near Nilambur,11.2625812,76.2590519,,Nilambur,Malappuram
+node/4753462318,LC near Aluva,10.1099179,76.3580075,,Aluva,Ernakulam
+node/4757763878,LC near Shenoys (Kizhavana Road),9.9557335,76.2938754,Kizhavana Road,Shenoys,Ernakulam
+node/4772230591,LC near Thikkodi,11.4883281,75.6273903,,Thikkodi,Kozhikode
+node/5023852287,LC near Haripad (Vazhappally - Railway Cross Road),9.2858307,76.4609863,Vazhappally - Railway Cross Road,Haripad,Alappuzha
+node/5023852306,LC near Kalavoor,9.5701678,76.3180771,,Kalavoor,Alappuzha
+node/5023919076,LC near Pattithanam (Anamala - Kanakkari Road),9.6915955,76.544722,Anamala - Kanakkari Road,Pattithanam,Kottayam
+node/5024155337,LC near Changanassery,9.441864,76.5541293,,Changanassery,Kottayam
+node/5024155350,LC near Mulanthuruthy,9.9070619,76.3878059,,Mulanthuruthy,Ernakulam
+node/5025569642,LC near Kadakkavoor (Vakkom Main Road),8.6884199,76.760836,Vakkom Main Road,Kadakkavoor,Thiruvananthapuram
+node/5025569644,LC near Kadakkavoor (Randam Gate Road),8.6847551,76.7614806,Randam Gate Road,Kadakkavoor,Thiruvananthapuram
+node/5026676803,LC near Pathaya Pura (Vattampoyil Railway gate),11.2400129,75.7860025,Vattampoyil Railway gate,Pathaya Pura,Kozhikode
+node/5031862843,LC near Kottappuram (AR Menon Road),10.5264835,76.2080228,AR Menon Road,Kottappuram,Thrissur
+node/5038686440,LC near Aroor,9.863465,76.3005813,,Aroor,Alappuzha
+node/5040661344,LC near Lakkidi (Pazhayannur-Lakkidi Road),10.7534216,76.4368833,Pazhayannur-Lakkidi Road,Lakkidi,Palakkad
+node/5050531564,LC near Thrikaripur (Chandera -Trikaripur -Olavara Road),12.1353892,75.177256,Chandera -Trikaripur -Olavara Road,Thrikaripur,Kasaragod
+node/5056130014,LC near Koyilandy (Kollam - Meppayyur Road),11.4568957,75.6835807,Kollam - Meppayyur Road,Koyilandy,Kozhikode
+node/5064696744,LC near Alappuzha (Beach Thiruvambadi Road),9.4812819,76.323025,Beach Thiruvambadi Road,Alappuzha,Alappuzha
+node/5064696752,LC near Shava kotta palam (Beach Thiruvambadi Road),9.4900703,76.3209835,Beach Thiruvambadi Road,Shava kotta palam,Alappuzha
+node/5064983940,LC near Nedungolam,8.8130359,76.6751449,,Nedungolam,Kollam
+node/5066611357,LC near Andamukkam (Public Library YMCA Road),8.8840361,76.5915385,Public Library YMCA Road,Andamukkam,Kollam
+node/5066611373,LC near Kallumthazham (Kallumthazham Motheenmukku road),8.9040532,76.6252094,Kallumthazham Motheenmukku road,Kallumthazham,Kollam
+node/5066611374,LC near Kallumthazham (Kallumthazham Motheenmukku road),8.9040188,76.6249876,Kallumthazham Motheenmukku road,Kallumthazham,Kollam
+node/5066611375,LC near Kallumthazham (Kallumthazham Motheenmukku road),8.9039997,76.6248931,Kallumthazham Motheenmukku road,Kallumthazham,Kollam
+node/5070846777,LC near Peringala (Bhagavathipadi - Menampally Road),9.2118972,76.5277308,Bhagavathipadi - Menampally Road,Peringala,Alappuzha
+node/5070846782,LC near Peringala (Bhagavathipadi - Menampally Road),9.2051549,76.5241769,Bhagavathipadi - Menampally Road,Peringala,Alappuzha
+node/5070846785,LC near Peringala (Kayamkulam - Thiruvalla Road),9.1925743,76.5167981,Kayamkulam - Thiruvalla Road,Peringala,Alappuzha
+node/5070846814,LC near Peringala (Kayamkulam - Thiruvalla Road),9.1925743,76.5167391,Kayamkulam - Thiruvalla Road,Peringala,Alappuzha
+node/5070875328,LC near Peringala (Kayamkulam - Thiruvalla Road),9.19281,76.5157306,Kayamkulam - Thiruvalla Road,Peringala,Alappuzha
+node/5071022457,LC near Ajanur (Thulicheri - Nileshwar - Azhithala Road),12.3292219,75.0807151,Thulicheri - Nileshwar - Azhithala Road,Ajanur,Kasaragod
+node/5071022461,LC near Ajanur (Thulicheri - Nileshwar - Azhithala Road),12.3292397,75.0807577,Thulicheri - Nileshwar - Azhithala Road,Ajanur,Kasaragod
+node/5071096722,LC near Walayar,10.8502218,76.8375166,,Walayar,Palakkad
+node/5071096723,LC near Walayar,10.8500063,76.8379535,,Walayar,Palakkad
+node/5071096724,LC near Walayar,10.8499109,76.8381633,,Walayar,Palakkad
+node/5071096725,LC near Walayar,10.8498505,76.838293,,Walayar,Palakkad
+node/5077718489,LC near Thavakkara (thane to kannur city),11.8648075,75.3789446,thane to kannur city,Thavakkara,Kannur
+node/5077719844,LC near Kannur,11.8888643,75.3608908,,Kannur,Kannur
+node/5128210264,LC near Puzhakkal,10.5563442,76.1871098,,Puzhakkal,Thrissur
+node/5128228764,LC near Mulakunnathukavu (Ayodhya Nagar Road),10.579294,76.2062628,Ayodhya Nagar Road,Mulakunnathukavu,Thrissur
+node/5160531911,LC near Haripad (Vazhappally - Railway Cross Road),9.2837619,76.4616502,Vazhappally - Railway Cross Road,Haripad,Alappuzha
+node/5201918002,LC near Mayyanad (Kottiyam mayyanad road),8.8411214,76.6459359,Kottiyam mayyanad road,Mayyanad,Kollam
+node/5201918003,LC near Mayyanad (Kottiyam mayyanad road),8.8411252,76.6458751,Kottiyam mayyanad road,Mayyanad,Kollam
+node/5214129313,LC near Cheppad (Ramapuram-Puthenkulangara road),9.2298367,76.4781475,Ramapuram-Puthenkulangara road,Cheppad,Alappuzha
+node/5216126660,LC near Vengara,12.027418,75.2477027,,Vengara,Kannur
+node/5216126663,LC near Vengara,12.0300734,75.2466154,,Vengara,Kannur
+node/5242505279,LC near Pattanakkad,9.7284414,76.3098529,,Pattanakkad,Alappuzha
+node/5253915398,LC near Koyilandy (Aanakulam-Purakkad-Thikkodi Road),11.4615241,75.6788161,Aanakulam-Purakkad-Thikkodi Road,Koyilandy,Kozhikode
+node/5255176280,LC near Palolipalam,11.5680403,75.6067732,,Palolipalam,Kozhikode
+node/5284574163,LC near Karunagapally (Puthiyakavu - Chakuvally Road),9.0770048,76.541306,Puthiyakavu - Chakuvally Road,Karunagapally,Kollam
+node/5284574164,LC near Karunagapally (Puthiyakavu - Chakuvally Road),9.07704,76.5411581,Puthiyakavu - Chakuvally Road,Karunagapally,Kollam
+node/5284574182,LC near Karunagapally (Puthiyakavu - Chakuvally Road),9.0813047,76.540037,Puthiyakavu - Chakuvally Road,Karunagapally,Kollam
+node/5284574215,LC near Thazhava (kanjirappally- sasthampoika road),9.0971097,76.5353778,kanjirappally- sasthampoika road,Thazhava,Kollam
+node/5284574329,LC near Thazhava (Changankulangara - Vallikunnam Road),9.103366,76.5335621,Changankulangara - Vallikunnam Road,Thazhava,Kollam
+node/5297540966,LC near Dhanuvachapuram,8.3876884,77.117767,,Dhanuvachapuram,Thiruvananthapuram
+node/5297540967,LC near Amaravila,8.3946672,77.1038954,,Amaravila,Thiruvananthapuram
+node/5297543932,LC near Amaravila,8.399683,77.0972356,,Amaravila,Thiruvananthapuram
+node/5297704685,LC near Balaramapuram,8.4320718,77.050298,,Balaramapuram,Thiruvananthapuram
+node/5306787314,LC near Chandanathope,8.9291731,76.6403935,,Chandanathope,Kollam
+node/5306788822,LC near Vellimon,8.9410986,76.6573001,,Vellimon,Kollam
+node/5306788829,LC near Elampalloor,8.9676272,76.6883007,,Elampalloor,Kollam
+node/5306788952,LC near Thalavoor,9.0345592,76.8303293,,Thalavoor,Kollam
+node/5306788953,LC near Vilakkudi (Kunnikodu - Pattazhy),9.0382281,76.8538529,Kunnikodu - Pattazhy,Vilakkudi,Kollam
+node/5306788960,LC near Mathra,9.0257812,76.9070458,,Mathra,Kollam
+node/5319743103,LC near Panayam,8.9639343,76.6169251,,Panayam,Kollam
+node/5319754773,LC near Chandanathope,8.9155946,76.6271754,,Chandanathope,Kollam
+node/5320175081,LC near Chandanathope,8.9156306,76.6272219,,Chandanathope,Kollam
+node/5320683378,LC near Nalukody (thengana naalukodi),9.4146914,76.5609433,thengana naalukodi,Nalukody,Kottayam
+node/5353162743,LC near Kalpathy,10.8048278,76.6476424,,Kalpathy,Palakkad
+node/5353162810,LC near Kalpathy,10.8048855,76.6476434,,Kalpathy,Palakkad
+node/5409224597,LC near Muthuvara,10.5604787,76.1765636,,Muthuvara,Thrissur
+node/5427225449,LC near Shenoys (Ambikapuram Crossing),9.9616576,76.2926648,Ambikapuram Crossing,Shenoys,Ernakulam
+node/5590317435,LC near Tanur,11.0128644,75.8723415,,Tanur,Malappuram
+node/5590322267,LC near Tanur,11.0128724,75.8724176,,Tanur,Malappuram
+node/5590645523,LC near Vairankode,10.8841362,75.9582525,,Vairankode,Malappuram
+node/5590645524,LC near Vairankode,10.8840824,75.9581488,,Vairankode,Malappuram
+node/5590712406,LC near Chettippadi (Chamravattam - Tirur - Kozhikkode Road),11.0722977,75.8554109,Chamravattam - Tirur - Kozhikkode Road,Chettippadi,Malappuram
+node/5591355695,LC near Vellayil (P. T. Usha Road),11.2598371,75.7761305,P. T. Usha Road,Vellayil,Kozhikode
+node/5591362000,LC near Puthiyangadi (Koya Road),11.2966752,75.76057,Koya Road,Puthiyangadi,Kozhikode
+node/5591484265,LC near Elathur,11.3446626,75.7412055,,Elathur,Kozhikode
+node/5591485029,LC near Chemanchery (Kappad-Thiruvangoor Road),11.3844882,75.7314916,Kappad-Thiruvangoor Road,Chemanchery,Kozhikode
+node/5591534985,LC near Koyilandy,11.466553,75.6695926,,Koyilandy,Kozhikode
+node/5591534993,LC near Thikkodi,11.4794832,75.6334615,,Thikkodi,Kozhikode
+node/5591535351,LC near Iringal,11.553296,75.6080627,,Iringal,Kozhikode
+node/5591535401,LC near Thikkodi,11.4794942,75.6335434,,Thikkodi,Kozhikode
+node/5591535409,LC near Thikkodi,11.4736661,75.6388455,,Thikkodi,Kozhikode
+node/5593551288,LC near Chorode,11.6058089,75.5796185,,Chorode,Kozhikode
+node/5593551351,LC near Azhiyur (Moonam Gate Road),11.6785563,75.5527326,Moonam Gate Road,Azhiyur,Kozhikode
+node/5593551367,LC near Azhiyur (Koroth Road to Mahe Railway station road),11.692919,75.5478599,Koroth Road to Mahe Railway station road,Azhiyur,Kozhikode
+node/5593551382,LC near Thalassery,11.7106852,75.5440811,,Thalassery,Kannur
+node/5593551384,LC near Thalassery,11.7114436,75.5436687,,Thalassery,Kannur
+node/5593551451,LC near Thalassery (Paraal road),11.7308182,75.5117036,Paraal road,Thalassery,Kannur
+node/5593551467,LC near Thalassery (Thalassery-Kuttiyadi Road),11.7392314,75.5079046,Thalassery-Kuttiyadi Road,Thalassery,Kannur
+node/5593551474,LC near Thalassery (Thalassery-Kuttiyadi Road),11.7415444,75.5054519,Thalassery-Kuttiyadi Road,Thalassery,Kannur
+node/5593551483,LC near Thalassery (Thalassery-Kuttiyadi Road),11.7445774,75.4999573,Thalassery-Kuttiyadi Road,Thalassery,Kannur
+node/5593551526,LC near Thalassery (Thalasseri - Irikkur Road),11.7671607,75.4788247,Thalasseri - Irikkur Road,Thalassery,Kannur
+node/5593551546,LC near Dharmadom,11.774811,75.4663456,,Dharmadom,Kannur
+node/5593578668,LC near Muzhappilangad,11.7996175,75.4482185,,Muzhappilangad,Kannur
+node/5593578832,LC near Melechovva (Thayil - Thazhe Chova Road),11.8663868,75.4027114,Thayil - Thazhe Chova Road,Melechovva,Kannur
+node/5593578838,LC near Varam (NH 66),11.8643924,75.407955,NH 66,Varam,Kannur
+node/5593687631,LC near Cherukunnu (Kannapuram-Dharmasala),11.9802286,75.3176855,Kannapuram-Dharmasala,Cherukunnu,Kannur
+node/5593687641,LC near Cherukunnu (Cherukunnuthara - Keezhara - Vellikkeelkadavu Road),11.990859,75.3086473,Cherukunnuthara - Keezhara - Vellikkeelkadavu Road,Cherukunnu,Kannur
+node/5593687662,LC near Cherukunnu (Odayammadam Road),11.9959317,75.3013268,Odayammadam Road,Cherukunnu,Kannur
+node/5593687671,LC near Cherukunnu (Kovvappuram - Irinavu Bypass Road),11.9972568,75.2954247,Kovvappuram - Irinavu Bypass Road,Cherukunnu,Kannur
+node/5595576840,LC near Vengara,12.0413634,75.2398221,,Vengara,Kannur
+node/5595576877,LC near Pilathara (Kunnaru--Kunhimangalam Road),12.0642055,75.2371133,Kunnaru--Kunhimangalam Road,Pilathara,Kannur
+node/5595576887,LC near Pilathara (Kunnaru--Kunhimangalam Road),12.0681432,75.2325036,Kunnaru--Kunhimangalam Road,Pilathara,Kannur
+node/5595616409,LC near Payyanur (Payyanur-Thrikkaripur-Kalikadavu),12.0972224,75.1933338,Payyanur-Thrikkaripur-Kalikadavu,Payyanur,Kannur
+node/5595684813,LC near Karuvakkode,12.3965927,75.03721,,Karuvakkode,Kasaragod
+node/5596915392,LC near Udyawara,12.7274461,74.8835493,,Udyawara,Kasaragod
+node/5596915524,LC near Manjeshwar,12.7060607,74.9022802,,Manjeshwar,Kasaragod
+node/5596915542,LC near Uppala (Uppala - Moosodi Road),12.6839104,74.9028576,Uppala - Moosodi Road,Uppala,Kasaragod
+node/5596915565,LC near Uppala,12.6714482,74.9060829,,Uppala,Kasaragod
+node/5596915623,LC near Bandiyod,12.6348434,74.9245761,,Bandiyod,Kasaragod
+node/5620191798,LC near Puzhakkal,10.5528486,76.1959,,Puzhakkal,Thrissur
+node/5662580883,LC near Alappuzha,9.5907257,76.3160412,,Alappuzha,Alappuzha
+node/5687593301,LC near Haripad (Harippad - Veeyapuram Road),9.3017709,76.4477232,Harippad - Veeyapuram Road,Haripad,Alappuzha
+node/5687612695,LC near Haripad (Harippad - Veeyapuram Road),9.2990605,76.4513442,Harippad - Veeyapuram Road,Haripad,Alappuzha
+node/5693713639,LC near Cantonment (Public Library YMCA Road),8.8811526,76.5971103,Public Library YMCA Road,Cantonment,Kollam
+node/5764324722,LC near Kayamkulam (Kayamkulam - Thiruvalla Road),9.1968088,76.5112763,Kayamkulam - Thiruvalla Road,Kayamkulam,Alappuzha
+node/5764324723,LC near Pathiyoor,9.2039738,76.4961093,,Pathiyoor,Alappuzha
+node/5764348890,LC near Chirayinkeezhu (Chirayinkeezhu - Attingal Road),8.6604957,76.7847632,Chirayinkeezhu - Attingal Road,Chirayinkeezhu,Thiruvananthapuram
+node/5764348895,LC near Perunguzhi (Manjadimoodu Level cross),8.6495702,76.7907283,Manjadimoodu Level cross,Perunguzhi,Thiruvananthapuram
+node/5764348897,LC near Perunguzhi (Azhoor level cross),8.6432899,76.7974102,Azhoor level cross,Perunguzhi,Thiruvananthapuram
+node/5764348917,LC near Murukkumpuzha,8.6113484,76.8326892,,Murukkumpuzha,Thiruvananthapuram
+node/5764348921,LC near Murukkumpuzha (Karichara Kadavu Road),8.6020201,76.842566,Karichara Kadavu Road,Murukkumpuzha,Thiruvananthapuram
+node/5764348927,LC near Kaniyapuram (Kaniyapuram-Perumathura Road),8.5884072,76.853388,Kaniyapuram-Perumathura Road,Kaniyapuram,Thiruvananthapuram
+node/5764349060,LC near Kadakkavoor (Randam Gate Road),8.6847354,76.7614909,Randam Gate Road,Kadakkavoor,Thiruvananthapuram
+node/5764349126,LC near Varkala (Varkala - Edava - Kappil Bridge Approach Road),8.7641423,76.6965986,Varkala - Edava - Kappil Bridge Approach Road,Varkala,Thiruvananthapuram
+node/5764349140,LC near Varkala (Varkala - Edava - Kappil Bridge Approach Road),8.7527973,76.7095922,Varkala - Edava - Kappil Bridge Approach Road,Varkala,Thiruvananthapuram
+node/5764349149,LC near Melvettoor (Varkala-Paripally Road),8.7481154,76.7163795,Varkala-Paripally Road,Melvettoor,Thiruvananthapuram
+node/5764349282,LC near Cantonment (College Junction Level Cross),8.8797546,76.6032266,College Junction Level Cross,Cantonment,Kollam
+node/5764349285,LC near Polayathodu (Parakkottu Kavu Temple Road),8.8790367,76.6049727,Parakkottu Kavu Temple Road,Polayathodu,Kollam
+node/5764349290,LC near Polayathodu (Madannada - Eravipuram),8.8728962,76.6155577,Madannada - Eravipuram,Polayathodu,Kollam
+node/5764349297,LC near Eravipuram (Thattamala-thirumukku road),8.8630789,76.6300572,Thattamala-thirumukku road,Eravipuram,Kollam
+node/5764349304,LC near Mayyanad (Kottiyam Mayyanad Road),8.8542238,76.6378048,Kottiyam Mayyanad Road,Mayyanad,Kollam
+node/5764349306,LC near Mayyanad (Kottiyam mayyanad road),8.8400135,76.6466275,Kottiyam mayyanad road,Mayyanad,Kollam
+node/5764349308,LC near Mayyanad (Kottiyam mayyanad road),8.8330179,76.6510765,Kottiyam mayyanad road,Mayyanad,Kollam
+node/5764349460,LC near Changanassery,9.4418599,76.5540737,,Changanassery,Kottayam
+node/5764349491,LC near Cheriyanad (Cheriyanad - Ala - Madathumpady Road),9.276673,76.5852781,Cheriyanad - Ala - Madathumpady Road,Cheriyanad,Alappuzha
+node/5764349494,LC near Cheriyanad (Cheriyanad - Ala - Madathumpady Road),9.2698723,76.5846443,Cheriyanad - Ala - Madathumpady Road,Cheriyanad,Alappuzha
+node/5764349547,LC near Thiruvalla,9.3828264,76.5833644,,Thiruvalla,Pathanamthitta
+node/5764357423,LC near Thrippunithura,9.9735317,76.3363643,,Thrippunithura,Ernakulam
+node/5764357820,LC near Muttuchira (Muttuchira - Ayakudi Road),9.7561051,76.4922716,Muttuchira - Ayakudi Road,Muttuchira,Kottayam
+node/5846392662,LC near Koratty,10.2738641,76.3455029,,Koratty,Thrissur
+node/5847832905,LC near Cherthala,9.671377,76.3329297,,Cherthala,Alappuzha
+node/5847857936,LC near Pathirappally,9.5350609,76.3210983,,Pathirappally,Alappuzha
+node/5848056573,LC near Ambalapuzha,9.3853265,76.3682175,,Ambalapuzha,Alappuzha
+node/5848553951,LC near Krishnapuram (Ochira - Thamarakkulam Road),9.1361698,76.5239905,Ochira - Thamarakkulam Road,Krishnapuram,Alappuzha
+node/5849490315,LC near Changanassery,9.4570164,76.5414569,,Changanassery,Kottayam
+node/5849574829,LC near Cherthala,9.7009163,76.3151178,,Cherthala,Alappuzha
+node/5849846545,LC near Pallom,9.5270642,76.5254566,,Pallom,Kottayam
+node/5849846546,LC near Pallom,9.5270619,76.5254204,,Pallom,Kottayam
+node/5849846725,LC near Changanassery,9.4688639,76.5377247,,Changanassery,Kottayam
+node/5851130619,LC near Puliyoor,9.2931014,76.5869932,,Puliyoor,Alappuzha
+node/5851130620,LC near Puliyoor,9.293118,76.5869046,,Puliyoor,Alappuzha
+node/5854200910,LC near Aroor,9.8688188,76.2986572,,Aroor,Alappuzha
+node/5856373957,LC near Chandiroor,9.8572953,76.3022784,,Chandiroor,Alappuzha
+node/5857551181,LC near Karumadi,9.381704,76.3957675,,Karumadi,Alappuzha
+node/5857701474,LC near Karumadi,9.384399,76.378773,,Karumadi,Alappuzha
+node/5859721107,LC near Pathiyoor (Maliyekkal - Chudukad Road),9.2141337,76.4862534,Maliyekkal - Chudukad Road,Pathiyoor,Alappuzha
+node/5859721108,LC near Pathiyoor (Maliyekkal - Chudukad Road),9.2141297,76.4861909,Maliyekkal - Chudukad Road,Pathiyoor,Alappuzha
+node/5859721109,LC near Kayamkulam,9.2013956,76.50153,,Kayamkulam,Alappuzha
+node/5859721110,LC near Kayamkulam,9.2013372,76.5015284,,Kayamkulam,Alappuzha
+node/5859721119,LC near Pathiyoor (Enakulangara - Kareelakulangara Road),9.2113327,76.4882863,Enakulangara - Kareelakulangara Road,Pathiyoor,Alappuzha
+node/5859721120,LC near Pathiyoor (Enakulangara - Kareelakulangara Road),9.2113489,76.4882248,Enakulangara - Kareelakulangara Road,Pathiyoor,Alappuzha
+node/5860169779,LC near Thuravoor,9.7556541,76.3121422,,Thuravoor,Alappuzha
+node/5860601727,LC near Krishnapuram,9.1522638,76.5164012,,Krishnapuram,Alappuzha
+node/5860601728,LC near Krishnapuram,9.1522506,76.5163462,,Krishnapuram,Alappuzha
+node/5860732071,LC near Oachira,9.124469,76.5274212,,Oachira,Kollam
+node/5860732072,LC near Oachira,9.1244585,76.527381,,Oachira,Kollam
+node/5860732073,LC near Oachira,9.1215821,76.5282486,,Oachira,Kollam
+node/5860732074,LC near Oachira,9.1215743,76.5282102,,Oachira,Kollam
+node/5860732075,LC near Oachira (Changankulangara - Vallikunnam Road),9.1167007,76.5296529,Changankulangara - Vallikunnam Road,Oachira,Kollam
+node/5860732076,LC near Oachira (Changankulangara - Vallikunnam Road),9.1167033,76.5296147,Changankulangara - Vallikunnam Road,Oachira,Kollam
+node/5860732077,LC near Kulasekharapuram (Changankulangara - Vallikunnam Road),9.109158,76.5318645,Changankulangara - Vallikunnam Road,Kulasekharapuram,Kollam
+node/5860732078,LC near Kulasekharapuram (Changankulangara - Vallikunnam Road),9.1091249,76.5318327,Changankulangara - Vallikunnam Road,Kulasekharapuram,Kollam
+node/5860732082,LC near Krishnapuram (Ochira - Thamarakkulam Road),9.1361496,76.5240631,Ochira - Thamarakkulam Road,Krishnapuram,Alappuzha
+node/5860732987,LC near Krishnapuram (koladuth road),9.1598626,76.5126292,koladuth road,Krishnapuram,Alappuzha
+node/5860732993,LC near Krishnapuram (koladuth road),9.1679758,76.5086724,koladuth road,Krishnapuram,Alappuzha
+node/5860733001,LC near Krishnapuram (koladuth road),9.1679672,76.5086278,koladuth road,Krishnapuram,Alappuzha
+node/5863266657,LC near Nalukody (thengana naalukodi),9.4146096,76.5609124,thengana naalukodi,Nalukody,Kottayam
+node/5864313308,LC near Mavelikkara,9.2255166,76.5313655,,Mavelikkara,Alappuzha
+node/5864313309,LC near Mavelikkara,9.2255333,76.5313002,,Mavelikkara,Alappuzha
+node/5864657450,LC near Kumbalam,9.9190361,76.3083131,,Kumbalam,Ernakulam
+node/5864733652,LC near Kalpathy,10.790411,76.6383267,,Kalpathy,Palakkad
+node/5864904446,LC near Pattanakkad,9.7362777,76.3108568,,Pattanakkad,Alappuzha
+node/5865055922,LC near Oachira (Ochira - Thamarakkulam Road),9.1305049,76.5256826,Ochira - Thamarakkulam Road,Oachira,Kollam
+node/5865055923,LC near Oachira (Ochira - Thamarakkulam Road),9.1304924,76.5256398,Ochira - Thamarakkulam Road,Oachira,Kollam
+node/5867276841,LC near Mavelikkara,9.258696,76.5642035,,Mavelikkara,Alappuzha
+node/5867276842,LC near Mavelikkara,9.2587555,76.5641874,,Mavelikkara,Alappuzha
+node/5869375113,LC near Pathiyoor (Enakulangara - Kareelakulangara Road),9.2071923,76.4914897,Enakulangara - Kareelakulangara Road,Pathiyoor,Alappuzha
+node/5869375114,LC near Pathiyoor (Enakulangara - Kareelakulangara Road),9.2072012,76.4915421,Enakulangara - Kareelakulangara Road,Pathiyoor,Alappuzha
+node/5871413566,LC near Haripad (Harippad - Veeyapuram Road),9.2973709,76.4556072,Harippad - Veeyapuram Road,Haripad,Alappuzha
+node/5871484623,LC near Haripad (Harippad - Veeyapuram Road),9.2990011,76.451353,Harippad - Veeyapuram Road,Haripad,Alappuzha
+node/5872261430,LC near Ayaparampu,9.3235789,76.4237382,,Ayaparampu,Alappuzha
+node/5872936117,LC near Nangiarkulangara (Thattarambalam - Thrikkunnappuzha Road),9.2586715,76.4695293,Thattarambalam - Thrikkunnappuzha Road,Nangiarkulangara,Alappuzha
+node/5872936119,LC near Nangiarkulangara (Thattarambalam - Thrikkunnappuzha Road),9.2586724,76.4695721,Thattarambalam - Thrikkunnappuzha Road,Nangiarkulangara,Alappuzha
+node/5873153829,LC near Cheppad,9.2400368,76.4748954,,Cheppad,Alappuzha
+node/5873153830,LC near Cheppad,9.240021,76.474845,,Cheppad,Alappuzha
+node/5873211976,LC near Nangiarkulangara,9.2471663,76.472565,,Nangiarkulangara,Alappuzha
+node/5873212388,LC near Nangiarkulangara (Thattarambalam - Thrikkunnappuzha Road),9.2515496,76.4711778,Thattarambalam - Thrikkunnappuzha Road,Nangiarkulangara,Alappuzha
+node/5873212389,LC near Nangiarkulangara (Thattarambalam - Thrikkunnappuzha Road),9.2515324,76.4711307,Thattarambalam - Thrikkunnappuzha Road,Nangiarkulangara,Alappuzha
+node/5879663733,LC near Haripad,9.3025329,76.4467973,,Haripad,Alappuzha
+node/5880735456,LC near Vaduthala (Chittoor Road),10.0047771,76.2787996,Chittoor Road,Vaduthala,Ernakulam
+node/5880735457,LC near Vaduthala (Chittoor Road),10.0047661,76.2787581,Chittoor Road,Vaduthala,Ernakulam
+node/5880892338,LC near Chalakudy (Parambi Road),10.3140973,76.3088318,Parambi Road,Chalakudy,Thrissur
+node/5881355657,LC near Chalakudy (Parambi Road),10.3140984,76.3087443,Parambi Road,Chalakudy,Thrissur
+node/5881355935,LC near Haripad (Harippad - Veeyapuram Road),9.301697,76.4477171,Harippad - Veeyapuram Road,Haripad,Alappuzha
+node/5883448390,LC near Ambalapuzha,9.389897,76.3544376,,Ambalapuzha,Alappuzha
+node/5883448418,LC near Ambalappuzha,9.3916874,76.3512623,,Ambalappuzha,Alappuzha
+node/5883448446,LC near Ambalapuzha,9.3842755,76.3743055,,Ambalapuzha,Alappuzha
+node/5883448914,LC near Ambalappuzha,9.3977741,76.3485382,,Ambalappuzha,Alappuzha
+node/5884017920,LC near Cherthala South,9.6513391,76.3293308,,Cherthala South,Alappuzha
+node/5884018198,LC near Kanichukulangara,9.6288807,76.3216884,,Kanichukulangara,Alappuzha
+node/5884138728,LC near Cherthala South,9.646745,76.3281585,,Cherthala South,Alappuzha
+node/5884138732,LC near Cherthala South,9.6406995,76.3259177,,Cherthala South,Alappuzha
+node/5886425859,LC near Cheppad (Ramapuram-Puthenkulangara road),9.2298359,76.4782033,Ramapuram-Puthenkulangara road,Cheppad,Alappuzha
+node/5886438854,LC near Kalavoor,9.5833168,76.316048,,Kalavoor,Alappuzha
+node/5886439087,LC near Mararikkulam,9.6015805,76.3187952,,Mararikkulam,Alappuzha
+node/5886452832,LC near Karayamparambu,10.2298328,76.3725429,,Karayamparambu,Ernakulam
+node/5886452835,LC near Kothakulangara,10.1972594,76.3743021,,Kothakulangara,Ernakulam
+node/5887435225,LC near Mararikkulam,9.6142755,76.3193522,,Mararikkulam,Alappuzha
+node/5887435226,LC near Mararikkulam,9.6097876,76.3192414,,Mararikkulam,Alappuzha
+node/5925689886,LC near Cherthala South,9.6564952,76.3302959,,Cherthala South,Alappuzha
+node/5971321623,LC near Vallakkunnu (muriyad- kodakara road),10.3535065,76.270256,muriyad- kodakara road,Vallakkunnu,Thrissur
+node/5971321624,LC near Vallakkunnu (muriyad- kodakara road),10.3535097,76.2701327,muriyad- kodakara road,Vallakkunnu,Thrissur
+node/5971322098,LC near Aloor (Kodakara - Kodungallur Road),10.3349913,76.2880644,Kodakara - Kodungallur Road,Aloor,Thrissur
+node/5971344073,LC near Chirangara (Old NH Koratty),10.2528916,76.3661975,Old NH Koratty,Chirangara,Thrissur
+node/5973659501,LC near Nedumbassery,10.1615873,76.380273,,Nedumbassery,Ernakulam
+node/5973659502,LC near Nedumbassery,10.1615867,76.3802119,,Nedumbassery,Ernakulam
+node/5973659504,LC near Kothakulangara (Angamayl Road),10.1854021,76.3771354,Angamayl Road,Kothakulangara,Ernakulam
+node/5973838601,LC near Haripad (Vazhappally - Railway Cross Road),9.2916331,76.4592798,Vazhappally - Railway Cross Road,Haripad,Alappuzha
+node/5973838976,LC near Haripad (Vazhappally - Railway Cross Road),9.2858396,76.4610445,Vazhappally - Railway Cross Road,Haripad,Alappuzha
+node/5973839173,LC near Haripad,9.2742555,76.4644074,,Haripad,Alappuzha
+node/5973839174,LC near Haripad,9.2742663,76.464454,,Haripad,Alappuzha
+node/5974291513,LC near Puliyoor,9.3018584,76.5921737,,Puliyoor,Alappuzha
+node/5974291514,LC near Puliyoor,9.3018149,76.5921981,,Puliyoor,Alappuzha
+node/5974684319,LC near Chandanathope,8.9171295,76.6323563,,Chandanathope,Kollam
+node/5974696189,LC near Nedumbassery,10.167973,76.3986269,,Nedumbassery,Ernakulam
+node/5974696190,LC near Nedumbassery,10.1676815,76.395719,,Nedumbassery,Ernakulam
+node/5975226313,LC near Cantonment (Public Library YMCA Road),8.8811965,76.5971252,Public Library YMCA Road,Cantonment,Kollam
+node/5977133942,LC near Pallom,9.5156098,76.5287628,,Pallom,Kottayam
+node/5977388095,LC near Eravankara,9.2610066,76.575447,,Eravankara,Alappuzha
+node/5977388096,LC near Eravankara,9.2608966,76.5754691,,Eravankara,Alappuzha
+node/5977418017,LC near Punnapra,9.4256009,76.3412072,,Punnapra,Alappuzha
+node/5977953919,LC near Shava kotta palam,9.4961124,76.3191828,,Shava kotta palam,Alappuzha
+node/5977954454,LC near Shava kotta palam,9.4996358,76.3187074,,Shava kotta palam,Alappuzha
+node/5977954747,LC near Thumpoly,9.5251829,76.3214648,,Thumpoly,Alappuzha
+node/5977954756,LC near Shava kotta palam,9.5038066,76.3184951,,Shava kotta palam,Alappuzha
+node/5977954889,LC near Shava kotta palam,9.4973179,76.3188508,,Shava kotta palam,Alappuzha
+node/5984494908,LC near Perissery (Ottappes - Ala - Chengannur Road),9.3089238,76.6031116,Ottappes - Ala - Chengannur Road,Perissery,Alappuzha
+node/5984494909,LC near Perissery (Ottappes - Ala - Chengannur Road),9.3089856,76.6031224,Ottappes - Ala - Chengannur Road,Perissery,Alappuzha
+node/5987546062,LC near Kallissery,9.3470902,76.603447,,Kallissery,Alappuzha
+node/5987546064,LC near Kallissery,9.3470543,76.6035687,,Kallissery,Alappuzha
+node/5987612333,LC near Kattoor,9.5603486,76.319209,,Kattoor,Alappuzha
+node/5995735789,LC near Walayar,10.8499842,76.8379969,,Walayar,Palakkad
+node/5995979098,LC near Mankara (Mankara Chakkanthara Road),10.7797746,76.5094015,Mankara Chakkanthara Road,Mankara,Palakkad
+node/5997033230,LC near Puthirikkal,11.0489022,75.8594568,,Puthirikkal,Malappuram
+node/5997063477,LC near Kadalundi (Chaliyam - Kadalundi - Kottakadavu Road),11.1372943,75.826737,Chaliyam - Kadalundi - Kottakadavu Road,Kadalundi,Kozhikode
+node/5997379590,LC near Elathur,11.3446711,75.7414686,,Elathur,Kozhikode
+node/5997379607,LC near Elathur,11.3446667,75.7413314,,Elathur,Kozhikode
+node/5997744028,LC near Thikkodi,11.4921125,75.6263991,,Thikkodi,Kozhikode
+node/5997744037,LC near Thikkodi,11.4921292,75.6264496,,Thikkodi,Kozhikode
+node/5997744046,LC near Thikkodi,11.4921484,75.6264933,,Thikkodi,Kozhikode
+node/5997744074,LC near Thikkodi,11.4935885,75.6267826,,Thikkodi,Kozhikode
+node/6015844948,LC near Vallakkunnu (Church road),10.3477462,76.2747406,Church road,Vallakkunnu,Thrissur
+node/6015844949,LC near Vallakkunnu (Church road),10.3477792,76.2748404,Church road,Vallakkunnu,Thrissur
+node/6016408724,LC node/6016408724 (muriyad- kodakara road),10.3620429,76.2694273,muriyad- kodakara road,,Thrissur
+node/6016408725,LC node/6016408725 (muriyad- kodakara road),10.3620319,76.2695387,muriyad- kodakara road,,Thrissur
+node/6030555053,LC near Wadakkancherry,10.6499627,76.2377822,,Wadakkancherry,Thrissur
+node/6030555196,LC near Mulakunnathukavu,10.5945352,76.2063434,,Mulakunnathukavu,Thrissur
+node/6030555205,LC near Mulakunnathukavu,10.5943757,76.2049259,,Mulakunnathukavu,Thrissur
+node/6031157272,LC near Cheerachi,10.483945,76.2243775,,Cheerachi,Thrissur
+node/6031157303,LC near Ollur (Mannuthy-Palakkal Road),10.4718538,76.2387757,Mannuthy-Palakkal Road,Ollur,Thrissur
+node/6031157330,LC near Ollur (Mannuthy-Palakkal Road),10.471883,76.2388165,Mannuthy-Palakkal Road,Ollur,Thrissur
+node/6031157359,LC near Amballur (Urakam-Pudukad Road),10.4196685,76.2619659,Urakam-Pudukad Road,Amballur,Thrissur
+node/6031157377,LC near Amballur (Urakam-Pudukad Road),10.4197786,76.2620514,Urakam-Pudukad Road,Amballur,Thrissur
+node/6031632518,LC near Kothakulangara (Angamayl Road),10.1854095,76.3772294,Angamayl Road,Kothakulangara,Ernakulam
+node/6031632532,LC near Kothakulangara (Angamayl Road),10.1853982,76.3770295,Angamayl Road,Kothakulangara,Ernakulam
+node/6031633034,LC near Aluva,10.1099576,76.3579596,,Aluva,Ernakulam
+node/6034128501,LC near Thrippunithura,9.9736313,76.3363603,,Thrippunithura,Ernakulam
+node/6034128515,LC near Thrippunithura,9.9735599,76.3404126,,Thrippunithura,Ernakulam
+node/6034128664,LC near Thrippunithura,9.9735712,76.3412,,Thrippunithura,Ernakulam
+node/6034128733,LC near Thrippunithura,9.9739286,76.347482,,Thrippunithura,Ernakulam
+node/6034128747,LC near Thrippunithura,9.9738845,76.3474904,,Thrippunithura,Ernakulam
+node/6036539844,LC near Chandiroor,9.8522721,76.3033512,,Chandiroor,Alappuzha
+node/6036938319,LC near Alappuzha (Beach Thiruvambadi Road),9.4812463,76.322837,Beach Thiruvambadi Road,Alappuzha,Alappuzha
+node/6036938330,LC near Alappuzha (Beach Thiruvambadi Road),9.4812405,76.3228014,Beach Thiruvambadi Road,Alappuzha,Alappuzha
+node/6036938343,LC near Alappuzha (Beach Thiruvambadi Road),9.481255,76.3228901,Beach Thiruvambadi Road,Alappuzha,Alappuzha
+node/6036938360,LC near Alappuzha (Beach Thiruvambadi Road),9.481261,76.3229267,Beach Thiruvambadi Road,Alappuzha,Alappuzha
+node/6036938370,LC near Ambalappuzha,9.3925536,76.3504662,,Ambalappuzha,Alappuzha
+node/6036938887,LC near Nangiarkulangara,9.2689365,76.4660123,,Nangiarkulangara,Alappuzha
+node/6038800399,LC near Thalapara,9.8052553,76.4626036,,Thalapara,Kottayam
+node/6039809207,LC near Pallom,9.5270421,76.5255009,,Pallom,Kottayam
+node/6039809413,LC near Thiruvalla (Muthoor-Chumathra-Believers Church Hospital-Kizhakken Muthoor-Traco Cable Factory Road),9.4062822,76.5721372,Muthoor-Chumathra-Believers Church Hospital-Kizhakken Muthoor-Traco Cable Factory Road,Thiruvalla,Pathanamthitta
+node/6041056962,LC near Mynagappally,9.0344473,76.5950724,,Mynagappally,Kollam
+node/6041056990,LC near Mynagappally (Karunagappally - Sasthamcottah Road),9.0429136,76.5796535,Karunagappally - Sasthamcottah Road,Mynagappally,Kollam
+node/6041056994,LC near Mynagappally (Karunagappally - Sasthamcottah Road),9.0443559,76.5780009,Karunagappally - Sasthamcottah Road,Mynagappally,Kollam
+node/6042091675,LC near Perunguzhi,8.6311105,76.8082547,,Perunguzhi,Thiruvananthapuram
+node/6045444471,LC near Nemom,8.4610198,77.0030479,,Nemom,Thiruvananthapuram
+node/6045445000,LC near Balaramapuram,8.448438,77.0146492,,Balaramapuram,Thiruvananthapuram
+node/6045445002,LC near Balaramapuram,8.4448084,77.0195378,,Balaramapuram,Thiruvananthapuram
+node/6080548529,LC near Kalamassery,10.0672448,76.337809,,Kalamassery,Ernakulam
+node/6080629871,LC near Kalamassery,10.0680787,76.3457946,,Kalamassery,Ernakulam
+node/6132278386,LC near Eravankara,9.2607721,76.5743003,,Eravankara,Alappuzha
+node/6180953466,LC near Guruvayur,10.5925341,76.0500225,,Guruvayur,Thrissur
+node/6190715209,LC near Enkakkad (Wadakkanchery Vazhani Rd),10.6657745,76.2562848,Wadakkanchery Vazhani Rd,Enkakkad,Thrissur
+node/6265300175,LC near Chala (Melarannoor-Killipalam Road),8.4850897,76.9661342,Melarannoor-Killipalam Road,Chala,Thiruvananthapuram
+node/6310613367,LC near Puzhakkal,10.5548252,76.1910501,,Puzhakkal,Thrissur
+node/6344464732,LC near Kaniyapuram (St Andrews Road),8.5802583,76.8600056,St Andrews Road,Kaniyapuram,Thiruvananthapuram
+node/6344464737,LC near Thumba,8.5433206,76.8744446,,Thumba,Thiruvananthapuram
+node/6351661049,LC near Nilambur,11.2595184,76.257443,,Nilambur,Malappuram
+node/6353707119,LC near Kottayam (Adichira-Ammancheri Road),9.6324279,76.542372,Adichira-Ammancheri Road,Kottayam,Kottayam
+node/6356623969,LC near Kinassery,10.7252511,76.6614198,,Kinassery,Palakkad
+node/6356623971,LC near Kinassery,10.7326073,76.6559028,,Kinassery,Palakkad
+node/6436497912,LC near Amballur (Urakam-Pudukad Road),10.4179754,76.2631276,Urakam-Pudukad Road,Amballur,Thrissur
+node/6436497913,LC near Amballur (Urakam-Pudukad Road),10.4179702,76.2631077,Urakam-Pudukad Road,Amballur,Thrissur
+node/6554031980,LC near Koratty,10.2738372,76.3454508,,Koratty,Thrissur
+node/6578127283,LC near Kadalundi (Chaliyam - Kadalundi - Kottakadavu Road),11.1373318,75.8267868,Chaliyam - Kadalundi - Kottakadavu Road,Kadalundi,Kozhikode
+node/6656812999,LC near Thrippunithura (Kambivelikkakam Road),9.9429166,76.3637961,Kambivelikkakam Road,Thrippunithura,Ernakulam
+node/6656813000,LC near Thrippunithura (Kambivelikkakam Road),9.9428132,76.3638151,Kambivelikkakam Road,Thrippunithura,Ernakulam
+node/6717760990,LC near Puthiyangadi (Koya Road),11.2966823,75.7606143,Koya Road,Puthiyangadi,Kozhikode
+node/6727429674,LC near Atholi,11.3577224,75.7423401,,Atholi,Kozhikode
+node/6727429675,LC near Atholi,11.3577449,75.7422558,,Atholi,Kozhikode
+node/6734861536,LC near Azhiyur (Moonam Gate Road),11.6867285,75.549177,Moonam Gate Road,Azhiyur,Kozhikode
+node/6735121630,LC near Palolipalam,11.5962702,75.5858635,,Palolipalam,Kozhikode
+node/6735121631,LC near Palolipalam,11.5962867,75.5859108,,Palolipalam,Kozhikode
+node/6735121632,LC near Palolipalam,11.5963046,75.5859616,,Palolipalam,Kozhikode
+node/6735529046,LC near Onchiyam,11.6693481,75.5593594,,Onchiyam,Kozhikode
+node/6735529047,LC near Onchiyam,11.6693345,75.5593219,,Onchiyam,Kozhikode
+node/6738858902,LC near Chorode,11.60585,75.5796817,,Chorode,Kozhikode
+node/6744165245,LC near Atholi,11.3718339,75.738681,,Atholi,Kozhikode
+node/6744470821,LC near Palolipalam,11.5680356,75.6068613,,Palolipalam,Kozhikode
+node/6745614002,LC near Iringal,11.5533004,75.6080018,,Iringal,Kozhikode
+node/6745614039,LC near Payyoli (payyoli 2nd gate road),11.5186427,75.6179514,payyoli 2nd gate road,Payyoli,Kozhikode
+node/6745614040,LC near Payyoli (payyoli 2nd gate road),11.5186634,75.6180152,payyoli 2nd gate road,Payyoli,Kozhikode
+node/6745614041,LC near Payyoli (Payyoli Beach Road),11.5152719,75.6189268,Payyoli Beach Road,Payyoli,Kozhikode
+node/6745614042,LC near Payyoli (Payyoli Beach Road),11.5152861,75.6189886,Payyoli Beach Road,Payyoli,Kozhikode
+node/6746919619,LC near Palolipalam,11.5656306,75.6081465,,Palolipalam,Kozhikode
+node/6746919620,LC near Palolipalam,11.5656614,75.6082248,,Palolipalam,Kozhikode
+node/6746919631,LC near Iringal,11.5610094,75.609361,,Iringal,Kozhikode
+node/6746919632,LC near Iringal,11.560985,75.6092809,,Iringal,Kozhikode
+node/6746931403,LC near Iringal,11.546326,75.6099992,,Iringal,Kozhikode
+node/6746931404,LC near Iringal,11.5462915,75.6100667,,Iringal,Kozhikode
+node/6746931412,LC near Iringal,11.5485655,75.6093466,,Iringal,Kozhikode
+node/6746931413,LC near Iringal,11.5485492,75.6094223,,Iringal,Kozhikode
+node/6747005643,LC near Payyoli (payyoli 2nd gate road),11.5234165,75.6166583,payyoli 2nd gate road,Payyoli,Kozhikode
+node/6747005644,LC near Payyoli (payyoli 2nd gate road),11.5234313,75.6165658,payyoli 2nd gate road,Payyoli,Kozhikode
+node/6747011804,LC near Payyoli,11.5359873,75.612959,,Payyoli,Kozhikode
+node/6747011805,LC near Payyoli,11.536017,75.6130135,,Payyoli,Kozhikode
+node/6747031189,LC near Iringal,11.5421478,75.6111884,,Iringal,Kozhikode
+node/6747031190,LC near Iringal,11.5421565,75.6112426,,Iringal,Kozhikode
+node/6747047692,LC near Payyoli,11.5323046,75.6140155,,Payyoli,Kozhikode
+node/6747047693,LC near Payyoli,11.5323441,75.6140902,,Payyoli,Kozhikode
+node/6749572329,LC near Cheerattamanna,11.0024946,76.2134901,,Cheerattamanna,Malappuram
+node/6752686859,LC near Payyoli (Payyoli Beach Road),11.5073727,75.621169,Payyoli Beach Road,Payyoli,Kozhikode
+node/6752686860,LC near Payyoli (Payyoli Beach Road),11.5074264,75.6212366,Payyoli Beach Road,Payyoli,Kozhikode
+node/6752686877,LC near Payyoli,11.5031222,75.622389,,Payyoli,Kozhikode
+node/6752686878,LC near Payyoli,11.5031496,75.6224576,,Payyoli,Kozhikode
+node/6752710894,LC near Payyoli,11.505621,75.6216711,,Payyoli,Kozhikode
+node/6752710895,LC near Payyoli,11.5056709,75.6217401,,Payyoli,Kozhikode
+node/6752754747,LC near Thikkodi,11.4955228,75.6246481,,Thikkodi,Kozhikode
+node/6752754748,LC near Thikkodi,11.4955074,75.6245935,,Thikkodi,Kozhikode
+node/6752754780,LC near Thikkodi,11.4882257,75.6272278,,Thikkodi,Kozhikode
+node/6752754781,LC near Thikkodi,11.488259,75.6272802,,Thikkodi,Kozhikode
+node/6752754782,LC near Thikkodi,11.4882811,75.6273149,,Thikkodi,Kozhikode
+node/6752769194,LC near Thikkodi,11.4888127,75.6272408,,Thikkodi,Kozhikode
+node/6752769195,LC near Thikkodi,11.4888037,75.6271729,,Thikkodi,Kozhikode
+node/6752769196,LC near Thikkodi,11.4887595,75.6270399,,Thikkodi,Kozhikode
+node/6752769197,LC near Thikkodi,11.488739,75.6270047,,Thikkodi,Kozhikode
+node/6752769198,LC near Thikkodi,11.4887124,75.6269509,,Thikkodi,Kozhikode
+node/6752769212,LC near Thikkodi,11.4893031,75.6271546,,Thikkodi,Kozhikode
+node/6764935103,LC near Thikkodi,11.4725705,75.6414558,,Thikkodi,Kozhikode
+node/6764935104,LC near Thikkodi,11.4724931,75.6414824,,Thikkodi,Kozhikode
+node/6764935143,LC near Thikkodi (Moodadi - Hill Bazar road),11.4720313,75.6572602,Moodadi - Hill Bazar road,Thikkodi,Kozhikode
+node/6764935144,LC near Thikkodi (Moodadi - Hill Bazar road),11.4719908,75.6572508,Moodadi - Hill Bazar road,Thikkodi,Kozhikode
+node/6774887671,LC near Aingoth,12.2841278,75.1035223,,Aingoth,Kasaragod
+node/6795977762,LC near Puthiyangadi (Koya Road),11.3000698,75.7591429,Koya Road,Puthiyangadi,Kozhikode
+node/6795977763,LC near Puthiyangadi (Koya Road),11.3000826,75.7591854,Koya Road,Puthiyangadi,Kozhikode
+node/6795977764,LC near West Hill (Bhatt Road),11.2918276,75.7626409,Bhatt Road,West Hill,Kozhikode
+node/6795994252,LC near Puthiyangadi (Koya Road),11.3037549,75.7576149,Koya Road,Puthiyangadi,Kozhikode
+node/6795994253,LC near Puthiyangadi (Koya Road),11.3037624,75.7575637,Koya Road,Puthiyangadi,Kozhikode
+node/6795994258,LC near Kandamkulangara,11.3115665,75.7543175,,Kandamkulangara,Kozhikode
+node/6796044238,LC near Chemanchery (Kappad - Pookkad Road),11.3943539,75.7257763,Kappad - Pookkad Road,Chemanchery,Kozhikode
+node/6796044239,LC near Chemanchery (Kappad - Pookkad Road),11.394418,75.7258246,Kappad - Pookkad Road,Chemanchery,Kozhikode
+node/6796058634,LC near Atholi,11.3718242,75.7385829,,Atholi,Kozhikode
+node/6796074891,LC near Elathur (Navachethana Library Road),11.3306445,75.7462537,Navachethana Library Road,Elathur,Kozhikode
+node/6796074901,LC near Kandamkulangara (Navachethana Library Road),11.3280575,75.7473438,Navachethana Library Road,Kandamkulangara,Kozhikode
+node/6796074902,LC near Kandamkulangara (Navachethana Library Road),11.3280427,75.7472967,Navachethana Library Road,Kandamkulangara,Kozhikode
+node/6796074905,LC near Elathur,11.3446651,75.741282,,Elathur,Kozhikode
+node/6813335052,LC near Kuttippuram (pappadam chettiyar road),10.850648,76.0288404,pappadam chettiyar road,Kuttippuram,Malappuram
+node/6813335053,LC near Kuttippuram (pappadam chettiyar road),10.850612,76.0287941,pappadam chettiyar road,Kuttippuram,Malappuram
+node/6813354097,LC near Kuttippuram (pappadam chettiyar road),10.8533562,76.0269141,pappadam chettiyar road,Kuttippuram,Malappuram
+node/6813354098,LC near Kuttippuram (pappadam chettiyar road),10.8533584,76.0269894,pappadam chettiyar road,Kuttippuram,Malappuram
+node/6964692330,LC near Kuttippuram (rangatoor sree durga devi temple road),10.8646468,76.0144385,rangatoor sree durga devi temple road,Kuttippuram,Malappuram
+node/6964692331,LC near Kuttippuram (rangatoor sree durga devi temple road),10.8645827,76.0143909,rangatoor sree durga devi temple road,Kuttippuram,Malappuram
+node/6964692350,LC near Vairankode (rangatoor sree durga devi temple road),10.8690114,76.0065589,rangatoor sree durga devi temple road,Vairankode,Malappuram
+node/6964692351,LC near Vairankode (rangatoor sree durga devi temple road),10.8690875,76.0066331,rangatoor sree durga devi temple road,Vairankode,Malappuram
+node/6966798145,LC near Tirur,10.9035974,75.9325785,,Tirur,Malappuram
+node/6966798147,LC near Tirur,10.903503,75.9324909,,Tirur,Malappuram
+node/6976564600,LC near Santhi Nagar,11.2406703,76.2525238,,Santhi Nagar,Malappuram
+node/7027481589,LC near Vaniyambalam,11.1939558,76.2568266,,Vaniyambalam,Malappuram
+node/7038708498,LC near Vairankode,10.8757352,75.9830939,,Vairankode,Malappuram
+node/7038708499,LC near Vairankode,10.8757856,75.9831086,,Vairankode,Malappuram
+node/7038708500,LC near Vairankode,10.8758287,75.9831212,,Vairankode,Malappuram
+node/7038708501,LC near Vairankode,10.8758874,75.9831382,,Vairankode,Malappuram
+node/7038708510,LC near Kuttippuram (pappadam chettiyar road),10.8483322,76.0303318,pappadam chettiyar road,Kuttippuram,Malappuram
+node/7038708511,LC near Kuttippuram (pappadam chettiyar road),10.8483418,76.0303423,pappadam chettiyar road,Kuttippuram,Malappuram
+node/7038708512,LC near Kuttippuram (pappadam chettiyar road),10.8483754,76.030379,pappadam chettiyar road,Kuttippuram,Malappuram
+node/7038708513,LC near Kuttippuram (pappadam chettiyar road),10.848387,76.0303917,pappadam chettiyar road,Kuttippuram,Malappuram
+node/7038708514,LC near Kuttippuram (pappadam chettiyar road),10.848419,76.0304267,pappadam chettiyar road,Kuttippuram,Malappuram
+node/7071381388,LC near Perunguzhi,8.6311271,76.8083008,,Perunguzhi,Thiruvananthapuram
+node/7085543902,LC near Chirayinkeezhu (chirayinkeezhu-Thiruvananthapuram Road),8.6548885,76.7877999,chirayinkeezhu-Thiruvananthapuram Road,Chirayinkeezhu,Thiruvananthapuram
+node/7085859366,LC near Karunagapally,9.0539038,76.5560606,,Karunagapally,Kollam
+node/7085859367,LC near Karunagapally,9.0538609,76.5560661,,Karunagapally,Kollam
+node/7085867882,LC near Karunagapally,9.0524735,76.5586387,,Karunagapally,Kollam
+node/7085867883,LC near Karunagapally,9.052425,76.5586405,,Karunagapally,Kollam
+node/7099004933,LC near Poongode,11.1601381,76.268275,,Poongode,Malappuram
+node/7255222104,LC near Cheerattamanna,11.0067975,76.2185795,,Cheerattamanna,Malappuram
+node/7358110098,LC near Thrikaripur (vellapp road),12.1416033,75.1758317,vellapp road,Thrikaripur,Kasaragod
+node/7358110180,LC near Pekkadam,12.1606222,75.1744508,,Pekkadam,Kasaragod
+node/7358110181,LC near Thrikaripur,12.1261027,75.1816747,,Thrikaripur,Kasaragod
+node/7362490130,LC near Thalassery (Thalassery Kolassery Road),11.75999,75.488907,Thalassery Kolassery Road,Thalassery,Kannur
+node/7368520346,LC near Eravankara,9.2606979,76.5743989,,Eravankara,Alappuzha
+node/7390872430,LC near Mylom,9.0340838,76.7973523,,Mylom,Kollam
+node/7441591058,LC near Perayam,8.9699158,76.6915887,,Perayam,Kollam
+node/7448717372,LC near Palakkunnu (kottikulum arattukadav road),12.4240484,75.0239974,kottikulum arattukadav road,Palakkunnu,Kasaragod
+node/7448717373,LC near Palakkunnu (kottikulum arattukadav road),12.4240622,75.0240388,kottikulum arattukadav road,Palakkunnu,Kasaragod
+node/7459583138,LC near Murukkumpuzha,8.6113237,76.8326408,,Murukkumpuzha,Thiruvananthapuram
+node/7461966149,LC near Thrippunithura,9.9665037,76.3441407,,Thrippunithura,Ernakulam
+node/7466120818,LC near Aluva,10.1099404,76.3579952,,Aluva,Ernakulam
+node/7469411781,LC near Thumpoly,9.5288146,76.3213249,,Thumpoly,Alappuzha
+node/7469429706,LC near Kalamassery,10.0687153,76.3422879,,Kalamassery,Ernakulam
+node/7474093396,LC near Karunagapally,9.06953,76.5430687,,Karunagapally,Kollam
+node/7476252792,LC near Pattithanam (vedagiri-nambiyakulam road),9.7054906,76.5309072,vedagiri-nambiyakulam road,Pattithanam,Kottayam
+node/7481839473,LC near Krishnapuram (Ochira - Thamarakkulam Road),9.1361497,76.524092,Ochira - Thamarakkulam Road,Krishnapuram,Alappuzha
+node/7481839474,LC near Oachira (Ochira - Thamarakkulam Road),9.1305146,76.5257252,Ochira - Thamarakkulam Road,Oachira,Kollam
+node/7482019076,LC near Chala (Melarannoor-Killipalam Road),8.4853706,76.9627923,Melarannoor-Killipalam Road,Chala,Thiruvananthapuram
+node/7482019077,LC near Chala (Melarannoor-Killipalam Road),8.4854603,76.9628161,Melarannoor-Killipalam Road,Chala,Thiruvananthapuram
+node/7482019079,LC near Karamana (Melarannoor-Killipalam Road),8.4835805,76.9699955,Melarannoor-Killipalam Road,Karamana,Thiruvananthapuram
+node/7484336039,LC near Vengara,12.030451,75.2464917,,Vengara,Kannur
+node/7484687722,LC near Punnapra,9.4434791,76.3353933,,Punnapra,Alappuzha
+node/7487239885,LC near Melechovva (Thayil - Thazhe Chova Road),11.8664222,75.4027593,Thayil - Thazhe Chova Road,Melechovva,Kannur
+node/7487239890,LC near Melechovva (Thayil - Thazhe Chova Road),11.8663161,75.402604,Thayil - Thazhe Chova Road,Melechovva,Kannur
+node/7488474845,LC near Arayi (Puthiyotta-Kallooravi Road),12.3098973,75.0893215,Puthiyotta-Kallooravi Road,Arayi,Kasaragod
+node/7488474846,LC near Arayi (Puthiyotta-Kallooravi Road),12.3098768,75.0892648,Puthiyotta-Kallooravi Road,Arayi,Kasaragod
+node/7488474913,LC near Aingoth,12.2841828,75.1036022,,Aingoth,Kasaragod
+node/7488474915,LC near Arayi,12.2936271,75.0982754,,Arayi,Kasaragod
+node/7488474920,LC near Arayi,12.2935649,75.0982034,,Arayi,Kasaragod
+node/7491857505,LC near Ambalapuzha,9.3877721,76.3589586,,Ambalapuzha,Alappuzha
+node/7491857528,LC near Ambalapuzha,9.3876703,76.3589083,,Ambalapuzha,Alappuzha
+node/7491857539,LC near Ambalapuzha,9.387627,76.3588879,,Ambalapuzha,Alappuzha
+node/7491857540,LC near Ambalapuzha,9.3877222,76.3589367,,Ambalapuzha,Alappuzha
+node/7500235953,LC near Ezhukone,8.9767542,76.7010387,,Ezhukone,Kollam
+node/7500779368,LC near Mulakunnathukavu,10.617046,76.2134404,,Mulakunnathukavu,Thrissur
+node/7501212993,LC near Ollur (Thaikkattussery Road),10.4543204,76.2428957,Thaikkattussery Road,Ollur,Thrissur
+node/7507360863,LC near Elampalloor,8.9622696,76.6823574,,Elampalloor,Kollam
+node/7509124205,LC near Krishnapuram (koladuth road),9.1598192,76.5125933,koladuth road,Krishnapuram,Alappuzha
+node/7511824196,LC near Kinassery,10.7122004,76.672165,,Kinassery,Palakkad
+node/7511863060,LC near Kazhakkoottam,8.562052,76.8720076,,Kazhakkoottam,Thiruvananthapuram
+node/7511863061,LC near Kazhakkoottam,8.5620626,76.8720489,,Kazhakkoottam,Thiruvananthapuram
+node/7511863062,LC near Kazhakkoottam,8.5620685,76.872072,,Kazhakkoottam,Thiruvananthapuram
+node/7513584457,LC near Kinassery,10.7190227,76.6665297,,Kinassery,Palakkad
+node/7513940585,LC near Mulakunnathukavu,10.5945556,76.2060372,,Mulakunnathukavu,Thrissur
+node/7514288334,LC near Cherukunnu (thavam dalil road),12.0173092,75.2755052,thavam dalil road,Cherukunnu,Kannur
+node/7514469835,LC near Chittattukara,10.5766332,76.0761216,,Chittattukara,Thrissur
+node/7515012589,LC near Chittattukara,10.5751202,76.1035797,,Chittattukara,Thrissur
+node/7516537435,LC near Parappur,10.5740175,76.1241159,,Parappur,Thrissur
+node/7516537436,LC near Parappur,10.5741327,76.1219744,,Parappur,Thrissur
+node/7517132340,LC near Peruvamba,10.7034563,76.6779333,,Peruvamba,Palakkad
+node/7517211662,LC near Mulakunnathukavu,10.5965932,76.2058407,,Mulakunnathukavu,Thrissur
+node/7517211677,LC near Mulakunnathukavu,10.5967169,76.2074572,,Mulakunnathukavu,Thrissur
+node/7517212785,LC near Mulakunnathukavu,10.5954684,76.2050949,,Mulakunnathukavu,Thrissur
+node/7517212796,LC near Mulakunnathukavu,10.5950082,76.2063141,,Mulakunnathukavu,Thrissur
+node/7517212811,LC near Mulakunnathukavu,10.5948459,76.2065517,,Mulakunnathukavu,Thrissur
+node/7517212815,LC near Mulakunnathukavu,10.5945275,76.2064847,,Mulakunnathukavu,Thrissur
+node/7517212816,LC near Mulakunnathukavu,10.5945324,76.2065213,,Mulakunnathukavu,Thrissur
+node/7517212817,LC near Mulakunnathukavu,10.5945419,76.2065774,,Mulakunnathukavu,Thrissur
+node/7517212818,LC near Mulakunnathukavu,10.5945123,76.2066429,,Mulakunnathukavu,Thrissur
+node/7517212819,LC near Mulakunnathukavu,10.5944786,76.2066753,,Mulakunnathukavu,Thrissur
+node/7517392331,LC near Mulakunnathukavu (Attore-Tirur Road),10.5898634,76.2042303,Attore-Tirur Road,Mulakunnathukavu,Thrissur
+node/7521377676,LC near Pappinisseri (kottapalam railway line road),11.9590763,75.3356088,kottapalam railway line road,Pappinisseri,Kannur
+node/7522788144,LC near Mulakunnathukavu,10.6170512,76.2133444,,Mulakunnathukavu,Thrissur
+node/7522788159,LC near Mulakunnathukavu,10.5976827,76.2081298,,Mulakunnathukavu,Thrissur
+node/7523093922,LC near Kuttoor,9.3618284,76.5983427,,Kuttoor,Pathanamthitta
+node/7523093925,LC near Kuttoor,9.3618546,76.5984492,,Kuttoor,Pathanamthitta
+node/7525857445,LC near Koyilandy (Aanakulam-Purakkad-Thikkodi Road),11.4615904,75.678794,Aanakulam-Purakkad-Thikkodi Road,Koyilandy,Kozhikode
+node/7525857476,LC near Koyilandy,11.4665852,75.6696276,,Koyilandy,Kozhikode
+node/7525866793,LC near Koyilandy (Kollam - Meppayyur Road),11.4514653,75.6887191,Kollam - Meppayyur Road,Koyilandy,Kozhikode
+node/7526592556,LC near Kodumunda (Pattambi-Kodumunda Road),10.8097863,76.1493438,Pattambi-Kodumunda Road,Kodumunda,Palakkad
+node/7526856965,LC near Pattithanam (Anamala - Kanakkari Road),9.6915462,76.544649,Anamala - Kanakkari Road,Pattithanam,Kottayam
+node/7536954179,LC near Puthukkad (Thaikkattussery Road),10.4450724,76.2436494,Thaikkattussery Road,Puthukkad,Thrissur
+node/7536954180,LC near Puthukkad (Thaikkattussery Road),10.4450778,76.2436901,Thaikkattussery Road,Puthukkad,Thrissur
+node/7537277143,LC near Fort,8.4963935,76.9254991,,Fort,Thiruvananthapuram
+node/7537277144,LC near Fort,8.4963418,76.9255125,,Fort,Thiruvananthapuram
+node/7538346459,LC near Payyoli (Payyoli Beach Road),11.5059329,75.6216657,Payyoli Beach Road,Payyoli,Kozhikode
+node/7539649813,LC near Kuriyachira (Kanimangalam - Nedupuzha Road),10.4936312,76.2085908,Kanimangalam - Nedupuzha Road,Kuriyachira,Thrissur
+node/7539649814,LC near Kuriyachira (Kanimangalam - Nedupuzha Road),10.4936269,76.208499,Kanimangalam - Nedupuzha Road,Kuriyachira,Thrissur
+node/7539649815,LC near Kuriyachira (Kanimangalam - Nedupuzha Road),10.4926259,76.2092455,Kanimangalam - Nedupuzha Road,Kuriyachira,Thrissur
+node/7539649818,LC near Poothole,10.5073336,76.20596,,Poothole,Thrissur
+node/7539649819,LC near Poothole,10.5073208,76.2060306,,Poothole,Thrissur
+node/7544851030,LC near West Kallada,9.0146805,76.6062163,,West Kallada,Kollam
+node/7544851037,LC near West Kallada,9.030225,76.6030234,,West Kallada,Kollam
+node/7544851038,LC near West Kallada,9.0301865,76.6029991,,West Kallada,Kollam
+node/7548142878,LC near Viyyur,10.5592275,76.2085849,,Viyyur,Thrissur
+node/7548152415,LC near Viyyur,10.5592435,76.2085377,,Viyyur,Thrissur
+node/7555775129,LC near Amballur (Arakkunnam - Amballoor Road),9.8680857,76.4003657,Arakkunnam - Amballoor Road,Amballur,Ernakulam
+node/7555775130,LC near Amballur (Kanjiramattom-Arakkunnam-Peppathy Road),9.8616384,76.4128446,Kanjiramattom-Arakkunnam-Peppathy Road,Amballur,Ernakulam
+node/7555775131,LC near Amballur (Arakkunnam - Amballoor Road),9.8681015,76.4003064,Arakkunnam - Amballoor Road,Amballur,Ernakulam
+node/7555775132,LC near Amballur (Kanjiramattom-Arakkunnam-Peppathy Road),9.861585,76.4128228,Kanjiramattom-Arakkunnam-Peppathy Road,Amballur,Ernakulam
+node/7558122583,LC near Panayam,8.9816192,76.6094377,,Panayam,Kollam
+node/7558122584,LC near Panayam,8.981626,76.6095065,,Panayam,Kollam
+node/7560376137,LC near Edakkad,11.8110722,75.4394131,,Edakkad,Kannur
+node/7560376138,LC near Edakkad,11.8110868,75.4394538,,Edakkad,Kannur
+node/7561471316,LC near Mynagappally (Karunagappally - Sasthamcottah Road),9.0483511,76.5749433,Karunagappally - Sasthamcottah Road,Mynagappally,Kollam
+node/7561471317,LC near Mynagappally (Karunagappally - Sasthamcottah Road),9.0483736,76.5749891,Karunagappally - Sasthamcottah Road,Mynagappally,Kollam
+node/7568826652,LC near Panayam,8.9739714,76.6073254,,Panayam,Kollam
+node/7568866875,LC near Panayam,8.9617519,76.6178731,,Panayam,Kollam
+node/7568866876,LC near Panayam,8.9617446,76.617723,,Panayam,Kollam
+node/7591933179,LC near Chandanathope,8.9256343,76.6361457,,Chandanathope,Kollam
+node/7594762273,LC near Chandanathope,8.9328021,76.6467914,,Chandanathope,Kollam
+node/7595968163,LC near Mangad,8.9179545,76.6266642,,Mangad,Kollam
+node/7595968164,LC near Mangad,8.9179554,76.6266033,,Mangad,Kollam
+node/7598168389,LC near Vellimon,8.9442594,76.6592787,,Vellimon,Kollam
+node/7601371310,LC near Mulakunnathukavu,10.5957253,76.2071532,,Mulakunnathukavu,Thrissur
+node/7601371311,LC near Mulakunnathukavu,10.5958905,76.2069033,,Mulakunnathukavu,Thrissur
+node/7605117062,LC near Chettukundu,12.3695798,75.0563841,,Chettukundu,Kasaragod
+node/7605117064,LC near Manikkoth (Chittari kadpuram),12.3426711,75.0748565,Chittari kadpuram,Manikkoth,Kasaragod
+node/7605117065,LC near Manikkoth (Chittari kadpuram),12.3426477,75.0747916,Chittari kadpuram,Manikkoth,Kasaragod
+node/7609587183,LC near Thalassery (Thalassery-Kuttiyadi Road),11.7392507,75.507948,Thalassery-Kuttiyadi Road,Thalassery,Kannur
+node/7616263890,LC near Kasaragod (2nd fort cross road),12.495955,74.9858126,2nd fort cross road,Kasaragod,Kasaragod
+node/7616263891,LC near Kasaragod (2nd fort cross road),12.4959467,74.9857485,2nd fort cross road,Kasaragod,Kasaragod
+node/7620408726,LC near Pappinisseri (kovvappuram-irinav bypass),11.9639243,75.3314229,kovvappuram-irinav bypass,Pappinisseri,Kannur
+node/7620408727,LC near Pappinisseri (kovvappuram-irinav bypass),11.9639502,75.3314726,kovvappuram-irinav bypass,Pappinisseri,Kannur
+node/7620408730,LC near Pappinisseri (railway line road),11.9487364,75.3442097,railway line road,Pappinisseri,Kannur
+node/7620408731,LC near Pappinisseri (railway line road),11.948788,75.3442577,railway line road,Pappinisseri,Kannur
+node/7629980040,LC near Shenoys (Ambikapuram Crossing),9.9616707,76.2927488,Ambikapuram Crossing,Shenoys,Ernakulam
+node/7643978039,LC near Palakkunnu (kottikulum arattukadav road),12.4156684,75.0245504,kottikulum arattukadav road,Palakkunnu,Kasaragod
+node/7643978040,LC near Palakkunnu (kottikulum arattukadav road),12.4156736,75.024488,kottikulum arattukadav road,Palakkunnu,Kasaragod
+node/7643986707,LC near Palakkunnu (kottikulum arattukadav road),12.4177905,75.0243342,kottikulum arattukadav road,Palakkunnu,Kasaragod
+node/7643986708,LC near Palakkunnu (kottikulum arattukadav road),12.4178126,75.0243998,kottikulum arattukadav road,Palakkunnu,Kasaragod
+node/7674288606,LC near Nileshwaram,12.2482207,75.1414614,,Nileshwaram,Kasaragod
+node/7674288607,LC near Nileshwaram,12.2482418,75.1415315,,Nileshwaram,Kasaragod
+node/7685334188,LC near Koyilandy (Kollam - Meppayyur Road),11.4569198,75.6835906,Kollam - Meppayyur Road,Koyilandy,Kozhikode
+node/7693291456,LC near Mulakunnathukavu (Attore-Tirur Road),10.5826733,76.2050435,Attore-Tirur Road,Mulakunnathukavu,Thrissur
+node/7693316905,LC near Cherukunnu (thavam dalil road),12.0172773,75.2754472,thavam dalil road,Cherukunnu,Kannur
+node/7727485905,LC near Mananchira (Court Road),11.2514165,75.7795417,Court Road,Mananchira,Kozhikode
+node/7727485906,LC near Nadakkave (Panickar Road),11.2675604,75.7728129,Panickar Road,Nadakkave,Kozhikode
+node/7727485907,LC near Koyilandy (Kollam - Meppayyur Road),11.4514413,75.6886803,Kollam - Meppayyur Road,Koyilandy,Kozhikode
+node/7756434865,LC near Kizhur,12.4655188,74.9986857,,Kizhur,Kasaragod
+node/7756434866,LC near Kizhur,12.4656016,74.9987738,,Kizhur,Kasaragod
+node/7814431987,LC near Cheppad (Ramapuram-Puthenkulangara road),9.219792,76.4820473,Ramapuram-Puthenkulangara road,Cheppad,Alappuzha
+node/7814431988,LC near Cheppad (Ramapuram-Puthenkulangara road),9.2198062,76.4821054,Ramapuram-Puthenkulangara road,Cheppad,Alappuzha
+node/7814771187,LC near Kayamkulam (Kayamkulam - Thiruvalla Road),9.1984683,76.5077246,Kayamkulam - Thiruvalla Road,Kayamkulam,Alappuzha
+node/7814771188,LC near Kayamkulam (Kayamkulam - Thiruvalla Road),9.1984271,76.5077117,Kayamkulam - Thiruvalla Road,Kayamkulam,Alappuzha
+node/7835615854,LC near Kannur,11.9059619,75.3553768,,Kannur,Kannur
+node/7835615855,LC node/7835615855,11.9059498,75.3552913,,,Kannur
+node/7858926253,LC near Cheppad (Ramapuram-Puthenkulangara road),9.2260429,76.4793695,Ramapuram-Puthenkulangara road,Cheppad,Alappuzha
+node/7858926254,LC near Cheppad (Ramapuram-Puthenkulangara road),9.2260741,76.4794281,Ramapuram-Puthenkulangara road,Cheppad,Alappuzha
+node/7863997087,LC near Muzhappilangad,11.792108,75.4523319,,Muzhappilangad,Kannur
+node/7863997088,LC near Muzhappilangad,11.7921497,75.4523955,,Muzhappilangad,Kannur
+node/7867895571,LC near Peringala (Kayamkulam - Thiruvalla Road),9.1971581,76.5194334,Kayamkulam - Thiruvalla Road,Peringala,Alappuzha
+node/7867895572,LC near Peringala (Kayamkulam - Thiruvalla Road),9.1971352,76.5194732,Kayamkulam - Thiruvalla Road,Peringala,Alappuzha
+node/7880661870,LC near Nangiarkulangara,9.2438288,76.4733742,,Nangiarkulangara,Alappuzha
+node/7880661871,LC near Nangiarkulangara,9.2438291,76.4736284,,Nangiarkulangara,Alappuzha
+node/7880661872,LC near Nangiarkulangara,9.2438292,76.4736828,,Nangiarkulangara,Alappuzha
+node/7906184182,LC near Kuttivattom,9.0254924,76.5377554,,Kuttivattom,Kollam
+node/7906184183,LC near Karunagapally,9.0568191,76.5444214,,Karunagapally,Kollam
+node/7944652312,LC near Kalamassery,10.0664661,76.3518178,,Kalamassery,Ernakulam
+node/7944652314,LC near Aluva,10.0795613,76.3427542,,Aluva,Ernakulam
+node/7944652315,LC near Aluva,10.0795153,76.3427916,,Aluva,Ernakulam
+node/7944652316,LC near Aluva,10.0794655,76.342841,,Aluva,Ernakulam
+node/7944652317,LC near Aluva,10.079425,76.3428712,,Aluva,Ernakulam
+node/7944652318,LC near Aluva,10.079393,76.3429119,,Aluva,Ernakulam
+node/7944652319,LC near Aluva,10.079359,76.3429389,,Aluva,Ernakulam
+node/7944652320,LC near Aluva,10.0793296,76.3429608,,Aluva,Ernakulam
+node/7944652321,LC near Aluva,10.0793025,76.3429883,,Aluva,Ernakulam
+node/7944652322,LC near Aluva,10.0792723,76.3430158,,Aluva,Ernakulam
+node/7944652323,LC near Aluva,10.079231,76.3430594,,Aluva,Ernakulam
+node/7944652324,LC near Aluva,10.0792084,76.3430861,,Aluva,Ernakulam
+node/7944652325,LC near Aluva,10.0791781,76.3431119,,Aluva,Ernakulam
+node/7944652326,LC near Aluva,10.0791444,76.3431383,,Aluva,Ernakulam
+node/7944652327,LC near Aluva,10.0791153,76.3431673,,Aluva,Ernakulam
+node/7944652328,LC near Aluva,10.0790809,76.3431925,,Aluva,Ernakulam
+node/7944652329,LC near Aluva,10.0790482,76.3432187,,Aluva,Ernakulam
+node/7944652330,LC near Aluva,10.0758481,76.3398421,,Aluva,Ernakulam
+node/7944652331,LC near Aluva,10.0759181,76.339471,,Aluva,Ernakulam
+node/7944652332,LC near Aluva,10.0759555,76.339431,,Aluva,Ernakulam
+node/7944652333,LC near Aluva,10.0759974,76.339388,,Aluva,Ernakulam
+node/7944652334,LC near Aluva,10.0760853,76.3393001,,Aluva,Ernakulam
+node/7959375271,LC near Palakkad,10.7598718,76.652964,,Palakkad,Palakkad
+node/7972829477,LC near Perinthalmanna,10.9782367,76.2066634,,Perinthalmanna,Malappuram
+node/7972979957,LC near Mattaya,10.8244895,76.254436,,Mattaya,Palakkad
+node/7985074644,LC near Thrikaripur (Chandera -Trikaripur -Olavara Road),12.1353658,75.177198,Chandera -Trikaripur -Olavara Road,Thrikaripur,Kasaragod
+node/8001811743,LC near Kalamassery,10.0389957,76.3111235,,Kalamassery,Ernakulam
+node/8001811744,LC near Kalamassery,10.0390297,76.3112061,,Kalamassery,Ernakulam
+node/8010642236,LC near Nadakkave (Panickar Road),11.2656998,75.7736122,Panickar Road,Nadakkave,Kozhikode
+node/8010642237,LC near Nadakkave (Panickar Road),11.2656857,75.7735545,Panickar Road,Nadakkave,Kozhikode
+node/8023028929,LC near Nandikkara (Mapranam Nandikara Road),10.4030056,76.2750964,Mapranam Nandikara Road,Nandikkara,Thrissur
+node/8023028930,LC near Nandikkara (Mapranam Nandikara Road),10.409707,76.2718894,Mapranam Nandikara Road,Nandikkara,Thrissur
+node/8023028932,LC near Amballur (Urakam-Pudukad Road),10.4179592,76.2630617,Urakam-Pudukad Road,Amballur,Thrissur
+node/8023028933,LC near Amballur (Urakam-Pudukad Road),10.4179531,76.2630361,Urakam-Pudukad Road,Amballur,Thrissur
+node/8058294829,LC near Thrippunithura,9.966492,76.3440876,,Thrippunithura,Ernakulam
+node/8058294830,LC near Thrippunithura,9.9665178,76.3441336,,Thrippunithura,Ernakulam
+node/8058294831,LC near Thrippunithura,9.9665369,76.3441675,,Thrippunithura,Ernakulam
+node/8061433240,LC near Ayaparampu,9.31845,76.4293404,,Ayaparampu,Alappuzha
+node/8064575634,LC node/8064575634,11.1518497,76.2687631,,,Malappuram
+node/8065287424,LC near Vayalar,9.7238442,76.3101679,,Vayalar,Alappuzha
+node/8228225642,LC near South Kalamassery,10.0462049,76.3144015,,South Kalamassery,Ernakulam
+node/8228225643,LC near South Kalamassery,10.0462235,76.3143529,,South Kalamassery,Ernakulam
+node/8239408172,LC near Vengara,12.0350719,75.2438326,,Vengara,Kannur
+node/8239408185,LC near Vengara,12.0351188,75.2438795,,Vengara,Kannur
+node/8240832710,LC near Njanakai,12.2224683,75.1517752,,Njanakai,Kasaragod
+node/8240832711,LC near Njanakai,12.2224937,75.1518702,,Njanakai,Kasaragod
+node/8247690967,LC near Arikady,12.5879756,74.9440042,,Arikady,Kasaragod
+node/8247690968,LC near Arikady,12.5879938,74.9440549,,Arikady,Kasaragod
+node/8247690969,LC near Arikady,12.5880109,74.9441024,,Arikady,Kasaragod
+node/8252119330,LC near Govindapuram,10.6333839,76.799419,,Govindapuram,Palakkad
+node/8265733271,LC near Edakkad,11.8125927,75.4382014,,Edakkad,Kannur
+node/8284150380,LC near Vadavannur,10.6338216,76.6878355,,Vadavannur,Palakkad
+node/8284150569,LC near Vadavannur,10.6417173,76.6864391,,Vadavannur,Palakkad
+node/8284150613,LC near Vadavannur,10.6393039,76.6868669,,Vadavannur,Palakkad
+node/8284269105,LC near Pudussery Central (AVP Road),10.8007254,76.7514051,AVP Road,Pudussery Central,Palakkad
+node/8284269106,LC near Pudussery Central (AVP Road),10.8007683,76.7514082,AVP Road,Pudussery Central,Palakkad
+node/8284269107,LC near Pudussery Central (AVP Road),10.8008124,76.7514114,AVP Road,Pudussery Central,Palakkad
+node/8284269108,LC near Pudussery Central (AVP Road),10.8008559,76.7514146,AVP Road,Pudussery Central,Palakkad
+node/8285790530,LC near Vadavannur,10.6303953,76.7155403,,Vadavannur,Palakkad
+node/8285790532,LC near Vadavannur,10.6262077,76.695173,,Vadavannur,Palakkad
+node/8289747307,LC near Vadavannur,10.6262813,76.6950968,,Vadavannur,Palakkad
+node/8289747308,LC near Vadavannur,10.6262408,76.6951387,,Vadavannur,Palakkad
+node/8293190907,LC near Anangadi,11.113637,75.8393997,,Anangadi,Malappuram
+node/8294129487,LC near Mogralputhur,12.5544346,74.9583491,,Mogralputhur,Kasaragod
+node/8294129488,LC near Mogralputhur,12.554473,74.9584431,,Mogralputhur,Kasaragod
+node/8299052254,LC near Mynagappally,9.0385786,76.5875265,,Mynagappally,Kollam
+node/8299052255,LC near Mynagappally,9.0386011,76.5875418,,Mynagappally,Kollam
+node/8299052273,LC near Mynagappally,9.0376325,76.5892895,,Mynagappally,Kollam
+node/8299052274,LC near Mynagappally,9.0375946,76.5892773,,Mynagappally,Kollam
+node/8299555533,LC near Thalassery,11.7111444,75.5439391,,Thalassery,Kannur
+node/8299678497,LC near Thalassery,11.7168066,75.5253159,,Thalassery,Kannur
+node/8299678498,LC near Thalassery,11.7166814,75.5252402,,Thalassery,Kannur
+node/8323389120,LC near Pattithanam (vedagiri-nambiyakulam road),9.7027643,76.5327881,vedagiri-nambiyakulam road,Pattithanam,Kottayam
+node/8323389121,LC near Pattithanam (vedagiri-nambiyakulam road),9.7027908,76.5328293,vedagiri-nambiyakulam road,Pattithanam,Kottayam
+node/8326589737,LC near Mavelikkara,9.2427933,76.5482838,,Mavelikkara,Alappuzha
+node/8348053617,LC near Nangiarkulangara (Thattarambalam - Thrikkunnappuzha Road),9.2664128,76.4667761,Thattarambalam - Thrikkunnappuzha Road,Nangiarkulangara,Alappuzha
+node/8348053618,LC near Nangiarkulangara (Thattarambalam - Thrikkunnappuzha Road),9.2664021,76.4668344,Thattarambalam - Thrikkunnappuzha Road,Nangiarkulangara,Alappuzha
+node/8356766806,LC near Santhi Nagar,11.2192203,76.250982,,Santhi Nagar,Malappuram
+node/8415811389,LC near Atholi,11.3628371,75.7424321,,Atholi,Kozhikode
+node/8415811390,LC near Atholi,11.3628359,75.7424917,,Atholi,Kozhikode
+node/8463629181,LC near Vadavannur,10.6280666,76.7009292,,Vadavannur,Palakkad
+node/8463629182,LC near Vadavannur,10.628012,76.7009394,,Vadavannur,Palakkad
+node/8463629183,LC near Vadavannur,10.627975,76.7009504,,Vadavannur,Palakkad
+node/8463647389,LC near Vadavannur,10.6307278,76.719032,,Vadavannur,Palakkad
+node/8463776673,LC near Balaramapuram,8.427087,77.0546521,,Balaramapuram,Thiruvananthapuram
+node/8463776674,LC near Mavelikkara,9.242793,76.5483255,,Mavelikkara,Alappuzha
+node/8476277012,LC near Thrippunithura,9.9735053,76.338897,,Thrippunithura,Ernakulam
+node/8476277013,LC near Thrippunithura,9.9735111,76.3390218,,Thrippunithura,Ernakulam
+node/8476277014,LC near Thrippunithura,9.9735191,76.3391946,,Thrippunithura,Ernakulam
+node/8476277015,LC near Thrippunithura,9.9735401,76.3396457,,Thrippunithura,Ernakulam
+node/8476277016,LC near Thrippunithura,9.9735119,76.3425109,,Thrippunithura,Ernakulam
+node/8476290717,LC near Thrippunithura,9.972342,76.356595,,Thrippunithura,Ernakulam
+node/8476290718,LC near Thrippunithura,9.9723854,76.3560495,,Thrippunithura,Ernakulam
+node/8476290719,LC near Thrippunithura,9.9724903,76.3566076,,Thrippunithura,Ernakulam
+node/8476290720,LC near Thrippunithura,9.9725716,76.3559815,,Thrippunithura,Ernakulam
+node/8476290721,LC near Thrippunithura,9.9724204,76.3566017,,Thrippunithura,Ernakulam
+node/8476290722,LC near Thrippunithura,9.9724705,76.3560184,,Thrippunithura,Ernakulam
+node/8476290723,LC near Thrippunithura,9.9723738,76.3565977,,Thrippunithura,Ernakulam
+node/8476290724,LC near Thrippunithura,9.9723783,76.3565981,,Thrippunithura,Ernakulam
+node/8476290725,LC near Thrippunithura,9.9724337,76.3560318,,Thrippunithura,Ernakulam
+node/8476290726,LC near Thrippunithura,9.9724636,76.3566053,,Thrippunithura,Ernakulam
+node/8476290727,LC near Thrippunithura,9.9725205,76.3560002,,Thrippunithura,Ernakulam
+node/8494116527,LC near Valummel,9.9366475,76.2753343,,Valummel,Ernakulam
+node/8559293670,LC near Cherthala,9.678965,76.3341816,,Cherthala,Alappuzha
+node/8560140963,LC near Ambalappuzha,9.3945259,76.3494491,,Ambalappuzha,Alappuzha
+node/8560140964,LC near Ambalappuzha,9.3909641,76.3522567,,Ambalappuzha,Alappuzha
+node/8560140965,LC near Ambalapuzha,9.3855816,76.3667153,,Ambalapuzha,Alappuzha
+node/8560140966,LC near Ambalapuzha,9.3856417,76.3667421,,Ambalapuzha,Alappuzha
+node/8560140967,LC near Ambalapuzha,9.3857155,76.3667654,,Ambalapuzha,Alappuzha
+node/8560140969,LC near Ambalappuzha,9.3924668,76.350537,,Ambalappuzha,Alappuzha
+node/8560140971,LC near Punnapra,9.4467945,76.3342314,,Punnapra,Alappuzha
+node/8560140972,LC near Punnapra,9.4415274,76.3360865,,Punnapra,Alappuzha
+node/8560140973,LC near Punnapra,9.4366768,76.3377762,,Punnapra,Alappuzha
+node/8560140974,LC near Punnapra,9.4310359,76.3396836,,Punnapra,Alappuzha
+node/8560140975,LC near Punnapra,9.4300214,76.3400063,,Punnapra,Alappuzha
+node/8588629142,LC near Melattur,11.0483133,76.2657472,,Melattur,Malappuram
+node/8593156163,LC near Thiruvalla,9.3828722,76.5833876,,Thiruvalla,Pathanamthitta
+node/8844691625,LC near Pathiyoor (Enakulangara - Kareelakulangara Road),9.2093525,76.48976,Enakulangara - Kareelakulangara Road,Pathiyoor,Alappuzha
+node/8849627596,LC near Uduma (GHSS Nalamvathukkal Road),12.4382469,75.0249622,GHSS Nalamvathukkal Road,Uduma,Kasaragod
+node/8849627597,LC near Uduma (GHSS Nalamvathukkal Road),12.4382343,75.0250292,GHSS Nalamvathukkal Road,Uduma,Kasaragod
+node/8853114886,LC near Nangiarkulangara,9.2689296,76.4659614,,Nangiarkulangara,Alappuzha
+node/8864729616,LC near Ambalappuzha,9.4047052,76.3467342,,Ambalappuzha,Alappuzha
+node/8868106149,LC near Chandanathope,8.9237767,76.6344621,,Chandanathope,Kollam
+node/8870252936,LC near Thalapara,9.8052515,76.4626761,,Thalapara,Kottayam
+node/8870624114,LC near Aluva,10.0815598,76.34005,,Aluva,Ernakulam
+node/8870624115,LC near Aluva,10.0815079,76.3400926,,Aluva,Ernakulam
+node/8873046807,LC near Aluva (Aluva Kalady Road),10.1285461,76.3687842,Aluva Kalady Road,Aluva,Ernakulam
+node/8873046808,LC near Aluva (Aluva Kalady Road),10.1285233,76.3688287,Aluva Kalady Road,Aluva,Ernakulam
+node/8873797488,LC near Aluva (Aluva Kalady Road),10.1248256,76.3658044,Aluva Kalady Road,Aluva,Ernakulam
+node/8873797489,LC near Aluva (Aluva Kalady Road),10.1248126,76.3658853,Aluva Kalady Road,Aluva,Ernakulam
+node/8889392079,LC near Aluva,10.0752078,76.3386791,,Aluva,Ernakulam
+node/8889392095,LC near Aluva,10.0751097,76.3387784,,Aluva,Ernakulam
+node/8889392096,LC near Aluva,10.0750492,76.3388397,,Aluva,Ernakulam
+node/8891685565,LC near Kanichukulangara,9.6300447,76.3219388,,Kanichukulangara,Alappuzha
+node/8891738867,LC node/8891738867,9.2625725,76.5810188,,,Alappuzha
+node/8911566043,LC near Kaithappuram,11.0016066,75.8746946,,Kaithappuram,Malappuram
+node/8911566044,LC near Kaithappuram,11.0016066,75.8747692,,Kaithappuram,Malappuram
+node/8917320287,LC near Puthirikkal,11.0454849,75.8610943,,Puthirikkal,Malappuram
+node/8917320288,LC near Puthirikkal,11.0455013,75.8611374,,Puthirikkal,Malappuram
+node/8917320289,LC near Puthirikkal,11.0455212,75.8611894,,Puthirikkal,Malappuram
+node/8919991209,LC near Elamkulam,10.9080296,76.2287316,,Elamkulam,Malappuram
+node/8927354721,LC near Udyawara,12.7258402,74.8860454,,Udyawara,Kasaragod
+node/8927354722,LC near Udyawara,12.7258869,74.8860759,,Udyawara,Kasaragod
+node/8927354723,LC near Udyawara,12.7259221,74.8860989,,Udyawara,Kasaragod
+node/8927354724,LC near Udyawara,12.7260252,74.8861662,,Udyawara,Kasaragod
+node/8927354725,LC near Udyawara,12.7274515,74.8835501,,Udyawara,Kasaragod
+node/8932447090,LC near Puthentheru,10.9633722,75.8914162,,Puthentheru,Malappuram
+node/8932447091,LC near Puthentheru,10.9634258,75.8914566,,Puthentheru,Malappuram
+node/8943143789,LC near Cherukunnu (Odayammadam Road),11.9958568,75.3012988,Odayammadam Road,Cherukunnu,Kannur
+node/8999712158,LC near Pazhayangadi,12.0217793,75.2607068,,Pazhayangadi,Kannur
+node/8999712176,LC near Pazhayangadi,12.0217375,75.260697,,Pazhayangadi,Kannur
+node/8999712184,LC near Vengara,12.0223032,75.2556489,,Vengara,Kannur
+node/8999712257,LC near Vengara,12.02239,75.2556607,,Vengara,Kannur
+node/8999712276,LC near Pappinisseri (railway line road),11.9399582,75.3471524,railway line road,Pappinisseri,Kannur
+node/8999712291,LC near Cherukunnu (thavam dalil road),12.0200163,75.2724319,thavam dalil road,Cherukunnu,Kannur
+node/8999712365,LC near Vengara,12.0250538,75.2496048,,Vengara,Kannur
+node/8999712462,LC near Pappinisseri (railway line road),11.9399707,75.3470983,railway line road,Pappinisseri,Kannur
+node/8999712524,LC near Vengara,12.0251013,75.2496955,,Vengara,Kannur
+node/8999712570,LC near Vengara,12.027389,75.2478057,,Vengara,Kannur
+node/8999712625,LC near Vengara,12.0413395,75.2397417,,Vengara,Kannur
+node/8999712712,LC near Cherukunnu (thavam dalil road),12.0199443,75.2723943,thavam dalil road,Cherukunnu,Kannur
+node/8999712840,LC near Vengara,12.0223338,75.2556515,,Vengara,Kannur
+node/9004567853,LC near Amala Nagar,10.5616079,76.1737171,,Amala Nagar,Thrissur
+node/9006293011,LC near Chandanathope,8.9151862,76.6317673,,Chandanathope,Kollam
+node/9006293012,LC near Chandanathope,8.9228424,76.6340064,,Chandanathope,Kollam
+node/9006293013,LC near Chandanathope,8.9171417,76.6323108,,Chandanathope,Kollam
+node/9085310777,LC near Vallarpadam,9.9883798,76.2576645,,Vallarpadam,Ernakulam
+node/9097138222,LC near Mattaya,10.8350968,76.252376,,Mattaya,Palakkad
+node/9114975073,LC near Perumpazhuthoor,8.4188101,77.0677453,,Perumpazhuthoor,Thiruvananthapuram
+node/9160784982,LC near Wadakkancherry (Kodungallur - Shornur Road),10.6532056,76.2432007,Kodungallur - Shornur Road,Wadakkancherry,Thrissur
+node/9160784983,LC near Wadakkancherry (Kodungallur - Shornur Road),10.6531648,76.2432156,Kodungallur - Shornur Road,Wadakkancherry,Thrissur
+node/9160784984,LC near Wadakkancherry (Kodungallur - Shornur Road),10.6531785,76.2432106,Kodungallur - Shornur Road,Wadakkancherry,Thrissur
+node/9163901371,LC near Ambalamugal,9.9725605,76.3654035,,Ambalamugal,Ernakulam
+node/9409817382,LC near Lakkidi,10.751875,76.4186471,,Lakkidi,Palakkad
+node/9409817383,LC near Lakkidi,10.7519276,76.41865,,Lakkidi,Palakkad
+node/9528243900,LC near Thakazhy,9.3631203,76.4121196,,Thakazhy,Alappuzha
+node/9528257944,LC near Haripad (Vathukulangara Railway Underpass),9.2937567,76.4586877,Vathukulangara Railway Underpass,Haripad,Alappuzha
+node/9528257947,LC near Haripad (Vazhappally - Railway Cross Road),9.2916389,76.4593344,Vazhappally - Railway Cross Road,Haripad,Alappuzha
+node/9528257965,LC near Karumadi,9.3844883,76.3787975,,Karumadi,Alappuzha
+node/9530962180,LC near Thakazhy (Ambalapuzha-Thiruvalla Highway),9.3742757,76.407564,Ambalapuzha-Thiruvalla Highway,Thakazhy,Alappuzha
+node/9530962193,LC near Karumadi,9.3817655,76.39575,,Karumadi,Alappuzha
+node/9533329195,LC near Ayaparampu,9.3184728,76.4294144,,Ayaparampu,Alappuzha
+node/9533329197,LC near Ayaparampu,9.3236752,76.4237213,,Ayaparampu,Alappuzha
+node/9534011203,LC near Haripad (Harippad - Veeyapuram Road),9.2974392,76.4556082,Harippad - Veeyapuram Road,Haripad,Alappuzha
+node/9537506948,LC near Pattithanam (vedagiri-nambiyakulam road),9.7054605,76.5308602,vedagiri-nambiyakulam road,Pattithanam,Kottayam
+node/9537719929,LC near Kothanalloor (Kothanalloor Chamakkala Road),9.7152911,76.5252203,Kothanalloor Chamakkala Road,Kothanalloor,Kottayam
+node/9537719930,LC near Kothanalloor (Kothanalloor Chamakkala Road),9.7200832,76.5230088,Kothanalloor Chamakkala Road,Kothanalloor,Kottayam
+node/9546752288,LC near Arayankavu (Olippuram Road),9.8466705,76.4377921,Olippuram Road,Arayankavu,Ernakulam
+node/9546752289,LC near Arayankavu (Olippuram Road),9.846571,76.4377984,Olippuram Road,Arayankavu,Ernakulam
+node/9594120465,LC near Udyawara,12.7438204,74.8749111,,Udyawara,Kasaragod
+node/9596990322,LC near Mullurkara (Mulloorkkara - Varavoor Road),10.7060094,76.2707192,Mulloorkkara - Varavoor Road,Mullurkara,Thrissur
+node/9626260233,LC near Thalassery (Thalasseri - Irikkur Road),11.7691536,75.4750985,Thalasseri - Irikkur Road,Thalassery,Kannur
+node/9626260234,LC near Thalassery (Thalasseri - Irikkur Road),11.7692479,75.4750985,Thalasseri - Irikkur Road,Thalassery,Kannur
+node/9631562905,LC near Kuttivattom,9.0477897,76.5389529,,Kuttivattom,Kollam
+node/9631569603,LC near Kuttivattom,9.0235616,76.5376168,,Kuttivattom,Kollam
+node/9633532619,LC near Amaravila,8.404264,77.0922387,,Amaravila,Thiruvananthapuram
+node/9635458738,LC near Kalpathy,10.8046587,76.647639,,Kalpathy,Palakkad
+node/9642150841,LC near Poothole (Kanimangalam - Nedupuzha Road),10.5016158,76.2054837,Kanimangalam - Nedupuzha Road,Poothole,Thrissur
+node/9642150842,LC near Poothole (Kanimangalam - Nedupuzha Road),10.5016052,76.2055516,Kanimangalam - Nedupuzha Road,Poothole,Thrissur
+node/9642174804,LC near Cheerachi,10.4840719,76.2243405,,Cheerachi,Thrissur
+node/9642182229,LC near Ollur (Thaikkattussery Road),10.4632989,76.2435174,Thaikkattussery Road,Ollur,Thrissur
+node/9642182230,LC near Ollur (Thaikkattussery Road),10.4632936,76.2434387,Thaikkattussery Road,Ollur,Thrissur
+node/9645749541,LC near Shava kotta palam,9.5140201,76.3216971,,Shava kotta palam,Alappuzha
+node/9650851809,LC near Onchiyam,11.6585723,75.567074,,Onchiyam,Kozhikode
+node/9650851810,LC near Onchiyam,11.6584965,75.5670316,,Onchiyam,Kozhikode
+node/9658594261,LC near Palakkad,10.8069848,76.6283941,,Palakkad,Palakkad
+node/9658594262,LC near Palakkad,10.8069016,76.6283512,,Palakkad,Palakkad
+node/9658594263,LC near Palakkad,10.8062901,76.628083,,Palakkad,Palakkad
+node/9658594264,LC near Palakkad,10.8062182,76.6280508,,Palakkad,Palakkad
+node/9658594267,LC near Palakkad,10.8072643,76.6293222,,Palakkad,Palakkad
+node/9679223739,LC near Vellimon,8.9485556,76.6618745,,Vellimon,Kollam
+node/9751751278,LC near Aluva,10.091065,76.345687,,Aluva,Ernakulam
+node/9751751280,LC near Aluva,10.0910809,76.3456353,,Aluva,Ernakulam
+node/9753383064,LC node/9753383064,10.0663939,76.3689617,,,Ernakulam
+node/9773153061,LC near Panmana,9.0159192,76.5355402,,Panmana,Kollam
+node/9773153062,LC near Kuttivattom,9.0225586,76.5373564,,Kuttivattom,Kollam
+node/9794225962,LC near Taliparamba,12.0363437,75.3641627,,Taliparamba,Kannur
+node/9794428506,LC near Palakkad,10.754616,76.6547575,,Palakkad,Palakkad
+node/9806110663,LC near Thrippunithura,9.9714554,76.3421219,,Thrippunithura,Ernakulam
+node/9837792856,LC near Balaramapuram,8.423091,77.0584732,,Balaramapuram,Thiruvananthapuram
+node/9847660628,LC near Pallom,9.5156155,76.5288446,,Pallom,Kottayam
+node/9847660632,LC near Thuruthy,9.4846594,76.5296888,,Thuruthy,Kottayam
+node/9847660637,LC near Changanassery,9.4570243,76.541508,,Changanassery,Kottayam
+node/9885033204,LC near Krishnapuram (Ochira - Thamarakkulam Road),9.1361682,76.5239744,Ochira - Thamarakkulam Road,Krishnapuram,Alappuzha
+node/9885033205,LC near Oachira (Ochira - Thamarakkulam Road),9.1304837,76.5256029,Ochira - Thamarakkulam Road,Oachira,Kollam
+node/9887609195,LC near Azhiyur,11.7034781,75.5458161,,Azhiyur,Kozhikode
+node/9887609330,LC near Azhiyur,11.7043183,75.5456659,,Azhiyur,Kozhikode
+node/9914375463,LC near Peringala,9.217005,76.5295826,,Peringala,Alappuzha
+node/9914375464,LC near Peringala,9.2170067,76.5296419,,Peringala,Alappuzha
+node/9925608246,LC near Kumbalam,9.8986581,76.3135457,,Kumbalam,Ernakulam
+node/9976821076,LC near Amballur (Chittisery -Thalore Road),10.4290826,76.248513,Chittisery -Thalore Road,Amballur,Thrissur
+node/9976821077,LC near Amballur (Chittisery -Thalore Road),10.4290228,76.2484647,Chittisery -Thalore Road,Amballur,Thrissur
+node/10020077247,LC near Kumaranalloor,9.6127287,76.5307488,,Kumaranalloor,Kottayam
+node/10025888913,LC near Kurichi,9.4987734,76.5272512,,Kurichi,Kottayam
+node/10025888914,LC near Kurichi,9.4987687,76.5272956,,Kurichi,Kottayam
+node/10025893299,LC near Thuruthy,9.4880892,76.5276878,,Thuruthy,Kottayam
+node/10025893300,LC near Changanassery,9.47429,76.5360439,,Changanassery,Kottayam
+node/10025893301,LC near Thuruthy,9.4880963,76.5277219,,Thuruthy,Kottayam
+node/10025893302,LC near Changanassery,9.474309,76.5360888,,Changanassery,Kottayam
+node/10081477629,LC near Thalassery (Paraal road),11.7293021,75.5118222,Paraal road,Thalassery,Kannur
+node/10116085980,LC near Nandikkara (Urakam-Pudukad Road),10.4148896,76.2649284,Urakam-Pudukad Road,Nandikkara,Thrissur
+node/10116085981,LC near Nandikkara (Urakam-Pudukad Road),10.4148413,76.2649015,Urakam-Pudukad Road,Nandikkara,Thrissur
+node/10172043526,LC near Pappinisseri (railway line road),11.9533106,75.3405152,railway line road,Pappinisseri,Kannur
+node/10182338991,LC near Thalassery (Paraal road),11.7328373,75.5111716,Paraal road,Thalassery,Kannur
+node/10204034640,LC near Cherukunnu (thavam dalil road),12.020592,75.2709869,thavam dalil road,Cherukunnu,Kannur
+node/10264841625,LC near Pilathara,12.0705809,75.2273266,,Pilathara,Kannur
+node/10264841655,LC near Pilathara,12.0764738,75.2140281,,Pilathara,Kannur
+node/10264841659,LC near Pilathara,12.0742824,75.219162,,Pilathara,Kannur
+node/10264841667,LC near Payyanur,12.078889,75.2081491,,Payyanur,Kannur
+node/10264869409,LC near Payyanur,12.0769851,75.2131208,,Payyanur,Kannur
+node/10264869439,LC near Pilathara,12.0763309,75.2143536,,Pilathara,Kannur
+node/10264869465,LC near Pilathara,12.0750911,75.2173593,,Pilathara,Kannur
+node/10264869707,LC near Pilathara,12.0742326,75.219273,,Pilathara,Kannur
+node/10264869719,LC near Pilathara,12.0756009,75.2160085,,Pilathara,Kannur
+node/10264869751,LC near Pilathara (Kunnaru--Kunhimangalam Road),12.0621363,75.2383669,Kunnaru--Kunhimangalam Road,Pilathara,Kannur
+node/10264869873,LC near Payyanur,12.0795778,75.2065557,,Payyanur,Kannur
+node/10264870026,LC near Pilathara,12.0705165,75.227277,,Pilathara,Kannur
+node/10264870118,LC near Pilathara,12.0762644,75.2145051,,Pilathara,Kannur
+node/10264870125,LC near Pilathara (Kunnaru--Kunhimangalam Road),12.0666958,75.2345912,Kunnaru--Kunhimangalam Road,Pilathara,Kannur
+node/10303948283,LC near Punathil,12.1088253,75.1855113,,Punathil,Kasaragod
+node/10303948284,LC near Punathil,12.1088465,75.1855779,,Punathil,Kasaragod
+node/10539057394,LC near Pudussery Central (AVP Road),10.8028751,76.7430668,AVP Road,Pudussery Central,Palakkad
+node/10539057395,LC near Pudussery Central (AVP Road),10.8029097,76.7430839,AVP Road,Pudussery Central,Palakkad
+node/10542228389,LC near Karunagapally,9.0710692,76.5430931,,Karunagapally,Kollam
+node/10542228390,LC near Karunagapally,9.0710651,76.5430706,,Karunagapally,Kollam
+node/10542228391,LC near Karunagapally,9.0710565,76.5430299,,Karunagapally,Kollam
+node/10542228392,LC near Karunagapally,9.0710497,76.5429955,,Karunagapally,Kollam
+node/10542228393,LC near Karunagapally,9.0710475,76.542983,,Karunagapally,Kollam
+node/10542228394,LC near Karunagapally,9.0710387,76.5429385,,Karunagapally,Kollam
+node/10542228395,LC near Karunagapally,9.0710296,76.5428961,,Karunagapally,Kollam
+node/10542243397,LC near Kadalundi (Mannur Rail Chaliyam Road),11.1504272,75.8282665,Mannur Rail Chaliyam Road,Kadalundi,Kozhikode
+node/10542319098,LC near Pappinisseri (kottapalam railway line road),11.9590548,75.3355524,kottapalam railway line road,Pappinisseri,Kannur
+node/10542358385,LC near Shiriya,12.6163183,74.9314229,,Shiriya,Kasaragod
+node/10542358386,LC near Shiriya,12.6163886,74.9314647,,Shiriya,Kasaragod
+node/10542576255,LC near Mynagappally,9.0344745,76.5950925,,Mynagappally,Kollam
+node/10542576256,LC near Mynagappally,9.0345043,76.5951139,,Mynagappally,Kollam
+node/10542576257,LC near Mynagappally,9.0345401,76.5951408,,Mynagappally,Kollam
+node/10600379360,LC near Kothakulangara (Angamayl Road),10.1853955,76.376917,Angamayl Road,Kothakulangara,Ernakulam
+node/10600379361,LC near Kothakulangara (Angamayl Road),10.1853974,76.3769947,Angamayl Road,Kothakulangara,Ernakulam
+node/10711471875,LC near Thalassery (Paraal road),11.7292953,75.5119002,Paraal road,Thalassery,Kannur
+node/10935292738,LC near Aingoth,12.2885415,75.1011273,,Aingoth,Kasaragod
+node/10935292757,LC near Aingoth,12.2885037,75.1010453,,Aingoth,Kasaragod
+node/10940360801,LC near Ajanur (Chittari kadpuram),12.3360605,75.0777761,Chittari kadpuram,Ajanur,Kasaragod
+node/10940365522,LC near Ajanur (Chittari kadpuram),12.3360556,75.0777177,Chittari kadpuram,Ajanur,Kasaragod
+node/10965928429,LC near Mulanthuruthy,9.8867617,76.3960495,,Mulanthuruthy,Ernakulam
+node/10965928438,LC near Oachira (Ochira - Thamarakkulam Road),9.1304823,76.5256033,Ochira - Thamarakkulam Road,Oachira,Kollam
+node/10965928449,LC near Mulanthuruthy,9.8867575,76.3961835,,Mulanthuruthy,Ernakulam
+node/10965928452,LC near Perumpazhuthoor,8.4129906,77.0772519,,Perumpazhuthoor,Thiruvananthapuram
+node/10965928458,LC near Krishnapuram (Ochira - Thamarakkulam Road),9.1361654,76.5239751,Ochira - Thamarakkulam Road,Krishnapuram,Alappuzha
+node/10965932441,LC near Manjoor (Kuruppamthara - Kallara Road),9.7358723,76.5090864,Kuruppamthara - Kallara Road,Manjoor,Kottayam
+node/10965932446,LC near Manjoor (Kuruppamthara - Kallara Road),9.7358327,76.5090183,Kuruppamthara - Kallara Road,Manjoor,Kottayam
+node/10965932447,LC near Manjoor (Kuruppamthara - Kallara Road),9.7358974,76.5091294,Kuruppamthara - Kallara Road,Manjoor,Kottayam
+node/10965932450,LC near Manjoor (Kuruppamthara - Kallara Road),9.735813,76.5089845,Kuruppamthara - Kallara Road,Manjoor,Kottayam
+node/10980528571,LC near Thikkodi,11.493303,75.6260278,,Thikkodi,Kozhikode
+node/10980534180,LC near Thikkodi,11.4947696,75.6263658,,Thikkodi,Kozhikode
+node/10980534201,LC near Thikkodi,11.4933184,75.6260696,,Thikkodi,Kozhikode
+node/10980534755,LC near Thikkodi,11.4935548,75.6266987,,Thikkodi,Kozhikode
+node/10980534772,LC near Thikkodi,11.4922203,75.6267522,,Thikkodi,Kozhikode
+node/10980535552,LC near Thikkodi,11.4945238,75.6256013,,Thikkodi,Kozhikode
+node/10980535832,LC near Thikkodi,11.4934164,75.6263214,,Thikkodi,Kozhikode
+node/10980535929,LC near Thikkodi,11.4736199,75.6388071,,Thikkodi,Kozhikode
+node/10980535939,LC near Thikkodi,11.4932878,75.6259819,,Thikkodi,Kozhikode
+node/10980536281,LC near Thikkodi,11.4945078,75.6255496,,Thikkodi,Kozhikode
+node/10980536298,LC near Thikkodi,11.4946274,75.6259037,,Thikkodi,Kozhikode
+node/10980536336,LC near Thikkodi,11.4947439,75.6262816,,Thikkodi,Kozhikode
+node/10980536430,LC near Thikkodi,11.4945349,75.6256325,,Thikkodi,Kozhikode
+node/11034632776,LC near Ayaparampu,9.3237312,76.4235872,,Ayaparampu,Alappuzha
+node/11034633355,LC near Ayaparampu,9.323742,76.4236581,,Ayaparampu,Alappuzha
+node/11042773004,LC near Mayyanad (Kottiyam mayyanad road),8.8465922,76.6425281,Kottiyam mayyanad road,Mayyanad,Kollam
+node/11042779559,LC near Mayyanad (Kottiyam mayyanad road),8.8465927,76.6425296,Kottiyam mayyanad road,Mayyanad,Kollam
+node/11049181325,LC near Thykoodam (Kizhavana Road),9.9524055,76.2946155,Kizhavana Road,Thykoodam,Ernakulam
+node/11051480581,LC near Mattancherry,9.9584898,76.2716775,,Mattancherry,Ernakulam
+node/11146087319,LC near Kazhakkoottam,8.5551837,76.8717261,,Kazhakkoottam,Thiruvananthapuram
+node/11146524217,LC near Kazhakkoottam,8.5551838,76.8717234,,Kazhakkoottam,Thiruvananthapuram
+node/11189384855,LC near Mavelikkara,9.2427867,76.5483206,,Mavelikkara,Alappuzha
+node/11189384856,LC near Mavelikkara,9.2370842,76.5443676,,Mavelikkara,Alappuzha
+node/11199162817,LC near Vettukadu,8.4960401,76.9086316,,Vettukadu,Thiruvananthapuram
+node/11199162818,LC near Vettukadu,8.4959998,76.9085922,,Vettukadu,Thiruvananthapuram
+node/11224275503,LC near Murukkumpuzha (Karichara Kadavu Road),8.6074091,76.8374244,Karichara Kadavu Road,Murukkumpuzha,Thiruvananthapuram
+node/11224294973,LC near Murukkumpuzha (Karichara Kadavu Road),8.607362,76.8373768,Karichara Kadavu Road,Murukkumpuzha,Thiruvananthapuram
+node/11224736915,LC near Murukkumpuzha (Karichara Kadavu Road),8.6073613,76.8373761,Karichara Kadavu Road,Murukkumpuzha,Thiruvananthapuram
+node/11224736947,LC near Murukkumpuzha (Karichara Kadavu Road),8.607409,76.8374243,Karichara Kadavu Road,Murukkumpuzha,Thiruvananthapuram
+node/11232380124,LC near Mayyanad,8.8264881,76.6551769,,Mayyanad,Kollam
+node/11232382065,LC near Mayyanad,8.8287572,76.6536973,,Mayyanad,Kollam
+node/11250439257,LC near Kandamkulangara (Navachethana Library Road),11.3188868,75.7511766,Navachethana Library Road,Kandamkulangara,Kozhikode
+node/11250439258,LC near Kandamkulangara (Navachethana Library Road),11.3188883,75.7512385,Navachethana Library Road,Kandamkulangara,Kozhikode
+node/11254394788,LC near Tirur,10.9056225,75.9303714,,Tirur,Malappuram
+node/11254394789,LC near Tirur,10.9056699,75.9304806,,Tirur,Malappuram
+node/11257698416,LC near Vattathani,10.9485745,75.9013956,,Vattathani,Malappuram
+node/11257698431,LC near Vattathani,10.9507228,75.8999695,,Vattathani,Malappuram
+node/11257850900,LC near Vattathani,10.9485752,75.9013968,,Vattathani,Malappuram
+node/11257850902,LC near Vattathani,10.9507188,75.8999695,,Vattathani,Malappuram
+node/11260092784,LC near Vairankode,10.8868641,75.954397,,Vairankode,Malappuram
+node/11260116325,LC near Vairankode,10.8868604,75.9543974,,Vairankode,Malappuram
+node/11285575463,LC near Pattithanam (Anamala - Kanakkari Road),9.6918068,76.5447099,Anamala - Kanakkari Road,Pattithanam,Kottayam
+node/11285577266,LC near Pattithanam (Anamala - Kanakkari Road),9.6918078,76.5447083,Anamala - Kanakkari Road,Pattithanam,Kottayam
+node/11290248847,LC near Melattur,11.037186,76.2592911,,Melattur,Malappuram
+node/11299763751,LC near Mangalpady,12.6587677,74.9109605,,Mangalpady,Kasaragod
+node/11299763752,LC near Uppala,12.6632588,74.9092666,,Uppala,Kasaragod
+node/11299765631,LC near Mangalpady,12.6587826,74.9110431,,Mangalpady,Kasaragod
+node/11299781904,LC near Uppala,12.6729726,74.9054841,,Uppala,Kasaragod
+node/11299781940,LC near Uppala,12.6729882,74.9055269,,Uppala,Kasaragod
+node/11299846781,LC near Uppala,12.6632429,74.9092177,,Uppala,Kasaragod
+node/11299864544,LC near Mangalpady,12.6587671,74.9109585,,Mangalpady,Kasaragod
+node/11299864545,LC near Uppala,12.6632464,74.9092674,,Uppala,Kasaragod
+node/11299864546,LC near Uppala,12.6632553,74.9092126,,Uppala,Kasaragod
+node/11299864547,LC near Mangalpady,12.6587828,74.9110443,,Mangalpady,Kasaragod
+node/11299864548,LC near Uppala,12.6729719,74.9054822,,Uppala,Kasaragod
+node/11299864549,LC near Uppala,12.6729876,74.9055252,,Uppala,Kasaragod
+node/11330463590,LC near Kadalundi (Mannur Rail Chaliyam Road),11.148651,75.8280112,Mannur Rail Chaliyam Road,Kadalundi,Kozhikode
+node/11330463591,LC near Kadalundi (Mannur Rail Chaliyam Road),11.148651,75.8280624,Mannur Rail Chaliyam Road,Kadalundi,Kozhikode
+node/11335385335,LC near Mulanthuruthy,9.8885865,76.3946439,,Mulanthuruthy,Ernakulam
+node/11335402985,LC near Karayamparambu,10.2233533,76.3741199,,Karayamparambu,Ernakulam
+node/11335402986,LC near Karayamparambu,10.2233533,76.3741668,,Karayamparambu,Ernakulam
+node/11357979281,LC near Kurikad,9.9314356,76.3737226,,Kurikad,Ernakulam
+node/11357979282,LC near Kurikad,9.9314441,76.3736732,,Kurikad,Ernakulam
+node/11365912894,LC near Karuvanpadi (Pallipuram - Pattambi Road),10.8313366,76.1271634,Pallipuram - Pattambi Road,Karuvanpadi,Palakkad
+node/11365940973,LC near Nhangattiri,10.802456,76.1676027,,Nhangattiri,Palakkad
+node/11365940975,LC near Nhangattiri,10.8023739,76.1675939,,Nhangattiri,Palakkad
+node/11366061333,LC near Pallippuram,10.8388348,76.1163339,,Pallippuram,Palakkad
+node/11366061334,LC near Pallippuram,10.8388603,76.1163339,,Pallippuram,Palakkad
+node/11366061335,LC near Pallippuram,10.8389,76.1163339,,Pallippuram,Palakkad
+node/11366061336,LC near Pallippuram,10.8389531,76.1163393,,Pallippuram,Palakkad
+node/11366061337,LC near Pallippuram,10.8389896,76.1163446,,Pallippuram,Palakkad
+node/11366061338,LC near Pallippuram,10.8390071,76.1163446,,Pallippuram,Palakkad
+node/11372731492,LC near Kodamthuruth,9.8066669,76.3047139,,Kodamthuruth,Alappuzha
+node/11373159399,LC near Chandiroor,9.8453954,76.3043402,,Chandiroor,Alappuzha
+node/11387557137,LC near Poongode,11.1686911,76.269889,,Poongode,Malappuram
+node/11549147819,LC near Koyilandy,11.4401796,75.6992421,,Koyilandy,Kozhikode
+node/11549147820,LC near Koyilandy,11.4401651,75.6991857,,Koyilandy,Kozhikode
+node/11572539316,LC near Kottayam (Adichira-Ammancheri Road),9.6362355,76.5425017,Adichira-Ammancheri Road,Kottayam,Kottayam
+node/11572539317,LC near Kottayam (Adichira-Ammancheri Road),9.6363616,76.5424131,Adichira-Ammancheri Road,Kottayam,Kottayam
+node/11572539318,LC near Kottayam (Adichira-Ammancheri Road),9.632422,76.5424331,Adichira-Ammancheri Road,Kottayam,Kottayam
+node/11572539319,LC near Kumaranalloor,9.6239564,76.5374409,,Kumaranalloor,Kottayam
+node/11630960997,LC near Ettumanoor,9.662387,76.5459368,,Ettumanoor,Kottayam
+node/11630960998,LC near Ettumanoor,9.6623513,76.5459837,,Ettumanoor,Kottayam
+node/11765604532,LC near Thalassery,11.7209603,75.5179717,,Thalassery,Kannur
+node/11765604533,LC near Thalassery,11.7208961,75.5179475,,Thalassery,Kannur
+node/11768906663,LC near Mynagappally (Karunagappally - Sasthamcottah Road),9.0407123,76.5836424,Karunagappally - Sasthamcottah Road,Mynagappally,Kollam
+node/11768906664,LC near Mynagappally (Karunagappally - Sasthamcottah Road),9.0406518,76.5836657,Karunagappally - Sasthamcottah Road,Mynagappally,Kollam
+node/11968294400,LC near Thrippunithura (Refinery Road),9.9555048,76.3495436,Refinery Road,Thrippunithura,Ernakulam
+node/11968294401,LC near Thrippunithura (Refinery Road),9.9554729,76.3494135,Refinery Road,Thrippunithura,Ernakulam
+node/12096409885,LC near Chittattukara,10.5768248,76.0723631,,Chittattukara,Thrissur
+node/12123915758,LC near Chorottur,10.7492794,76.3496577,,Chorottur,Palakkad
+node/12123915759,LC near Chorottur,10.7493413,76.3496648,,Chorottur,Palakkad
+node/12143856144,LC near Panayam,8.9677545,76.6102191,,Panayam,Kollam
+node/12143856145,LC near Panayam,8.9678867,76.6103172,,Panayam,Kollam
+node/12210279319,LC near Kayamkulam (koladuth road),9.1722703,76.5089578,koladuth road,Kayamkulam,Alappuzha
+node/12488704467,LC near Aluva,10.1089877,76.3497098,,Aluva,Ernakulam
+node/12531745588,LC near Elamkulam,10.9139749,76.2277219,,Elamkulam,Malappuram
+node/12647554670,LC node/12647554670,9.7094919,76.3109597,,,Alappuzha
+node/12771637081,LC near Vallarpadam,9.9871166,76.2565696,,Vallarpadam,Ernakulam
+node/12869476647,LC near Pathiyoor (Enakulangara - Kareelakulangara Road),9.2093409,76.4897057,Enakulangara - Kareelakulangara Road,Pathiyoor,Alappuzha
+node/13304341924,LC near Kazhuthurutty,8.9700165,77.0982749,,Kazhuthurutty,Kollam
+node/13410304781,LC near Ambalappuzha,9.4017887,76.3475035,,Ambalappuzha,Alappuzha
+node/13671476828,LC near Santhi Nagar,11.2084992,76.251489,,Santhi Nagar,Malappuram
+node/13704815197,LC near Vallakkunnu (Church road),10.3447789,76.277309,Church road,Vallakkunnu,Thrissur
+node/13704815198,LC near Vallakkunnu (Church road),10.3448541,76.2773186,Church road,Vallakkunnu,Thrissur

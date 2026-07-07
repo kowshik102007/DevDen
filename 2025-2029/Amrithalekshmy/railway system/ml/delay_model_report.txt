@@ -1,0 +1,23 @@
+Kerala Railway Gate — Train Delay Prediction Model Report
+============================================================
+
+Training samples: 10000
+Algorithm: Random Forest Regressor (100 trees)
+
+Performance Metrics:
+  Mean Absolute Error (test): 5.0 minutes
+  RMSE (test):                6.4 minutes
+  R-squared (test):           0.799
+  Mean Absolute Error (train): 3.7 minutes
+
+Feature Importance:
+  prev_station_delay             0.9168
+  distance_from_origin           0.0273
+  scheduled_hour                 0.0162
+  train_number_encoded           0.0161
+  month                          0.0133
+  day_of_week                    0.0094
+  is_express                     0.0009
+
+Target: MAE under 10 minutes = PASS
+Result: PASS

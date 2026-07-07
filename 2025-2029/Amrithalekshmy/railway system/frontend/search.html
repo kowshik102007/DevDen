@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Gates — Kerala Gate Watch</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Kerala Gate Watch</h1>
+        <nav>
+            <a href="/">Map</a>
+            <a href="/search" class="active">Search</a>
+        </nav>
+    </div>
+
+    <div class="page-content">
+        <div class="search-container">
+            <input type="text" id="search-input" class="search-input"
+                placeholder="Search by gate name, district, or road...">
+            <div class="filter-bar">
+                <button class="filter-btn" data-status="CLOSED">Closed</button>
+                <button class="filter-btn" data-status="WARNING">Warning</button>
+                <button class="filter-btn" data-status="OPEN">Open</button>
+                <button class="filter-btn" data-status="UNKNOWN">Unknown</button>
+            </div>
+        </div>
+
+        <div id="search-results">
+            <div class="loading">Loading gates...</div>
+        </div>
+    </div>
+
+    <script src="/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', initSearch);
+    </script>
+</body>
+</html>
