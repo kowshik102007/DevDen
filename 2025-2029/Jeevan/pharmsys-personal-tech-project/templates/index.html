@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block page_title %}Dashboard overview{% endblock %}
+{% block page_subtitle %}Real-time pharmacy analytics{% endblock %}
+
+{% block content %}
+<div class="dashboard-cards">
+    <div class="card glass">
+        <div class="card-icon">
+            <i class="fa-solid fa-pills"></i>
+        </div>
+        <h3>Total Medicines</h3>
+        <p class="big-num">{{ med_count }}</p>
+    </div>
+
+    <div class="card glass">
+        <div class="card-icon">
+            <i class="fa-solid fa-sack-dollar"></i>
+        </div>
+        <h3>Total Revenue</h3>
+        <p class="big-num">${{ "%.2f"|format(total_rev) }}</p>
+    </div>
+
+    <div class="card glass alert-card {% if low_stock > 0 %}has-low-stock{% endif %}">
+        <div class="card-icon">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+        </div>
+        <h3>Low Stock Items</h3>
+        <p class="big-num">{{ low_stock }}</p>
+    </div>
+</div>
+
+<div class="recent-sales glass">
+    <h2><i class="fa-solid fa-clock-rotate-left"></i> Recent Sales</h2>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Date & Time</th>
+                    <th>Medicine Details</th>
+                    <th>Quantity</th>
+                    <th>Total Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for sale in sales %}
+                <tr>
+                    <td>
+                        <span class="badge"><i class="fa-regular fa-calendar"></i> {{ sale.date.strftime('%b %d, %Y')
+                            }}</span>
+                        <div style="font-size: 12px; color: var(--text-muted); margin-top: 5px; margin-left: 5px;">{{
+                            sale.date.strftime('%I:%M %p') }}</div>
+                    </td>
+                    <td style="font-weight: 500;">
+                        <i class="fa-solid fa-capsules" style="color: var(--primary); margin-right: 8px;"></i>
+                        {{ sale.medicine.name }}
+                    </td>
+                    <td><b>{{ sale.quantity }}</b> units</td>
+                    <td class="price">${{ "%.2f"|format(sale.total_amount) }}</td>
+                </tr>
+                {% else %}
+                <tr>
+                    <td colspan="4" style="text-align: center; color: var(--text-muted); padding: 40px;">
+                        <i class="fa-solid fa-folder-open"
+                            style="font-size: 40px; margin-bottom: 15px; display: block; opacity: 0.5;"></i>
+                        No sales recorded yet.
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
