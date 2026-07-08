@@ -1,0 +1,22 @@
+body{
+font-family: Arial;
+margin:20px;
+}
+
+nav{
+background:#222;
+padding:10px;
+}
+
+nav a{
+color:white;
+margin-right:15px;
+text-decoration:none;
+}
+
+button{
+padding:10px 15px;
+background:green;
+color:white;
+border:none;
+}

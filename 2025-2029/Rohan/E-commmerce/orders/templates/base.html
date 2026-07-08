@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Mini Shop</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+{% include 'navbar.html' %}
+
+{% with messages = get_flashed_messages() %}
+  {% for msg in messages %}
+     <p>{{ msg }}</p>
+  {% endfor %}
+{% endwith %}
+
+{% block content %}{% endblock %}
+
+</body>
+
+</html>

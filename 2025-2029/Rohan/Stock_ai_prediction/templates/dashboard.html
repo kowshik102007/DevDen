@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="card shadow">
+
+<div class="card-body">
+
+<h2>
+
+Welcome
+
+{{ user.username }}
+
+</h2>
+
+<hr>
+
+<a href="/stock"
+   class="btn btn-primary">
+
+Predict Stock
+
+</a>
+
+</div>
+
+</div>
+
+<br>
+
+<div class="card shadow">
+
+<div class="card-header">
+
+Prediction History
+
+</div>
+
+<div class="card-body">
+
+<table class="table table-bordered">
+
+<thead>
+
+<tr>
+
+<th>Stock</th>
+<th>Current</th>
+<th>Predicted</th>
+<th>Signal</th>
+<th>Confidence</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+{% for p in predictions %}
+
+<tr>
+
+<td>{{ p.symbol }}</td>
+
+<td>₹{{ p.current_price }}</td>
+
+<td>₹{{ p.predicted_price }}</td>
+
+<td>{{ p.signal }}</td>
+
+<td>{{ p.confidence }}%</td>
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+{% endblock %}

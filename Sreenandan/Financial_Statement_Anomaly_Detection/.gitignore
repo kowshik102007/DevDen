@@ -1,0 +1,14 @@
+# Dataset (too large for GitHub)
+data_FraudDetection_JAR2020.csv
+test_sample.csv
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# PNG outputs
+*.png
+
+# VS Code
+.vscode/
