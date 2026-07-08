@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz Statistics – QuizCraft</title>
+  <link rel="stylesheet" href="quiz_stats.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-brand">📝 QuizCraft</div>
+    <div class="nav-right">
+      <a href="teacher_dashboard.html" class="nav-link">← Dashboard</a>
+      <button class="nav-logout" onclick="logout()">Logout</button>
+    </div>
+  </nav>
+
+  <div class="page-wrap">
+
+    <div class="page-header">
+      <h2 id="statsTitle">Quiz Statistics</h2>
+      <p id="statsSubtitle">Loading…</p>
+    </div>
+
+
+    <div class="summary-grid" id="summaryGrid"></div>
+
+
+    <div class="table-section">
+      <h3 class="section-title">Student Results</h3>
+      <p class="empty-msg hidden" id="noResultsMsg">No students have attempted this quiz yet.</p>
+      <div class="table-wrap">
+        <table class="stats-table hidden" id="statsTable">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Student Name</th>
+              <th>Correct</th>
+              <th>Wrong</th>
+              <th>Unanswered</th>
+              <th>Score</th>
+              <th>%</th>
+              <th>Grade</th>
+              <th>Submitted</th>
+            </tr>
+          </thead>
+          <tbody id="statsTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+  
+    <div id="quizPickSection" class="hidden">
+      <h3 class="section-title">Select a Quiz</h3>
+      <div id="quizPickList"></div>
+    </div>
+
+  </div>
+
+  <script src="quiz_stats.js"></script>
+</body>
+</html>

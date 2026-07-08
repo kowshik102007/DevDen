@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Share Quiz – QuizCraft</title>
+  <link rel="stylesheet" href="generate_link.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-brand">📝 QuizCraft</div>
+    <div class="nav-right">
+      <a href="teacher_dashboard.html" class="nav-link">Dashboard</a>
+      <button class="nav-logout" onclick="logout()">Logout</button>
+    </div>
+  </nav>
+
+  <div class="page-wrap">
+
+    <div class="success-banner">
+      <span class="success-icon">🎉</span>
+      <div>
+        <h2 id="quizTitleDisplay">Quiz Created!</h2>
+        <p id="quizMeta">Your quiz is ready to share.</p>
+      </div>
+    </div>
+
+    <div class="link-card">
+      <h3>Share this link with your students</h3>
+
+      <div class="link-box-row">
+        <input type="text" id="linkInput" class="link-input" readonly />
+        <button class="btn-copy" id="copyBtn" onclick="copyLink()">Copy</button>
+      </div>
+
+      <p class="copy-confirm hidden" id="copyConfirm">✅ Copied to clipboard!</p>
+
+      <div class="quiz-info-grid" id="quizInfoGrid">
+    
+      </div>
+
+      <div class="actions-row">
+        <button class="btn-primary" onclick="window.location.href='teacher_dashboard.html'">Back to Dashboard</button>
+        <button class="btn-secondary" onclick="window.location.href='personalisation.html'">Create Another Quiz</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="generate_link.js"></script>
+</body>
+</html>

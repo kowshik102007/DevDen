@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Add Questions – QuizCraft</title>
+  <link rel="stylesheet" href="add_questions.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-brand">📝 QuizCraft</div>
+    <div class="nav-right">
+      <a href="personalisation.html" class="nav-link">← Settings</a>
+      <button class="nav-logout" onclick="logout()">Logout</button>
+    </div>
+  </nav>
+
+  <div class="page-layout">
+
+
+    <aside class="left-panel">
+      <div class="lp-top">
+        <p class="lp-eyebrow">Quiz Builder</p>
+        <h2 id="pageTitle" class="lp-title">Add Questions</h2>
+        <p id="pageSubtitle" class="lp-sub">Question 1 of ?</p>
+
+        <div class="progress-bar-wrap">
+          <div class="progress-bar-fill" id="progressFill" style="width:0%"></div>
+        </div>
+        <p class="progress-label" id="progressLabel">0% complete</p>
+      </div>
+
+      <div class="lp-list">
+        <p class="lp-list-heading">Questions</p>
+        <ul class="qlist" id="questionList">
+          <li class="qlist-empty">No questions yet.</li>
+        </ul>
+      </div>
+    </aside>
+
+
+    <main class="main-area">
+
+      <div class="form-top-row">
+        <span class="form-counter" id="formCounter">Question 1</span>
+        <span class="form-hint">Select the correct answer using the radio button</span>
+      </div>
+
+      <div class="form-group">
+        <label>Question <span class="req">*</span></label>
+        <textarea id="questionText" rows="3" placeholder="Type your question here…"></textarea>
+      </div>
+
+      <div class="options-section">
+        <label class="options-label">Options <span class="req">*</span></label>
+
+        <div class="option-row">
+          <label class="opt-radio-wrap">
+            <input type="radio" name="correctOpt" value="0" id="radio0" />
+            <span class="opt-letter">A</span>
+          </label>
+          <input type="text" class="opt-input" id="opt0" placeholder="Option A" />
+        </div>
+        <div class="option-row">
+          <label class="opt-radio-wrap">
+            <input type="radio" name="correctOpt" value="1" id="radio1" />
+            <span class="opt-letter">B</span>
+          </label>
+          <input type="text" class="opt-input" id="opt1" placeholder="Option B" />
+        </div>
+        <div class="option-row">
+          <label class="opt-radio-wrap">
+            <input type="radio" name="correctOpt" value="2" id="radio2" />
+            <span class="opt-letter">C</span>
+          </label>
+          <input type="text" class="opt-input" id="opt2" placeholder="Option C" />
+        </div>
+        <div class="option-row">
+          <label class="opt-radio-wrap">
+            <input type="radio" name="correctOpt" value="3" id="radio3" />
+            <span class="opt-letter">D</span>
+          </label>
+          <input type="text" class="opt-input" id="opt3" placeholder="Option D" />
+        </div>
+      </div>
+
+      <p class="error-msg hidden" id="qError">Please fill in the question, all 4 options, and mark the correct answer.</p>
+
+      <div class="btn-row">
+        <button class="btn-secondary" id="prevQBtn" onclick="prevQuestion()">← Previous</button>
+        <button class="btn-primary"   id="nextQBtn" onclick="nextOrFinish()">Save & Next →</button>
+      </div>
+
+    </main>
+
+  </div>
+
+  <script src="add_questions.js"></script>
+</body>
+</html>

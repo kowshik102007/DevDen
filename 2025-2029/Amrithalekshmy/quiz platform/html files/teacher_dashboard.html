@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Teacher Dashboard – QuizCraft</title>
+  <link rel="stylesheet" href="teacher_dashboard.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-brand">📝 QuizCraft</div>
+    <div class="nav-right">
+      <span id="teacherName" class="nav-user"></span>
+      <a href="quiz_stats.html" class="nav-link">Statistics</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <button class="nav-create" onclick="window.location.href='personalisation.html'">+ Create Quiz</button>
+      <button class="nav-logout" onclick="logout()">Logout</button>
+    </div>
+  </nav>
+
+
+  <div class="hero-strip">
+    <div class="hero-left">
+      <p class="hero-eyebrow">Teacher Dashboard</p>
+      <h1>Welcome back, <span id="greetName">Teacher</span> 👋</h1>
+      <p class="hero-sub">Create quizzes, track student performance, and share links instantly.</p>
+    </div>
+    <div class="hero-right">
+      <div class="stat-box">
+        <span class="stat-num" id="statQuizzes">0</span>
+        <span class="stat-label">Quizzes Created</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num" id="statAttempts">0</span>
+        <span class="stat-label">Total Attempts</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num" id="statAvg">—</span>
+        <span class="stat-label">Avg. Score %</span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="quizzes-section">
+    <div class="quizzes-header">
+      <h2 class="section-title">Your Quizzes</h2>
+    </div>
+
+
+    <div class="empty-state" id="emptyMsg">
+      <div class="empty-icon">📋</div>
+      <h4>No quizzes yet</h4>
+      <p>Use the <strong>+ Create Quiz</strong> button in the top bar to get started.</p>
+    </div>
+
+
+    <div class="quiz-cards-grid hidden" id="quizCardsGrid"></div>
+
+
+    <div class="table-wrap hidden" id="tableWrap">
+      <table class="quiz-table" id="quizTable">
+        <thead>
+          <tr>
+            <th>Quiz Title</th>
+            <th>Questions</th>
+            <th>Time Limit</th>
+            <th>Attempts</th>
+            <th>Created</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="quizTableBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="teacher_dashboard.js"></script>
+</body>
+</html>
