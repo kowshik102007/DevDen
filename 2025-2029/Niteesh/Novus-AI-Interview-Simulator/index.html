@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novus AI - Enterprise Interview Suite</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.20.0/dist/tf.min.js"></script>
+    <!-- CodeMirror for IDE experience -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/dracula.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/hint/show-hint.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/hint/show-hint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/hint/anyword-hint.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/python/python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/clike/clike.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Mesmerizing Ambient Background Elements -->
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+    <div class="ambient-orb orb-3"></div>
+
+    <div id="view-login" class="view active-view">
+        <div class="login-shell">
+            <section class="login-hero">
+                <div>
+                    <div class="brand-lockup"><span class="brand-mark">N</span><span>Novus AI</span></div>
+                    <h1>Interview preparation that feels like the real room.</h1>
+                    <p>Practice DSA, system design, behavioral answers, coding assessments, voice interviews, and attention tracking from one focused student workspace.</p>
+                    <div class="login-proof">
+                        <div class="proof-item"><strong>5</strong><span>prep modes in one workspace</span></div>
+                        <div class="proof-item"><strong>Live</strong><span>speech and webcam simulation</span></div>
+                        <div class="proof-item"><strong>Free</strong><span>hackathon-ready stack</span></div>
+                    </div>
+                </div>
+                <p style="margin: 0; font-size: 0.9rem;">Built for small student groups preparing under real time pressure.</p>
+            </section>
+            <div class="login-box">
+                <p class="eyebrow">Student access</p>
+                <h2>Enter your workspace</h2>
+                <p style="margin-top:0.6rem; font-size: 0.92rem;">Use your student or institutional email to unlock adaptive prep tools.</p>
+                <div class="input-group"><label>Institutional Email</label><input type="email" id="authEmail" placeholder="developer@university.edu"></div>
+                <div class="input-group"><label>Security Key</label><input type="password" id="authPassword" placeholder="Enter password"></div>
+                <button class="btn-main" id="loginBtn" style="width: 100%; margin-top: 2rem;" onclick="handleLogin()">Authenticate securely</button>
+                <p style="font-size: 0.78rem; margin-top: 1rem;">New students are automatically provisioned for the hackathon demo environment.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="view-dashboard" class="dashboard-view">
+        <div class="dash-header">
+            <div>
+                <h1 id="workspaceTitle">Workspace Environment</h1>
+                <p>Complete your target prep tracks or finish your technical assessments to unlock live simulations.</p>
+                <p id="aiUsageText" style="margin-top: 0.25rem; font-size: 0.85rem; color: var(--warning);"></p>
+            </div>
+            <button class="btn-outline" onclick="navigateTo('view-login')">Disconnect</button>
+        </div>
+
+        <section class="dashboard-hero">
+            <div>
+                <p class="eyebrow">AI Interview Coach</p>
+                <h2>Your Readiness Profile</h2>
+                <p>Metrics are continuously aggregated from your mock interviews and online assessments to identify exact growth areas.</p>
+                <div class="stats-row">
+                    <div class="stat-card"><strong id="dashReadiness">—</strong><span>Overall Readiness</span></div>
+                    <div class="stat-card"><strong id="dashTech">—</strong><span>Technical Avg</span></div>
+                    <div class="stat-card"><strong id="dashComm">—</strong><span>Communication</span></div>
+                    <div class="stat-card"><strong id="dashConf">—</strong><span>Confidence Avg (1-5)</span></div>
+                </div>
+            </div>
+            <aside class="mission-panel">
+                <p class="eyebrow">Intelligent Actions</p>
+                <ul class="coaching-list" id="coachingList">
+                    <li>Complete an assessment to generate your personalized action plan.</li>
+                </ul>
+            </aside>
+        </section>
+
+        <div class="dashboard-analytics">
+            <div class="panel-card">
+                <p class="eyebrow">Growth Intelligence</p>
+                <div style="height: 240px; position: relative;">
+                    <canvas id="growthChart"></canvas>
+                </div>
+            </div>
+            <div class="panel-card">
+                <p class="eyebrow">Knowledge Mapping</p>
+                <h4 style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-muted);">Strongest Topics</h4>
+                <div class="topic-pills" id="dashStrongTopics"><span>N/A</span></div>
+                <h4 style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--text-muted);">Target Weaknesses</h4>
+                <div class="topic-pills" id="dashWeakTopics"><span>N/A</span></div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Recent Mock Interviews</h2>
+        <div class="panel-card" style="padding: 0; overflow: hidden; position: relative;">
+            <div id="historyEmptyState" style="padding: 3rem; text-align: center; color: var(--text-muted); display: none;">
+                Complete your first mock interview to generate historical trends.
+            </div>
+            <div style="overflow-x: auto;">
+                <table class="history-table" id="historyTable" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Overall Score</th>
+                            <th>Technical</th>
+                            <th>Communication</th>
+                            <th>Composure</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historyTableBody"></tbody>
+                </table>
+            </div>
+            <div id="historyLoadingState" style="display: none; position: absolute; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px); z-index: 10; flex-direction: column; justify-content: center; align-items: center; color: var(--primary); font-weight: 800;">
+                Retrieving session transcript...
+            </div>
+        </div>
+
+        <h2 class="section-title">Dynamic Knowledge Modules</h2>
+        <div class="card-grid">
+            <div class="resource-card" onclick="openPrepModal('dsa')">
+                <div class="status-tag" style="color: var(--success)">LIVE API</div>
+                <div class="card-content">
+                    <span class="card-kicker">Algorithm lab</span>
+                    <h3>Data Structures & Algorithms</h3>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">Generate a comprehensive masterclass: Graphs, DP, Two Pointers, and Complexity.</p>
+                </div>
+            </div>
+            <div class="resource-card" onclick="openPrepModal('sysdesign')">
+                <div class="status-tag" style="color: var(--warning)">LIVE API</div>
+                <div class="card-content">
+                    <span class="card-kicker">Architecture lab</span>
+                    <h3>System Design Blueprints</h3>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">Generate scaling architectures, Microservices, CAP Theorem, and Database Sharding guides.</p>
+                </div>
+            </div>
+            <div class="resource-card" onclick="openPrepModal('star')">
+                <div class="status-tag">LIVE API</div>
+                <div class="card-content">
+                    <span class="card-kicker">Communication lab</span>
+                    <h3>Behavioral STAR Method</h3>
+                    <p style="margin-top: 10px; font-size: 0.9rem;">Generate structural frameworks for Leadership Principles, failures, and conflict resolution.</p>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Replicated Online Assessments (OAs)</h2>
+        <div class="card-grid">
+            <div class="resource-card" onclick="launchOA('google')">
+                <div class="card-content">
+                    <span class="card-kicker">Assessment simulator</span>
+                    <h3 style="color: #4285F4;">Google SDE Mock OA</h3>
+                    <p style="margin: 10px 0;">Dynamic algorithmic generation targeting O(N) constraints.</p>
+                    <span style="font-size: 0.8rem; font-weight: bold; color: #4285F4;">LAUNCH COMPILER &rarr;</span>
+                </div>
+            </div>
+            <div class="resource-card" onclick="launchOA('amazon')">
+                <div class="card-content">
+                    <span class="card-kicker">Assessment simulator</span>
+                    <h3 style="color: #FF9900;">Amazon Performance OA</h3>
+                    <p style="margin: 10px 0;">Dynamic logistics and stream processing challenges.</p>
+                    <span style="font-size: 0.8rem; font-weight: bold; color: #FF9900;">LAUNCH COMPILER &rarr;</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-banner">
+            <div>
+                <h2 style="color: white;">Ready for full simulation?</h2>
+                <p style="color: rgba(255,255,255,0.8);">Initiate the live voice-response interface with real-time biometric tracking.</p>
+            </div>
+            <button class="btn-main" style="background: white; color: var(--bg-base); padding: 16px 32px;" onclick="navigateTo('view-setup')">Deploy Simulator</button>
+        </div>
+    </div>
+
+    <div id="view-oa" class="view">
+        <div style="width: 100%; max-width: 1300px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+            <div>
+                <p class="eyebrow">Online assessment simulator</p>
+                <h2 id="oaTitle">Replicated Assessment Environment</h2>
+                <p style="margin:0; font-size:0.9rem;">Verify performance constraints via the Piston multi-language execution API.</p>
+            </div>
+            <button class="btn-outline" onclick="navigateTo('view-dashboard')">&larr; Terminate Session</button>
+        </div>
+        <div class="oa-meta-bar">
+            <div class="oa-tabs" id="oaQuestionTabs"></div>
+            <div class="timer-badge" id="oaTimer">90:00</div>
+        </div>
+        <div class="oa-layout">
+            <div class="oa-panel">
+                <div class="panel-header"><h4>Problem Statement (Dynamic AI Generation)</h4></div>
+                <div class="panel-body" id="oaProblemText" style="line-height: 1.6; font-size: 1.05rem;"></div>
+                <div class="oa-actions">
+                    <button class="btn-outline" onclick="moveOAQuestion(-1)">Previous</button>
+                    <button class="btn-main" style="padding: 10px 18px;" onclick="moveOAQuestion(1)">Next Question</button>
+                </div>
+            </div>
+            <div class="oa-panel">
+                <div class="panel-header">
+                    <div style="display:flex; align-items:center; gap: 0.8rem;">
+                        <h4 style="margin:0;">Interactive Terminal</h4>
+                        <select id="languageSelect" class="lang-dropdown" onchange="changeOALanguage()">
+                            <option value="python">Python 3.10</option>
+                            <option value="javascript">Node.js</option>
+                            <option value="java">Java</option>
+                            <option value="cpp">C++</option>
+                        </select>
+                    </div>
+                    <div style="display:flex; gap:0.6rem; flex-wrap:wrap;">
+                        <button class="btn-outline" style="padding: 6px 12px; font-size: 0.82rem;" onclick="finishOA()">Submit OA</button>
+                        <button class="btn-main" style="padding: 6px 16px; font-size: 0.85rem;" onclick="runTestCompilation()">Compile & Run</button>
+                    </div>
+                </div>
+                <textarea id="editorInput" class="code-editor" spellcheck="false">def solution():
+    # Write your optimal logic here
+    pass
+
+# Test your output
+print("System Ready")</textarea>
+                <div class="terminal-output" id="terminalLog">
+                    <span style="color: var(--text-muted);">// System ready. Awaiting code execution payload...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="view-setup" class="view">
+        <div style="width: 100%; max-width: 1000px; margin: 0 auto 2rem auto; display: flex; justify-content: flex-start;">
+            <button class="btn-outline" onclick="navigateTo('view-dashboard')">&larr; Return to Workspace</button>
+        </div>
+        <div style="text-align: center; max-width: 1000px; margin: 0 auto;">
+            <p class="eyebrow">Live simulation</p>
+            <h1>Select Applied Role</h1>
+            <p>Choose the role you are preparing for. Novus will use the matching scoring profile and interview track.</p>
+            <div class="setup-grid">
+                <div class="track-card" onclick="startInterviewFlow('swe')">
+                    <span class="card-kicker">Software engineering</span>
+                    <h3>SWE / SDE</h3>
+                    <p style="font-size: 0.9rem; margin-top:10px;">Algorithms, debugging, system design, and engineering tradeoffs.</p>
+                </div>
+                <div class="track-card" onclick="startInterviewFlow('data')">
+                    <span class="card-kicker">Data roles</span>
+                    <h3>Data Analyst / Scientist</h3>
+                    <p style="font-size: 0.9rem; margin-top:10px;">Problem solving, metrics, experimentation, and data reasoning.</p>
+                </div>
+                <div class="track-card" onclick="startInterviewFlow('frontend')">
+                    <span class="card-kicker">Product engineering</span>
+                    <h3>Frontend Engineer</h3>
+                    <p style="font-size: 0.9rem; margin-top:10px;">UI architecture, performance, accessibility, and debugging.</p>
+                </div>
+                <div class="track-card" onclick="startInterviewFlow('behavioral')">
+                    <span class="card-kicker">Communication loop</span>
+                    <h3>Behavioral / HR</h3>
+                    <p style="font-size: 0.9rem; margin-top:10px;">STAR answers, conflict, ownership, pressure, and communication.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="view-interview" class="view">
+        <div style="width: 100%; max-width: 1200px; display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <p class="eyebrow">Mock interview room</p>
+                <h2 id="roundTitleText">Initializing Telemetry...</h2>
+            </div>
+            <button class="btn-outline" onclick="navigateTo('view-dashboard')">Exit Interview</button>
+        </div>
+        <div class="dashboard-layout">
+            <div class="sidebar">
+                <div class="video-container"><video id="webcam" autoplay playsinline muted></video></div>
+                <div class="metrics-panel">
+                    <div class="metric-row"><span>Subject Tracking</span><span id="presenceBadge" class="status-badge" style="background:rgba(245,158,11,0.15); color:var(--warning);">CALIBRATING</span></div>
+                    <div class="metric-row"><span>Attention Lock</span><span id="gazeBadge" class="status-badge" style="background:rgba(245,158,11,0.15); color:var(--warning);">CALIBRATING</span></div>
+                </div>
+            </div>
+            <div class="main-panel">
+                <div class="transcript-box">
+                    <h4 style="color:var(--primary); font-size:0.8rem; letter-spacing:1px; margin-bottom:10px;">EVALUATOR</h4>
+                    <div id="aiText" class="ai-text">Connecting terminal pipelines to core analytics network...</div>
+                </div>
+                <div class="transcript-box">
+                    <h4 style="color:var(--text-muted); font-size:0.8rem; letter-spacing:1px; margin-bottom:10px;">VOCAL STREAM</h4>
+                    <p id="userText" style="color: var(--text-muted); font-style: italic; margin:0;">System standby...</p>
+                </div>
+                <div style="display: flex; justify-content: flex-end;">
+                    <button id="startBtn" class="btn-main" disabled>Awaiting Handshake</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Self-report confidence overlay (shown after each answer) -->
+    <div id="selfReportOverlay" class="self-report-overlay">
+        <div class="self-report-card">
+            <p class="eyebrow">Quick check-in</p>
+            <h3>How confident did you feel about that answer?</h3>
+            <p style="font-size:0.88rem; margin-top:0.4rem;">Takes one tap. Helps calibrate your session scores.</p>
+            <div class="confidence-buttons">
+                <button class="conf-btn" data-value="1" onclick="submitSelfReport(1)" aria-label="Not at all confident">😰<span>Not at all</span></button>
+                <button class="conf-btn" data-value="2" onclick="submitSelfReport(2)" aria-label="Unsure">😟<span>Unsure</span></button>
+                <button class="conf-btn" data-value="3" onclick="submitSelfReport(3)" aria-label="Okay">😐<span>Okay</span></button>
+                <button class="conf-btn" data-value="4" onclick="submitSelfReport(4)" aria-label="Confident">🙂<span>Confident</span></button>
+                <button class="conf-btn" data-value="5" onclick="submitSelfReport(5)" aria-label="Very confident">😄<span>Very sure</span></button>
+            </div>
+            <button class="skip-report" onclick="submitSelfReport(null)">Skip</button>
+        </div>
+    </div>
+
+    <!-- Dedicated report view -->
+    <div id="view-report" class="view">
+        <div style="width:100%; max-width:1100px; display:flex; justify-content:space-between; align-items:center; margin-bottom:2rem;">
+            <div>
+                <p class="eyebrow">Session complete</p>
+                <h2 id="reportRoleLabel">Interview Report</h2>
+            </div>
+            <div style="display:flex; gap:0.75rem;">
+                <button class="btn-outline" onclick="navigateTo('view-setup')">Practice Again</button>
+                <button class="btn-outline" onclick="navigateTo('view-dashboard')">← Dashboard</button>
+            </div>
+        </div>
+
+        <div class="report-page" style="width:100%; max-width:1100px;">
+
+            <!-- Top row: overall score + radar -->
+            <div class="report-top-row">
+                <div class="report-overall-card">
+                    <p class="eyebrow">Overall score</p>
+                    <div class="report-overall-num" id="reportOverallScore">—</div>
+                    <p id="reportWeakNote" style="margin-top:0.75rem; font-size:0.88rem;"></p>
+                    <div class="report-composite-pills" id="reportCompositePills"></div>
+                </div>
+                <div class="report-radar-card">
+                    <p class="eyebrow" style="margin-bottom:1rem;">Composite breakdown</p>
+                    <div style="position:relative; height:260px;">
+                        <canvas id="radarChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Topic bars -->
+            <div class="report-section">
+                <h4 class="report-section-title">Topic scores</h4>
+                <div id="reportTopicBars" class="topic-score-list"></div>
+            </div>
+
+            <!-- Per-question breakdown -->
+            <div class="report-section">
+                <h4 class="report-section-title">Question breakdown</h4>
+                <div id="reportAnswerList" class="answer-review-list"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="prepModal" class="modal-overlay" onclick="closePrepModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="close-modal" onclick="closePrepModal()">&times;</button>
+            <div id="modalBody" class="modal-body-content"></div>
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
