@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PharmaCare — Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="login.css"/>
+</head>
+<body>
+
+<div class="auth-wrapper">
+
+  <div class="auth-panel">
+    <div class="brand">
+      <div class="brand-icon">🧑‍⚕️</div>
+      <div class="brand-name">PharmaCare</div>
+    </div>
+    <div>
+      <h2 class="panel-headline">Welcome to PharmaCare</h2>
+      <p class="panel-sub">Why Fear when we are here?</p>
+    </div>
+  </div>
+
+  <div class="auth-form-side">
+    <h1 class="form-title">Sign In</h1>
+    <p class="form-subtitle">Enter your credentials to continue</p>
+
+    <div class="alert-box" id="alertBox"></div>
+
+    <form id="loginForm" novalidate>
+
+      <div class="field-group">
+        <label for="email">Email address</label>
+        <div class="input-wrap">
+          <span class="icon">✉️</span>
+          <input type="email" id="email"
+                 placeholder="you@pharmacare.com"
+                 autocomplete="username"/>
+        </div>
+        <div class="field-error" id="emailError">Please enter a valid email address.</div>
+      </div>
+
+      <div class="field-group">
+        <label for="password">Password</label>
+        <div class="input-wrap">
+          <span class="icon">🔒</span>
+          <input type="password" id="password"
+                 placeholder="Enter your password"
+                 autocomplete="current-password"/>
+          <button type="button" class="toggle-pw" id="togglePw">👁️</button>
+        </div>
+        <div class="field-error" id="passwordError">Password must be at least 6 characters.</div>
+      </div>
+
+      <div class="form-extras">
+        <label class="remember">
+          <input type="checkbox" id="rememberMe"/> Remember me
+        </label>
+        <a href="#" class="forgot-link">Forgot password?</a>
+      </div>
+
+      <button type="submit" class="btn-login" id="submitBtn">
+        <span class="btn-text">Sign In</span>
+        <div class="spinner"></div>
+      </button>
+
+    </form>
+  </div>
+
+</div>
+
+<script src="login.js"></script>
+</body>
+</html>

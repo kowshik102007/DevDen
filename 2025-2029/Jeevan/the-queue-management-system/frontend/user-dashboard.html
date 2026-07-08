@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard | QueueEase</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="container">
+        <a href="index.html" class="logo">QueueEase</a>
+        <div class="nav-links">
+            <span id="user-name" style="color: var(--text-primary);">...</span>
+            <button id="logout-btn" class="btn btn-secondary">Logout</button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="grid grid-cols-2">
+            <!-- Left: Current Active Ticket/Join Queue -->
+            <section>
+                <div id="join-section" class="card glass animate-fade">
+                    <h2>Join a Queue</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Select a clinic to join their current waiting list.</p>
+                    <div class="form-group">
+                        <label>Select Clinic</label>
+                        <select id="clinic-select">
+                            <option value="">Loading clinics...</option>
+                        </select>
+                    </div>
+                    <button id="join-btn" class="btn btn-primary" style="width: 100%;">Join Queue Now</button>
+                </div>
+
+                <div id="active-ticket-section" class="card glass animate-fade" style="display: none; border-left: 4px solid var(--accent);">
+                    <h2>Your Active Ticket</h2>
+                    <div style="display: flex; gap: 2rem; align-items: center; margin-top: 1.5rem;">
+                        <div style="text-align: center; flex: 1; padding: 1.5rem; background: rgba(0,0,0,0.2); border-radius: 1rem;">
+                            <div style="font-size: 0.9rem; color: var(--text-secondary);">Ticket Number</div>
+                            <div id="ticket-num" style="font-size: 3rem; font-weight: 800; color: var(--accent);">#0</div>
+                        </div>
+                        <div style="flex: 1;">
+                            <p style="margin-bottom: 0.5rem;"><strong id="active-clinic-name">Clinic Name</strong></p>
+                            <p id="ticket-status-row" style="margin-bottom: 0.5rem;"><span class="badge badge-waiting" id="active-status">Waiting</span></p>
+                            <p style="font-size: 0.9rem; color: var(--text-secondary);">In front of you: <span id="people-ahead" style="color: #fff; font-weight: 600;">...</span></p>
+                            <p style="font-size: 0.9rem; color: var(--text-secondary);">Est. Wait: <span id="wait-time" style="color: #fff; font-weight: 600;">...</span></p>
+                        </div>
+                    </div>
+                    <button id="cancel-btn" class="btn btn-secondary" style="width: 100%; margin-top: 1.5rem; color: var(--error);">Cancel Ticket</button>
+                </div>
+            </section>
+
+            <!-- Right: History -->
+            <section>
+                <div class="card glass animate-fade" style="height: 100%;">
+                    <h2>Queue History</h2>
+                    <div style="overflow-x: auto;">
+                        <table id="history-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Clinic</th>
+                                    <th>Ticket</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="history-body">
+                                <tr>
+                                    <td colspan="4" style="text-align: center; color: var(--text-secondary);">No history found</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/user-dashboard.js"></script>
+</body>
+</html>

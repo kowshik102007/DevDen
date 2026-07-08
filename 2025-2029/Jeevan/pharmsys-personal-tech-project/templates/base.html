@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Management System</title>
+
+    <!-- Modern Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons (FontAwesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="sidebar glass">
+        <div class="sidebar-header">
+            <h2><i class="fa-solid fa-staff-snake"></i> PharmaSys</h2>
+        </div>
+
+        <ul>
+            <li>
+                <a href="{{ url_for('index') }}" class="{% if request.endpoint == 'index' %}active{% endif %}">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ url_for('inventory') }}" class="{% if request.endpoint == 'inventory' %}active{% endif %}">
+                    <i class="fa-solid fa-box-open"></i>
+                    <span>Inventory</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ url_for('add_medicine') }}"
+                    class="{% if request.endpoint == 'add_medicine' %}active{% endif %}">
+                    <i class="fa-solid fa-pills"></i>
+                    <span>Add Medicine</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ url_for('sell') }}" class="{% if request.endpoint == 'sell' %}active{% endif %}">
+                    <i class="fa-solid fa-cash-register"></i>
+                    <span>Sell Medicine</span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="creator-info">
+            Created by
+            <span>Jeevan A Jacob</span>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <div>
+                <h1>{% block page_title %}Pharmacy Dashboard{% endblock %}</h1>
+                <p class="subtitle">{% block page_subtitle %}Overview & Analytics{% endblock %}</p>
+            </div>
+
+            <div class="header-actions">
+                <a href="{{ url_for('add_medicine') }}" class="btn btn-sm">
+                    <i class="fa-solid fa-plus"></i> New Item
+                </a>
+            </div>
+        </header>
+
+        <div class="messages" id="message-container">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+            {% for category, message in messages %}
+            <div class="alert {{ category }} glass">
+                {% if category == 'success' %}
+                <i class="fa-solid fa-circle-check"></i>
+                {% else %}
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                {% endif %}
+                {{ message }}
+            </div>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+        </div>
+
+        <div class="content-area">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+</body>
+
+</html>
