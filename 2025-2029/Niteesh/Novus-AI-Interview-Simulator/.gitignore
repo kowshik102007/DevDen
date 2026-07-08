@@ -1,0 +1,31 @@
+# Secrets / env — never commit these
+.env
+.env.*
+*.key
+kaggle.json
+supabase/.env
+supabase/functions/**/.env
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Python (from the training notebook)
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+data/            # FER-2013 dataset — too large, download via Kaggle
+saved_fer/
+tfjs_model/
+tfjs_graph/
+*.zip
+
+# Node (if you ever add tooling)
+node_modules/
+
+# Keep the exported model, but ignore stray large binaries elsewhere
+# (comment the next line out if you WANT to commit models/fer_tfjs/*.bin)
+# models/**/*.bin
