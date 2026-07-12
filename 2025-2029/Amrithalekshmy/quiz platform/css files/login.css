@@ -1,0 +1,179 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  background: #F0F9FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 20px;
+}
+
+.auth-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.auth-card {
+  background: #fff;
+  border-radius: 22px;
+  width: 100%;
+  max-width: 460px;
+  padding: 52px 52px 46px;
+  box-shadow: 0 12px 40px rgba(100, 100, 160, 0.12), 0 2px 10px rgba(0,0,0,0.06);
+  border: 1px solid rgba(200, 200, 220, 0.45);
+}
+
+
+.brand {
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.brand-icon {
+  font-size: 2.8rem;
+}
+
+.brand-name {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-top: 8px;
+  letter-spacing: -0.02em;
+}
+
+.brand-tagline {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  margin-top: 5px;
+  letter-spacing: 0.02em;
+}
+
+
+.tab-row {
+  display: flex;
+  background: #f1f5f9;
+  border-radius: 12px;
+  padding: 5px;
+  margin-bottom: 34px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  background: transparent;
+  border-radius: 9px;
+  font-size: 0.97rem;
+  font-weight: 600;
+  color: #94a3b8;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tab-btn.active {
+  background: #fff;
+  color: #0284C7;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+}
+
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 13px 16px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 11px;
+  font-size: 1rem;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1e293b;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  background: #fff;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #0284C7;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.1);
+}
+
+
+.btn-primary {
+  width: 100%;
+  padding: 14px;
+  background: #0284C7;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.02rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background 0.18s, transform 0.12s, box-shadow 0.18s;
+  letter-spacing: 0.01em;
+}
+
+.btn-primary:hover {
+  background: #0369a1;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(2, 132, 199, 0.3);
+}
+
+
+.error-msg {
+  font-size: 0.9rem;
+  color: #dc2626;
+  margin-bottom: 12px;
+  text-align: center;
+  background: #fef2f2;
+  padding: 10px 14px;
+  border-radius: 9px;
+  border: 1px solid #fecaca;
+}
+
+.success-msg {
+  font-size: 0.9rem;
+  color: #16a34a;
+  margin-bottom: 12px;
+  text-align: center;
+  background: #f0fdf4;
+  padding: 10px 14px;
+  border-radius: 9px;
+  border: 1px solid #bbf7d0;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 520px) {
+  .auth-card {
+    padding: 38px 28px 34px;
+  }
+  .brand-name { font-size: 1.65rem; }
+}

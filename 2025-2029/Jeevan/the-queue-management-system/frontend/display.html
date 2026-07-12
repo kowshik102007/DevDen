@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Queue Display | QueueEase</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { padding: 0; display: flex; flex-direction: column; height: 100vh; background: #020617; }
+        .display-header { padding: 2rem; background: rgba(255,255,255,0.05); border-bottom: 2px solid var(--accent); display: flex; justify-content: space-between; align-items: center; }
+        .grid-display { flex: 1; display: grid; grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); gap: 2rem; padding: 2rem; overflow-y: auto; }
+        .clinic-display-card { height: 350px; display: flex; flex-direction: column; animation: slideIn 0.5s ease; }
+        .now-calling { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .number { font-size: 8rem; font-weight: 800; color: var(--accent); line-height: 1; margin: 1rem 0; text-shadow: 0 0 30px rgba(56, 189, 248, 0.4); }
+        .waiting-list { padding: 1rem; background: rgba(0,0,0,0.3); border-radius: 0 0 1rem 1rem; display: flex; gap: 1rem; overflow-x: auto; font-size: 1.2rem; }
+        @keyframes slideIn { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
+        .blink { animation: pulse 1s infinite; }
+    </style>
+</head>
+<body>
+    <div class="display-header">
+        <div class="logo" style="font-size: 2rem;">QueueEase <span style="font-size: 1rem; color: var(--text-secondary); -webkit-text-fill-color: initial;">LIVE</span></div>
+        <div id="clock" style="font-size: 1.5rem; font-weight: 600;">00:00:00</div>
+    </div>
+
+    <div class="grid-display" id="display-grid">
+        <!-- Clinic Display Cards will appear here -->
+    </div>
+
+    <div style="padding: 1rem; text-align: center; background: var(--accent); color: #000; font-weight: 800; font-size: 1.2rem;">
+        PLEASE WATCH THE SCREEN FOR YOUR NUMBER. BE READY WHEN CALLED.
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/display.js"></script>
+    <script>
+        function updateClock() {
+            const now = new Date();
+            document.getElementById('clock').textContent = now.toLocaleTimeString([], { hour12: false });
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>

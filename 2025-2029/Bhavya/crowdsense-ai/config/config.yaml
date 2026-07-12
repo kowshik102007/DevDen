@@ -1,0 +1,26 @@
+video:
+  source: 0
+  resize_width: 800
+
+detector:
+  win_stride: [8, 8]
+  padding: [8, 8]
+  scale: 1.05
+  nms_threshold: 0.35
+
+tracker:
+  max_disappeared: 25
+  max_distance: 90
+
+alerts:
+  person_count_medium: 5
+  person_count_high: 10
+  velocity_medium: 80
+  velocity_high: 160
+  dispersion_low: 40
+  dispersion_high: 250
+
+models:
+  models:
+  isolation_forest_path: models/isolation_forest.pkl
+  random_forest_path: models/random_forest_classifier.pkl

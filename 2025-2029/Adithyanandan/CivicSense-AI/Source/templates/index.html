@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CivicSense AI</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --orange: #e8651a;
+  --orange-dark: #c9531a;
+  --bg: #fdf6ed;
+  --white: #fffaf3;
+  --border: #ead9c4;
+  --text: #2b2118;
+  --muted: #9e8c7a;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes msgIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+header {
+  background: var(--white);
+  border-bottom: 1.5px solid var(--border);
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.logo-mark {
+  width: 32px; height: 32px;
+  background: var(--orange);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: .95rem;
+}
+
+.logo-text {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+.logo-text span { color: var(--orange); }
+
+.header-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: .76rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.user-dot {
+  width: 26px; height: 26px;
+  background: var(--orange);
+  border-radius: 7px;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff;
+  font-size: .68rem;
+  font-weight: 700;
+}
+
+.signout-btn {
+  background: none;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  padding: 5px 11px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .73rem;
+  font-weight: 600;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all .15s;
+}
+
+.signout-btn:hover { color: var(--text); background: #f5ead8; border-color: #d4bea8; }
+
+#messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background: var(--bg);
+  animation: fadeUp .35s ease both;
+}
+
+#messages::-webkit-scrollbar { width: 4px; }
+#messages::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+
+#welcome {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  animation: fadeUp .4s ease both;
+}
+
+.welcome-icon {
+  width: 58px; height: 58px;
+  background: var(--orange);
+  border-radius: 15px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 16px rgba(232,101,26,.22);
+}
+
+#welcome h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.55rem;
+  margin-bottom: 8px;
+  letter-spacing: -.02em;
+}
+
+#welcome p {
+  font-size: .83rem;
+  color: var(--muted);
+  line-height: 1.6;
+  max-width: 300px;
+  margin-bottom: 28px;
+}
+
+.suggestions {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.sug {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 11px 15px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .81rem;
+  font-weight: 500;
+  color: var(--text);
+  cursor: pointer;
+  text-align: left;
+  line-height: 1.4;
+  transition: all .18s;
+}
+
+.sug:hover { border-color: var(--orange); background: #fef0e6; }
+
+.msg { display: flex; gap: 10px; max-width: 700px; animation: msgIn .25s ease both; }
+.msg.user { flex-direction: row-reverse; align-self: flex-end; }
+
+.av {
+  width: 28px; height: 28px;
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: .65rem; font-weight: 700;
+  flex-shrink: 0; margin-top: 2px;
+}
+
+.av.ai { background: var(--orange); color: #fff; }
+.av.user { background: #f5ead8; color: var(--muted); font-size: .85rem; }
+
+.bubble {
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: .84rem;
+  line-height: 1.7;
+  max-width: 82%;
+}
+
+.bubble.ai {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-top-left-radius: 3px;
+}
+
+.bubble.user {
+  background: var(--orange);
+  color: #fff;
+  border-top-right-radius: 3px;
+}
+
+.typing-bub {
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  border-top-left-radius: 3px;
+  padding: 12px 14px;
+  display: flex; gap: 4px; align-items: center;
+}
+
+.td { width: 5px; height: 5px; border-radius: 50%; background: var(--muted); animation: tb 1.1s ease infinite; }
+.td:nth-child(2) { animation-delay: .15s; }
+.td:nth-child(3) { animation-delay: .3s; }
+
+@keyframes tb {
+  0%,60%,100% { transform: translateY(0); opacity: .35; }
+  30% { transform: translateY(-4px); opacity: 1; }
+}
+
+.input-bar {
+  flex-shrink: 0;
+  background: var(--white);
+  border-top: 1.5px solid var(--border);
+  padding: 12px 24px 16px;
+}
+
+.input-row {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+textarea {
+  flex: 1;
+  background: var(--bg);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .85rem;
+  color: var(--text);
+  outline: none;
+  resize: none;
+  min-height: 42px;
+  max-height: 110px;
+  line-height: 1.5;
+  transition: border-color .2s;
+}
+
+textarea:focus { border-color: var(--orange); background: var(--white); }
+textarea::placeholder { color: #c8b9a8; }
+
+.send-btn {
+  width: 40px; height: 40px;
+  background: var(--orange);
+  border: none;
+  border-radius: 9px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all .2s;
+}
+
+.send-btn:hover { background: var(--orange-dark); transform: translateY(-1px); }
+.send-btn:disabled { background: var(--border); cursor: default; transform: none; }
+
+.hint { text-align: center; font-size: .63rem; color: var(--muted); margin-top: 7px; }
+
+.error-toast {
+  position: fixed;
+  top: 16px; right: 16px;
+  background: #fff0f0;
+  border: 1.5px solid #f5c0c0;
+  color: #c0392b;
+  padding: 9px 14px;
+  border-radius: 10px;
+  font-size: .78rem;
+  font-weight: 500;
+  z-index: 99;
+  animation: fadeUp .3s ease both;
+}
+
+@media (max-width: 600px) {
+  #messages { padding: 16px 14px; }
+  .input-bar { padding: 10px 14px 14px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo-mark">🏛️</div>
+  <div class="logo-text">Civic<span>Sense</span> AI</div>
+  <div class="header-right">
+    <div class="user-chip">
+      <div class="user-dot" id="userDot">U</div>
+      <span id="userName">User</span>
+    </div>
+    <button class="signout-btn" onclick="logout()">Sign out</button>
+  </div>
+</header>
+
+<div id="messages">
+  <div id="welcome">
+    <div class="welcome-icon">🏛️</div>
+    <h2>How can I help?</h2>
+    <p>Ask about any Indian government scheme — eligibility, benefits, and how to apply.</p>
+    <div class="suggestions">
+      <button class="sug" onclick="ask('How can I apply for Ayushman Bharat health coverage?')">How can I apply for Ayushman Bharat health coverage?</button>
+      <button class="sug" onclick="ask('What schemes are available for women entrepreneurs?')">What schemes are available for women entrepreneurs?</button>
+      <button class="sug" onclick="ask('Tell me about housing loan schemes for low-income families')">Tell me about housing loan schemes for low-income families</button>
+      <button class="sug" onclick="ask('Which education scholarships exist for SC/ST students?')">Which education scholarships exist for SC/ST students?</button>
+    </div>
+  </div>
+</div>
+
+<div class="input-bar">
+  <div class="input-row">
+    <textarea id="chatInput" placeholder="Ask about a government scheme…" rows="1"></textarea>
+    <button class="send-btn" id="sendBtn">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="22" y1="2" x2="11" y2="13"/>
+        <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+      </svg>
+    </button>
+  </div>
+  <div class="hint">Enter to send · Shift+Enter for new line</div>
+</div>
+
+<script>
+  const msgsEl  = document.getElementById('messages');
+  const inputEl = document.getElementById('chatInput');
+  const sendBtn = document.getElementById('sendBtn');
+
+  let session_id = null;
+  let isLoading  = false;
+  let started    = false;
+
+  // pull username from server-rendered template variable or default
+  const username = "{{ session.get('username', 'User') }}";
+  document.getElementById('userName').textContent = username;
+  document.getElementById('userDot').textContent  = username.charAt(0).toUpperCase();
+
+  function ensureStarted() {
+    if (started) return;
+    document.getElementById('welcome')?.remove();
+    started = true;
+  }
+
+  function addMsg(html, isUser) {
+    ensureStarted();
+    const row = document.createElement('div');
+    row.className = `msg${isUser ? ' user' : ''}`;
+    row.innerHTML = `<div class="av ${isUser ? 'user' : 'ai'}">${isUser ? '👤' : 'AI'}</div><div class="bubble ${isUser ? 'user' : 'ai'}">${html}</div>`;
+    msgsEl.appendChild(row);
+    msgsEl.scrollTop = msgsEl.scrollHeight;
+  }
+
+  function showTyping() {
+    ensureStarted();
+    const row = document.createElement('div');
+    row.className = 'msg'; row.id = 'typing';
+    row.innerHTML = `<div class="av ai">AI</div><div class="typing-bub"><div class="td"></div><div class="td"></div><div class="td"></div></div>`;
+    msgsEl.appendChild(row);
+    msgsEl.scrollTop = msgsEl.scrollHeight;
+  }
+
+  function showError(msg) {
+    const t = document.createElement('div');
+    t.className = 'error-toast';
+    t.textContent = '⚠ ' + msg;
+    document.body.appendChild(t);
+    setTimeout(() => t.remove(), 4000);
+  }
+
+  function formatText(text) {
+    return text
+      .replace(/```([\s\S]*?)```/g, '<pre style="background:#f5ead8;border-radius:6px;padding:10px;overflow-x:auto;margin:6px 0;font-size:.8rem"><code>$1</code></pre>')
+      .replace(/`([^`]+)`/g, '<code style="background:#f5ead8;padding:1px 5px;border-radius:4px;font-size:.82rem">$1</code>')
+      .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\n/g, '<br>');
+  }
+
+  async function send(text) {
+    const msg = text || inputEl.value.trim();
+    if (!msg || isLoading) return;
+
+    isLoading = true;
+    sendBtn.disabled = true;
+    inputEl.value = '';
+    resize();
+    addMsg(msg, true);
+    showTyping();
+
+    try {
+      const res = await fetch('/groq', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: msg, session_id })
+      });
+
+      const data = await res.json();
+      document.getElementById('typing')?.remove();
+
+      if (!res.ok) {
+        if (res.status === 401) { window.location.href = '/login'; return; }
+        showError(data.error || 'Something went wrong');
+        return;
+      }
+
+      session_id = data.session_id;
+      addMsg(formatText(data.reply), false);
+    } catch {
+      document.getElementById('typing')?.remove();
+      showError('Connection error. Try again.');
+    } finally {
+      isLoading = false;
+      sendBtn.disabled = false;
+      inputEl.focus();
+    }
+  }
+
+  function ask(q) { send(q); }
+
+  function resize() {
+    inputEl.style.height = 'auto';
+    inputEl.style.height = Math.min(inputEl.scrollHeight, 110) + 'px';
+  }
+
+  async function logout() {
+    await fetch('/api/logout', { method: 'POST' });
+    window.location.href = '/login';
+  }
+
+  sendBtn.addEventListener('click', () => send());
+  inputEl.addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); send(); } });
+  inputEl.addEventListener('input', resize);
+</script>
+</body>
+</html>

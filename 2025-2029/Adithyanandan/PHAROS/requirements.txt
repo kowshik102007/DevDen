@@ -1,0 +1,21 @@
+numpy>=1.24
+scipy>=1.10
+opencv-python>=4.8
+matplotlib>=3.7
+astropy>=5.3
+pyyaml>=6.0
+ruamel.yaml>=0.18
+tqdm>=4.65
+aotools>=1.0
+# ML dependencies — requires Python <=3.12 wheel or nightly for 3.14
+torch>=2.0
+torchvision>=0.15
+onnx>=1.14
+onnxruntime>=1.15
+stable-baselines3>=2.0
+gymnasium>=0.29
+# Optional GPU-accelerated numpy
+# cupy-cuda12x>=12.0
+# Development / testing
+pytest>=7.0
+h5py>=3.8

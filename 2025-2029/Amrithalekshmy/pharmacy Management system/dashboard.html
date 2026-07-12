@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Customer Dashboard - PharmaCare</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/static/style.css"/>
+</head>
+<body class="dashboard-body">
+
+<div class="dash-header">
+  <div class="dash-brand">
+    <span class="dash-brand-icon">🧑‍⚕️</span>
+    <span class="dash-brand-name">PharmaCare</span>
+  </div>
+  <div class="dash-header-right">
+    <span class="dash-user">Hello, {{ username }}</span>
+    <a href="/logout" class="logout-btn">Log Out</a>
+  </div>
+</div>
+
+<div class="dash-content">
+  <h2 class="dash-title">Search Medicines</h2>
+  <div class="search-container">
+    <form action="/search" method="post" class="search-form">
+      <input type="text" name="query" value="{{ query }}" placeholder="Type medicine name..." required>
+      <button type="submit" class="search-btn">🔍 Search</button>
+    </form>
+    <a href="/dashboard" class="clear-btn">Clear</a>
+  </div>
+
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+  <div class="dash-alert">
+    {% for message in messages %}
+    <b>{{ message }}</b>
+    {% endfor %}
+  </div>
+  {% endif %}
+  {% endwith %}
+
+  <h2 class="dash-title">Available Medicines</h2>
+  <div class="table-wrap">
+  <table class="med-table">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Medicine Name</th>
+      <th>Category</th>
+      <th>Manufacturer</th>
+      <th>Price (₹)</th>
+      <th>Expiry Date</th>
+      <th>Stock</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for md in medicines %}
+    <tr>
+      <td>{{ md.id }}</td>
+      <td><b>{{ md.name }}</b></td>
+      <td>{{ md.category }}</td>
+      <td>{{ md.manufacturer }}</td>
+      <td>{{ md.price }}</td>
+      <td>{{ md.expiry_date }}</td>
+      <td>
+        {% if md.stock > 0 %}
+        <span class="stock-in">{{ md.stock }} In Stock</span>
+        {% else %}
+        <span class="stock-out">Out of Stock</span>
+        {% endif %}
+      </td>
+      <td>
+        {% if md.stock > 0 %}
+        <a href="/buy/{{ md.id }}" class="buy-btn" onclick="return confirm('Are you sure you want to buy 1 unit of {{ md.name }}?');">Buy 1</a>
+        {% else %}
+        <button disabled class="buy-btn-disabled">N/A</button>
+        {% endif %}
+      </td>
+    </tr>
+    {% else %}
+    <tr>
+      <td colspan="8" style="text-align:center; padding:20px;">No medicines found matching your search. Try again!</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  </div>
+</div>
+
+</body>
+</html>

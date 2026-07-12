@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Theme Colors -->
+    <color name="primaryColor">#1A237E</color>
+    <color name="primaryColorVariant">#000051</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    
+    <color name="backgroundColor">#F4F6F9</color>
+    <color name="surfaceColor">#FFFFFF</color>
+    
+    <!-- Text Colors -->
+    <color name="textColorPrimary">#202124</color>
+    <color name="textColorSecondary">#757575</color>
+    <color name="textColorTertiary">#9E9E9E</color>
+    
+    <!-- Icon Tints -->
+    <color name="iconTint">#757575</color>
+    <color name="iconTintPrimary">#5C6BC0</color>
+    
+    <!-- Specific elements -->
+    <color name="dividerColor">#E0E0E0</color>
+    <color name="subtitleColor">#B3E5FC</color>
+    
+    <!-- Hardcoded ones that remain same -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="red_error">#D32F2F</color>
+    <color name="orange_warning">#E65100</color>
+    <color name="green_success">#2E7D32</color>
+    
+    <color name="bg_warning">#FFF3E0</color>
+    <color name="bg_success">#E8F5E9</color>
+</resources>

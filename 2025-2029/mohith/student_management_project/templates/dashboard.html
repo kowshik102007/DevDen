@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<div class="container">
+
+    <head>
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+
+    <body class="{{ 'dark' if session.get('theme') == 'dark' else '' }}">
+
+        {% include 'navbar.html' %}
+
+        <h2>Student Management Dashboard</h2>
+
+        <div class="dashboard">
+
+            <div class="card">
+                <h3>Total Students</h3>
+                <h2>{{ total_students }}</h2>
+            </div>
+
+            <div class="card">
+                <h3>Average Age</h3>
+                <h2>{{ avg_age | round }}</h2>
+            </div>
+
+            <div class="card">
+                <h3>Total Courses</h3>
+                <h2>{{ total_courses }}</h2>
+            </div>
+
+        </div>
+
+        <div class="dashboard">
+
+            <div class="card">
+                <h3>Popular Course</h3>
+                <h2>{{ popular_course }}</h2>
+            </div>
+
+            <div class="card">
+                <h3>Latest Student</h3>
+                <h2>{{ latest_student.name if latest_student else "None" }}</h2>
+            </div>
+
+            <div class="card">
+                <h3>Last Login</h3>
+                <h2>{{ last_login }}</h2>
+            </div>
+
+        </div>
+
+    </body>
+
+</div>
+
+</html>

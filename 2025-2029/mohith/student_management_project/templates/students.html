@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<div class="main-container">
+
+    <head>
+        <title>Student Management</title>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    </head>
+
+    <body class="{{ 'dark' if session.get('theme') == 'dark' else '' }}">
+
+        {% include 'navbar.html' %}
+
+
+        <h2>Student Management System</h2>
+
+        <form action="/add" method="POST" class="form-row">
+
+            <input type="text" name="name" placeholder="Student Name" required>
+
+            <input type="number" name="age" placeholder="Age" required>
+
+            <input type="text" name="course" placeholder="Course" required>
+
+            <button type="submit">Add Student</button>
+
+        </form>
+
+
+        <h3>Search a particular student ?</h3>
+        <form action="/search" method="GET">
+            <input type="text" name="query" value="{{ query or '' }}" placeholder="Search student">
+            <button type="submit">Search</button>
+        </form>
+
+        <h4>Student List</h4>
+
+        <table style="border-collapse: collapse;" border="1">
+
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Course</th>
+                <th>Actions</th>
+            </tr>
+
+            {% for student in students.items %}
+
+            <tr>
+
+                <td>{{ student.id }}</td>
+
+                <td>
+
+                    {% if query and query.lower() in student.name.lower() %}
+                    {{ student.name | replace(query, "<mark>" + query + "</mark>") | safe }}
+                    {% else %}
+                    {{ student.name }}
+                    {% endif %}
+
+                </td>
+
+                <td>{{ student.age }}</td>
+
+                <td>{{ student.course }}</td>
+
+                <td>
+
+                    <a href="/edit/{{ student.id }}">Edit</a>
+
+                    <a href="/delete/{{ student.id }}">Delete</a>
+
+                </td>
+
+            </tr>
+
+            {% endfor %}
+
+        </table>
+
+        <div style="margin-top:20px;">
+
+            {% if students.has_prev %}
+            <a href="?page={{ students.prev_num }}">Previous</a>
+            {% endif %}
+
+            {% if students.has_next %}
+            <a href="?page={{ students.next_num }}">Next</a>
+            {% endif %}
+
+        </div>
+
+        <div>
+
+            {% if students.has_prev %}
+            <a href="?page={{ students.prev_num }}">Previous</a>
+            {% endif %}
+
+            {% if students.has_next %}
+            <a href="?page={{ students.next_num }}">Next</a>
+            {% endif %}
+
+        </div>
+
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+
+    </body>
+
+</div>
+
+</html>

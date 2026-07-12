@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QueueEase | Smart Clinic Queue Management</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="container">
+        <a href="index.html" class="logo">QueueEase</a>
+        <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="display.html">Live View</a>
+            <a href="auth.html" id="nav-login">Login</a>
+            <a href="auth.html" class="btn btn-primary" id="nav-join">Join Queue</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero animate-fade" style="text-align: center; padding: 4rem 0;">
+            <h1 style="font-size: 3.5rem; margin-bottom: 1.5rem; line-height: 1.1;">
+                Skip the Wait, <br>
+                <span style="color: var(--accent);">Queue from Anywhere.</span>
+            </h1>
+            <p style="color: var(--text-secondary); font-size: 1.25rem; max-width: 600px; margin: 0 auto 2.5rem;">
+                QueueEase allows you to join the line at your favorite clinics and offices digitally. 
+                Track your position in real-time and arrive just when it's your turn.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center;">
+                <a href="auth.html" class="btn btn-primary">Get Started Now</a>
+                <a href="display.html" class="btn btn-secondary">View Live Screen</a>
+            </div>
+        </section>
+
+        <section id="features" class="grid grid-cols-3" style="margin-top: 4rem;">
+            <div class="card glass animate-fade" style="animation-delay: 0.1s;">
+                <h3 style="margin-bottom: 1rem; color: var(--accent);">Online Check-in</h3>
+                <p style="color: var(--text-secondary);">Join the queue from your home or office with just a few clicks.</p>
+            </div>
+            <div class="card glass animate-fade" style="animation-delay: 0.2s;">
+                <h3 style="margin-bottom: 1rem; color: var(--accent);">Real-time Tracking</h3>
+                <p style="color: var(--text-secondary);">Watch your position move as others are served, with live WebSocket updates.</p>
+            </div>
+            <div class="card glass animate-fade" style="animation-delay: 0.3s;">
+                <h3 style="margin-bottom: 1rem; color: var(--accent);">Admin Control</h3>
+                <p style="color: var(--text-secondary);">Staff can manage the flow efficiently with one-click "Next" calling.</p>
+            </div>
+        </section>
+
+        <footer style="margin-top: 6rem; text-align: center; color: var(--text-secondary); border-top: 1px solid var(--glass-border); padding-top: 2rem;">
+            <p>&copy; 2026 QueueEase. A model project by <strong>Jeevan A Jacob</strong>.</p>
+        </footer>
+    </main>
+
+    <script src="js/config.js"></script>
+    <script>
+        // Check if logged in
+        const user = JSON.parse(localStorage.getItem('user'));
+        if (user) {
+            document.getElementById('nav-login').textContent = 'Dashboard';
+            document.getElementById('nav-login').href = user.role === 'admin' ? 'admin-dashboard.html' : 'user-dashboard.html';
+            document.getElementById('nav-join').textContent = 'My Queue';
+            document.getElementById('nav-join').href = user.role === 'admin' ? 'admin-dashboard.html' : 'user-dashboard.html';
+        }
+    </script>
+</body>
+</html>

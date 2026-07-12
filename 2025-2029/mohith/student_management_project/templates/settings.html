@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<div class="container">
+
+    <head>
+        <title>Settings</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+
+    <body class="{{ 'dark' if session.get('theme') == 'dark' else '' }}">
+
+        {% include 'navbar.html' %}
+
+
+        <h2>Settings</h2>
+
+        <div class="card">
+            <h3>Update Profile</h3>
+
+            <form action="/update_profile" method="POST">
+                <input type="text" name="username" value="{{ user.username }}">
+                <button type="submit">Update</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h3>Change Password</h3>
+
+            <form action="/change_password" method="POST">
+                <input type="password" name="old_password" placeholder="Old Password">
+                <input type="password" name="new_password" placeholder="New Password">
+                <button type="submit">Change</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h3>Theme</h3>
+
+            <form action="/theme" method="POST">
+                <select name="theme">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                </select>
+                <button type="submit">Apply</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h3>Logout</h3>
+            <a href="/logout">
+                <button class="logout-btn">Logout</button>
+            </a>
+        </div>
+
+</div>
+
+</body>
+
+</div>
+
+</html>

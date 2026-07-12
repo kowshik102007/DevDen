@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block page_title %}Add Medicine{% endblock %}
+{% block page_subtitle %}Register new medication to the inventory system{% endblock %}
+
+{% block content %}
+<div class="form-container glass">
+    <h2><i class="fa-solid fa-pills" style="color: var(--primary);"></i> Medicine Registration</h2>
+
+    <form action="{{ url_for('add_medicine') }}" method="POST">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="name"><i class="fa-solid fa-capsules"></i> Medicine Name</label>
+                <input type="text" id="name" name="name" required placeholder="e.g. Amoxicillin">
+                <div class="input-border"></div>
+            </div>
+            <div class="form-group">
+                <label for="brand"><i class="fa-solid fa-industry"></i> Brand / Manufacturer</label>
+                <input type="text" id="brand" name="brand" required placeholder="e.g. Pfizer">
+                <div class="input-border"></div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="category"><i class="fa-solid fa-tags"></i> Category</label>
+                <div class="select-wrapper">
+                    <select id="category" name="category" required>
+                        <option value="" disabled selected>Select category...</option>
+                        <option value="Antibiotic">Antibiotic</option>
+                        <option value="Painkiller">Painkiller</option>
+                        <option value="Vitamin">Vitamin</option>
+                        <option value="Syrup">Syrup</option>
+                        <option value="Cream">Cream / Ointment</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="price"><i class="fa-solid fa-tag"></i> Unit Price ($)</label>
+                <input type="number" id="price" name="price" step="0.01" required placeholder="0.00">
+                <div class="input-border"></div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="stock"><i class="fa-solid fa-cubes-stacked"></i> Initial Stock</label>
+                <input type="number" id="stock" name="stock" required placeholder="e.g. 100">
+                <div class="input-border"></div>
+            </div>
+            <div class="form-group">
+                <label for="expiry"><i class="fa-solid fa-calendar-xmark"></i> Expiry Date</label>
+                <input type="date" id="expiry" name="expiry" required>
+                <div class="input-border"></div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn">
+            <i class="fa-solid fa-cloud-arrow-up"></i> Save to Inventory
+        </button>
+    </form>
+</div>
+{% endblock %}

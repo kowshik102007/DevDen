@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="card shadow">
+
+<div class="card-body">
+
+<h3>
+
+Stock Prediction
+
+</h3>
+
+<hr>
+
+<form method="POST">
+
+<div class="mb-3">
+
+<label>
+
+Stock Symbol
+
+</label>
+
+<input
+type="text"
+name="symbol"
+class="form-control"
+placeholder="RELIANCE"
+required>
+
+</div>
+
+<button
+class="btn btn-primary">
+
+Predict
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+<br>
+
+{% if result %}
+
+<div class="card shadow">
+
+<div class="card-header">
+
+Prediction Result
+
+</div>
+
+<div class="card-body">
+
+<h4>
+
+{{ result.symbol }}
+
+</h4>
+
+<hr>
+
+<p>
+
+Current Price:
+
+<b>
+
+₹{{ result.current_price }}
+
+</b>
+
+</p>
+
+<p>
+
+Predicted Price:
+
+<b>
+
+₹{{ result.predicted_price }}
+
+</b>
+
+</p>
+
+<p>
+
+Signal:
+
+<b>
+
+{{ result.signal }}
+
+</b>
+
+</p>
+
+<p>
+
+Confidence:
+
+<b>
+
+{{ result.confidence }}%
+
+</b>
+
+</p>
+
+</div>
+
+</div>
+
+{% endif %}
+
+{% endblock %}

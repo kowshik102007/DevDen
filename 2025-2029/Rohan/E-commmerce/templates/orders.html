@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block title %}Orders - E-Commerce Store{% endblock %}
+
+{% block extra_css %}
+<style>
+    .orders-container {
+        max-width: 1000px;
+        margin: 30px auto;
+    }
+    
+    .orders-header {
+        margin-bottom: 30px;
+    }
+    
+    .orders-header h2 {
+        color: #333;
+    }
+    
+    .empty-orders {
+        text-align: center;
+        padding: 50px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        color: #999;
+    }
+    
+    .empty-orders a {
+        display: inline-block;
+        margin-top: 20px;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        padding: 12px 25px;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+    }
+    
+    .orders-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+    }
+    
+    .order-card {
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        border-left: 5px solid #667eea;
+    }
+    
+    .order-id {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 10px;
+    }
+    
+    .order-date {
+        color: #999;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    
+    .order-total {
+        font-size: 24px;
+        font-weight: bold;
+        color: #667eea;
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid #eee;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="orders-container">
+    <div class="orders-header">
+        <h2>My Orders</h2>
+    </div>
+    
+    {% if orders and orders|length > 0 %}
+        <div class="orders-grid">
+            {% for order in orders %}
+                <div class="order-card">
+                    <div class="order-id">Order #{{ order.id }}</div>
+                    <div class="order-date">{{ order.created_on.strftime('%B %d, %Y') if order.created_on else 'N/A' }}</div>
+                    <div>Items: {{ order.items|length }}</div>
+                    <div class="order-total">Total: ${{ "%.2f"|format(order.total_amount) }}</div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="empty-orders">
+            <h3>No orders yet</h3>
+            <p>You haven't placed any orders. Start shopping to place your first order!</p>
+            <a href="/products/">Shop Now</a>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

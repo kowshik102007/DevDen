@@ -1,0 +1,42 @@
+# Virtual environment
+pharos-env/
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Large data files (regenerate with data/sim/ scripts)
+data/raw/
+data/sim/reconstructor_dataset.npz
+data/sim/turbulence_dataset.npz
+
+# Trained model weights (large binaries; export/ TorchScript kept)
+ml/centroid_cnn/model_best.pt
+ml/reconstructor/model_best.pt
+ml/turbulence_ann/model_best.pt
+
+# Editor / OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db

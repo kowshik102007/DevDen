@@ -1,0 +1,410 @@
+/* Kerala Railway Gate Status App */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+}
+
+/* Header */
+.header {
+    background: #1a237e;
+    color: white;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.header h1 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.header nav {
+    display: flex;
+    gap: 16px;
+}
+
+.header nav a {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    font-size: 14px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.header nav a:hover,
+.header nav a.active {
+    background: rgba(255,255,255,0.15);
+    color: white;
+}
+
+/* Map container */
+#map {
+    position: fixed;
+    top: 52px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* Stats bar */
+.stats-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(26, 35, 126, 0.95);
+    color: white;
+    padding: 8px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    font-size: 13px;
+    z-index: 1000;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.stat-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.stat-dot.open { background: #4caf50; }
+.stat-dot.warning { background: #ff9800; }
+.stat-dot.closed { background: #f44336; }
+.stat-dot.unknown { background: #9e9e9e; }
+
+/* Near me button */
+.near-me-btn {
+    position: fixed;
+    bottom: 50px;
+    right: 16px;
+    z-index: 1000;
+    background: #1a237e;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 24px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.near-me-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* Leaflet popup styling */
+.gate-popup {
+    min-width: 200px;
+}
+
+.gate-popup h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+    color: #1a237e;
+}
+
+.gate-popup .status-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.status-badge.open { background: #4caf50; }
+.status-badge.warning { background: #ff9800; }
+.status-badge.closed { background: #f44336; }
+.status-badge.unknown { background: #9e9e9e; }
+
+.gate-popup .train-info {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 4px;
+}
+
+.gate-popup .detail-link {
+    display: inline-block;
+    margin-top: 8px;
+    color: #1a237e;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.gate-popup .detail-link:hover {
+    text-decoration: underline;
+}
+
+/* Gate detail page */
+.page-content {
+    margin-top: 52px;
+    padding: 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gate-header {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    margin-bottom: 16px;
+}
+
+.gate-header h2 {
+    font-size: 22px;
+    color: #1a237e;
+    margin-bottom: 8px;
+}
+
+.gate-meta {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.gate-meta span {
+    margin-right: 16px;
+}
+
+.status-large {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+}
+
+.status-large.open { background: #4caf50; }
+.status-large.warning { background: #ff9800; }
+.status-large.closed { background: #f44336; }
+.status-large.unknown { background: #9e9e9e; }
+
+.countdown {
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+/* Train list */
+.train-list {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.train-list h3 {
+    font-size: 16px;
+    color: #1a237e;
+    margin-bottom: 12px;
+}
+
+.train-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.train-row:last-child {
+    border-bottom: none;
+}
+
+.train-name {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.train-number {
+    font-size: 12px;
+    color: #888;
+}
+
+.train-time {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.train-eta {
+    font-size: 12px;
+    color: #888;
+}
+
+.no-trains {
+    color: #999;
+    font-style: italic;
+    padding: 16px 0;
+    text-align: center;
+}
+
+.delay-badge {
+    display: inline-block;
+    background: #ff5722;
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-left: 6px;
+    vertical-align: middle;
+}
+
+.ontime-badge {
+    display: inline-block;
+    background: #4caf50;
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-left: 6px;
+    vertical-align: middle;
+}
+
+/* Search page */
+.search-container {
+    margin-bottom: 20px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.search-input:focus {
+    border-color: #1a237e;
+}
+
+.filter-bar {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 6px 14px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    background: white;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.filter-btn:hover { background: #f0f0f0; }
+.filter-btn.active { background: #1a237e; color: white; border-color: #1a237e; }
+
+.gate-card {
+    background: white;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.2s;
+}
+
+.gate-card:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.gate-card-info h4 {
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.gate-card-info p {
+    font-size: 12px;
+    color: #888;
+}
+
+.gate-card-status {
+    text-align: right;
+}
+
+/* Loading spinner */
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: #999;
+}
+
+.loading::after {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: 3px solid #ddd;
+    border-top-color: #1a237e;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Mini map on detail page */
+#detail-map {
+    height: 200px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .header h1 { font-size: 15px; }
+    .header nav a { font-size: 12px; }
+    .stats-bar { font-size: 11px; gap: 12px; }
+    .page-content { padding: 12px; }
+}

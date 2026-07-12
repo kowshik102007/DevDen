@@ -1,0 +1,6 @@
+# venv\Scripts\activate
+# pip install Flask Flask-SQLAlchemy
+# echo Flask > requirements.txt
+# echo Flask-SQLAlchemy >> requirements.txt
+flask
+gunicorn

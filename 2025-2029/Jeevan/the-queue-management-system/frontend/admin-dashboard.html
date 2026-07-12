@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel | QueueEase</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="container">
+        <a href="index.html" class="logo">QueueEase Admin</a>
+        <div class="nav-links">
+            <span id="admin-name" style="color: var(--text-primary);">Root Admin</span>
+            <button id="logout-btn" class="btn btn-secondary">Logout</button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- Stats Row -->
+        <div class="grid grid-cols-3" style="margin-bottom: 2rem;">
+            <div class="card glass animate-fade">
+                <div style="color: var(--text-secondary); font-size: 0.9rem;">Total Served Today</div>
+                <div id="stat-served" style="font-size: 2rem; font-weight: 700;">0</div>
+            </div>
+            <div class="card glass animate-fade" style="animation-delay: 0.1s;">
+                <div style="color: var(--text-secondary); font-size: 0.9rem;">Currently Waiting</div>
+                <div id="stat-waiting" style="font-size: 2rem; font-weight: 700; color: var(--warning);">0</div>
+            </div>
+            <div class="card glass animate-fade" style="animation-delay: 0.2s;">
+                <div style="color: var(--text-secondary); font-size: 0.9rem;">Active Clinics</div>
+                <div id="stat-clinics" style="font-size: 2rem; font-weight: 700; color: var(--accent);">0</div>
+            </div>
+        </div>
+
+        <div class="grid" style="grid-template-columns: 1fr 300px;">
+            <!-- Left: Main Queue Table -->
+            <section>
+                <div class="card glass animate-fade">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                        <h2>Live Queue List</h2>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <select id="admin-clinic-filter" style="width: 200px;">
+                                <option value="">Select Clinic...</option>
+                            </select>
+                            <button id="reset-btn" class="btn btn-secondary" style="color: var(--error);">Reset Day</button>
+                        </div>
+                    </div>
+                    
+                    <div id="calling-now" style="background: rgba(56, 189, 248, 0.1); padding: 1.5rem; border-radius: 0.5rem; border: 1px dashed var(--accent); display: none; margin-bottom: 2rem;">
+                        <span style="color: var(--accent); font-weight: 600;">ACTIVE:</span>
+                        <span id="active-calling-text" style="margin-left: 1rem; font-size: 1.1rem;">Ticket #12 (John Doe)</span>
+                        <div style="float: right;">
+                            <button id="complete-active-btn" class="btn btn-primary" style="padding: 0.4rem 1rem; font-size: 0.8rem;">Complete</button>
+                            <button id="skip-active-btn" class="btn btn-secondary" style="padding: 0.4rem 1rem; font-size: 0.8rem;">Skip</button>
+                        </div>
+                    </div>
+
+                    <div style="overflow-x: auto;">
+                        <table id="admin-queue-table">
+                            <thead>
+                                <tr>
+                                    <th>Ticket #</th>
+                                    <th>Patient Name</th>
+                                    <th>Joined At</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="admin-queue-body">
+                                <tr>
+                                    <td colspan="5" style="text-align: center; color: var(--text-secondary);">Select a clinic to view queue</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right: Admin Actions -->
+            <section>
+                <div class="card glass animate-fade" style="border-top: 4px solid var(--accent);">
+                    <h2>Queue Controls</h2>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">Call the next patient in line for the selected clinic.</p>
+                    <button id="call-next-btn" class="btn btn-primary" style="width: 100%; padding: 1.5rem; font-size: 1.25rem;">Call Next</button>
+                </div>
+
+                <div class="card glass animate-fade" style="margin-top: 1.5rem;">
+                    <h2>Clinic Management</h2>
+                    <button id="add-clinic-btn" class="btn btn-secondary" style="width: 100%; margin-bottom: 1rem;">+ Add New Clinic</button>
+                    <div id="clinic-list-mini" style="max-height: 200px; overflow-y: auto;">
+                        <!-- Mini list of clinics with status toggles -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Simple Modal for adding/editing clinic -->
+    <div id="clinic-modal" style="display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.8); z-index: 100; align-items: center; justify-content: center;">
+        <div class="card glass" style="width: 400px;">
+            <h2 id="modal-title">Add Clinic</h2>
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" id="clinic-name-input">
+            </div>
+            <div class="form-group">
+                <label>Avg. Service Time (mins)</label>
+                <input type="number" id="clinic-time-input" value="15">
+            </div>
+            <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                <button id="save-clinic-btn" class="btn btn-primary" style="flex: 1;">Save</button>
+                <button id="close-modal-btn" class="btn btn-secondary" style="flex: 1;">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/admin-dashboard.js"></script>
+</body>
+</html>

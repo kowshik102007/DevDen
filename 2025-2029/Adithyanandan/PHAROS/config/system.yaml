@@ -1,0 +1,33 @@
+mla:
+  n_lenslets_x: 10          # TODO: confirm from hardware
+  n_lenslets_y: 10
+  pitch_mm: 0.3             # lenslet pitch in millimetres
+  focal_length_mm: 18.6     # lenslet focal length
+
+camera:
+  pixel_size_um: 5.5        # pixel size in micrometres
+  frame_width_px: 1024
+  frame_height_px: 1024
+  bit_depth: 16
+  frame_rate_hz: 200.0
+
+pupil:
+  diameter_px: 900          # pupil diameter on detector in pixels
+  centre_x_px: 512
+  centre_y_px: 512
+
+dm:
+  n_actuators: 97
+  stroke_um: 5.0
+  coupling_matrix_path: "data/calibration/coupling_matrix.npy"
+
+atmosphere:
+  L0_m: 30.0                # outer scale in metres
+  l0_m: 0.01                # inner scale in metres
+  wavelength_m: 550.0e-9    # observing wavelength
+
+data:
+  raw_frames_dir: "data/raw/"
+  dark_frame_path: "data/calibration/dark.npy"
+  flat_frame_path: "data/calibration/flat.npy"
+  reference_centroids_path: "data/calibration/ref_centroids.npy"

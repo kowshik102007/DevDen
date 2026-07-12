@@ -1,0 +1,237 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark-bg: #f4f6f8;
+  --color-dark-card: #ffffff;
+  --color-dark-border: #e1e3e5;
+  --color-primary: #008060; /* Shopify Green */
+  --color-primary-hover: #006e52;
+  --color-accent: #2c6ecb; /* royal blue (matching Bridge logo) */
+  --color-accent-hover: #1f5199;
+}
+
+:root {
+  color-scheme: light;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: 'Outfit', 'Inter', system-ui, sans-serif;
+  background: linear-gradient(135deg, #e3f2fd, #e8f5e9, #e0f2f1, #e8f5e9, #e3f2fd) !important;
+  background-size: 300% 300% !important;
+  animation: gradientAnimation 12s ease-in-out infinite !important;
+  color: #1a1a1a !important;
+  overflow-x: hidden;
+}
+
+/* Force clean light theme overrides across dark class styles */
+h1, h2, h3, h4, h5, h6 {
+  color: #1a1a1a !important;
+}
+
+/* Force dark text inside white cards/dropdowns */
+.glass-panel .text-white,
+.bg-darkCard .text-white,
+.glass-nav .text-white {
+  color: #1a1a1a !important;
+}
+
+.text-gray-100, .text-gray-200, .text-gray-300 {
+  color: #202223 !important;
+}
+
+.text-gray-400 {
+  color: #6d7175 !important;
+}
+
+.text-gray-500 {
+  color: #8c9196 !important;
+}
+
+/* Ensure buttons have white text */
+button.text-white, 
+button .text-white,
+.bg-indigo-600,
+.bg-indigo-600 *,
+.bg-cyan-600,
+.bg-cyan-600 * {
+  color: #ffffff !important;
+}
+
+/* Custom Shopify Secondary Button Override */
+button.bg-slate-800, 
+button.bg-slate-900,
+a.bg-slate-800,
+a.bg-slate-900 {
+  background-color: #ffffff !important;
+  border: 1px solid #babfc3 !important;
+  color: #1a1a1a !important;
+}
+
+button.bg-slate-800:hover, 
+button.bg-slate-900:hover,
+a.bg-slate-800:hover,
+a.bg-slate-900:hover {
+  background-color: #f6f6f7 !important;
+  color: #1a1a1a !important;
+}
+
+/* For disabled state */
+button.bg-slate-800:disabled, 
+button.bg-slate-900:disabled,
+button[disabled] {
+  background-color: #f4f6f8 !important;
+  border: 1px solid #e1e3e5 !important;
+  color: #8c9196 !important;
+  cursor: not-allowed !important;
+}
+
+/* Custom Shopify Card Styling */
+.glass-panel {
+  background: #ffffff !important;
+  border: 1px solid #e1e3e5 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+  border-radius: 8px !important;
+  backdrop-filter: none !important;
+}
+
+/* Clean Header Nav */
+.glass-nav {
+  background: #ffffff !important;
+  border-bottom: 1px solid #e1e3e5 !important;
+  backdrop-filter: none !important;
+}
+
+/* Shopify Green Primary Action Overrides */
+.bg-indigo-600 {
+  background-color: #008060 !important;
+}
+
+.bg-indigo-600:hover, .hover\:bg-indigo-500:hover {
+  background-color: #006e52 !important;
+}
+
+.text-indigo-400, .text-indigo-500 {
+  color: #008060 !important;
+}
+
+/* Secondary Actions and Accents (Royal Blue matching Bridge logo) */
+.text-cyan-400, .text-cyan-500 {
+  color: #2c6ecb !important;
+}
+
+.bg-cyan-600 {
+  background-color: #2c6ecb !important;
+}
+
+.bg-cyan-600:hover, .hover\:bg-cyan-500:hover {
+  background-color: #1f5199 !important;
+}
+
+/* Alert Boxes (styled with a clean green tint) */
+.bg-indigo-950\/50, .bg-indigo-950\/60 {
+  background-color: #f0f4f2 !important;
+  border-color: #a3c4b5 !important;
+  color: #008060 !important;
+}
+
+.bg-slate-900, .bg-slate-900\/60, .bg-slate-950, .bg-slate-950\/60 {
+  background-color: #f6f6f7 !important;
+  border-color: #e1e3e5 !important;
+  color: #1a1a1a !important;
+}
+
+/* Standard Inputs Override for Crisp Border Focus */
+input, select, textarea {
+  background-color: #ffffff !important;
+  color: #1a1a1a !important;
+  border: 1px solid #babfc3 !important;
+  border-radius: 6px !important;
+  transition: border-color 0.2s ease !important;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #008060 !important;
+  box-shadow: 0 0 0 2px rgba(0, 128, 96, 0.15) !important;
+}
+
+/* Dropdowns menu */
+.bg-darkCard {
+  background-color: #ffffff !important;
+  border: 1px solid #e1e3e5 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+.border-darkBorder, .border-darkBorder\/40, .border-darkBorder\/50 {
+  border-color: #e1e3e5 !important;
+}
+
+.hover\:bg-slate-800:hover, .hover\:bg-slate-900\/40:hover {
+  background-color: #f6f6f7 !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f4f6f8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c9cccf;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a9acaf;
+}
+
+/* Removing Neon Glows for Crisp Minimalist Layout */
+.shadow-glow, .shadow-cyanGlow, .hover\:shadow-cyanGlow:hover {
+  box-shadow: none !important;
+}
+
+.gradient-text {
+  background: none !important;
+  -webkit-background-clip: border-box !important;
+  -webkit-text-fill-color: initial !important;
+  color: #008060 !important;
+}
+
+/* Force white text in dark hero section */
+.dark-hero h1, 
+.dark-hero h2, 
+.dark-hero h3, 
+.dark-hero h4, 
+.dark-hero p, 
+.dark-hero span:not(.gradient-text) {
+  color: #ffffff !important;
+}
+.dark-hero .text-gray-300 {
+  color: #d1d5db !important;
+}
+.dark-hero .text-gray-400 {
+  color: #9ca3af !important;
+}
+.dark-hero .gradient-text {
+  background: linear-gradient(135deg, #10b981, #3b82f6) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  display: inline-block !important;
+  color: transparent !important;
+}

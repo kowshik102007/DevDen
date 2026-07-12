@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block page_title %}Sell Medicine{% endblock %}
+{% block page_subtitle %}Process a new transaction point of sale{% endblock %}
+
+{% block content %}
+<div class="form-container glass" style="max-width: 600px;">
+    <h2><i class="fa-solid fa-cash-register" style="color: var(--success);"></i> Process Sale</h2>
+
+    <form action="{{ url_for('sell') }}" method="POST">
+        <div class="form-group">
+            <label for="medicine_id"><i class="fa-solid fa-prescription-bottle-file"></i> Select Product</label>
+            <div class="select-wrapper">
+                <select id="medicine_id" name="medicine_id" required>
+                    <option value="" disabled selected>Choose a medicine in stock...</option>
+                    {% for m in medicines %}
+                    <option value="{{ m.id }}">{{ m.name }} (Stock: {{ m.stock }} | Price: ${{ "%.2f"|format(m.price)
+                        }})</option>
+                    {% endfor %}
+                </select>
+            </div>
+            {% if medicines|length == 0 %}
+            <p style="color: var(--danger); font-size: 13px; margin-top: 8px;">
+                <i class="fa-solid fa-circle-exclamation"></i> No medicines currently available in stock. Add items
+                first.
+            </p>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            <label for="quantity"><i class="fa-solid fa-arrow-down-9-1"></i> Quantity to Sell</label>
+            <input type="number" id="quantity" name="quantity" min="1" required placeholder="e.g. 1">
+            <div class="input-border"></div>
+        </div>
+
+        <button type="submit" class="btn" style="background: linear-gradient(135deg, var(--success), #059669);" {% if
+            medicines|length==0 %}disabled{% endif %}>
+            <i class="fa-solid fa-circle-check"></i> Complete Transaction
+        </button>
+    </form>
+</div>
+{% endblock %}

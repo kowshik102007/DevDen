@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Quiz – QuizCraft</title>
+  <link rel="stylesheet" href="student_view.css" />
+</head>
+<body>
+
+
+  <div class="entry-layout" id="nameScreen">
+    <div class="entry-left">
+      <div class="entry-brand">📝 QuizCraft</div>
+      <h1 id="quizTitleDisplay" class="entry-title">Loading quiz…</h1>
+      <p id="quizMetaDisplay" class="entry-meta"></p>
+      <div class="entry-features">
+        <div class="ef-item">✅ Multiple choice questions</div>
+        <div class="ef-item">⏱ Timed quiz</div>
+        <div class="ef-item">📊 Instant score &amp; grade</div>
+      </div>
+    </div>
+    <div class="entry-right">
+      <div class="entry-form-box">
+        <h2 class="entry-form-title">Enter your details</h2>
+        <p class="entry-form-sub">You'll need your name to start the quiz.</p>
+        <div class="form-group">
+          <label>Your Full Name</label>
+          <input type="text" id="studentNameInput" placeholder="e.g.River Tristan" />
+        </div>
+        <p class="error-msg hidden" id="nameError">Please enter your name to continue.</p>
+        <button class="btn-start" onclick="startQuiz()">Start Quiz →</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="quiz-layout hidden" id="quizScreen">
+
+
+    <div class="quiz-left-panel">
+      <div class="qlp-brand">📝 QuizCraft</div>
+      <h2 class="qlp-title" id="qlpTitle">Quiz</h2>
+      <p class="qlp-student" id="qlpStudent"></p>
+
+      <div class="timer-box" id="timerBox">
+        <span class="timer-icon">⏱</span>
+        <span class="timer-value" id="timerDisplay">15:00</span>
+        <span class="timer-label">remaining</span>
+      </div>
+
+      <div class="qlp-progress-wrap">
+        <div class="qlp-progress-bar">
+          <div class="qlp-progress-fill" id="progressFill" style="width:0%"></div>
+        </div>
+        <p class="qlp-progress-label" id="questionCounter">Question 1 of 5</p>
+      </div>
+
+      <div class="qlp-legend">
+        <div class="legend-dot answered"></div><span>Answered</span>
+        <div class="legend-dot unanswered"></div><span>Unanswered</span>
+      </div>
+    </div>
+
+
+    <div class="quiz-right-area">
+      <p class="question-text" id="questionText"></p>
+      <ul class="options-list" id="optionsList"></ul>
+
+      <div class="nav-buttons">
+        <button class="nav-btn btn-prev" id="prevBtn" onclick="goToPrev()">← Previous</button>
+        <button class="nav-btn btn-next" id="nextBtn" onclick="goToNext()">Next →</button>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="score-layout hidden" id="scoreScreen">
+    <div class="score-left">
+      <div class="score-brand">📝 QuizCraft</div>
+      <div class="score-grade-circle">
+        <span class="sgc-grade" id="rankBadge">—</span>
+        <span class="sgc-label">Grade</span>
+      </div>
+      <p class="score-name" id="scoreStudentName"></p>
+    </div>
+
+    <div class="score-right">
+      <h2 class="score-heading" id="scoreHeading">Your Results</h2>
+
+      <div class="score-grid">
+        <div class="score-stat green">
+          <span class="ss-num" id="correctCount">—</span>
+          <span class="ss-label">Correct</span>
+        </div>
+        <div class="score-stat red">
+          <span class="ss-num" id="incorrectCount">—</span>
+          <span class="ss-label">Incorrect</span>
+        </div>
+        <div class="score-stat amber">
+          <span class="ss-num" id="partialCount">—</span>
+          <span class="ss-label">Unanswered</span>
+        </div>
+        <div class="score-stat blue">
+          <span class="ss-num" id="totalMarks">—</span>
+          <span class="ss-label">Total Marks</span>
+        </div>
+      </div>
+
+
+      <div id="answersReview" class="hidden">
+        <h4 class="review-heading">Answer Review</h4>
+        <div id="answersReviewList"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="student_view.js"></script>
+</body>
+</html>

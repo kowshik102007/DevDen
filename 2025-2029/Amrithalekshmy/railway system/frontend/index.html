@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kerala Railway Gate Status</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Kerala Gate Watch</h1>
+        <nav>
+            <a href="/" class="active">Map</a>
+            <a href="/search">Search</a>
+        </nav>
+    </div>
+
+    <div id="map"></div>
+
+    <button class="near-me-btn" onclick="locateMe()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M12 2v4m0 12v4m10-10h-4M6 12H2"/>
+        </svg>
+        Near Me
+    </button>
+
+    <div class="stats-bar" id="stats-bar">
+        <div class="loading">Loading gates...</div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', initMap);
+    </script>
+</body>
+</html>
