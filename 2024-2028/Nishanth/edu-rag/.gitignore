@@ -1,0 +1,97 @@
+# ==============================================================================
+# edu-rag Git Ignore Configuration
+# Covers frontend (Node/Vite), backend (Python/FastAPI), and local data stores.
+# ==============================================================================
+
+# --- Environment Variables & Sensitive Files ---
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+*.env.*
+*.pem
+*.key
+
+# --- OS & System Files ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# --- IDE & Editor Settings ---
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*~
+.project
+.classpath
+.settings/
+
+# --- Frontend Node & Build Output ---
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/.vite/
+frontend/.cache/
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/pnpm-debug.log*
+
+# --- Python Virtual Environments & Packages ---
+.venv/
+venv/
+ENV/
+env/
+python-local-env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# --- Python Caching & Compilation ---
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.tox/
+.coverage
+.cache
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# --- Local Application Data & Storage (CRITICAL) ---
+# Ignore dynamic document database registry
+backend/document_registry.json
+
+# Ignore document uploads to prevent pushing processed PDFs
+backend/uploads/*
+!backend/uploads/.gitkeep 
+*tasks.txt
