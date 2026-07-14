@@ -1,0 +1,24 @@
+[project]
+name = "taskify-backend"
+version = "0.1.0"
+description = "Taskify Backend API with FastAPI"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.32.1",
+    "python-multipart>=0.0.17",
+    "python-jose[cryptography]>=3.3.0",
+    "passlib[bcrypt]>=1.7.4",
+    "python-dotenv>=1.1.1",
+    "pymongo>=4.15.2",
+    "docx2txt>=0.9",
+    "langchain>=0.3.27",
+    "langchain-community>=0.3.30",
+    "langchain-google-genai>=2.1.12",
+    "langchain-groq>=0.3.8",
+    "langchain-pinecone>=0.2.12",
+    "pinecone>=7.3.0",
+    "pypdf>=6.1.1",
+    "python-docx>=1.2.0",
+]

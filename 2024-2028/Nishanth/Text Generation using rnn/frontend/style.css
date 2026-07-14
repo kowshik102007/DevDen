@@ -1,0 +1,79 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #222222;
+    --primary-color: #4a90e2;
+    --secondary-color: #f0f0f0;
+}
+
+body.dark {
+    --bg-color: #121212;
+    --text-color: #eeeeee;
+    --primary-color: #ff9800;
+    --secondary-color: #1f1f1f;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 0.8rem;
+    border-radius: 10px;
+    border: 1px solid var(--secondary-color);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    resize: none;
+}
+
+.controls {
+    margin: 1rem 0;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+button {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: white;
+    transition: background 0.2s;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+#outputContainer {
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: var(--secondary-color);
+    text-align: left;
+}
+
+#outputStory {
+    white-space: pre-wrap;
+}
