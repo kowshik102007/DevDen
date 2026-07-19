@@ -1,0 +1,691 @@
+{
+  "version": "1.0.0",
+  "widgets": [
+    {
+      "uri": "/agent-dashboard",
+      "name": "Agent Dashboard",
+      "description": "Grid of active, paused, and error agents",
+      "examples": [
+        {
+          "name": "Default Dashboard State",
+          "description": "Overview of hospital AI agents",
+          "data": {
+            "stats": {
+              "total": 3,
+              "active": 2,
+              "paused": 1,
+              "error": 0,
+              "totalAlerts": 12,
+              "byTemplate": {
+                "vitals-monitoring": 2,
+                "blood-bank-inventory": 1
+              }
+            },
+            "agents": [
+              {
+                "id": "agent_vitals_1",
+                "templateId": "vitals-monitoring",
+                "name": "ICU Vitals Alerter",
+                "description": "Monitors heart rate and SpO2 in the ICU ward",
+                "status": "active",
+                "alertCount": 8,
+                "lastCheckedAt": "2026-07-17T14:40:00.000Z",
+                "config": {
+                  "thresholds": {
+                    "heartRateHigh": 120,
+                    "spo2Low": 90
+                  }
+                }
+              },
+              {
+                "id": "agent_blood_1",
+                "templateId": "blood-bank-inventory",
+                "name": "O-Neg Stock Watcher",
+                "description": "Alerts when O-negative units drop below critical thresholds",
+                "status": "active",
+                "alertCount": 4,
+                "lastCheckedAt": "2026-07-17T14:42:00.000Z",
+                "config": {
+                  "thresholds": {
+                    "criticalUnitsByType": 3
+                  }
+                }
+              },
+              {
+                "id": "agent_vitals_2",
+                "templateId": "vitals-monitoring",
+                "name": "General Ward BP Tracker",
+                "description": "Monitors blood pressure in GW rooms",
+                "status": "paused",
+                "alertCount": 0,
+                "lastCheckedAt": "2026-07-17T14:30:00.000Z",
+                "config": {
+                  "thresholds": {
+                    "bloodPressureSystolicHigh": 180
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "tags": ["agent", "dashboard", "list"]
+    },
+    {
+      "uri": "/agent-generated",
+      "name": "Agent Generated Result",
+      "description": "Success screen showing the newly generated agent from a natural language prompt",
+      "examples": [
+        {
+          "name": "Agent Created Successfully",
+          "description": "Celebration state for a newly generated agent",
+          "data": {
+            "success": true,
+            "message": "Agent 'ICU Tachycardia Alerter' created successfully from natural language",
+            "prompt": "alert the doctor when a patient's heartbeat crosses 120 bpm",
+            "matchedTemplate": "vitals-monitoring",
+            "templateLabel": "Vitals Monitor",
+            "agent": {
+              "id": "agent_new_123",
+              "templateId": "vitals-monitoring",
+              "name": "ICU Tachycardia Alerter",
+              "description": "alert the doctor when a patient's heartbeat crosses 120 bpm",
+              "status": "active",
+              "alertCount": 0,
+              "createdAt": "2026-07-17T14:55:00.000Z",
+              "config": {
+                "thresholds": {
+                  "heartRateHigh": 120
+                },
+                "alertRules": [
+                  {
+                    "condition": "heartRate > 120",
+                    "severity": "warning",
+                    "message": "Elevated heart rate detected: {value} bpm for patient {patientId}"
+                  }
+                ],
+                "checkIntervalSeconds": 30,
+                "resourceEndpoint": "fhir://patients/{patientId}/observations"
+              }
+            }
+          }
+        }
+      ],
+      "tags": ["agent", "creation", "success"]
+    },
+    {
+      "uri": "/audit-log",
+      "name": "System Audit Log",
+      "description": "Timeline of security and operational events",
+      "examples": [
+        {
+          "name": "Recent Audit History",
+          "description": "Timeline of agent creation and evaluations",
+          "data": {
+            "total": 3,
+            "events": [
+              {
+                "id": "evt_1",
+                "action": "agent_generated",
+                "timestamp": "2026-07-17T14:55:00.000Z",
+                "resource": "factory",
+                "result": "Generated 'ICU Tachycardia Alerter' from prompt",
+                "severity": "info"
+              },
+              {
+                "id": "evt_2",
+                "action": "alert_triggered",
+                "timestamp": "2026-07-17T14:50:00.000Z",
+                "resource": "alerts",
+                "result": "Alert triggered for agent_vitals_1 (heartRate > 120)",
+                "severity": "warning"
+              },
+              {
+                "id": "evt_3",
+                "action": "agent_paused",
+                "timestamp": "2026-07-17T14:45:00.000Z",
+                "resource": "agents",
+                "result": "Paused agent agent_vitals_2",
+                "severity": "info"
+              }
+            ]
+          }
+        }
+      ],
+      "tags": ["audit", "logs", "timeline"]
+    },
+    {
+      "uri": "/active-alerts",
+      "name": "Active Alerts Board",
+      "description": "Hospital-wide active alerts needing clinician action",
+      "examples": [
+        {
+          "name": "Clinically Critical Alerts",
+          "description": "Active unresolved alerts list",
+          "data": {
+            "total": 2,
+            "alerts": [
+              {
+                "id": "alert_111",
+                "agentId": "agent_vitals_1",
+                "condition": "heartRate > 120",
+                "severity": "warning",
+                "message": "Elevated heart rate detected: 132 bpm for patient PAT-001",
+                "createdAt": "2026-07-17T14:50:00.000Z"
+              },
+              {
+                "id": "alert_222",
+                "agentId": "agent_vitals_1",
+                "condition": "spo2 < 90",
+                "severity": "critical",
+                "message": "CRITICAL: Hypoxemia — SpO2 at 87% for patient PAT-001",
+                "createdAt": "2026-07-17T14:50:02.000Z"
+              }
+            ]
+          }
+        }
+      ],
+      "tags": ["alerts", "active", "resolve"]
+    },
+    {
+      "uri": "/agent-detail",
+      "name": "Agent Configuration Detail",
+      "description": "Detailed view of an agent's configured thresholds and rules",
+      "examples": [
+        {
+          "name": "Active Vitals Agent Configuration",
+          "description": "Vitals Monitoring agent thresholds and rules",
+          "data": {
+            "success": true,
+            "agent": {
+              "id": "agent_vitals_1",
+              "templateId": "vitals-monitoring",
+              "name": "ICU Vitals Alerter",
+              "description": "Monitors heart rate and SpO2 in the ICU ward",
+              "status": "active",
+              "createdAt": "2026-07-17T14:00:00.000Z",
+              "alertCount": 8,
+              "config": {
+                "thresholds": {
+                  "heartRateHigh": 120,
+                  "heartRateLow": 50,
+                  "spo2Low": 90,
+                  "temperatureHigh": 39.0
+                },
+                "alertRules": [
+                  {
+                    "condition": "heartRate > 120",
+                    "severity": "warning",
+                    "message": "Elevated heart rate detected: {value} bpm for patient {patientId}"
+                  },
+                  {
+                    "condition": "spo2 < 90",
+                    "severity": "critical",
+                    "message": "CRITICAL: Hypoxemia — SpO2 at {value}% for patient {patientId}"
+                  }
+                ],
+                "checkIntervalSeconds": 30,
+                "resourceEndpoint": "fhir://patients/{patientId}/observations"
+              }
+            }
+          }
+        }
+      ],
+      "tags": ["agent", "detail", "config"]
+    },
+    {
+      "uri": "/agent-evolved",
+      "name": "Agent Evolved Confirmation",
+      "description": "Success display after modifying thresholds or rule configurations",
+      "examples": [
+        {
+          "name": "Threshold Updated",
+          "description": "Successful evolution of rules and thresholds",
+          "data": {
+            "success": true,
+            "message": "Agent 'ICU Vitals Alerter' evolved successfully",
+            "agent": {
+              "id": "agent_vitals_1",
+              "templateId": "vitals-monitoring",
+              "name": "ICU Vitals Alerter",
+              "description": "Monitors heart rate and SpO2 in the ICU ward",
+              "status": "active",
+              "createdAt": "2026-07-17T14:00:00.000Z",
+              "alertCount": 8,
+              "config": {
+                "thresholds": {
+                  "heartRateHigh": 130,
+                  "spo2Low": 88
+                },
+                "alertRules": [
+                  {
+                    "condition": "heartRate > 130",
+                    "severity": "warning",
+                    "message": "Elevated heart rate detected: {value} bpm for patient {patientId}"
+                  }
+                ],
+                "checkIntervalSeconds": 30,
+                "resourceEndpoint": "fhir://patients/{patientId}/observations"
+              }
+            }
+          }
+        }
+      ],
+      "tags": ["agent", "evolution", "success"]
+    },
+    {
+      "uri": "/factory-stats",
+      "name": "Factory Stats & Overview",
+      "description": "System-wide metrics and template utilization metrics",
+      "examples": [
+        {
+          "name": "Overall Metrics",
+          "description": "Aggregate statistics of agents and templates",
+          "data": {
+            "total": 6,
+            "active": 4,
+            "paused": 2,
+            "error": 0,
+            "totalAlerts": 18,
+            "byTemplate": {
+              "vitals-monitoring": 3,
+              "blood-bank-inventory": 2,
+              "medication-tracker": 1
+            }
+          }
+        }
+      ],
+      "tags": ["factory", "stats", "overview"]
+    },
+    {
+      "uri": "/patient-vitals",
+      "name": "FHIR Patient Vitals",
+      "description": "Vital signs panel showing patient metrics and thresholds",
+      "examples": [
+        {
+          "name": "Patient PAT-001 Vitals",
+          "description": "Current vitals showing elevated HR and low SpO2",
+          "data": {
+            "resourceType": "Bundle",
+            "type": "collection",
+            "entry": [
+              {
+                "resource": {
+                  "resourceType": "Observation",
+                  "id": "PAT-001-heartRate",
+                  "status": "final",
+                  "subject": { "reference": "Patient/PAT-001", "display": "Arjun Sharma" },
+                  "effectiveDateTime": "2026-07-17T14:50:00.000Z",
+                  "code": { "coding": [{ "system": "http://loinc.org", "code": "heartRate", "display": "heartRate" }] },
+                  "valueQuantity": { "value": 132, "unit": "bpm" }
+                }
+              },
+              {
+                "resource": {
+                  "resourceType": "Observation",
+                  "id": "PAT-001-bloodPressureSystolic",
+                  "status": "final",
+                  "subject": { "reference": "Patient/PAT-001", "display": "Arjun Sharma" },
+                  "effectiveDateTime": "2026-07-17T14:50:00.000Z",
+                  "code": { "coding": [{ "system": "http://loinc.org", "code": "bloodPressureSystolic", "display": "bloodPressureSystolic" }] },
+                  "valueQuantity": { "value": 155, "unit": "mmHg" }
+                }
+              },
+              {
+                "resource": {
+                  "resourceType": "Observation",
+                  "id": "PAT-001-spo2",
+                  "status": "final",
+                  "subject": { "reference": "Patient/PAT-001", "display": "Arjun Sharma" },
+                  "effectiveDateTime": "2026-07-17T14:50:00.000Z",
+                  "code": { "coding": [{ "system": "http://loinc.org", "code": "spo2", "display": "spo2" }] },
+                  "valueQuantity": { "value": 87, "unit": "%" }
+                }
+              },
+              {
+                "resource": {
+                  "resourceType": "Observation",
+                  "id": "PAT-001-temperature",
+                  "status": "final",
+                  "subject": { "reference": "Patient/PAT-001", "display": "Arjun Sharma" },
+                  "effectiveDateTime": "2026-07-17T14:50:00.000Z",
+                  "code": { "coding": [{ "system": "http://loinc.org", "code": "temperature", "display": "temperature" }] },
+                  "valueQuantity": { "value": 38.9, "unit": "°C" }
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "tags": ["patient", "vitals", "fhir"]
+    },
+    {
+      "uri": "/blood-bank",
+      "name": "FHIR Blood Bank Inventory",
+      "description": "Live stock check and unit counts by blood type",
+      "examples": [
+        {
+          "name": "Blood Stock List",
+          "description": "Stock levels of O-neg, B-neg, and other types",
+          "data": {
+            "resourceType": "Bundle",
+            "type": "collection",
+            "entry": [
+              {
+                "resource": {
+                  "resourceType": "SupplyDelivery",
+                  "id": "blood-0",
+                  "status": "completed",
+                  "product": { "code": { "text": "A+" } },
+                  "quantity": { "value": 8 },
+                  "extension": [{ "url": "expiryDays", "valueInteger": 12 }]
+                }
+              },
+              {
+                "resource": {
+                  "resourceType": "SupplyDelivery",
+                  "id": "blood-1",
+                  "status": "completed",
+                  "product": { "code": { "text": "A-" } },
+                  "quantity": { "value": 2 },
+                  "extension": [{ "url": "expiryDays", "valueInteger": 5 }]
+                }
+              },
+              {
+                "resource": {
+                  "resourceType": "SupplyDelivery",
+                  "id": "blood-7",
+                  "status": "completed",
+                  "product": { "code": { "text": "O-" } },
+                  "quantity": { "value": 5 },
+                  "extension": [{ "url": "expiryDays", "valueInteger": 6 }]
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "tags": ["blood", "inventory", "fhir"]
+    },
+    {
+      "uri": "/patient-list",
+      "name": "Patient Directory",
+      "description": "List of active patients admitted in the hospital database",
+      "examples": [
+        {
+          "name": "Hospital Patients Summary",
+          "description": "Directory of patients with demographics",
+          "data": {
+            "resourceType": "Bundle",
+            "type": "collection",
+            "total": 3,
+            "entry": [
+              {
+                "resource": {
+                  "resourceType": "Patient",
+                  "id": "PAT-001",
+                  "name": [{ "text": "Arjun Sharma" }],
+                  "extension": [
+                    { "url": "age", "valueInteger": 67 },
+                    { "url": "department", "valueString": "ICU" },
+                    { "url": "bed", "valueString": "ICU-03" }
+                  ]
+                }
+              },
+              {
+                "resource": {
+                  "resourceType": "Patient",
+                  "id": "PAT-002",
+                  "name": [{ "text": "Lakshmi Nair" }],
+                  "extension": [
+                    { "url": "age", "valueInteger": 45 },
+                    { "url": "department", "valueString": "General Ward" },
+                    { "url": "bed", "valueString": "GW-12" }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "tags": ["patients", "list", "directory"]
+    },
+    {
+      "uri": "/bed-status",
+      "name": "Ward Occupancy Board",
+      "description": "Bed availability rates per ward (ICU, Emergency, etc.)",
+      "examples": [
+        {
+          "name": "Ward Bed Availability",
+          "description": "Occupancy percentages across hospital wards",
+          "data": {
+            "resourceType": "Bundle",
+            "type": "collection",
+            "entry": [
+              {
+                "resource": {
+                  "resourceType": "Location",
+                  "id": "ward-0",
+                  "name": "ICU",
+                  "physicalType": { "coding": [{ "code": "ward" }] },
+                  "extension": [
+                    { "url": "totalBeds", "valueInteger": 20 },
+                    { "url": "occupied", "valueInteger": 18 },
+                    { "url": "occupancyPercent", "valueDecimal": 90 }
+                  ]
+                }
+              },
+              {
+                "resource": {
+                  "resourceType": "Location",
+                  "id": "ward-1",
+                  "name": "General Ward",
+                  "physicalType": { "coding": [{ "code": "ward" }] },
+                  "extension": [
+                    { "url": "totalBeds", "valueInteger": 50 },
+                    { "url": "occupied", "valueInteger": 44 },
+                    { "url": "occupancyPercent", "valueDecimal": 88 }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "tags": ["ward", "beds", "occupancy"]
+    },
+    {
+      "uri": "/patient-medications",
+      "name": "Medication Schedules",
+      "description": "Medication tracks, dosing details, and administration delays",
+      "examples": [
+        {
+          "name": "Dosing Overview for PAT-001",
+          "description": "Active prescription list with last administration times",
+          "data": {
+            "resourceType": "Bundle",
+            "type": "collection",
+            "entry": [
+              {
+                "resource": {
+                  "resourceType": "MedicationRequest",
+                  "id": "PAT-001-med-0",
+                  "status": "active",
+                  "subject": { "reference": "Patient/PAT-001" },
+                  "medicationCodeableConcept": { "text": "Metoprolol" },
+                  "dosageInstruction": [
+                    {
+                      "text": "25mg — 08:00, 20:00",
+                      "timingAdditional": { "lastAdministered": "06:00" }
+                    }
+                  ]
+                }
+              },
+              {
+                "resource": {
+                  "resourceType": "MedicationRequest",
+                  "id": "PAT-001-med-1",
+                  "status": "active",
+                  "subject": { "reference": "Patient/PAT-001" },
+                  "medicationCodeableConcept": { "text": "Aspirin" },
+                  "dosageInstruction": [
+                    {
+                      "text": "100mg — 08:00",
+                      "timingAdditional": { "lastAdministered": "08:05" }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "tags": ["medications", "patient", "schedule"]
+    },
+    {
+      "uri": "/patient-labs",
+      "name": "Lab Results",
+      "description": "Critical, abnormal, or normal Diagnostic Reports",
+      "examples": [
+        {
+          "name": "Diagnostic Panel for PAT-001",
+          "description": "Lab readings with alert flagging",
+          "data": {
+            "resourceType": "Bundle",
+            "type": "collection",
+            "entry": [
+              {
+                "resource": {
+                  "resourceType": "DiagnosticReport",
+                  "id": "PAT-001-lab-0",
+                  "status": "preliminary",
+                  "subject": { "reference": "Patient/PAT-001" },
+                  "code": { "text": "Troponin" },
+                  "result": [{ "value": "2.4 ng/mL", "status": "critical", "reviewed": false }],
+                  "effectiveDateTime": "2026-07-17T14:15:00.000Z"
+                }
+              },
+              {
+                "resource": {
+                  "resourceType": "DiagnosticReport",
+                  "id": "PAT-001-lab-1",
+                  "status": "final",
+                  "subject": { "reference": "Patient/PAT-001" },
+                  "code": { "text": "WBC" },
+                  "result": [{ "value": "14.2 K/uL", "status": "abnormal", "reviewed": true }],
+                  "effectiveDateTime": "2026-07-17T14:10:00.000Z"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "tags": ["labs", "diagnostic", "report"]
+    },
+    {
+      "uri": "/agent-check-result",
+      "name": "Check Run Output",
+      "description": "Results summary after evaluating thresholds against real-time patient status",
+      "examples": [
+        {
+          "name": "Check Run Complete with Alert",
+          "description": "Summary indicating one triggered alert",
+          "data": {
+            "success": true,
+            "agentId": "agent_vitals_1",
+            "agentName": "ICU Vitals Alerter",
+            "checkedAt": "2026-07-17T14:55:00.000Z",
+            "triggeredAlerts": 1,
+            "alerts": [
+              {
+                "id": "alert_check_999",
+                "agentId": "agent_vitals_1",
+                "condition": "heartRate > 120",
+                "severity": "warning",
+                "message": "Elevated heart rate detected: 132 bpm for patient PAT-001",
+                "patientId": "PAT-001",
+                "metric": "heartRate",
+                "value": 132,
+                "threshold": 120,
+                "resolved": false,
+                "createdAt": "2026-07-17T14:55:00.000Z"
+              }
+            ]
+          }
+        }
+      ],
+      "tags": ["agent", "check", "eval"]
+    },
+    {
+      "uri": "/threshold-eval",
+      "name": "Dry-run Rule Evaluation",
+      "description": "Simulation showing potential alerts without writing updates to DB",
+      "examples": [
+        {
+          "name": "Dry-Run Simulation",
+          "description": "Dry-run analysis for a vitals monitor",
+          "data": {
+            "agentId": "agent_vitals_1",
+            "agentName": "ICU Vitals Alerter",
+            "thresholdsConfigured": 4,
+            "rulesConfigured": 2,
+            "wouldTrigger": 1,
+            "details": [
+              {
+                "id": "alert_sim_888",
+                "agentId": "",
+                "condition": "heartRate > 120",
+                "severity": "warning",
+                "message": "Elevated heart rate detected: 132 bpm for patient PAT-001",
+                "patientId": "PAT-001",
+                "metric": "heartRate",
+                "value": 132,
+                "threshold": 120,
+                "resolved": false,
+                "createdAt": "2026-07-17T14:55:00.000Z"
+              }
+            ]
+          }
+        }
+      ],
+      "tags": ["simulation", "thresholds", "rules"]
+    },
+    {
+      "uri": "/template-preview",
+      "name": "Template Preview Inspector",
+      "description": "Overview of preset values and rules embedded in an agent template",
+      "examples": [
+        {
+          "name": "Vitals Template Configuration",
+          "description": "Reads standard thresholds for heartRate, SpO2, etc.",
+          "data": {
+            "success": true,
+            "template": {
+              "id": "vitals-monitoring",
+              "label": "Vitals Monitor",
+              "description": "Watches patient vital signs and alerts when thresholds are breached",
+              "icon": "💓",
+              "defaultThresholds": {
+                "heartRateHigh": 120,
+                "heartRateLow": 50,
+                "spo2Low": 90,
+                "temperatureHigh": 39.0
+              },
+              "defaultAlertRules": [
+                {
+                  "condition": "heartRate > 120",
+                  "severity": "warning",
+                  "message": "Elevated heart rate detected: {value} bpm for patient {patientId}"
+                }
+              ],
+              "dataResources": ["fhir://patients/{patientId}/observations"],
+              "checkIntervalSeconds": 30
+            }
+          }
+        }
+      ],
+      "tags": ["template", "inspect", "defaults"]
+    }
+  ],
+  "generatedAt": "2026-07-17T14:55:00.000Z"
+}
